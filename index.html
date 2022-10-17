@@ -13,13 +13,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="start-screen">
-      <button id="start-button">Start</button>
+    <div class="start-screen-name card">
+      <p class="question">Kako ti je ime?</p>
+      <input type="text" id="name-input" name="name" placeholder="Ime">
+      <button id="next-button-name">Naprej</button>
+    </div>
+    <div class="start-screen-date card hide">
+      <p class="question">Dobro Jana, kaj je danes?</p>
+      <input type="date" id="date-input" name="date">
+      <button id="next-button-date">Naprej</button>
+    </div>
+    <div class="start-screen-event card hide">
+      <p class="question">Hmm.. praviš, da imaš rojstni dan..</p>
+      <button id="next-button-event">Naprej</button>
+    </div>
+    <div class="start-screen-age card hide">
+      <p class="question">Koliko let pa imaš?</p>
+      <input type="number" id="age-input" name="age" placeholder="69">
+      <button id="next-button-age">Naprej</button>
+    </div>
+    <div class="start-screen hide">
+      <p class="question">21 let -> 21 vprašanj</p>
+      <button id="start-button">Začni</button>
     </div>
     <div id="display-container">
       <div class="header">
         <div class="number-of-count">
-          <span class="number-of-question">1 of 3 questions</span>
+          <span class="number-of-question">Vprašanje 1/3</span>
         </div>
         <div class="timer-div">
           <img src="img/timer-icon.svg" />
@@ -29,11 +49,15 @@
       <div id="container">
         <!-- questions and options will be displayed here -->
       </div>
-      <button id="next-button">Next</button>
+      <button id="next-button">Naprej</button>
     </div>
     <div class="score-container hide">
-      <div id="user-score">Demo Score</div>
-      <button id="restart">Restart</button>
+      <div id="user-score">Rezultat kviza</div>
+      <button id="restart">Poskusi znova</button>
+      <button id="to-the-code" class="hide">Pojdi na presenečenje</button>
+    </div>
+    <div class="qr-code hide">
+      <img src="" alt="">
     </div>
     <!-- Script -->
     <script src="script.js"></script>
