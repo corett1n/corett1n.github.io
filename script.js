@@ -9,6 +9,16 @@ let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
 let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
+let nameContainer = document.querySelector(".start-screen-name");
+let eventContainer = document.querySelector(".start-screen-event");
+let dateContainer = document.querySelector(".start-screen-date");
+let ageContainer = document.querySelector(".start-screen-age");
+let qrCodeContainer = document.querySelector(".qr-code");
+let nameButton = document.getElementById("next-button-name");
+let eventButton= document.getElementById("next-button-event");
+let dateButton = document.getElementById("next-button-date");
+let ageButton = document.getElementById("next-button-age");
+let surpriseButton = document.getElementById("to-the-code");
 let questionCount;
 let scoreCount = 0;
 let count = 11;
@@ -185,11 +195,15 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount;
+        "Imaš " + scoreCount + " od " + questionCount + " točk";
+        if(scoreCount >= 1){ // TODO 1->questionCount
+          surpriseButton.classList.remove("hide");
+          restart.classList.add("hide");
+        }
     } else {
       //display questionCount
       countOfQuestion.innerHTML =
-        questionCount + 1 + " of " + quizArray.length + " Question";
+        "Vprašanje " + (questionCount + 1) + "/" + quizArray.length;
       //display quiz
       quizDisplay(questionCount);
       count = 11;
@@ -308,8 +322,33 @@ startButton.addEventListener("click", () => {
   initial();
 });
 
+nameButton.addEventListener("click", () => {
+  nameContainer.classList.add("hide");
+  dateContainer.classList.remove("hide");
+});
+
+dateButton.addEventListener("click", () => {
+  dateContainer.classList.add("hide");
+  eventContainer.classList.remove("hide");
+});
+
+eventButton.addEventListener("click", () => {
+  eventContainer.classList.add("hide");
+  ageContainer.classList.remove("hide");
+});
+
+ageButton.addEventListener("click", () => {
+  ageContainer.classList.add("hide");
+  startScreen.classList.remove("hide");
+});
+
+surpriseButton.addEventListener("click", () => {
+  scoreContainer.classList.add("hide");
+  qrCodeContainer.classList.remove("hide");
+});
+
 //hide quiz and display start screen
 window.onload = () => {
-  startScreen.classList.remove("hide");
+  //startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
