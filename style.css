@@ -24,12 +24,12 @@ button {
   cursor: pointer;
 }
 #start-button,
-#restart {
+#restart, #to-the-code {
   font-size: 1.3em;
   padding: 0.5em 1.8em;
   border-radius: 0.2em;
 }
-#restart {
+#restart, #to-the-code {
   margin-top: 0.9em;
 }
 #display-container {
@@ -80,7 +80,7 @@ button {
   color: #000000;
   cursor: not-allowed;
 }
-#next-button {
+#next-button, #next-button-name, #next-button-date, #next-button-event, #next-button-age {
   font-size: 1em;
   margin-top: 1.5em;
   background-color: #0a69ed;
@@ -114,4 +114,22 @@ button {
   border-radius: 10%;
   max-width: 75%;
   max-height: 17em;
+}
+.card {
+  background-color: #ffffff;
+  padding: 3.1em 1.8em;
+  width: 80%;
+  max-width: 37.5em;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.6em;
+}
+
+input {
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 10px;
 }
