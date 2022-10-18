@@ -13,12 +13,16 @@ let nameContainer = document.querySelector(".start-screen-name");
 let eventContainer = document.querySelector(".start-screen-event");
 let dateContainer = document.querySelector(".start-screen-date");
 let ageContainer = document.querySelector(".start-screen-age");
+let introContainer = document.querySelector(".start-screen-intro");
 let qrCodeContainer = document.querySelector(".qr-code");
 let nameButton = document.getElementById("next-button-name");
 let eventButton= document.getElementById("next-button-event");
 let dateButton = document.getElementById("next-button-date");
 let ageButton = document.getElementById("next-button-age");
 let surpriseButton = document.getElementById("to-the-code");
+let eventButtonNo = document.getElementById("event-button-no");
+let introButton = document.getElementById("next-button-intro");
+let userScoreWin = document.getElementById("user-score-win");
 let questionCount;
 let scoreCount = 0;
 let count = 11;
@@ -77,14 +81,14 @@ const quizArray = [
   },
   {
     id: "7",
-    question: "Katera kavica je najboljša?",  // *** TODO ***
+    question: "Katera kavica je najboljša?",
     options: ["Trst", "Novi Sad", "Ljubljana", "Budimpešta"],
     correct: "Trst",
     questionImg: "img/7_main.jpg",
   },
   {
     id: "8",
-    question: "Kateri after kavica je najboljši?",  // *** TODO ***
+    question: "Kateri after kavica je najboljši?",
     options: ["Novi Sad", "Trst", "Ljubljana", "Budimpešta"],
     correct: "Novi Sad",
     questionImg: "img/8_main.jpg",
@@ -195,8 +199,9 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Imaš " + scoreCount + " od " + questionCount + " točk";
+        "Imaš " + scoreCount + " od " + questionCount + " točk.";
         if(scoreCount >= 1){ // TODO 1->questionCount
+          userScoreWin.classList.remove("hide");
           surpriseButton.classList.remove("hide");
           restart.classList.add("hide");
         }
@@ -248,7 +253,7 @@ function quizCreator() {
     let div = document.createElement("div");
     div.classList.add("container-mid", "hide");
     //question number
-    countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Questions";
+    countOfQuestion.innerHTML = "Vprašanje 1/" + quizArray.length;
     //question
     let question_DIV = document.createElement("p");
     question_DIV.classList.add("question");
@@ -324,6 +329,7 @@ startButton.addEventListener("click", () => {
 
 nameButton.addEventListener("click", () => {
   nameContainer.classList.add("hide");
+  document.getElementById("date-question-name").textContent = "Dobro " + document.getElementById("name-input").value + " Gianni, kaj je danes?";
   dateContainer.classList.remove("hide");
 });
 
@@ -339,12 +345,22 @@ eventButton.addEventListener("click", () => {
 
 ageButton.addEventListener("click", () => {
   ageContainer.classList.add("hide");
+  introContainer.classList.remove("hide");
+});
+
+introButton.addEventListener("click", () => {
+  introContainer.classList.add("hide");
   startScreen.classList.remove("hide");
 });
 
 surpriseButton.addEventListener("click", () => {
   scoreContainer.classList.add("hide");
   qrCodeContainer.classList.remove("hide");
+});
+
+eventButtonNo.addEventListener("click", () => {
+  alert("Torej zapri to stran takoj!!!11!!1!");
+  eventButton.classList.add("hide");
 });
 
 //hide quiz and display start screen
