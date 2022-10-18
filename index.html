@@ -19,21 +19,28 @@
       <button id="next-button-name">Naprej</button>
     </div>
     <div class="start-screen-date card hide">
-      <p class="question">Dobro Jana, kaj je danes?</p>
-      <input type="date" id="date-input" name="date">
+      <p class="question" id="date-question-name"></p>
+      <input type="date" id="date-input" name="date" onfocus="(this.type='date')">
       <button id="next-button-date">Naprej</button>
     </div>
     <div class="start-screen-event card hide">
-      <p class="question">Hmm.. praviš, da imaš rojstni dan..</p>
-      <button id="next-button-event">Naprej</button>
+      <p class="question">Hmm.. praviš, da imaš rojstni dan.. 🤔</p>
+      <button id="next-button-event">Da</button>
+      <button id="event-button-no">Ne</button>
     </div>
     <div class="start-screen-age card hide">
       <p class="question">Koliko let pa imaš?</p>
-      <input type="number" id="age-input" name="age" placeholder="69">
+      <input type="number" id="age-input" name="age" placeholder="6.9" min="1" max="22">
       <button id="next-button-age">Naprej</button>
     </div>
+    <div class="start-screen-intro card hide">
+      <p class="">Dobro. Da vidimo, če si to res ti 😌</p>
+      <p class="">Ker praviš, da si stara 21 let, sem ti pripravil kviz z ..</p><br>
+      <p class="question">.. z 21 vprašanji.</p><br>
+      <p class="">Presenečenje te čaka na koncu kviza, če boš uspela priti do tja seveda.. 😏</p>
+      <button id="next-button-intro">Naprej</button>
+    </div>
     <div class="start-screen hide">
-      <p class="question">21 let -> 21 vprašanj</p>
       <button id="start-button">Začni</button>
     </div>
     <div id="display-container">
@@ -53,11 +60,12 @@
     </div>
     <div class="score-container hide">
       <div id="user-score">Rezultat kviza</div>
+      <p id="user-score-win" class="hide"><br>Z dosegom vseh točk si končno dokazala, da si res moja Jana. Zaslužila si si presenečenje.</p>
       <button id="restart">Poskusi znova</button>
       <button id="to-the-code" class="hide">Pojdi na presenečenje</button>
     </div>
-    <div class="qr-code hide">
-      <img src="" alt="">
+    <div class="qr-code hide card">
+      <img src="img/ascii-art.png" alt="" class="ascii-art">
     </div>
     <!-- Script -->
     <script src="script.js"></script>
