@@ -22,7 +22,12 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
+button:hover {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.24), 0 12px 30px 0 rgba(0,0,0,0.19);
+}
+
 #start-button,
 #restart, #to-the-code {
   font-size: 1.3em;
@@ -80,7 +85,7 @@ button {
   color: #000000;
   cursor: not-allowed;
 }
-#next-button, #next-button-name, #next-button-date, #next-button-event, #next-button-age {
+#next-button, #next-button-name, #next-button-date, #next-button-event, #next-button-age, #event-button-no, #next-button-intro {
   font-size: 1em;
   margin-top: 1.5em;
   background-color: #0a69ed;
@@ -102,9 +107,10 @@ button {
   color: #689f38;
   border-color: #689f38;
 }
-#user-score {
+#user-score, #user-score-win {
   font-size: 1.5em;
   color: #ffffff;
+  text-align: center;
 }
 .question-image {
   display: block;
@@ -132,4 +138,25 @@ input {
   padding: 10px;
   max-width: 100%;
   border-radius: 10px;
+}
+
+#next-button-event {
+  background-color: #689f38;
+}
+
+#event-button-no {
+  background-color: #d32f2f;
+  margin-right: 1em;
+}
+
+.start-screen-intro {
+  text-align: center;
+}
+
+.ascii-art {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  max-width: 100%;
 }
