@@ -329,11 +329,15 @@ startButton.addEventListener("click", () => {
 
 nameButton.addEventListener("click", () => {
   nameContainer.classList.add("hide");
-  document.getElementById("date-question-name").textContent = "Dobro " + document.getElementById("name-input").value + " Gianni, kaj je danes?";
+  document.getElementById("date-question-name").textContent = "Dobro " + document.getElementById("name-input").value + " Gianni, kaj je danes? 📆";
   dateContainer.classList.remove("hide");
 });
 
 dateButton.addEventListener("click", () => {
+  if(document.getElementById("date-input").value != "2022-10-28"){
+    alert("Torej danes ni dan za to, zapri to stran takoj!!!11!!1!");
+    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
+  }
   dateContainer.classList.add("hide");
   eventContainer.classList.remove("hide");
 });
@@ -361,6 +365,7 @@ surpriseButton.addEventListener("click", () => {
 eventButtonNo.addEventListener("click", () => {
   alert("Torej zapri to stran takoj!!!11!!1!");
   eventButton.classList.add("hide");
+  window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
 });
 
 //hide quiz and display start screen
