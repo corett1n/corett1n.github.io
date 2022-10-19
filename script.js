@@ -328,6 +328,10 @@ startButton.addEventListener("click", () => {
 });
 
 nameButton.addEventListener("click", () => {
+  if(document.getElementById("name-input").value.toUpperCase() != "JANA"){
+    alert("Torej nisi moja Jana, zapri to stran takoj!!!11!!1!");
+    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
+  }
   nameContainer.classList.add("hide");
   document.getElementById("date-question-name").textContent = "Dobro " + document.getElementById("name-input").value + " Gianni, kaj je danes? 📆";
   dateContainer.classList.remove("hide");
