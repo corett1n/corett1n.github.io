@@ -352,6 +352,10 @@ eventButton.addEventListener("click", () => {
 });
 
 ageButton.addEventListener("click", () => {
+  if(document.getElementById("age-input").value != "21"){
+    alert("Niti številk ne pozna, zapri to stran takoj!!!11!!1!");
+    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
+  }
   ageContainer.classList.add("hide");
   introContainer.classList.remove("hide");
 });
