@@ -328,7 +328,7 @@ startButton.addEventListener("click", () => {
 });
 
 nameButton.addEventListener("click", () => {
-  if(document.getElementById("name-input").value.toUpperCase() != "JANA"){
+  if(!document.getElementById("name-input").value.toUpperCase().includes("JANA")){
     alert("Torej nisi moja Jana, zapri to stran takoj!!!11!!1!");
     window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
   }
@@ -381,3 +381,8 @@ window.onload = () => {
   //startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
+
+document.getElementsByClassName("qr-code")[0].addEventListener("click", () => {
+  document.getElementsByClassName("qr-code-front")[0].classList.add("hide");
+  document.getElementsByClassName("qr-code-back")[0].classList.remove("hide");
+});
