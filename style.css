@@ -160,3 +160,16 @@ input {
   border-radius: 10%;
   max-width: 100%;
 }
+
+#timer-icon {
+  height: 1.5em;
+}
+
+#footer {
+  position: fixed;
+  padding: 3px;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  text-align: center;
+}
