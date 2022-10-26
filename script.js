@@ -200,7 +200,7 @@ nextBtn.addEventListener(
       //user score
       userScore.innerHTML =
         "Imaš " + scoreCount + " od " + questionCount + " točk.";
-        if(scoreCount >= 1){ // TODO 1->questionCount
+        if(scoreCount >= questionCount){ // TODO 1->questionCount
           userScoreWin.classList.remove("hide");
           surpriseButton.classList.remove("hide");
           restart.classList.add("hide");
