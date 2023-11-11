@@ -157,7 +157,7 @@ button:hover {
   -webkit-transition-duration: 0.3s; 
   -webkit-transition-timing-function: ease; 
 }
-.question-image:hover{
+.question-image:hover, .question-image:active{
   transform: scale(2.5);
 }
 .card {
