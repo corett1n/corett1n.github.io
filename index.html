@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="UTF-8"
+    />
+    <title>28.10.2022</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="img/cake.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="start-screen-name card">
+        <p class="question">Zdravo 👋<br />Kako ti je ime?</p>
+        <input type="text" id="name-input" name="name" placeholder="Ime" />
+        <button id="next-button-name">Naprej</button>
+      </div>
+      <div class="start-screen-date card hide">
+        <p class="question" id="date-question-name"></p>
+        <input
+          type="date"
+          id="date-input"
+          name="date"
+          onfocus="(this.type='date')"
+        />
+        <button id="next-button-date">Naprej</button>
+      </div>
+      <div class="start-screen-event card hide">
+        <p class="question">Hmm.. praviš, da imaš rojstni dan.. 🤔</p>
+        <button id="next-button-event">Da</button>
+        <button id="event-button-no">Ne</button>
+      </div>
+      <div class="start-screen-age card hide">
+        <p class="question">Koliko let pa imaš? 🔞</p>
+        <input
+          type="number"
+          id="age-input"
+          name="age"
+          placeholder="6.9"
+          min="1"
+          max="22"
+        />
+        <button id="next-button-age">Naprej</button>
+      </div>
+      <div class="start-screen-intro card hide">
+        <p class="">Dobro. Da vidimo, če si to res ti 😌</p>
+        <p class="">
+          Ker praviš, da si stara 21 let, sem ti pripravil kviz z ..
+        </p>
+        <br />
+        <p class="question">.. z 21 vprašanji. 🤯</p>
+        <br />
+        <p class="">
+          Pravila so enostavna. Da mi dokažeš, da si ti res moja Jana, moraš
+          pravilno odgovoriti na vseh 21 vprašanj, za vsako vprašanje pa imaš na
+          voljo samo 10s ⏳
+        </p>
+        <p class="">
+          Presenečenje te čaka na koncu kviza, če boš uspela priti do tja
+          seveda.. 😏
+        </p>
+        <button id="next-button-intro">Naprej</button>
+      </div>
+      <div class="start-screen hide">
+        <button id="start-button">Začni</button>
+      </div>
+      <div id="display-container">
+        <div class="header">
+          <div class="number-of-count">
+            <span class="number-of-question">Vprašanje 1/3</span>
+          </div>
+          <div class="timer-div">
+            <img src="img/timer-icon.svg" id="timer-icon" />
+            <span class="time-left">10s</span>
+          </div>
+        </div>
+        <div id="container">
+          <!-- questions and options will be displayed here -->
+        </div>
+        <button id="next-button">Naprej</button>
+      </div>
+      <div class="score-container hide">
+        <div id="user-score">Rezultat kviza</div>
+        <p id="user-score-win" class="hide">
+          <br />Z dosegom vseh točk si končno dokazala, da si res moja Jana
+          ✅<br />Zaslužila si si presenečenje 😌
+        </p>
+        <button id="restart">Poskusi znova ❌</button>
+        <button id="to-the-code" class="hide">Pojdi na presenečenje</button>
+      </div>
+      <div class="qr-code hide card">
+        <div class="qr-code-front">
+          <img src="img/ascii-art.png" alt="" class="ascii-art" />
+        </div>
+        <div class="qr-code-back hide">
+          <img src="img/qr-code.png" alt="" class="ascii-art" />
+        </div>
+      </div>
+    </div>
+    <!-- <div id="footer">MC, 28.10.2022</div> -->
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
