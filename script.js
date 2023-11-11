@@ -395,64 +395,41 @@ const quizDisplay = (questionCount) => {
 function quizCreator() {
   // empty the array
   quizArray = [];
-  
+
   // create an array with questions of sorted categories
-  if (selectedCategories.vse) {
+  if (selectedCategories.casopisi)
     casopisiQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.geografskipolozaj)
     geografskipolozajQuiz.forEach((el) => quizArray.push(el));
-    hranaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.hrana) hranaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.hribovja)
     hribovjaQuiz.forEach((el) => quizArray.push(el));
-    junakiQuiz.forEach((el) => quizArray.push(el));
-    mestaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.junaki) junakiQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.narodnisimboli)
     narodnisimboliQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.podjetja)
     podjetjaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.pokrajine)
     pokrajineQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.prazniki)
     praznikiQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.pregovori)
     pregovoriQuiz.forEach((el) => quizArray.push(el));
-    rekeQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.reke) rekeQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.sportniki)
     sportnikiQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.tablice)
     tabliceQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.turisticnedestinacije)
     turisticnedestinacijeQuiz.forEach((el) => quizArray.push(el));
-    vinaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.vina) vinaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.zanimivosti)
     zanimivostiQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.zgodovina)
     zgodovinaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.znaneosebnosti)
     znaneosebnostiQuiz.forEach((el) => quizArray.push(el));
-  } else {
-    if (selectedCategories.casopisi)
-      casopisiQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.geografskipolozaj)
-      geografskipolozajQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.hrana) hranaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.hribovja)
-      hribovjaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.junaki)
-      junakiQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.narodnisimboli)
-      narodnisimboliQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.podjetja)
-      podjetjaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.pokrajine)
-      pokrajineQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.prazniki)
-      praznikiQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.pregovori)
-      pregovoriQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.reke) rekeQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.sportniki)
-      sportnikiQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.tablice)
-      tabliceQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.turisticnedestinacije)
-      turisticnedestinacijeQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.vina) vinaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.zanimivosti)
-      zanimivostiQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.zgodovina)
-      zgodovinaQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.znaneosebnosti)
-      znaneosebnostiQuiz.forEach((el) => quizArray.push(el));
-  }
 
   //randomly sort questions
   quizArray.sort(() => Math.random() - 0.5);
@@ -523,7 +500,6 @@ function checker(userOption) {
 //initial setup
 function initial() {
   selectedCategories = {
-    vse: document.querySelector("#vse").checked,
     casopisi: document.querySelector("#casopisi").checked,
     geografskipolozaj: document.querySelector("#geografskipolozaj").checked,
     hrana: document.querySelector("#hrana").checked,
@@ -550,7 +526,7 @@ function initial() {
   scoreCount = 0;
   count = timecount;
   clearInterval(countdown);
-  timerDisplay();
+  //timerDisplay();
   quizCreator();
   quizDisplay(questionCount);
 }
