@@ -14,7 +14,7 @@
 }
 .background::before {
   content: "";
-  background-image: url("media/background/background6.png");
+  background-image: url("media/background/background8.png");
   background-color: #ffffff;
   background-size: cover;
   position: fixed;
