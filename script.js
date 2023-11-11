@@ -526,7 +526,7 @@ function initial() {
   scoreCount = 0;
   count = timecount;
   clearInterval(countdown);
-  //timerDisplay();
+  //timerDisplay(); todo: disabled timer
   quizCreator();
   quizDisplay(questionCount);
 }
