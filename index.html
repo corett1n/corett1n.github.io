@@ -6,28 +6,132 @@
       content="width=device-width, initial-scale=1.0"
       charset="UTF-8"
     />
-    <title>Kviz o Sloveniji 🇸🇮</title>
+    <title>Kviz o Sloveniji</title>
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="img/cake.png" />
+    <link rel="icon" type="image/x-icon" href="media/favicon.png" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="background">
       <div class="start-screen">
-        <button id="start-button">Začni</button>
+        <button id="start-button">Vstopi</button>
       </div>
-      <div id="display-container">
+      <div class="categories-screen hide">
+        <div id="categories">
+          <div class="header">V katerem znanju bi se radi preizkusili?</div>
+          <form action="">
+            <label for="vse">
+              <input type="checkbox" id="vse" name="vse" />
+              Vse </label
+            ><br /><br />
+            <label for="casopisi">
+              <input type="checkbox" id="casopisi" name="casopisi" />
+              Časopisi </label
+            ><br />
+            <label for="geografskipolozaj">
+              <input
+                type="checkbox"
+                id="geografskipolozaj"
+                name="geografskipolozaj"
+              />
+              Geografski položaj </label
+            ><br />
+            <label for="hrana">
+              <input type="checkbox" id="hrana" name="hrana" />
+              Hrana </label
+            ><br />
+            <label for="hribovja">
+              <input type="checkbox" id="hribovja" name="hribovja" />
+              Hribovja </label
+            ><br />
+            <label for="junaki">
+              <input type="checkbox" id="junaki" name="junaki" />
+              Junaki </label
+            ><br />
+            <label for="mesta">
+              <input type="checkbox" id="mesta" name="mesta" />
+              Mesta </label
+            ><br />
+            <label for="narodnisimboli">
+              <input
+                type="checkbox"
+                id="narodnisimboli"
+                name="narodnisimboli"
+              />
+              Narodni simboli </label
+            ><br />
+            <label for="podjetja">
+              <input type="checkbox" id="podjetja" name="podjetja" />
+              Podjetja </label
+            ><br />
+            <label for="pokrajine">
+              <input type="checkbox" id="pokrajine" name="pokrajine" />
+              Pokrajine </label
+            ><br />
+            <label for="prazniki">
+              <input type="checkbox" id="prazniki" name="prazniki" />
+              Prazniki </label
+            ><br />
+            <label for="pregovori">
+              <input type="checkbox" id="pregovori" name="pregovori" />
+              Pregovori </label
+            ><br />
+            <label for="reke">
+              <input type="checkbox" id="reke" name="reke" />
+              Reke </label
+            ><br />
+            <label for="sportniki">
+              <input type="checkbox" id="sportniki" name="sportniki" />
+              Športniki </label
+            ><br />
+            <label for="tablice">
+              <input type="checkbox" id="tablice" name="tablice" />
+              Tablice </label
+            ><br />
+            <label for="turisticnedestinacije">
+              <input
+                type="checkbox"
+                id="turisticnedestinacije"
+                name="turisticnedestinacije"
+              />
+              Turistične destinacije </label
+            ><br />
+            <label for="vina">
+              <input type="checkbox" id="vina" name="vina" />
+              Vina </label
+            ><br />
+            <label for="zanimivosti">
+              <input type="checkbox" id="zanimivosti" name="zanimivosti" />
+              Zanimivosti </label
+            ><br />
+            <label for="zgodovina">
+              <input type="checkbox" id="zgodovina" name="zgodovina" />
+              Zgodovina </label
+            ><br />
+            <label for="znaneosebnosti">
+              <input
+                type="checkbox"
+                id="znaneosebnosti"
+                name="znaneosebnosti"
+              />
+              Znane osebnosti </label
+            ><br />
+          </form>
+        </div>
+        <button id="select-categories">Začni</button>
+      </div>
+      <div id="display-container" class="hide">
         <div class="header">
           <div class="number-of-count">
             <span class="number-of-question">Vprašanje 1/</span>
           </div>
           <div class="timer-div">
-            <img src="img/timer-icon.svg" id="timer-icon" />
+            <img src="media/timer-icon.svg" id="timer-icon" />
             <span class="time-left">20s</span>
           </div>
         </div>
@@ -38,10 +142,8 @@
       </div>
       <div class="score-container hide">
         <div id="user-score">Rezultat kviza</div>
-        <p id="user-score-win" class="hide">
-          Čestitamo! 🎉
-        </p>
-        <button id="restart">Poskusi znova ❌</button>
+        <p id="user-score-win" class="hide">Čestitamo! 🎉</p>
+        <button id="restart">Poskusi znova</button>
       </div>
     </div>
     <!-- <div id="footer">MC, 28.10.2022</div> -->

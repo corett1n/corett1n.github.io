@@ -14,9 +14,10 @@
 }
 .background::before {
   content: "";
-  background-image: url("background2.png");
+  background-image: url("media/background/background6.png");
+  background-color: #ffffff;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -24,6 +25,7 @@
   opacity: 0.369;
 }
 .start-screen,
+.categories-screen,
 .score-container {
   position: absolute;
   top: 0;
@@ -47,6 +49,7 @@ button:hover {
 
 #start-button,
 #restart,
+#select-categories,
 #to-the-code {
   font-size: 1.3em;
   padding: 0.5em 1.8em;
@@ -55,12 +58,14 @@ button:hover {
   color: #ffffff;
 }
 #restart,
+#select-categories,
 #to-the-code {
   margin-top: 0.9em;
 }
-#display-container {
-  background-color: #ffffff;
-  padding: 2.2em 1.8em;
+#display-container,
+.categories-screen {
+  background-color: #f8f8f8;
+  padding: 1em 1.5em;
   width: 80%;
   max-width: 37.5em;
   margin: 0 auto;
@@ -69,6 +74,7 @@ button:hover {
   top: 50%;
   left: 50%;
   border-radius: 0.6em;
+  border: 2px solid #689f38;
 }
 .header {
   margin-bottom: 1.8em;
@@ -147,6 +153,12 @@ button:hover {
   margin-bottom: 1.25em;
   max-width: 75%;
   max-height: 150px;
+  -webkit-transition-property: all; 
+  -webkit-transition-duration: 0.3s; 
+  -webkit-transition-timing-function: ease; 
+}
+.question-image:hover{
+  transform: scale(2.5);
 }
 .card {
   background-color: #ffffff;

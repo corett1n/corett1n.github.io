@@ -1,9 +1,11 @@
 //References
 let timeLeft = document.querySelector(".time-left");
 let quizContainer = document.getElementById("container");
+let selectCategoriesBtn = document.getElementById("select-categories");
 let nextBtn = document.getElementById("next-button");
 let countOfQuestion = document.querySelector(".number-of-question");
 let displayContainer = document.getElementById("display-container");
+let categoriesScreen = document.querySelector(".categories-screen");
 let scoreContainer = document.querySelector(".score-container");
 let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
@@ -17,10 +19,13 @@ let timecount = 20;
 let countdown;
 
 //Questions and Options array
-const quizArray = [
+
+let selectedCategories = {};
+
+let casopisiQuiz = [
   {
     id: "0",
-    question: 'Kakšen je pravilen odgovor na "Plačate z gotovino"?',
+    question: "casopisiQuiz",
     options: [
       "Da, gotovina.",
       "Ne, kartica bo.",
@@ -28,207 +33,306 @@ const quizArray = [
       "Oboje.",
     ],
     correct: "Ne gotovina, cash.",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "1",
-    question:
-      "Kateri izraz se uporablja za opis zelo kratkega časovnega obdobja?",
-    options: ["V pol sekunde", "V hipu", "V trenutku", "Takoj"],
-    correct: "V pol sekunde",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "2",
-    question: "Kako se bere zapis 10%?",
-    options: [
-      "Deset odsto odstotkov",
-      "Deset odstotkov",
-      "Sto odstotkov",
-      "Deset posto",
-    ],
-    correct: "Deset odsto odstotkov",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "3",
-    question: "Naslov te slike je?",
-    options: [
-      "Raining in the rain",
-      "Singing in the rain",
-      "Raining in the sing",
-      "Singing in the sing",
-    ],
-    correct: "Raining in the rain",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "4",
-    question: 'Kateri je pravilen odgovor na vprašanje "Kaj bo potem?"?',
-    options: ["Vse", "Xbox", "Serija", "Kavica"],
-    correct: "Vse",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "5",
-    question: "*Na sliki je...?",
-    options: [
-      "Slovaška zastava",
-      "Slovenska zastava",
-      "Ruska zastava",
-      "Poljska zastava",
-    ],
-    correct: "Slovaška zastava",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "6",
-    question: "Kako je ime gradu na sliki?",
-    options: [
-      "Miramarski grad",
-      "Schloss Miramar",
-      "Castello di Miramare",
-      "Miramare castle",
-    ],
-    correct: "Miramarski grad",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "7",
-    question: "Katera kavica je najboljša?",
-    options: ["Trst", "Novi Sad", "Ljubljana", "Budimpešta"],
-    correct: "Trst",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "8",
-    question: "Kateri after kavica je najboljši?",
-    options: ["Novi Sad", "Trst", "Ljubljana", "Budimpešta"],
-    correct: "Novi Sad",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "9",
-    question: "Kateri fitnes hoče Jana za Martina in zakaj?",
-    options: [
-      "Benetke - da ga lahko moti",
-      "Split - da ga lahko prekine",
-      "Trst - da pride Martin zjutraj v posteljo",
-      "Ljubljana - da se celo noč stiska k njemu",
-    ],
-    correct: "Benetke - da ga lahko moti",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "10",
-    question: "Kako je ime tej igri in kdo vedno zmaga?",
-    options: [
-      "Briškola, Martin",
-      "Briscola, Martin",
-      "Briscola, Jana",
-      "Briškola, Jana",
-    ],
-    correct: "Briškola, Martin",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "11",
-    question: "Kdo vedno zmaga v šahu?",
-    options: ["Martin", "Jana", "Oba", "Nobeden"],
-    correct: "Martin",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "12",
-    question: "Kako se reče slonu po madžarsko?",
-    options: ["Szlon", "Zlon", "Sslon", "Elefant"],
-    correct: "Szlon",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "13",
-    question:
-      "Kdo sta glavna igralca filma, ki bo kmalu na sporedu v Cineplexx Koper?",
-    options: [
-      "Medo Makedonija in Panda Pandica",
-      "Martin in Jana",
-      "Gru in minioni",
-      "Medo Makedonija in Snežak Slovenija",
-    ],
-    correct: "Medo Makedonija in Panda Pandica",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "14",
-    question: "Kdo dela najboljše sendviče?",
-    options: ["Martin", "Jana", "Sendviček", "Paninček"],
-    correct: "Martin",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "15",
-    question: "Čigav je Xbox?",
-    options: [
-      "Martinov",
-      "Janin",
-      "Od Meda Makedonija",
-      "Od Snežaka Slovenija",
-    ],
-    correct: "Martinov",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "16",
-    question: "Kakšno registracijo imajo avtomobili v mestu Bjelovar?",
-    options: ["BJ", "BE", "BL", "BV"],
-    correct: "BJ",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "17",
-    question: "*Kaj imajo skupnega Benetke in Budimpešta?",
-    options: [
-      "Obe mesti se začneta na B",
-      "Mesti sta pobrateni",
-      "Obe imata pomembno pristanišče",
-      "Barve zastave",
-    ],
-    correct: "Obe mesti se začneta na B",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "18",
-    question: "Čigav je ta nosek?",
-    options: [
-      "Martinov",
-      "Janin",
-      "Od Meda Makedonija",
-      "Od Snežaka Slovenija",
-    ],
-    correct: "Martinov",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "19",
-    question: "*Kam bi dala Jana tuš v stanovanju?",
-    options: ["Blizu postelje", "Na hodnik", "V stranišče", "Na dvorišče"],
-    correct: "Blizu postelje",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
-  },
-  {
-    id: "20",
-    question: "Kakšna je pravilna poza za sliko za vizum?",
-    options: ["Zvita", "Pokončna", "Ravna", "Stranska"],
-    correct: "Zvita",
-    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
 ];
 
+let geografskipolozajQuiz = [
+  {
+    id: "0",
+    question: "geografskipolozajQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let hranaQuiz = [
+  {
+    id: "0",
+    question: "hranaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let hribovjaQuiz = [
+  {
+    id: "0",
+    question: "hribovjaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let junakiQuiz = [
+  {
+    id: "0",
+    question: "junakiQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let mestaQuiz = [
+  {
+    id: "0",
+    question: "mestaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let narodnisimboliQuiz = [
+  {
+    id: "0",
+    question: "narodnisimboliQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let podjetjaQuiz = [
+  {
+    id: "0",
+    question: "podjetjaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let pokrajineQuiz = [
+  {
+    id: "0",
+    question: "pokrajineQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let praznikiQuiz = [
+  {
+    id: "0",
+    question: "praznikiQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let pregovoriQuiz = [
+  {
+    id: "0",
+    question: "pregovoriQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let rekeQuiz = [
+  {
+    id: "0",
+    question: "rekeQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let sportnikiQuiz = [
+  {
+    id: "0",
+    question: "sportnikiQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let tabliceQuiz = [
+  {
+    id: "0",
+    question: "tabliceQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let turisticnedestinacijeQuiz = [
+  {
+    id: "0",
+    question: "turisticnedestinacijeQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let vinaQuiz = [
+  {
+    id: "0",
+    question: "vinaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let zanimivostiQuiz = [
+  {
+    id: "0",
+    question: "zanimivostiQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let zgodovinaQuiz = [
+  {
+    id: "0",
+    question: "zgodovinaQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let znaneosebnostiQuiz = [
+  {
+    id: "0",
+    question: "znaneosebnostiQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let quizArray = [];
+
 //Restart Quiz
 restart.addEventListener("click", () => {
-  initial();
-  displayContainer.classList.remove("hide");
   scoreContainer.classList.add("hide");
+  categoriesScreen.classList.remove("hide");
+  initial();
 });
 
 //Next Button
@@ -244,7 +348,7 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Imaš " + scoreCount + " od " + questionCount + " točk.";
+        "Imate " + scoreCount + " od " + questionCount + " točk.";
       if (scoreCount >= questionCount) {
         // TODO 1->questionCount
         userScoreWin.classList.remove("hide");
@@ -289,8 +393,70 @@ const quizDisplay = (questionCount) => {
 
 //Quiz Creation
 function quizCreator() {
+  // empty the array
+  quizArray = [];
+  
+  // create an array with questions of sorted categories
+  if (selectedCategories.vse) {
+    casopisiQuiz.forEach((el) => quizArray.push(el));
+    geografskipolozajQuiz.forEach((el) => quizArray.push(el));
+    hranaQuiz.forEach((el) => quizArray.push(el));
+    hribovjaQuiz.forEach((el) => quizArray.push(el));
+    junakiQuiz.forEach((el) => quizArray.push(el));
+    mestaQuiz.forEach((el) => quizArray.push(el));
+    narodnisimboliQuiz.forEach((el) => quizArray.push(el));
+    podjetjaQuiz.forEach((el) => quizArray.push(el));
+    pokrajineQuiz.forEach((el) => quizArray.push(el));
+    praznikiQuiz.forEach((el) => quizArray.push(el));
+    pregovoriQuiz.forEach((el) => quizArray.push(el));
+    rekeQuiz.forEach((el) => quizArray.push(el));
+    sportnikiQuiz.forEach((el) => quizArray.push(el));
+    tabliceQuiz.forEach((el) => quizArray.push(el));
+    turisticnedestinacijeQuiz.forEach((el) => quizArray.push(el));
+    vinaQuiz.forEach((el) => quizArray.push(el));
+    zanimivostiQuiz.forEach((el) => quizArray.push(el));
+    zgodovinaQuiz.forEach((el) => quizArray.push(el));
+    znaneosebnostiQuiz.forEach((el) => quizArray.push(el));
+  } else {
+    if (selectedCategories.casopisi)
+      casopisiQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.geografskipolozaj)
+      geografskipolozajQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.hrana) hranaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.hribovja)
+      hribovjaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.junaki)
+      junakiQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.narodnisimboli)
+      narodnisimboliQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.podjetja)
+      podjetjaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.pokrajine)
+      pokrajineQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.prazniki)
+      praznikiQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.pregovori)
+      pregovoriQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.reke) rekeQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.sportniki)
+      sportnikiQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.tablice)
+      tabliceQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.turisticnedestinacije)
+      turisticnedestinacijeQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.vina) vinaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.zanimivosti)
+      zanimivostiQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.zgodovina)
+      zgodovinaQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.znaneosebnosti)
+      znaneosebnostiQuiz.forEach((el) => quizArray.push(el));
+  }
+
   //randomly sort questions
   quizArray.sort(() => Math.random() - 0.5);
+
   //generate quiz
   for (let i of quizArray) {
     //randomly sort options
@@ -356,6 +522,29 @@ function checker(userOption) {
 
 //initial setup
 function initial() {
+  selectedCategories = {
+    vse: document.querySelector("#vse").checked,
+    casopisi: document.querySelector("#casopisi").checked,
+    geografskipolozaj: document.querySelector("#geografskipolozaj").checked,
+    hrana: document.querySelector("#hrana").checked,
+    hribovja: document.querySelector("#hribovja").checked,
+    junaki: document.querySelector("#junaki").checked,
+    mesta: document.querySelector("#mesta").checked,
+    narodnisimboli: document.querySelector("#narodnisimboli").checked,
+    podjetja: document.querySelector("#podjetja").checked,
+    pokrajine: document.querySelector("#pokrajine").checked,
+    prazniki: document.querySelector("#prazniki").checked,
+    pregovori: document.querySelector("#pregovori").checked,
+    reke: document.querySelector("#reke").checked,
+    sportniki: document.querySelector("#sportniki").checked,
+    tablice: document.querySelector("#tablice").checked,
+    turisticnedestinacije: document.querySelector("#turisticnedestinacije")
+      .checked,
+    vina: document.querySelector("#vina").checked,
+    zanimivosti: document.querySelector("#zanimivosti").checked,
+    zgodovina: document.querySelector("#zgodovina").checked,
+    znaneosebnosti: document.querySelector("#znaneosebnosti").checked,
+  };
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
@@ -369,12 +558,12 @@ function initial() {
 //when user click on start button
 startButton.addEventListener("click", () => {
   startScreen.classList.add("hide");
+  categoriesScreen.classList.remove("hide");
+});
+
+//when user click on start button
+selectCategoriesBtn.addEventListener("click", () => {
+  categoriesScreen.classList.add("hide");
   displayContainer.classList.remove("hide");
   initial();
 });
-
-//hide quiz and display start screen
-window.onload = () => {
-  //startScreen.classList.remove("hide");
-  displayContainer.classList.add("hide");
-};
