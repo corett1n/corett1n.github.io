@@ -363,7 +363,7 @@ nextBtn.addEventListener(
       quizDisplay(questionCount);
       count = timecount;
       clearInterval(countdown);
-      timerDisplay();
+      //timerDisplay(); todo: disabled timer
     }
   })
 );
