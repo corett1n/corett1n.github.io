@@ -9,173 +9,218 @@ let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
 let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
-let nameContainer = document.querySelector(".start-screen-name");
-let eventContainer = document.querySelector(".start-screen-event");
-let dateContainer = document.querySelector(".start-screen-date");
-let ageContainer = document.querySelector(".start-screen-age");
-let introContainer = document.querySelector(".start-screen-intro");
-let qrCodeContainer = document.querySelector(".qr-code");
-let nameButton = document.getElementById("next-button-name");
-let eventButton= document.getElementById("next-button-event");
-let dateButton = document.getElementById("next-button-date");
-let ageButton = document.getElementById("next-button-age");
 let surpriseButton = document.getElementById("to-the-code");
-let eventButtonNo = document.getElementById("event-button-no");
-let introButton = document.getElementById("next-button-intro");
 let userScoreWin = document.getElementById("user-score-win");
 let questionCount;
 let scoreCount = 0;
-let count = 11;
+let timecount = 20;
 let countdown;
 
 //Questions and Options array
 const quizArray = [
   {
     id: "0",
-    question: "Kakšen je pravilen odgovor na \"Plačate z gotovino\"?",
-    options: ["Da, gotovina.", "Ne, kartica bo.", "Ne gotovina, cash.", "Oboje."],
+    question: 'Kakšen je pravilen odgovor na "Plačate z gotovino"?',
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
     correct: "Ne gotovina, cash.",
-    questionImg: "img/0_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "1",
-    question: "Kateri izraz se uporablja za opis zelo kratkega časovnega obdobja?",
+    question:
+      "Kateri izraz se uporablja za opis zelo kratkega časovnega obdobja?",
     options: ["V pol sekunde", "V hipu", "V trenutku", "Takoj"],
     correct: "V pol sekunde",
-    questionImg: "img/1_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "2",
     question: "Kako se bere zapis 10%?",
-    options: ["Deset odsto odstotkov", "Deset odstotkov", "Sto odstotkov", "Deset posto"],
+    options: [
+      "Deset odsto odstotkov",
+      "Deset odstotkov",
+      "Sto odstotkov",
+      "Deset posto",
+    ],
     correct: "Deset odsto odstotkov",
-    questionImg: "img/2_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "3",
     question: "Naslov te slike je?",
-    options: ["Raining in the rain", "Singing in the rain", "Raining in the sing", "Singing in the sing"],
+    options: [
+      "Raining in the rain",
+      "Singing in the rain",
+      "Raining in the sing",
+      "Singing in the sing",
+    ],
     correct: "Raining in the rain",
-    questionImg: "img/3_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "4",
-    question: "Kateri je pravilen odgovor na vprašanje \"Kaj bo potem?\"?",
+    question: 'Kateri je pravilen odgovor na vprašanje "Kaj bo potem?"?',
     options: ["Vse", "Xbox", "Serija", "Kavica"],
     correct: "Vse",
-    questionImg: "img/4_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "5",
     question: "*Na sliki je...?",
-    options: ["Slovaška zastava", "Slovenska zastava", "Ruska zastava", "Poljska zastava"],
+    options: [
+      "Slovaška zastava",
+      "Slovenska zastava",
+      "Ruska zastava",
+      "Poljska zastava",
+    ],
     correct: "Slovaška zastava",
-    questionImg: "img/5_main.png",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "6",
     question: "Kako je ime gradu na sliki?",
-    options: ["Miramarski grad", "Schloss Miramar", "Castello di Miramare", "Miramare castle"],
+    options: [
+      "Miramarski grad",
+      "Schloss Miramar",
+      "Castello di Miramare",
+      "Miramare castle",
+    ],
     correct: "Miramarski grad",
-    questionImg: "img/6_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "7",
     question: "Katera kavica je najboljša?",
     options: ["Trst", "Novi Sad", "Ljubljana", "Budimpešta"],
     correct: "Trst",
-    questionImg: "img/7_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "8",
     question: "Kateri after kavica je najboljši?",
     options: ["Novi Sad", "Trst", "Ljubljana", "Budimpešta"],
     correct: "Novi Sad",
-    questionImg: "img/8_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "9",
     question: "Kateri fitnes hoče Jana za Martina in zakaj?",
-    options: ["Benetke - da ga lahko moti", "Split - da ga lahko prekine", "Trst - da pride Martin zjutraj v posteljo", "Ljubljana - da se celo noč stiska k njemu"],
+    options: [
+      "Benetke - da ga lahko moti",
+      "Split - da ga lahko prekine",
+      "Trst - da pride Martin zjutraj v posteljo",
+      "Ljubljana - da se celo noč stiska k njemu",
+    ],
     correct: "Benetke - da ga lahko moti",
-    questionImg: "img/9_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "10",
     question: "Kako je ime tej igri in kdo vedno zmaga?",
-    options: ["Briškola, Martin", "Briscola, Martin", "Briscola, Jana", "Briškola, Jana"],
+    options: [
+      "Briškola, Martin",
+      "Briscola, Martin",
+      "Briscola, Jana",
+      "Briškola, Jana",
+    ],
     correct: "Briškola, Martin",
-    questionImg: "img/10_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "11",
     question: "Kdo vedno zmaga v šahu?",
     options: ["Martin", "Jana", "Oba", "Nobeden"],
     correct: "Martin",
-    questionImg: "img/11_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "12",
     question: "Kako se reče slonu po madžarsko?",
     options: ["Szlon", "Zlon", "Sslon", "Elefant"],
     correct: "Szlon",
-    questionImg: "img/12_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "13",
-    question: "Kdo sta glavna igralca filma, ki bo kmalu na sporedu v Cineplexx Koper?",
-    options: ["Medo Makedonija in Panda Pandica", "Martin in Jana", "Gru in minioni", "Medo Makedonija in Snežak Slovenija"],
+    question:
+      "Kdo sta glavna igralca filma, ki bo kmalu na sporedu v Cineplexx Koper?",
+    options: [
+      "Medo Makedonija in Panda Pandica",
+      "Martin in Jana",
+      "Gru in minioni",
+      "Medo Makedonija in Snežak Slovenija",
+    ],
     correct: "Medo Makedonija in Panda Pandica",
-    questionImg: "img/13_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "14",
     question: "Kdo dela najboljše sendviče?",
     options: ["Martin", "Jana", "Sendviček", "Paninček"],
     correct: "Martin",
-    questionImg: "img/14_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "15",
     question: "Čigav je Xbox?",
-    options: ["Martinov", "Janin", "Od Meda Makedonija", "Od Snežaka Slovenija"],
+    options: [
+      "Martinov",
+      "Janin",
+      "Od Meda Makedonija",
+      "Od Snežaka Slovenija",
+    ],
     correct: "Martinov",
-    questionImg: "img/15_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "16",
     question: "Kakšno registracijo imajo avtomobili v mestu Bjelovar?",
     options: ["BJ", "BE", "BL", "BV"],
     correct: "BJ",
-    questionImg: "img/16_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "17",
     question: "*Kaj imajo skupnega Benetke in Budimpešta?",
-    options: ["Obe mesti se začneta na B", "Mesti sta pobrateni", "Obe imata pomembno pristanišče", "Barve zastave"],
+    options: [
+      "Obe mesti se začneta na B",
+      "Mesti sta pobrateni",
+      "Obe imata pomembno pristanišče",
+      "Barve zastave",
+    ],
     correct: "Obe mesti se začneta na B",
-    questionImg: "img/17_main.jpg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "18",
     question: "Čigav je ta nosek?",
-    options: ["Martinov", "Janin", "Od Meda Makedonija", "Od Snežaka Slovenija"],
+    options: [
+      "Martinov",
+      "Janin",
+      "Od Meda Makedonija",
+      "Od Snežaka Slovenija",
+    ],
     correct: "Martinov",
-    questionImg: "img/18_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "19",
     question: "*Kam bi dala Jana tuš v stanovanju?",
     options: ["Blizu postelje", "Na hodnik", "V stranišče", "Na dvorišče"],
     correct: "Blizu postelje",
-    questionImg: "img/19_main.webp",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
   {
     id: "20",
     question: "Kakšna je pravilna poza za sliko za vizum?",
     options: ["Zvita", "Pokončna", "Ravna", "Stranska"],
     correct: "Zvita",
-    questionImg: "img/20_main.jpeg",
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
 ];
 
@@ -200,18 +245,19 @@ nextBtn.addEventListener(
       //user score
       userScore.innerHTML =
         "Imaš " + scoreCount + " od " + questionCount + " točk.";
-        if(scoreCount >= questionCount){ // TODO 1->questionCount
-          userScoreWin.classList.remove("hide");
-          surpriseButton.classList.remove("hide");
-          restart.classList.add("hide");
-        }
+      if (scoreCount >= questionCount) {
+        // TODO 1->questionCount
+        userScoreWin.classList.remove("hide");
+        surpriseButton.classList.remove("hide");
+        restart.classList.add("hide");
+      }
     } else {
       //display questionCount
       countOfQuestion.innerHTML =
         "Vprašanje " + (questionCount + 1) + "/" + quizArray.length;
       //display quiz
       quizDisplay(questionCount);
-      count = 11;
+      count = timecount;
       clearInterval(countdown);
       timerDisplay();
     }
@@ -264,7 +310,7 @@ function quizCreator() {
     let question_IMG = document.createElement("img");
     question_IMG.src = i.questionImg;
     question_IMG.classList.add("question-image");
-    
+
     div.appendChild(question_IMG);
     // ***
 
@@ -313,7 +359,7 @@ function initial() {
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
-  count = 11;
+  count = timecount;
   clearInterval(countdown);
   timerDisplay();
   quizCreator();
@@ -327,62 +373,8 @@ startButton.addEventListener("click", () => {
   initial();
 });
 
-nameButton.addEventListener("click", () => {
-  if(!document.getElementById("name-input").value.toUpperCase().includes("JANA")){
-    alert("Torej nisi moja Jana, zapri to stran takoj!!!11!!1!");
-    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
-  }
-  nameContainer.classList.add("hide");
-  document.getElementById("date-question-name").textContent = "Dobro " + document.getElementById("name-input").value + " Gianni, kaj je danes? 📆";
-  dateContainer.classList.remove("hide");
-});
-
-dateButton.addEventListener("click", () => {
-  if(document.getElementById("date-input").value != "2022-10-28"){
-    alert("Torej danes ni dan za to, zapri to stran takoj!!!11!!1!");
-    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
-  }
-  dateContainer.classList.add("hide");
-  eventContainer.classList.remove("hide");
-});
-
-eventButton.addEventListener("click", () => {
-  eventContainer.classList.add("hide");
-  ageContainer.classList.remove("hide");
-});
-
-ageButton.addEventListener("click", () => {
-  if(document.getElementById("age-input").value != "21"){
-    alert("Niti številk ne pozna, zapri to stran takoj!!!11!!1!");
-    window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
-  }
-  ageContainer.classList.add("hide");
-  introContainer.classList.remove("hide");
-});
-
-introButton.addEventListener("click", () => {
-  introContainer.classList.add("hide");
-  startScreen.classList.remove("hide");
-});
-
-surpriseButton.addEventListener("click", () => {
-  scoreContainer.classList.add("hide");
-  qrCodeContainer.classList.remove("hide");
-});
-
-eventButtonNo.addEventListener("click", () => {
-  alert("Torej zapri to stran takoj!!!11!!1!");
-  eventButton.classList.add("hide");
-  window.location.href = "https://media.tenor.com/KuJSBQPj1X0AAAAC/you-have-been-hacked-anon.gif";
-});
-
 //hide quiz and display start screen
 window.onload = () => {
   //startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
-
-document.getElementsByClassName("qr-code")[0].addEventListener("click", () => {
-  document.getElementsByClassName("qr-code-front")[0].classList.add("hide");
-  document.getElementsByClassName("qr-code-back")[0].classList.remove("hide");
-});
