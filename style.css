@@ -51,6 +51,8 @@ button:hover {
   font-size: 1.3em;
   padding: 0.5em 1.8em;
   border-radius: 0.2em;
+  background-color: #689f38;
+  color: #ffffff;
 }
 #restart,
 #to-the-code {
