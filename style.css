@@ -66,14 +66,17 @@ button:hover {
 .categories-screen {
   background-color: #f8f8f8;
   padding: 1em 1.5em;
-  min-width: 300px;
-  width: 80%;
-  max-width: 37.5em;
+  min-width: 350px;
+  width: fit-content;
+  height: auto;
+  /*
+  max-width: 40em;
+  */
   margin: 0 auto;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
   left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
   border-radius: 0.6em;
   border: 2px solid #689f38;
 }
@@ -100,9 +103,9 @@ button:hover {
 }
 .option-div {
   font-size: 0.9em;
-  width: 48%;
+  width: 32%;
   padding: 1em;
-  margin: 0.3em 1%;
+  margin: 0.3em 0.5%;
   text-align: left;
   outline: none;
   background: transparent;
