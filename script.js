@@ -17,6 +17,7 @@ let questionCount;
 let scoreCount = 0;
 let timecount = 20;
 let countdown;
+let atLeastOneCategoryIsSelected = false;
 
 //Questions and Options array
 
@@ -202,6 +203,22 @@ let rekeQuiz = [
   {
     id: "0",
     question: "rekeQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
+let splosnakulturaQuiz = [
+  {
+    id: "0",
+    question: "splosnakulturaQuiz",
     options: [
       "Da, gotovina.",
       "Ne, kartica bo.",
@@ -417,6 +434,8 @@ function quizCreator() {
   if (selectedCategories.pregovori)
     pregovoriQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.reke) rekeQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.splosnakultura)
+    splosnakulturaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.sportniki)
     sportnikiQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.tablice)
@@ -499,28 +518,6 @@ function checker(userOption) {
 
 //initial setup
 function initial() {
-  selectedCategories = {
-    casopisi: document.querySelector("#casopisi").checked,
-    geografskipolozaj: document.querySelector("#geografskipolozaj").checked,
-    hrana: document.querySelector("#hrana").checked,
-    hribovja: document.querySelector("#hribovja").checked,
-    junaki: document.querySelector("#junaki").checked,
-    mesta: document.querySelector("#mesta").checked,
-    narodnisimboli: document.querySelector("#narodnisimboli").checked,
-    podjetja: document.querySelector("#podjetja").checked,
-    pokrajine: document.querySelector("#pokrajine").checked,
-    prazniki: document.querySelector("#prazniki").checked,
-    pregovori: document.querySelector("#pregovori").checked,
-    reke: document.querySelector("#reke").checked,
-    sportniki: document.querySelector("#sportniki").checked,
-    tablice: document.querySelector("#tablice").checked,
-    turisticnedestinacije: document.querySelector("#turisticnedestinacije")
-      .checked,
-    vina: document.querySelector("#vina").checked,
-    zanimivosti: document.querySelector("#zanimivosti").checked,
-    zgodovina: document.querySelector("#zgodovina").checked,
-    znaneosebnosti: document.querySelector("#znaneosebnosti").checked,
-  };
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
@@ -539,6 +536,36 @@ startButton.addEventListener("click", () => {
 
 //when user click on start button
 selectCategoriesBtn.addEventListener("click", () => {
+  selectedCategories = {
+    casopisi: document.querySelector("#casopisi").checked,
+    geografskipolozaj: document.querySelector("#geografskipolozaj").checked,
+    hrana: document.querySelector("#hrana").checked,
+    hribovja: document.querySelector("#hribovja").checked,
+    junaki: document.querySelector("#junaki").checked,
+    mesta: document.querySelector("#mesta").checked,
+    narodnisimboli: document.querySelector("#narodnisimboli").checked,
+    podjetja: document.querySelector("#podjetja").checked,
+    pokrajine: document.querySelector("#pokrajine").checked,
+    prazniki: document.querySelector("#prazniki").checked,
+    pregovori: document.querySelector("#pregovori").checked,
+    reke: document.querySelector("#reke").checked,
+    splosnakultura: document.querySelector("#splosnakultura").checked,
+    sportniki: document.querySelector("#sportniki").checked,
+    tablice: document.querySelector("#tablice").checked,
+    turisticnedestinacije: document.querySelector("#turisticnedestinacije")
+      .checked,
+    vina: document.querySelector("#vina").checked,
+    zanimivosti: document.querySelector("#zanimivosti").checked,
+    zgodovina: document.querySelector("#zgodovina").checked,
+    znaneosebnosti: document.querySelector("#znaneosebnosti").checked,
+  };
+
+  for (const [key, value] of Object.entries(selectedCategories)) {
+    if (value) atLeastOneCategoryIsSelected = true;
+  }
+  if(!atLeastOneCategoryIsSelected) return;
+  atLeastOneCategoryIsSelected = false;
+
   categoriesScreen.classList.add("hide");
   displayContainer.classList.remove("hide");
   initial();
