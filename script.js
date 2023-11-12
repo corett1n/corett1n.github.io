@@ -32,6 +32,18 @@ let casopisiQuiz = [
       "Ne, kartica bo.",
       "Ne gotovina, cash.",
       "Oboje.",
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
     ],
     correct: "Ne gotovina, cash.",
     questionImg:
@@ -477,12 +489,9 @@ function quizCreator() {
     // ***
 
     //options
-    div.innerHTML += `
-      <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-    `;
+    i.options.forEach(option => {
+        div.innerHTML += `<button class="option-div" onclick="checker(this)">${option}</button>`
+    });
     quizContainer.appendChild(div);
   }
 }
@@ -563,7 +572,7 @@ selectCategoriesBtn.addEventListener("click", () => {
   for (const [key, value] of Object.entries(selectedCategories)) {
     if (value) atLeastOneCategoryIsSelected = true;
   }
-  if(!atLeastOneCategoryIsSelected) return;
+  if (!atLeastOneCategoryIsSelected) return;
   atLeastOneCategoryIsSelected = false;
 
   categoriesScreen.classList.add("hide");
