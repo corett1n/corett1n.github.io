@@ -302,19 +302,80 @@ let hribovjaQuiz = [
   },
 ];
 
+let junakiQuizOptions = [
+  "Erazem Predjamski",
+  "Kekec",
+  "Kralj Matjaž",
+  "Kralj Samo",
+  "Lepa Vida",
+  "Martin Krpan",
+  "Povodni mož",
+  "Zeleni Jurij",
+];
 let junakiQuiz = [
   {
     id: "0",
-    question: "junakiQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "Sin tržaškega cesarskega glavarja Nikolaja, znan predvsem kot ropar. Kmalu je zaslovel kot hraber bojevnik, a ker se je sprl s cesarjem, se je bil primoran umakniti na domači grad, ki ga je oblegala cesarska vojska. Brez težav je prenašal obleganje, saj je bilo pod gradom veliko rovov, po katerih so prenašali hrano. Cesarjevi vojaki so po naključju streljali na grad in ga ubili.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/junaki/slovenija-junaki-erazempredjamski.png",
+  },
+  {
+    id: "1",
+    question: "Je pogumen in prijazen pastirček, ki na visokogorskih pašnikih doživi marsikaj zanimivega. Medtem, ko se njegova čreda ovac in goveda mirno pase, se on sprehaja in raziskuje po gorskih travnikih in poteh.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[1],
+    questionImg:
+      "media/junaki/slovenija-junaki-kekec.png",
+  },
+  {
+    id: "2",
+    question: "Med ljudmi je bil zelo priljubljen, saj je pomagal vsem in je bil zelo radodaren. Zaradi njegove priljubljenosti so se ostali vladarji odločili, da ga ubijejo. Legenda pravi, da je zaspal pod goro Peco na Koroškem, kamor se je zatekel pred sovražniki. Ko se mu bo brada devetkrat ovila okoli kamnite mize, pa se bo zbudil in bo spet zavladal. To pomeni, da bodo za Koroško nastopili spet dobri časi.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[2],
+    questionImg:
+      "media/junaki/slovenija-junaki-kraljmatjaz.png",
+  },
+  {
+    id: "3",
+    question: "V mladih letih je bil trgovec, zaradi izjemne bojevitosti pa je postal vladar prve slovanske organizirane zveze, Karantanije, ki je obsegala ozemlje današnje Češke, Slovaške, Avstrije in Slovenije. Imel je 12 žena, 35 sinov in 15 hčera.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[3],
+    questionImg:
+      "media/junaki/slovenija-junaki-kraljsamo.png",
+  },
+  {
+    id: "4",
+    question: "Lik, ki simbolizira hrepenenje po nedosegljivem, po sanjah, ki ostajajo le sanje, po željah, ki so neuresničljive.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[4],
+    questionImg:
+      "media/junaki/slovenija-junaki-lepavida.png",
+  },
+  {
+    id: "5",
+    question: "Bil je močan in samosvoj človek. Tihotapljal je angleško sol, zaradi česar ga je oblast preganjala. Nekoč je na cesti srečal cesarja, ta ga je ogovoril, saj ga je njegova fizična moč navdušila - hotel je namreč pomoč v boju s turškim banditom. Tihotapec soli se je tako odpravil na Dunaj in turškemu banditu odsekal glavo z lipovo vejo. Za nagrado je od cesarja dobil dovoljenje za tovorjenje angleške soli.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[5],
+    questionImg:
+      "media/junaki/slovenija-junaki-martinkrpan.png",
+  },
+  {
+    id: "6",
+    question: "Na Starem trgu se odvija ples, na katerem Urška zavrača fante enega za drugim. Plesa je že skoraj konec, ko zagleda mladeniča, ki ga želi omrežiti. Ta jo prosi za ples in Urška privoli. Kljub grmenju in vetru se vrtita vse hitreje, dokler se ne zavrtita do brega in izgineta v vrtincu Ljubljanice.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[6],
+    questionImg:
+      "media/junaki/slovenija-junaki-povodnimoz.png",
+  },
+  {
+    id: "7",
+    question: "Moški, oblečen v brezove veje, ki hodi od hiše do hiše in na vrata zatika vejice, ki vasem in družinam prinaša srečo in zagotovilo, da bo letina dobra. Če družina vejice ne dobi, je to za njih velika sramota.",
+    options: junakiQuizOptions,
+    correct: junakiQuizOptions[7],
+    questionImg:
+      "media/junaki/slovenija-junaki-zelenijurij.png",
   },
 ];
 
