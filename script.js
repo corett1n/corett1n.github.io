@@ -122,7 +122,7 @@ let hranaQuiz = [
   {
     id: "0",
     question:
-      "Po tradiciji se ta slovenska dobrota na mizo prinese še topla, nakar si jo jedci z rokami sproti lomijo. Proizvod, zaščiten na ravni EU, je...",
+      "Po tradiciji se ta dolenjska dobrota na mizo prinese še topla, nakar si jo jedci z rokami sproti lomijo. Proizvod, zaščiten na ravni EU, je...",
     options: hranaQuizOptions,
     correct: hranaQuizOptions[0],
     questionImg: "media/hrana/slovenija-hrana-belokranjskapogaca.png",
@@ -178,7 +178,7 @@ let hranaQuiz = [
   {
     id: "7",
     question:
-      "Jed je povezana s kolinami ob zakolu prašiča v poznem jesenskem ali zimskem času, jedli pa so jo ob romanjih, krstih in porokah. To je...",
+      "Ta koroška jed je povezana s kolinami ob zakolu prašiča v poznem jesenskem ali zimskem času, jedli pa so jo ob romanjih, krstih in porokah. To je...",
     options: hranaQuizOptions,
     correct: hranaQuizOptions[7],
     questionImg: "media/hrana/slovenija-hrana-mezerli.png",
@@ -186,7 +186,7 @@ let hranaQuiz = [
   {
     id: "8",
     question:
-      "Tipična pustna jed, veliko enostavnejša za pripravo kot krofi. Ocvre se jih v vročem olju, lahko pa se jim tudi doda rozine. To so...",
+      "Tipična primorska pustna jed, veliko enostavnejša za pripravo kot krofi. Ocvre se jih v vročem olju, lahko pa se jim tudi doda rozine. To so...",
     options: hranaQuizOptions,
     correct: hranaQuizOptions[8],
     questionImg: "media/hrana/slovenija-hrana-miske.png",
@@ -218,7 +218,7 @@ let hranaQuiz = [
   {
     id: "12",
     question:
-      "Nastala je v letu 1952, vanjo pa sodi izključno brusnični nadev. To je...",
+      "Ta štajerska specialiteta je nastala v letu 1952, vanjo pa sodi izključno brusnični nadev. To je...",
     options: hranaQuizOptions,
     correct: hranaQuizOptions[12],
     questionImg: "media/hrana/slovenija-hrana-pohorskaomleta.png",
@@ -234,7 +234,7 @@ let hranaQuiz = [
   {
     id: "14",
     question:
-      "Lahko so slani ali sladki, ponudijo pa se lahko kot izvrstna samostojna jed, priloga ali posladek, uporabljajo pa se tudi kot dodatek juhi. To so...",
+      "Lahko so slani ali sladki, ponudijo pa se lahko kot izvrstna samostojna jed, priloga ali posladek, uporabljajo pa se tudi kot dodatek juhi. To so dolenjski...",
     options: hranaQuizOptions,
     correct: hranaQuizOptions[14],
     questionImg: "media/hrana/slovenija-hrana-skutinistruklji.png",
