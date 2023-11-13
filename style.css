@@ -69,9 +69,6 @@ button:hover {
   min-width: 350px;
   width: fit-content;
   height: auto;
-  /*
-  max-width: 40em;
-  */
   margin: 0 auto;
   position: absolute;
   left: 50%;

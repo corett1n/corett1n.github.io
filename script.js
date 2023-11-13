@@ -187,6 +187,22 @@ let narodnisimboliQuiz = [
   },
 ];
 
+let navadeQuiz = [
+  {
+    id: "0",
+    question: "navadeQuiz",
+    options: [
+      "Da, gotovina.",
+      "Ne, kartica bo.",
+      "Ne gotovina, cash.",
+      "Oboje.",
+    ],
+    correct: "Ne gotovina, cash.",
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+];
+
 let podjetjaQuiz = [
   {
     id: "0",
@@ -477,6 +493,8 @@ function quizCreator() {
   if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.narodnisimboli)
     narodnisimboliQuiz.forEach((el) => quizArray.push(el));
+    if (selectedCategories.navade)
+    navadeQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.podjetja)
     podjetjaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.pokrajine)
@@ -593,6 +611,7 @@ selectCategoriesBtn.addEventListener("click", () => {
     junaki: document.querySelector("#junaki").checked,
     mesta: document.querySelector("#mesta").checked,
     narodnisimboli: document.querySelector("#narodnisimboli").checked,
+    navade: document.querySelector("#navade").checked,
     podjetja: document.querySelector("#podjetja").checked,
     pokrajine: document.querySelector("#pokrajine").checked,
     prazniki: document.querySelector("#prazniki").checked,
