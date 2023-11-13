@@ -23,103 +23,229 @@ let atLeastOneCategoryIsSelected = false;
 
 let selectedCategories = {};
 
+let casopisiQuizOptions = [
+  "Da, gotovina.",
+  "Ne, kartica bo.",
+  "Ne gotovina, cash.",
+  "Oboje.",
+];
 let casopisiQuiz = [
   {
     id: "0",
     question: "casopisiQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[2],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
 ];
 
+let geografskipolozajQuizOptions = [
+  "Jadransko morje",
+  "Avstrija",
+  "Hrvaška",
+  "Italija",
+  "Madžarska",
+  "Srednja Evropa",
+];
 let geografskipolozajQuiz = [
   {
     id: "0",
-    question: "geografskipolozajQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question:
+      "Teritorialno morje Republike Slovenije obsega 326 km², dolžina obale pa je približno 45 km. Morju pa je ime...",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/geografskipolozaj/slovenija-geografskipolozaj-jadranskomorje.png",
+  },
+  {
+    id: "1",
+    question: "S katero državo meji Slovenija na severu?",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[1],
+    questionImg:
+      "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-avstrija.png",
+  },
+  {
+    id: "2",
+    question: "S katero državo meji Slovenija na jugu?",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[2],
+    questionImg:
+      "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-hrvaska.png",
+  },
+  {
+    id: "3",
+    question: "S katero državo meji Slovenija na zahodu?",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[3],
+    questionImg:
+      "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-italija.png",
+  },
+  {
+    id: "4",
+    question: "S katero državo meji Slovenija na vzhodu?",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[4],
+    questionImg:
+      "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-madzarska.png",
+  },
+  {
+    id: "5",
+    question: "V katerem delu Evrope se nahaja Slovenija?",
+    options: geografskipolozajQuizOptions,
+    correct: geografskipolozajQuizOptions[5],
+    questionImg:
+      "media/geografskipolozaj/slovenija-geografskipolozaj-srednjaevropa.png",
   },
 ];
 
+let hranaQuizOptions = [
+  "Belokranjska pogača",
+  "Hroštule",
+  "Idrijski žlikrofi",
+  "Jota",
+  "Kranjska klobasa",
+  "Kraški pršut",
+  "Kremšnita",
+  "Mežerli",
+  "Miške",
+  "Potica",
+  "Pašta fižol",
+  "Pinca",
+  "Pohorska omleta",
+  "Prekmurska gibanica",
+  "Skutini štruklji",
+  "Zeliščna frtalja",
+];
 let hranaQuiz = [
   {
     id: "0",
-    question: "hranaQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "Po tradiciji se ta slovenska dobrota na mizo prinese še topla, nakar si jo jedci z rokami sproti lomijo. Proizvod, zaščiten na ravni EU, je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/hrana/slovenija-hrana-belokranjskapogaca.png",
+  },
+  {
+    id: "1",
+    question: "Tipično istrsko pecivo, ki jih istrske gospodinje pripravijo predvsem v pustnem času, pa tudi ob raznih slavjih, kot so poroke in šagre. Pravijo jim flancati ali...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[1],
+    questionImg:
+      "media/hrana/slovenija-hrana-hrostule.png",
+  },
+  {
+    id: "2",
+    question: "Zgledajo kot majhni klobuki, postreže se jih z omako od pečenke, polnjeni pa so s krompirjem in začimbami. Ponudijo se lahko kot predjed ali glavna jed in so zaščiteni na ravni EU. To so...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[2],
+    questionImg:
+      "media/hrana/slovenija-hrana-idrijskizlikrofi.png",
+  },
+  {
+    id: "3",
+    question: "Tipična primorska jed, ki se lahko postreže z mesom ali brez. Pozimi se je toplo, poleti pa hladno. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[3],
+    questionImg:
+      "media/hrana/slovenija-hrana-jota.png",
+  },
+  {
+    id: "4",
+    question: "Legenda pravi, da ji je ime dal avstrijski cesar, ki se je med potovanjem ustavil na Gorenjskem. Tu so mu postregli to jed, on pa je navdušeno vzkliknil: 'To ni navadna klobasa, to je...'",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[4],
+    questionImg:
+      "media/hrana/slovenija-hrana-kranjskaklobasa.png",
+  },
+  {
+    id: "5",
+    question: "Nosi EU zaščiteno geografsko oznako, suši se na vetru do 20 mesecev, dodana pa mu je morska sol. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[5],
+    questionImg:
+      "media/hrana/slovenija-hrana-kraskiprsut.png",
+  },
+  {
+    id: "6",
+    question: "Na Bledu so jih v zadnjih 60 letih spekli približno 15 milijonov. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[6],
+    questionImg:
+      "media/hrana/slovenija-hrana-kremsnita.png",
+  },
+  {
+    id: "7",
+    question: "Jed je povezana s kolinami ob zakolu prašiča v poznem jesenskem ali zimskem času, jedli pa so jo ob romanjih, krstih in porokah. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[7],
+    questionImg:
+      "media/hrana/slovenija-hrana-mezerli.png",
+  },
+  {
+    id: "8",
+    question: "Tipična pustna jed, veliko enostavnejša za pripravo kot krofi. Ocvre se jih v vročem olju, lahko pa se jim tudi doda rozine. To so...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[8],
+    questionImg:
+      "media/hrana/slovenija-hrana-miske.png",
+  },
+  {
+    id: "9",
+    question: "Prvi jo je v pisni obliki omenil Primož Trubar leta 1575. Pozna jo ves svet, tudi Donald Trump po Melanijini zaslugi. Obstaja orehova, pehtranova, medena...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[9],
+    questionImg:
+      "media/hrana/slovenija-hrana-potica.png",
+  },
+  {
+    id: "10",
+    question: "Zelo priljubljena primorska jed, ki je zelo nasitna. Kuha se dve uri, skupen čas priprave pa znaša vsaj 10 ur. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[10],
+    questionImg:
+      "media/hrana/slovenija-hrana-pastafizol.png",
+  },
+  {
+    id: "11",
+    question: "Tipična velikonočna jed iz Primorske, ki si jo lahko privoščimo ob zajtrku ali topli kavi. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[11],
+    questionImg:
+      "media/hrana/slovenija-hrana-pinca.png",
+  },
+  {
+    id: "12",
+    question: "Nastala je v letu 1952, vanjo pa sodi izključno brusnični nadev. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[12],
+    questionImg:
+      "media/hrana/slovenija-hrana-pohorskaomleta.png",
+  },
+  {
+    id: "13",
+    question: "Jed je zelo kalorična, saj je vsaka plast prelita z obilo sladke smetane, jajc in masla. Prav zato se je postregla le ob svečanih priložnostih, saj izdelava ni bila poceni. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[13],
+    questionImg:
+      "media/hrana/slovenija-hrana-prekmurskagibanica.png",
+  },
+  {
+    id: "14",
+    question: "Lahko so slani ali sladki, ponudijo pa se lahko kot izvrstna samostojna jed, priloga ali posladek, uporabljajo pa se tudi kot dodatek juhi. To so...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[14],
+    questionImg:
+      "media/hrana/slovenija-hrana-skutinistruklji.png",
+  },
+  {
+    id: "15",
+    question: "Preprosta samostojna kmečka jed iz Primorske. Pomembno je, da se pri pripravi uporabljajo sezonske sestavine. To je...",
+    options: hranaQuizOptions,
+    correct: hranaQuizOptions[15],
+    questionImg:
+      "media/hrana/slovenija-hrana-zeliscnafrtalja.png",
   },
 ];
 
@@ -493,8 +619,7 @@ function quizCreator() {
   if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.narodnisimboli)
     narodnisimboliQuiz.forEach((el) => quizArray.push(el));
-    if (selectedCategories.navade)
-    navadeQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.navade) navadeQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.podjetja)
     podjetjaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.pokrajine)
@@ -547,8 +672,8 @@ function quizCreator() {
     // ***
 
     //options
-    i.options.forEach(option => {
-        div.innerHTML += `<button class="option-div" onclick="checker(this)">${option}</button>`
+    i.options.forEach((option) => {
+      div.innerHTML += `<button class="option-div" onclick="checker(this)">${option}</button>`;
     });
     quizContainer.appendChild(div);
   }
