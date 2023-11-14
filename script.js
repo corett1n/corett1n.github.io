@@ -565,7 +565,7 @@ let narodnisimboliQuizOptions = [
   "Ornament",
   "Sejalec",
   "Slava vojvodine Kranjske",
-  "Gora Triglav",
+  "Simbol Triglava",
   "Trobojnica",
   "Vojvodski prestol",
   "Vurnikova hiša",
