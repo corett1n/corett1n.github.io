@@ -958,19 +958,107 @@ let pregovoriQuiz = [
   },
 ];
 
+let rekeQuizOptions = [
+  "Drava",
+  "Kolpa",
+  "Krka",
+  "Ljubljanica",
+  "Mura",
+  "Reka",
+  "Sava",
+  "Savinja",
+  "Soča",
+  "Sora",
+  "Vipava",
+];
 let rekeQuiz = [
   {
     id: "0",
-    question: "rekeQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "Izvira v Toblachu na Južnem Tirolskem, izliva pa se v Donavo blizu Osijeka. Dolga je 749 km, od tega 117 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/reke/slovenija-reke-drava.png",
+  },
+  {
+    id: "1",
+    question: "Izvira v Gorskem kotarju, izliva pa se v Savo blizu Sisaka. Dolga je 294 km, od tega 118 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[1],
+    questionImg:
+      "media/reke/slovenija-reke-kolpa.png",
+  },
+  {
+    id: "2",
+    question: "Izvira v bližini Ivančne Gorice, izliva pa se v Savo blizu Brežic. Dolga je 94 km.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[2],
+    questionImg:
+      "media/reke/slovenija-reke-krka.png",
+  },
+  {
+    id: "3",
+    question: "Izvira v bližini Vrhnike, izliva pa se v Savo pri Podgradu. Dolga je 41 km.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[3],
+    questionImg:
+      "media/reke/slovenija-reke-ljubljanica.png",
+  },
+  {
+    id: "4",
+    question: "Izvira v Visokih Turah, izliva pa se v Dravo pri Legradu. Dolga je 438 km, od tega 95 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[4],
+    questionImg:
+      "media/reke/slovenija-reke-mura.png",
+  },
+  {
+    id: "5",
+    question: "Izvira v bližini Klane, izliva pa se v Škocjanskih jamah. Dolga je 54 km, od tega 51 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[5],
+    questionImg:
+      "media/reke/slovenija-reke-reka.png",
+  },
+  {
+    id: "6",
+    question: "Izvira v Zelencih pri Kranjski gori, izliva pa se v Donavo pri Beogradu. Dolga je 947 km, od tega 225 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[6],
+    questionImg:
+      "media/reke/slovenija-reke-sava.png",
+  },
+  {
+    id: "7",
+    question: "Izvira nad slapom Rinka, izliva pa se v Savo pri Zidanem Mostu. Dolga je 102 km.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[7],
+    questionImg:
+      "media/reke/slovenija-reke-savinja.png",
+  },
+  {
+    id: "8",
+    question: "Izvira v Triglavskem narodnem parku, izliva pa se v Jadransko morje blizu Tržiča. Dolga je 138 km, od tega 96 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[8],
+    questionImg:
+      "media/reke/slovenija-reke-soca.png",
+  },
+  {
+    id: "9",
+    question: "Izvira v bližini Škofje Loke, izliva pa se v Savo pri Medvodah. Dolga je 52 km.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[9],
+    questionImg:
+      "media/reke/slovenija-reke-sora.png",
+  },
+  {
+    id: "10",
+    question: "Izvira v bližini Vipave, izliva pa se v Sočo pri Sovodnjah. Dolga je 49 km, od tega 44 km v Sloveniji.",
+    options: rekeQuizOptions,
+    correct: rekeQuizOptions[10],
+    questionImg:
+      "media/reke/slovenija-reke-vipava.png",
   },
 ];
 
