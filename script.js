@@ -24,10 +24,6 @@ let atLeastOneCategoryIsSelected = false;
 let selectedCategories = {};
 
 let casopisiQuizOptions = [
-  "Da, gotovina.",
-  "Ne, kartica bo.",
-  "Ne gotovina, cash.",
-  "Oboje.",
 ];
 let casopisiQuiz = [
   {
