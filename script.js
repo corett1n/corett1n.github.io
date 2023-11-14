@@ -1179,19 +1179,143 @@ let tabliceQuiz = [
   },
 ];
 
+let turisticnedestinacijeQuizOptions = [
+  "Bled",
+  "Bohinj",
+  "Celje",
+  "Koper",
+  "Kranjska Gora",
+  "Lipica",
+  "Ljubljana",
+  "Maribor",
+  "Piran",
+  "Postojna",
+  "Predjama",
+  "Soča",
+  "toplice",
+  "Triglavski narodni park",
+  "Velika planina",
+];
 let turisticnedestinacijeQuiz = [
   {
     id: "0",
-    question: "turisticnedestinacijeQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-bled.png",
+  },
+  {
+    id: "1",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[1],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-bohinj.png",
+  },
+  {
+    id: "2",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[2],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-celje.png",
+  },
+  {
+    id: "3",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[3],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-koper.png",
+  },
+  {
+    id: "4",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[4],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-kranjskagora.png",
+  },
+  {
+    id: "5",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[5],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-lipica.png",
+  },
+  {
+    id: "6",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[6],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-ljubljana.png",
+  },
+  {
+    id: "7",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[7],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-maribor.png",
+  },
+  {
+    id: "8",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[8],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-piran.png",
+  },
+  {
+    id: "9",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[9],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-postojna.png",
+  },
+  {
+    id: "10",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[10],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-predjama.png",
+  },
+  {
+    id: "11",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[11],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-soca.png",
+  },
+  {
+    id: "12",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[12],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-toplice.png",
+  },
+  {
+    id: "13",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[13],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-triglavskinarodnipark.png",
+  },
+  {
+    id: "14",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[14],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-velikaplanina.png",
   },
 ];
 
