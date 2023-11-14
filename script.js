@@ -544,19 +544,260 @@ let mestaQuiz = [
   },
 ];
 
+let narodnisimboliQuizOptions = [
+  "Abecednik",
+  "Aljažev stolp",
+  "Brižinski spomeniki",
+  "Človeška ribica",
+  "Grb Republike Slovenije",
+  "Karantanski panter",
+  "Knežji kamen",
+  "Kozolec",
+  "Kranjska čebela",
+  "Kranjski orel",
+  "Kraški ovčar",
+  "Kurenti",
+  "Lipa",
+  "Lipicanec",
+  "Triglav",
+  "Nagelj",
+  "Narodna noša",
+  "Ornament",
+  "Sejalec",
+  "Slava vojvodine Kranjske",
+  "Gora Triglav",
+  "Trobojnica",
+  "Vojvodski prestol",
+  "Vurnikova hiša",
+  "Zastava",
+  "Zdravljica",
+  "Zemljevid slovenskih dežel",
+  "Zlatorog",
+];
 let narodnisimboliQuiz = [
   {
     id: "0",
-    question: "narodnisimboliQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "Prva slovenska tiskana knjiga, izdana v letu 1550. Trubar jo je napisal z namenom, da se preprosti Slovenci naučijo brati in pisati. V njej je prvič omenjena beseda 'Slovenci'.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[0],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-abecednik.png",
+  },
+  {
+    id: "1",
+    question: "Župnik Jakob Aljaž ni maral zanimanja tujcev za slovenske gore, zato se je temu skušal upreti z nakupom vrha Triglava za en goldinar, na katerega je dal leta 1895 postaviti gorsko zavetišče.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[1],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-aljazevstolp.png",
+  },
+  {
+    id: "2",
+    question: "Najstarejši zapis v slovenskem jeziku in kateremkoli slovanskem jeziku v latinici. Nastal je leta 972, v njem pa so obrazci za spoved.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[2],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-brizinskispomeniki.png",
+  },
+  {
+    id: "3",
+    question: "Živi izključno v podzemeljskih vodah, saj je zelo občutljiva na svetlobo. Živi lahko do 100 let, nekoč pa so se jih ljudje bali, saj so zgledali kot mali zmaji.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[3],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-cloveskaribica.png",
+  },
+  {
+    id: "4",
+    question: "Ima obliko ščita, na katerem je simbol Triglava, trije šestokrake zveze celjskih grofov in valova, ki prikazujeta slovensko morje in reke.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[4],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-grb.png",
+  },
+  {
+    id: "5",
+    question: "Zgodovinski grb Štajerske, je simbol domoljubja. Dandanes je kot simbol uporabljen tako v vojski kot v policiji.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[5],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-karantanskipanter.png",
+  },
+  {
+    id: "6",
+    question: "Obrnjen spodnji del rimskega stebra, na njem je potekalo ustoličevanje karantanskih knezov in koroških vojvod.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[6],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-knezjikamen.png",
+  },
+  {
+    id: "7",
+    question: "Lesena, s strani odprta stavba za sušenje žita in trave, značilna za slovensko podeželje. Nahajajo se le v krajih, kjer živijo Slovenci.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[7],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-kozolec.png",
+  },
+  {
+    id: "8",
+    question: "Njena domovina je Gorenjska, je zelo vitka in umirjena. Velja za drugo najbolj razširjeno sorto na svetu.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[8],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-kranjskacebela.png",
+  },
+  {
+    id: "9",
+    question: "Zgodovinski grb dežele Kranjske, ki obsega današnjo Gorenjsko, Notranjsko, Dolenjsko in del Primorske. Nastal naj bi v 12. stoletju.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[9],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-kranjskiorel.png",
+  },
+  {
+    id: "10",
+    question: "Edina slovenska avtohtona sorta psov. Je srednje velik, mišičast, z gosto in bujno železno sivo dlako. Ima prijazen in rahlo otožen pogled.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[10],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-kraskiovcar.png",
+  },
+  {
+    id: "11",
+    question: "Značilni pustni lik iz Ptuja in okolice. S poskakovanjem in hudim truščem iz dežele odganjajo zimo in zlo, vanjo pa kličejo pomlad.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[11],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-kurenti.png",
+  },
+  {
+    id: "12",
+    question: "V vaseh so se ob njej zbrali vaščani, da bi obravnavali medsebojne spore, sprejemali odločitve o medsebojni pomoči, volili, pod njo pa so se tudi zbirali na praznovanjih, veselicah in plesih. Ima pomen središča skupnosti.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[12],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-lipa.png",
+  },
+  {
+    id: "13",
+    question: "Slovenska avtohtona sorta, ki sega v leto 1580. Žrebijo se temne barve, s starostjo pa postanejo povsem bele barve. Ima živahen temperament, a je dobro učljiv.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[13],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-lipicanec.png",
+  },
+  {
+    id: "14",
+    question: "Sliko je naslikal Marko Pernhart, prvi slovenski realistični krajinski slikar, doma iz Koroške. Naslikal je tudi Gospo Sveto, Krnski grad, Vrbsko in Blejsko jezero, Šmarno goro in Kranj.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[14],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-markopernhartovtriglav.png",
+  },
+  {
+    id: "15",
+    question: "Prva slovenska roža, ki nosi velik simbolni pomen ljubezni in slovenstva. Ob krstu in poroki je bel, ob slovesu pa rdeč. ",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[15],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-nagelj.png",
+  },
+  {
+    id: "16",
+    question: "Odražale so družbeni položaj ljudi. Po vzorcih, vezenju in barvi so se razlikovale po vaseh, vsaka pa ima svojo zgodovino, ki sega tudi več stoletij v preteklost. Najdragocenejše so istrske, saj je njihova izdelava zahtevala največ časa in ročnega dela.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[16],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-narodnanosa.png",
+  },
+  {
+    id: "17",
+    question: "Likovna umetnost, ki se v vseh časih razvija, izpopolnjuje in dopolnjuje. Slovenska se bistveno razlikuje od drugih že v zasnovi in pojmovanju.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[17],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-ornament.png",
+  },
+  {
+    id: "18",
+    question: "Impresionistična slika Ivana Groharja. V središču slike je kmet pri delu, v ozadju pa stoji kozolec.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[18],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-sejalec.png",
+  },
+  {
+    id: "19",
+    question: "Knjigo je napisal Janez Vajkard Valvazor leta 1689, velja pa za eno najpomembnejših znanstvenih del o Kranjski.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[19],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-slavavojvodinekranjske.png",
+  },
+  {
+    id: "20",
+    question: "Prikazuje najvišjo slovensko goro, visoko kar 2864 m. Ime je verjetno dobila po njeni obliki, kot je vidna iz Bohinja. Nastopa v slovenskih grbih že več stoletij.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[20],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-triglav.png",
+  },
+  {
+    id: "21",
+    question: "Prvič jo je 7. aprila 1848 v Ljubljani izobesil domoljubni študent Lovro Toman na Wolfovi ulici 8, kot odgovor na izobešanje nemške zastave na Ljubljanskem gradu.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[21],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-trobojnica.png",
+  },
+  {
+    id: "22",
+    question: "Stoji na Gosposvetskem polju na Koroškem, na njem so ustoličevali koroške vojvode v slovenskem jeziku.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[22],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-vojvodskiprestol.png",
+  },
+  {
+    id: "23",
+    question: "Ob gradnji so zavrgli prvotne ideje o dunajskih okrasih, namesto njih pa so na fasado narisali tipične slovenske motive ornamentike.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[23],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+  },
+  {
+    id: "24",
+    question: "Sestavljajo jo slovenske narodne barve in grb s Triglavom. Uradna je od leta 1991, ko je Slovenija postala samostojna država.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[24],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-zastava.png",
+  },
+  {
+    id: "25",
+    question: "Napisal jo je France Prešeren leta 1848, v njej je predstavljena ideja o svobodi in zedinjenosti Slovencev. Napisana je v obliki čaše, saj gre za napitnico. Danes je njena sedma kitica himna Republike Slovenije.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[25],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-zdravljica.png",
+  },
+  {
+    id: "26",
+    question: "Narisal ga je Peter Kozler, saj se je kot narodno zaveden Slovenec zavzemal za idejo Zedinjene Slovenije. Peter Kozler je tudi ustanovitelj Pivovarne Union.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[26],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-zemljevidslovenskihdezel.png",
+  },
+  {
+    id: "27",
+    question: "Vedno ga spremljajo tri device, ki varujejo skriti zaklad. Legenda pravi, da so ga številni ljudje poskušali ujeti, da bi se dokopali do zaklada. Nekega dne ga je pohlepnemu lovcu uspelo ubiti, iz njegove rane pa je stekla kri, ki je vzklila triglavsko rožo, ki ima čudežne zdravilne učinke.",
+    options: narodnisimboliQuizOptions,
+    correct: narodnisimboliQuizOptions[27],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-zlatorog.png",
   },
 ];
 
