@@ -315,83 +315,232 @@ let junakiQuizOptions = [
 let junakiQuiz = [
   {
     id: "0",
-    question: "Sin tržaškega cesarskega glavarja Nikolaja, znan predvsem kot ropar. Kmalu je zaslovel kot hraber bojevnik, a ker se je sprl s cesarjem, se je bil primoran umakniti na domači grad, ki ga je oblegala cesarska vojska. Brez težav je prenašal obleganje, saj je bilo pod gradom veliko rovov, po katerih so prenašali hrano. Cesarjevi vojaki so po naključju streljali na grad in ga ubili.",
+    question:
+      "Sin tržaškega cesarskega glavarja Nikolaja, znan predvsem kot ropar. Kmalu je zaslovel kot hraber bojevnik, a ker se je sprl s cesarjem, se je bil primoran umakniti na domači grad, ki ga je oblegala cesarska vojska. Brez težav je prenašal obleganje, saj je bilo pod gradom veliko rovov, po katerih so prenašali hrano. Cesarjevi vojaki so po naključju streljali na grad in ga ubili.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[0],
-    questionImg:
-      "media/junaki/slovenija-junaki-erazempredjamski.png",
+    questionImg: "media/junaki/slovenija-junaki-erazempredjamski.png",
   },
   {
     id: "1",
-    question: "Je pogumen in prijazen pastirček, ki na visokogorskih pašnikih doživi marsikaj zanimivega. Medtem, ko se njegova čreda ovac in goveda mirno pase, se on sprehaja in raziskuje po gorskih travnikih in poteh.",
+    question:
+      "Je pogumen in prijazen pastirček, ki na visokogorskih pašnikih doživi marsikaj zanimivega. Medtem, ko se njegova čreda ovac in goveda mirno pase, se on sprehaja in raziskuje po gorskih travnikih in poteh.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[1],
-    questionImg:
-      "media/junaki/slovenija-junaki-kekec.png",
+    questionImg: "media/junaki/slovenija-junaki-kekec.png",
   },
   {
     id: "2",
-    question: "Med ljudmi je bil zelo priljubljen, saj je pomagal vsem in je bil zelo radodaren. Zaradi njegove priljubljenosti so se ostali vladarji odločili, da ga ubijejo. Legenda pravi, da je zaspal pod goro Peco na Koroškem, kamor se je zatekel pred sovražniki. Ko se mu bo brada devetkrat ovila okoli kamnite mize, pa se bo zbudil in bo spet zavladal. To pomeni, da bodo za Koroško nastopili spet dobri časi.",
+    question:
+      "Med ljudmi je bil zelo priljubljen, saj je pomagal vsem in je bil zelo radodaren. Zaradi njegove priljubljenosti so se ostali vladarji odločili, da ga ubijejo. Legenda pravi, da je zaspal pod goro Peco na Koroškem, kamor se je zatekel pred sovražniki. Ko se mu bo brada devetkrat ovila okoli kamnite mize, pa se bo zbudil in bo spet zavladal. To pomeni, da bodo za Koroško nastopili spet dobri časi.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[2],
-    questionImg:
-      "media/junaki/slovenija-junaki-kraljmatjaz.png",
+    questionImg: "media/junaki/slovenija-junaki-kraljmatjaz.png",
   },
   {
     id: "3",
-    question: "V mladih letih je bil trgovec, zaradi izjemne bojevitosti pa je postal vladar prve slovanske organizirane zveze, Karantanije, ki je obsegala ozemlje današnje Češke, Slovaške, Avstrije in Slovenije. Imel je 12 žena, 35 sinov in 15 hčera.",
+    question:
+      "V mladih letih je bil trgovec, zaradi izjemne bojevitosti pa je postal vladar prve slovanske organizirane zveze, Karantanije, ki je obsegala ozemlje današnje Češke, Slovaške, Avstrije in Slovenije. Imel je 12 žena, 35 sinov in 15 hčera.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[3],
-    questionImg:
-      "media/junaki/slovenija-junaki-kraljsamo.png",
+    questionImg: "media/junaki/slovenija-junaki-kraljsamo.png",
   },
   {
     id: "4",
-    question: "Lik, ki simbolizira hrepenenje po nedosegljivem, po sanjah, ki ostajajo le sanje, po željah, ki so neuresničljive.",
+    question:
+      "Lik, ki simbolizira hrepenenje po nedosegljivem, po sanjah, ki ostajajo le sanje, po željah, ki so neuresničljive.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[4],
-    questionImg:
-      "media/junaki/slovenija-junaki-lepavida.png",
+    questionImg: "media/junaki/slovenija-junaki-lepavida.png",
   },
   {
     id: "5",
-    question: "Bil je močan in samosvoj človek. Tihotapljal je angleško sol, zaradi česar ga je oblast preganjala. Nekoč je na cesti srečal cesarja, ta ga je ogovoril, saj ga je njegova fizična moč navdušila - hotel je namreč pomoč v boju s turškim banditom. Tihotapec soli se je tako odpravil na Dunaj in turškemu banditu odsekal glavo z lipovo vejo. Za nagrado je od cesarja dobil dovoljenje za tovorjenje angleške soli.",
+    question:
+      "Bil je močan in samosvoj človek. Tihotapljal je angleško sol, zaradi česar ga je oblast preganjala. Nekoč je na cesti srečal cesarja, ta ga je ogovoril, saj ga je njegova fizična moč navdušila - hotel je namreč pomoč v boju s turškim banditom. Tihotapec soli se je tako odpravil na Dunaj in turškemu banditu odsekal glavo z lipovo vejo. Za nagrado je od cesarja dobil dovoljenje za tovorjenje angleške soli.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[5],
-    questionImg:
-      "media/junaki/slovenija-junaki-martinkrpan.png",
+    questionImg: "media/junaki/slovenija-junaki-martinkrpan.png",
   },
   {
     id: "6",
-    question: "Na Starem trgu se odvija ples, na katerem Urška zavrača fante enega za drugim. Plesa je že skoraj konec, ko zagleda mladeniča, ki ga želi omrežiti. Ta jo prosi za ples in Urška privoli. Kljub grmenju in vetru se vrtita vse hitreje, dokler se ne zavrtita do brega in izgineta v vrtincu Ljubljanice.",
+    question:
+      "Na Starem trgu se odvija ples, na katerem Urška zavrača fante enega za drugim. Plesa je že skoraj konec, ko zagleda mladeniča, ki ga želi omrežiti. Ta jo prosi za ples in Urška privoli. Kljub grmenju in vetru se vrtita vse hitreje, dokler se ne zavrtita do brega in izgineta v vrtincu Ljubljanice.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[6],
-    questionImg:
-      "media/junaki/slovenija-junaki-povodnimoz.png",
+    questionImg: "media/junaki/slovenija-junaki-povodnimoz.png",
   },
   {
     id: "7",
-    question: "Moški, oblečen v brezove veje, ki hodi od hiše do hiše in na vrata zatika vejice, ki vasem in družinam prinaša srečo in zagotovilo, da bo letina dobra. Če družina vejice ne dobi, je to za njih velika sramota.",
+    question:
+      "Moški, oblečen v brezove veje, ki hodi od hiše do hiše in na vrata zatika vejice, ki vasem in družinam prinaša srečo in zagotovilo, da bo letina dobra. Če družina vejice ne dobi, je to za njih velika sramota.",
     options: junakiQuizOptions,
     correct: junakiQuizOptions[7],
-    questionImg:
-      "media/junaki/slovenija-junaki-zelenijurij.png",
+    questionImg: "media/junaki/slovenija-junaki-zelenijurij.png",
   },
 ];
 
+let mestaQuizOptions = [
+  "Celje",
+  "Domžale",
+  "Izola",
+  "Jesenice",
+  "Kamnik",
+  "Kočevje",
+  "Koper",
+  "Kranj",
+  "Ljubljana",
+  "Logatec",
+  "Maribor",
+  "Murska Sobota",
+  "Nova Gorica",
+  "Novo mesto",
+  "Postojna",
+  "Ptuj",
+  "Škofja Loka",
+  "Trbovlje",
+  "Velenje",
+  "Vrhnika",
+];
 let mestaQuiz = [
   {
     id: "0",
-    question: "mestaQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
-    questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+    question: "Tretje največje slovensko mesto s 40.000 prebivalci, znano po grofih in vitezih.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[0],
+    questionImg: "media/mesta/slovenija-mesta-celje.png",
+  },
+  {
+    id: "1",
+    question: "Mesto s 15.000 prebivalci v Ljubljanski kotlini. Športno mesto, saj imata tu sedež nogometni in košarkarski klub.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[1],
+    questionImg: "media/mesta/slovenija-mesta-domzale.png",
+  },
+  {
+    id: "2",
+    question: "Bivši otok in ribiško naselje, danes mesto s 13.000 prebivalci.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[2],
+    questionImg: "media/mesta/slovenija-mesta-izola.png",
+  },
+  {
+    id: "3",
+    question: "Mesto s 14.000 prebivalci pod Karavankami, ki ima bogato železarsko tradicijo.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[3],
+    questionImg: "media/mesta/slovenija-mesta-jesenice.png",
+  },
+  {
+    id: "4",
+    question: "Mesto, ki šteje 15.000 prebivalcev, z odlično ohranjenim srednjeveškim mestnim jedrom.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[4],
+    questionImg: "media/mesta/slovenija-mesta-kamnik.png",
+  },
+  {
+    id: "5",
+    question: "Mesto s 10.000 prebivalci, ki ponuja lepote neokrnjene narave in ogromno možnosti za rekreacijo.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[5],
+    questionImg: "media/mesta/slovenija-mesta-kocevje.png",
+  },
+  {
+    id: "6",
+    question: "Nekoč otok, danes peto največje slovensko mesto s 27.000 prebivalci. V njem se nahaja eno najpomembnejših pristanišč v Jadranu.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[6],
+    questionImg: "media/mesta/slovenija-mesta-koper.png",
+  },
+  {
+    id: "7",
+    question: "S 38.000 prebivalci je četrto največje slovensko mesto, znano tudi kot Prešernovo mesto.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[7],
+    questionImg: "media/mesta/slovenija-mesta-kranj.png",
+  },
+  {
+    id: "8",
+    question: "Prestolnica Republike Slovenije, šteje 300.000 prebivalcev, njeno ime izvira iz besede 'ljubezen'.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[8],
+    questionImg: "media/mesta/slovenija-mesta-ljubljana.png",
+  },
+  {
+    id: "9",
+    question: "Mesto z 11.000 prebivalci, v bližini se nahaja Napoleonov lipov drevored.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[9],
+    questionImg: "media/mesta/slovenija-mesta-logatec.png",
+  },
+  {
+    id: "10",
+    question: "Drugo največje slovensko mesto s 100.000 prebivalci. Tu raste in vzgaja najstarejša trta na svetu.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[10],
+    questionImg: "media/mesta/slovenija-mesta-maribor.png",
+  },
+  {
+    id: "11",
+    question: "Mesto z 11.000 prebivalci, ime je dobilo po sejmih, ki so se v mestu odvijali ob sobotah.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[11],
+    questionImg: "media/mesta/slovenija-mesta-murskasobota.png",
+  },
+  {
+    id: "12",
+    question: "Najnovejše slovensko mesto s 13.000 prebivalci, saj je bilo ustanovaljeno komaj leta 1947.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[12],
+    questionImg: "media/mesta/slovenija-mesta-novagorica.png",
+  },
+  {
+    id: "13",
+    question: "Sedmo največje slovensko mesto s 25.000 prebivalci, pomemben sedež farmacevtske in avtomobilske industrije.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[13],
+    questionImg: "media/mesta/slovenija-mesta-novomesto.png",
+  },
+  {
+    id: "14",
+    question: "Mesto z 10.000 prebivalci, ki živi skoraj izključno od turizma.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[14],
+    questionImg: "media/mesta/slovenija-mesta-postojna.png",
+  },
+  {
+    id: "15",
+    question: "Najstarejše slovensko mesto z 18.000 prebivalci, ustanovili so ga Rimljani okoli leta 69.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[15],
+    questionImg: "media/mesta/slovenija-mesta-ptuj.png",
+  },
+  {
+    id: "16",
+    question: "Mesto z 12.000 prebivalci, velja za najbolje ohranjeno srednjeveško mesto v Sloveniji.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[16],
+    questionImg: "media/mesta/slovenija-mesta-skofjaloka.png",
+  },
+  {
+    id: "17",
+    question: "Mesto s 14.000 prebivalci, v njem se nahaja najvišja zgradba v Sloveniji.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[17],
+    questionImg: "media/mesta/slovenija-mesta-trbovlje.png",
+  },
+  {
+    id: "18",
+    question: "Šesto največje slovensko mesto z 25.000 prebivalci, znano tudi kot mesto knapov.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[18],
+    questionImg: "media/mesta/slovenija-mesta-velenje.png",
+  },
+  {
+    id: "19",
+    question: "Mesto z 10.000 prebivalci, tu se je rodil in deloval pisatelj Ivan Cankar.",
+    options: mestaQuizOptions,
+    correct: mestaQuizOptions[19],
+    questionImg: "media/mesta/slovenija-mesta-vrhnika.png",
   },
 ];
 
