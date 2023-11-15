@@ -1091,7 +1091,7 @@ let sportnikiQuiz = [
   {
     id: "0",
     question:
-      "Prvi slovenski hokejski igralec, ki je zaigral v severnoameriški profesionalni hokejski ligi NHL, igra pa v moštvu Los Angeles Kings. Leta 2016 je bil kapetan moštva Evropa na svetovnem prvenstvu, na katerem je dosegel srebrno mesto. Leta 2021 je na tekmi dosegel tisočo točko in se s tem kot 91. član uvrstil v »Klub tisočih točk«. ",
+      "Prvi slovenski hokejski igralec, ki je zaigral v severnoameriški profesionalni hokejski ligi NHL, igra pa v moštvu Los Angeles Kings. Leta 2016 je bil kapetan moštva Evropa na svetovnem prvenstvu, na katerem je dosegel srebrno mesto. Leta 2021 je na tekmi dosegel tisočo točko in se s tem kot 91. član uvrstil v »<i>Klub tisočih točk</i>«. ",
     options: sportnikiQuizOptions,
     correct: sportnikiQuizOptions[0],
     questionImg: "media/sportniki/slovenija-sportniki-anzekopitar.png",
@@ -1411,35 +1411,371 @@ let turisticnedestinacijeQuiz = [
   },
 ];
 
+let vinaQuizOptions = [
+  "Belokranjec",
+  "Bizeljčan",
+  "Cviček",
+  "Malvazija",
+  "Modra frankinja",
+  "Rebula",
+  "Refošk",
+  "Šipon",
+  "Teran",
+  "Vipavec",
+  "Vitovska",
+];
 let vinaQuiz = [
   {
     id: "0",
-    question: "vinaQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
-    questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[0],
+    questionImg: "media/vina/slovenija-vina-belokranjec.png",
+  },
+  {
+    id: "1",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[1],
+    questionImg: "media/vina/slovenija-vina-bizeljcan.png",
+  },
+  {
+    id: "2",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[2],
+    questionImg: "media/vina/slovenija-vina-cvicek.png",
+  },
+  {
+    id: "3",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[3],
+    questionImg: "media/vina/slovenija-vina-malvazija.png",
+  },
+  {
+    id: "4",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[4],
+    questionImg: "media/vina/slovenija-vina-modrafrankinja.png",
+  },
+  {
+    id: "5",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[5],
+    questionImg: "media/vina/slovenija-vina-rebula.png",
+  },
+  {
+    id: "6",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[6],
+    questionImg: "media/vina/slovenija-vina-refosk.png",
+  },
+  {
+    id: "7",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[7],
+    questionImg: "media/vina/slovenija-vina-sipon.png",
+  },
+  {
+    id: "8",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[8],
+    questionImg: "media/vina/slovenija-vina-teran.png",
+  },
+  {
+    id: "9",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[9],
+    questionImg: "media/vina/slovenija-vina-vipavec.png",
+  },
+  {
+    id: "10",
+    question: "",
+    options: vinaQuizOptions,
+    correct: vinaQuizOptions[10],
+    questionImg: "media/vina/slovenija-vina-vitovska.png",
   },
 ];
 
+let zanimivostiQuizOptions = [
+  "V Ljubljani lahko prespiš v hostelu, ki je bil nekoč zapor",
+  "Davo Karničar je bil prvi, ki je presmučal celoten Everest",
+  "Slovenija je z 52 medaljami druga država na svetu po številu olimpijskih medalj na prebivalca",
+  "Dve tretjini Slovenije pokrivajo gozdovi",
+  "Edina država, ki ima v imenu besedo ljubezen",
+  "V Olimjah se nahaja ena najstarejših evropskih lekarn",
+  "Gorenjska Kranjska čebela je druga najbolj razširjena sorta na svetu",
+  "Kranjsko klobaso je astronavtka slovenskih korenin Sunita Williams popeljala v vesolje",
+  "Na poročni dan mora ženin nevesto nositi v naročju po vseh 99 stopnicah na Blejskem otoku, nevesta pa mora biti popolnoma tiho",
+  "Prekmurje je za teden dni obstajalo kot samostojna republika leta 1919",
+  "Postojnska jama je najbolj obiskana jama na svetu in edina z dvotirnimi tračnicami",
+  "V Solkanu se nahaja najdaljši kamniti most z lokom na svetu, dolg je 220 m",
+  "V premogovniku Velenje se nahaja najgloblja jedilnica v Evropi, kar 160 m pod zemljo",
+  "V Lipici se nahaja najstarejša evropska še delujoča kobilarna, deuje neprekinjeno že skoraj 500 let",
+  "Najstarejša trta na svetu, stara 400 let, se nahaja ob Dravi v Mariboru",
+  "V Divjih babah so odkrili najstarejše glasbilo na svetu - piščal staro 60.000 let",
+  "Na Ljubljanskem barju so našli najstarejše kolo na svetu, imelo naj bi 5200 let",
+  "Slovenija ima največ crkva na prebivalca v Evropi, skupno preko 3.000",
+  "V Sloveniji se nahaja največji zipline park v Evropi",
+  "Slovenija je prva na svetu po številu traktorjev na prebivalca",
+  "V Trbovljah se nahaja najvišji dimnik v Evropi, visok kar 360 m",
+  "V Planici se nahaja največja letalnica za smučarske skoke na svetu",
+  "Ob Soči so snemali film »<i>Prince of Narnia</i>«",
+  "Slovenija je prva in edina država na območju nekdanje Jugoslavije, ki ima v vesolju svoje satelite",
+  "Slovenska osamosvojitvena vojna je bila prva vojna v Evropi po koncu druge svetovne vojne",
+  "Oblika Slovenije spominja na kokoš",
+  "V Sloveniji je več kot 500 gradov",
+  "V Sloveniji živi približno 1.000 rjavih medvedov",
+  "V Sloveniji je več kot 10.000 jam, le nekaj deset pa je odprtih za turiste",
+  "Na Zalarjevem vrhu je mogoče zaslediti prave stopinje dinozavrov",
+];
 let zanimivostiQuiz = [
   {
     id: "0",
-    question: "zanimivostiQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[0],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/zanimivosti/slovenija-zanimivosti-celicahostelbivsizapor.png",
+  },
+  {
+    id: "1",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[1],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-davokarnicarprvikijesmucalizeveresta.png",
+  },
+  {
+    id: "2",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[2],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-drugadrzavanasvetupostevilumedaljnaprebivalca.png",
+  },
+  {
+    id: "3",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[3],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-dvetretjinislovenijepokrivajogozdovi.png",
+  },
+  {
+    id: "4",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[4],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-edinadrzavakiimabesedolove.png",
+  },
+  {
+    id: "5",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[5],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-enaizmednajstarejsihlekarnvevropi.png",
+  },
+  {
+    id: "6",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[6],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-kranjskacebelajeprvasortacebelevevropiindruganasvetu.png",
+  },
+  {
+    id: "7",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[7],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-kranjskaklobasavvesolju.png",
+  },
+  {
+    id: "8",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[8],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-moznosizenopo99stopnicahzenamorabitipopolnomatiho.png",
+  },
+  {
+    id: "9",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[9],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-murskarepublika.png",
+  },
+  {
+    id: "10",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[10],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najboljobiskanajamavevropiinedinanasvetustracnicami.png",
+  },
+  {
+    id: "11",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[11],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najdaljsikamnitimostnasvetu.png",
+  },
+  {
+    id: "12",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[12],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najglobljajedilnicavevropi.png",
+  },
+  {
+    id: "13",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[13],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najstarejsaevropskakobilarnavlipici.png",
+  },
+  {
+    id: "14",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[14],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najstarejsatrtanasvetuvmariboru.png",
+  },
+  {
+    id: "15",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[15],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najstarejseglasbilonasvetu.png",
+  },
+  {
+    id: "16",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[16],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najstarejsekolonasvetu.png",
+  },
+  {
+    id: "17",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[17],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najveccrkvanaprebivalcavevropi.png",
+  },
+  {
+    id: "18",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[18],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najvecjiziplineparkvevropi.png",
+  },
+  {
+    id: "19",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[19],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najvectraktorjevnaprebivalcanasvetu.png",
+  },
+  {
+    id: "20",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[20],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najvisjidimnikvevropi.png",
+  },
+  {
+    id: "21",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[21],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-planicanajvecjaletalnicanasvetu.png",
+  },
+  {
+    id: "22",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[22],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-princeofnarniasnemanobsoci.png",
+  },
+  {
+    id: "23",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[23],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-prvainedinaexyudrzavassatelitivvesolju.png",
+  },
+  {
+    id: "24",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[24],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-prvavojnavevropipoww2.png",
+  },
+  {
+    id: "25",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[25],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-slovenijajepodobnakokosi.png",
+  },
+  {
+    id: "26",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[26],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-veckot500gradov.png",
+  },
+  {
+    id: "27",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[27],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-veckot900medvedov.png",
+  },
+  {
+    id: "28",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[28],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-veckot10000jam.png",
+  },
+  {
+    id: "29",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[29],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-zalarjevvrhsledidinozavrov.png",
   },
 ];
 
@@ -1495,7 +1831,8 @@ let znaneosebnostiQuizOptions = [
 let znaneosebnostiQuiz = [
   {
     id: "0",
-    question: "Slovenski odvetnik in nogometni funkcionar, ⋆ 13.10.1967, Ljubljana.<br>Diplomiral je na ljubljanski pravni fakulteti iz kazenskega prava. V svoji pravni karieri je kot mlad odvetnik že zelo zgodaj opozoril nase, ko je kot zagovornik nastopal v odmevnih primerih. Opravljal je funkcijo predsednika Nogometne zveze Slovenije (NZS), leta 2016 pa je postal predsednik Evropske nogometne zveze (UEFA) in podpredsednik Svetovne nogometne zveze (FIFA) z veliko večino glasov. Leta 2019 in 2023 so mu potrdili ponovno izvolitev tako, da zdaj teče že njegov tretji mandat.",
+    question:
+      "Slovenski odvetnik in nogometni funkcionar, ⋆ 13.10.1967, Ljubljana.<br>Diplomiral je na ljubljanski pravni fakulteti iz kazenskega prava. V svoji pravni karieri je kot mlad odvetnik že zelo zgodaj opozoril nase, ko je kot zagovornik nastopal v odmevnih primerih. Opravljal je funkcijo predsednika Nogometne zveze Slovenije (NZS), leta 2016 pa je postal predsednik Evropske nogometne zveze (UEFA) in podpredsednik Svetovne nogometne zveze (FIFA) z veliko večino glasov. Leta 2019 in 2023 so mu potrdili ponovno izvolitev tako, da zdaj teče že njegov tretji mandat.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[0],
     questionImg:
@@ -1503,7 +1840,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "1",
-    question: "Slovenski škof, pisatelj in pesnik, ⋆ 26.11.1800, Slom pri Mariboru - † 24.9.1862, Maribor.<br>Ker je zgodaj postal sirota, se je na posebnem učiteljskem tečaju v 3. razredu gimnazije z odliko usposobil za inštruktorja učencev, da se je s poučevanjem lahko preživljal. Leta 1824 je postal duhovnik, iz vneme za slovenščino je že med študijem teologije ustanovil slovensko društvo, poučeval bogoslovce v slovenščini in jih navduševal za pisne in govorne vaje in jih navajal k prevajanju knjig v slovenski jezik. Znan je njegov rek »Sveta vera bodi vam luč, materni jezik pa ključ do zveličavne omike«. Leta 1999 ga je papež Janez Pavel II. beatificiral.",
+    question:
+      "Slovenski škof, pisatelj in pesnik, ⋆ 26.11.1800, Slom pri Mariboru - † 24.9.1862, Maribor.<br>Ker je zgodaj postal sirota, se je na posebnem učiteljskem tečaju v 3. razredu gimnazije z odliko usposobil za inštruktorja učencev, da se je s poučevanjem lahko preživljal. Leta 1824 je postal duhovnik, iz vneme za slovenščino je že med študijem teologije ustanovil slovensko društvo, poučeval bogoslovce v slovenščini in jih navduševal za pisne in govorne vaje in jih navajal k prevajanju knjig v slovenski jezik. Znan je njegov rek »<i>Sveta vera bodi vam luč, materni jezik pa ključ do zveličavne omike</i>«. Leta 1999 ga je papež Janez Pavel II. beatificiral.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[1],
     questionImg:
@@ -1511,23 +1849,24 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "2",
-    question: "Slovenski pisatelj, ⋆ 26.8.1913, Trst - † 30.5.2022, Trst.<br>Veljal je za enega najpomembnejših slovenskih pisateljev, obenem je tudi eden najbolj prevajanih slovenskih avtorjev. Njegova dela so prevedena v francoščino, nemščino, srbohrvaščino, madžarščino, angleščino, španščino, italijanščino, katalonščino, finščino in esperanto. Na prvem mestu med prevodi je Nekropola, roman o pisateljevem življenju v taborišču Natzweiler-Struthof, ki je bil preveden v 18 jezikov. Večkrat so ga omenjali kot kandidata za Nobelovo nagrado za književnost. Bil je globoki antifašist in pričevalec o fašističnem nasilju nad Slovenci v Italiji ter trpljenju v nemških koncentracijskih taboriščih med drugo svetovno vojno.",
+    question:
+      "Slovenski pisatelj, ⋆ 26.8.1913, Trst - † 30.5.2022, Trst.<br>Veljal je za enega najpomembnejših slovenskih pisateljev, obenem je tudi eden najbolj prevajanih slovenskih avtorjev. Njegova dela so prevedena v francoščino, nemščino, srbohrvaščino, madžarščino, angleščino, španščino, italijanščino, katalonščino, finščino in esperanto. Na prvem mestu med prevodi je Nekropola, roman o pisateljevem življenju v taborišču Natzweiler-Struthof, ki je bil preveden v 18 jezikov. Večkrat so ga omenjali kot kandidata za Nobelovo nagrado za književnost. Bil je globoki antifašist in pričevalec o fašističnem nasilju nad Slovenci v Italiji ter trpljenju v nemških koncentracijskih taboriščih med drugo svetovno vojno.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[2],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-borispahor.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-borispahor.png",
   },
   {
     id: "3",
-    question: "Slovenski didžej, glasbenik in producent, ⋆ 16.5.1976, Ljubljana.<br>Svojo kariero je začel v 90. letih, kmalu je postal zelo priljubljen doma in naokoli. Na lestvici TOP 100 didžejev in producentov pri najpomembnejši reviji za plesno glasbo DJ Mag se je leta 2007 uvrstil na 29. mesto. Skupaj z zvezdniškimi imeni, kot so na primer Carl Cox, Jeff Mills in Sven Väth je bil leta 2009 nominiran za prestižno priznanje DJ Awards v kategoriji tehna.",
+    question:
+      "Slovenski didžej, glasbenik in producent, ⋆ 16.5.1976, Ljubljana.<br>Svojo kariero je začel v 90. letih, kmalu je postal zelo priljubljen doma in naokoli. Na lestvici TOP 100 didžejev in producentov pri najpomembnejši reviji za plesno glasbo DJ Mag se je leta 2007 uvrstil na 29. mesto. Skupaj z zvezdniškimi imeni, kot so na primer Carl Cox, Jeff Mills in Sven Väth je bil leta 2009 nominiran za prestižno priznanje DJ Awards v kategoriji tehna.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[3],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-urosumek.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-urosumek.png",
   },
   {
     id: "4",
-    question: "Slovenski politik, pisatelj, učitelj, partizan in narodni heroj, ⋆ 27.1.1910, Ljubljana - † 10.2.1979, Ljubljana.<br>Eden izmed vodilnih članov Komunistične partije Slovenije pred drugo svetovno vojno, med vojno pa eden izmed glavnih voditeljev osvobodilne fronte. Po vojni je vodil mirovna pogajanja z Italijo. Bil je glavni ustvarjalec jugoslovanskega sistema delavskega samoupravljanja, postavil je tudi temelj zunanje politike z oblikovanjem ideološke osnovne jugoslovanske politike neskladnosti v petdesetih in šestdesetih letih 20. stoletja. Bil je druga najpomembnejša oseba v Jugoslaviji, takoj za Titom.",
+    question:
+      "Slovenski politik, pisatelj, učitelj, partizan in narodni heroj, ⋆ 27.1.1910, Ljubljana - † 10.2.1979, Ljubljana.<br>Eden izmed vodilnih članov Komunistične partije Slovenije pred drugo svetovno vojno, med vojno pa eden izmed glavnih voditeljev osvobodilne fronte. Po vojni je vodil mirovna pogajanja z Italijo. Bil je glavni ustvarjalec jugoslovanskega sistema delavskega samoupravljanja, postavil je tudi temelj zunanje politike z oblikovanjem ideološke osnovne jugoslovanske politike neskladnosti v petdesetih in šestdesetih letih 20. stoletja. Bil je druga najpomembnejša oseba v Jugoslaviji, takoj za Titom.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[4],
     questionImg:
@@ -1535,7 +1874,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "5",
-    question: "Slovenski letalski konstruktor, pilot in pionir letalstva, ⋆ 6.6.1886, Trst - † 9.1.1911, Beograd.<br>Z bratom sta bila prva slovenska letalca, ki sta se po dosežkih lahko primerjala z bratoma Wright v ZDA. Njegova unikatnost je bila v tem, da sta bila z bratom načrtovalca, konstruktorja in pilota istočasno, brez nobenega predhodnega znanja ali bogatih finančnih sredstev. Leta 1911 se je odpravil na promocijsko turnejo po Balkanu. Januarja se je znašel v Beogradu, kjer je bilo vreme vetrovno, a je kljub svarilom poletel, dokler ni njegovemu letalu močan sunek zlomil krila. Lrilo je padlo v Savo, letalo pa je strmoglavilo. Utrpel je hude poškodbe in umrl med prevozom v bolnišnico. Njegovemu pogrebu je prisostvovalo 15 tisoč ljudi. Po njem je poimenovano letališče v Mariboru in asteroid v vesolju.",
+    question:
+      "Slovenski letalski konstruktor, pilot in pionir letalstva, ⋆ 6.6.1886, Trst - † 9.1.1911, Beograd.<br>Z bratom sta bila prva slovenska letalca, ki sta se po dosežkih lahko primerjala z bratoma Wright v ZDA. Njegova unikatnost je bila v tem, da sta bila z bratom načrtovalca, konstruktorja in pilota istočasno, brez nobenega predhodnega znanja ali bogatih finančnih sredstev. Leta 1911 se je odpravil na promocijsko turnejo po Balkanu. Januarja se je znašel v Beogradu, kjer je bilo vreme vetrovno, a je kljub svarilom poletel, dokler ni njegovemu letalu močan sunek zlomil krila. Lrilo je padlo v Savo, letalo pa je strmoglavilo. Utrpel je hude poškodbe in umrl med prevozom v bolnišnico. Njegovemu pogrebu je prisostvovalo 15 tisoč ljudi. Po njem je poimenovano letališče v Mariboru in asteroid v vesolju.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[5],
     questionImg:
@@ -1543,7 +1883,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "6",
-    question: "Slovenski pesnik, ⋆ 29.11.1921, Kamnik - † 24.11.1943, Grahovo.<br>Zaradi vojne se je njegovo šolanje predčasno prekinilo potem, ko so ga Italijani odpeljali v koncentracijsko taborišče Gonars v Furlanijo, saj so sumili, da je povezan z osvobodilno fronto. Že tako bolan se je vrnil v Ljubljano, kjer se je pozneje pridružil vaškim stražam. Enkrat je uspel uiti smrti, drugič pa je med partizanskim obleganjem domobranske postojanke v Grahovem živ zgorel. Pisal je sonete, ki so razodevali tegobno stanje njegove družine, nekaj pesmi je posvetil tudi svoji prvi ljubezni, Marjetici, živahni dijakinji trgovske akademije. To so bile erotično zasnovane lirične izpovedi in refleksivni utrinki. Najbolj znana je njegova zbirka V ognju groze plapolam, ki je izšla leto dni po njegovi smrti. Njegova dela so bila v Jugoslaviji prepovedana, zato jih je vse do osamosvojitve Slovenije gojila slovenska skupnost v Argentini.",
+    question:
+      "Slovenski pesnik, ⋆ 29.11.1921, Kamnik - † 24.11.1943, Grahovo.<br>Zaradi vojne se je njegovo šolanje predčasno prekinilo potem, ko so ga Italijani odpeljali v koncentracijsko taborišče Gonars v Furlanijo, saj so sumili, da je povezan z osvobodilno fronto. Že tako bolan se je vrnil v Ljubljano, kjer se je pozneje pridružil vaškim stražam. Enkrat je uspel uiti smrti, drugič pa je med partizanskim obleganjem domobranske postojanke v Grahovem živ zgorel. Pisal je sonete, ki so razodevali tegobno stanje njegove družine, nekaj pesmi je posvetil tudi svoji prvi ljubezni, Marjetici, živahni dijakinji trgovske akademije. To so bile erotično zasnovane lirične izpovedi in refleksivni utrinki. Najbolj znana je njegova zbirka V ognju groze plapolam, ki je izšla leto dni po njegovi smrti. Njegova dela so bila v Jugoslaviji prepovedana, zato jih je vse do osamosvojitve Slovenije gojila slovenska skupnost v Argentini.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[6],
     questionImg:
@@ -1551,7 +1892,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "7",
-    question: "Slovenski pesnik, ⋆ 3.12.1800, Vrba - † 8.2.1849, Kranj. Rodil se je v kmečki družini.<br>V osnovni šoli je bil tako priden, da so ga zapisali v zlato knjigo. Po uspešno zaključenem študiju na dunajski pravni fakulteti se je vrnil v Ljubljano, kjer je delal kot odvetnik. V tem času je napisal večino svojih pesmi, pri pisanju katerih ga je pomembno usmerjal prijatelj Matija Čop. Bil je prvi Slovenec, ki se je po kakovosti svojega pisanja lahko kosal s sodobniki po Evropi, kjer je tedaj vladala romantična usmeritev. Življenjska pot pesnika, nesrečno zaljubljenega v bogato Primičevo Julijo, se je končala v znamenju z malodušja in težav z alkoholom, kar je nazadnje povzročilo njegovo smrt.",
+    question:
+      "Slovenski pesnik, ⋆ 3.12.1800, Vrba - † 8.2.1849, Kranj. Rodil se je v kmečki družini.<br>V osnovni šoli je bil tako priden, da so ga zapisali v zlato knjigo. Po uspešno zaključenem študiju na dunajski pravni fakulteti se je vrnil v Ljubljano, kjer je delal kot odvetnik. V tem času je napisal večino svojih pesmi, pri pisanju katerih ga je pomembno usmerjal prijatelj Matija Čop. Bil je prvi Slovenec, ki se je po kakovosti svojega pisanja lahko kosal s sodobniki po Evropi, kjer je tedaj vladala romantična usmeritev. Življenjska pot pesnika, nesrečno zaljubljenega v bogato Primičevo Julijo, se je končala v znamenju z malodušja in težav z alkoholom, kar je nazadnje povzročilo njegovo smrt.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[7],
     questionImg:
@@ -1559,7 +1901,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "8",
-    question: "Slovenski raketni inženir, častnik in pionir kozmonavtike, ⋆ 22.12.1892, Pulj - † 27.8.1929, Dunaj.<br>Kot strokovnjak za mostovne in inženirske gradnje je moral na fronto, kjer je zbolel za tuberkolozo, zato so ga leta 1919 upokojili. Naslednja leta se je z bratom popolnoma posvetil načrtovanju prodora v vesolje. Leta 1928 je v Berlinu izšla njegova knjiga Problem vožnje po vesolju - Raketni motor, ki velja za eno temeljnih del prve generacije raziskovalcev vesolja, kjer je opisal načrt za preboj v vesolje in ureditev stalne vesoljske postaje z namenom opazovanja zemlje. V Berlinu so njegove zamisli vzeli resno medtem, ko so dunajski inženirji ocenili njegovo delo za domišljijo, čeprav je postala temelj za nadaljnje osvajanje vesolja. Je eden prvih snovateljev na svetu, ki je načrtoval izvorne rešitve in zasnove naprav za vesolje. Z izdajo knjige je postal eden izmed najpomembnejših svetovnih utemeljiteljev potovanja in bivanja v vesolju, njegova knjiga je bila temelj nemškega, ameriškega in sovjetskega vesoljskega programa.",
+    question:
+      "Slovenski raketni inženir, častnik in pionir kozmonavtike, ⋆ 22.12.1892, Pulj - † 27.8.1929, Dunaj.<br>Kot strokovnjak za mostovne in inženirske gradnje je moral na fronto, kjer je zbolel za tuberkolozo, zato so ga leta 1919 upokojili. Naslednja leta se je z bratom popolnoma posvetil načrtovanju prodora v vesolje. Leta 1928 je v Berlinu izšla njegova knjiga Problem vožnje po vesolju - Raketni motor, ki velja za eno temeljnih del prve generacije raziskovalcev vesolja, kjer je opisal načrt za preboj v vesolje in ureditev stalne vesoljske postaje z namenom opazovanja zemlje. V Berlinu so njegove zamisli vzeli resno medtem, ko so dunajski inženirji ocenili njegovo delo za domišljijo, čeprav je postala temelj za nadaljnje osvajanje vesolja. Je eden prvih snovateljev na svetu, ki je načrtoval izvorne rešitve in zasnove naprav za vesolje. Z izdajo knjige je postal eden izmed najpomembnejših svetovnih utemeljiteljev potovanja in bivanja v vesolju, njegova knjiga je bila temelj nemškega, ameriškega in sovjetskega vesoljskega programa.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[8],
     questionImg:
@@ -1567,15 +1910,16 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "9",
-    question: "Slovenski pisatelj, esejist, dramatik in pesnik, ⋆ 10.5.1876, Vrhnika - † 11.12.1918, Ljubljana.<br>Letnica 1899 je letnica izida njegove prve pesniške zbirke Erotika in Župančičeve Čaše opojnosti in velja za začetek slovenske moderne. V svoji pesniški zbirki je zbral mladostne ljubezenske pesmi, balade in romance. V svojih dunajskih letih je sodeloval pri literarnem krožku slovenskih študentov.",
+    question:
+      "Slovenski pisatelj, esejist, dramatik in pesnik, ⋆ 10.5.1876, Vrhnika - † 11.12.1918, Ljubljana.<br>Letnica 1899 je letnica izida njegove prve pesniške zbirke Erotika in Župančičeve Čaše opojnosti in velja za začetek slovenske moderne. V svoji pesniški zbirki je zbral mladostne ljubezenske pesmi, balade in romance. V svojih dunajskih letih je sodeloval pri literarnem krožku slovenskih študentov.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[9],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-ivancankar.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-ivancankar.png",
   },
   {
     id: "10",
-    question: "Slovenski letalec, poslovnež in politik, ⋆ 15.4.1956, Postojna.<br>Je eden najuspešnejših slovenskih podjetnikov in ustanovitelj ter dolgoletni direktor podjetja Pipistrel, ki proizvaja ultra lahka letala, ustanovljeno leta 1987 kot prvo zasebno tovarno letal v Jugoslaviji. Leta 2022 je prodal večinski delež Pipistrela američanom za skoraj 250 milijonov dolarjev. Znan je tudi po radodarnosti: domači občini je podaril 25 milijonov evrov, gasilcem pa 2 milijona evrov za gašenje ob hudem požaru na Krasu.",
+    question:
+      "Slovenski letalec, poslovnež in politik, ⋆ 15.4.1956, Postojna.<br>Je eden najuspešnejših slovenskih podjetnikov in ustanovitelj ter dolgoletni direktor podjetja Pipistrel, ki proizvaja ultra lahka letala, ustanovljeno leta 1987 kot prvo zasebno tovarno letal v Jugoslaviji. Leta 2022 je prodal večinski delež Pipistrela američanom za skoraj 250 milijonov dolarjev. Znan je tudi po radodarnosti: domači občini je podaril 25 milijonov evrov, gasilcem pa 2 milijona evrov za gašenje ob hudem požaru na Krasu.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[10],
     questionImg:
@@ -1583,15 +1927,16 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "11",
-    question: "Slovenski izumitelj, mehanik in proizvajalec vozil, ⋆ 27.6.1862, Slovenske gorice - † 19.7.1914, Zagreb.<br>Pri mladih letih je obiskal Daimlerja in Benza ter preštudiral njune motorje, ker je hotel z njimi opremiti svoja kolesa. Pri konstrukciji motocikla se je kmalu ločil od vzora kolesa in iskal prikladnejše oblike. Po daljšem preskušanju in izpopolnjevanju mu je uspelo zgraditi motocikel. Leta 1906 je ta zmagal na sloviti dirki za pokal Gordon-Bennet – vozil je s povprečno hitrostjo 77 km/h. S svojimi vozili je začel oskrbovati celo avstrijski dvor, njegova tovarna pa je leta 1912 izdelala 17.000 vozil, kar je bilo za takratne razmere ogromno.",
+    question:
+      "Slovenski izumitelj, mehanik in proizvajalec vozil, ⋆ 27.6.1862, Slovenske gorice - † 19.7.1914, Zagreb.<br>Pri mladih letih je obiskal Daimlerja in Benza ter preštudiral njune motorje, ker je hotel z njimi opremiti svoja kolesa. Pri konstrukciji motocikla se je kmalu ločil od vzora kolesa in iskal prikladnejše oblike. Po daljšem preskušanju in izpopolnjevanju mu je uspelo zgraditi motocikel. Leta 1906 je ta zmagal na sloviti dirki za pokal Gordon-Bennet – vozil je s povprečno hitrostjo 77 km/h. S svojimi vozili je začel oskrbovati celo avstrijski dvor, njegova tovarna pa je leta 1912 izdelala 17.000 vozil, kar je bilo za takratne razmere ogromno.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[11],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-janezpuh.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-janezpuh.png",
   },
   {
     id: "12",
-    question: "Kranjski plemič in član Kraljeve družbe, ⋆ 1.5.1641, Ljubljana - † 16.11.1693, Krško.<br>Bil je vsestransko izobražena osebnost, njegovo delo ni bilo omejeno samo na eno področje ali znanost, ampak je obsegalo več raznovrstnih področij. Čeprav je bil po poklicu vojak, je večino svojega življenja zapisal znanosti, zbirateljstvu in preučevanju Kranjske, osrednjega dela današnje Slovenije. Tako je zapustil obširno znanstveno delo.",
+    question:
+      "Kranjski plemič in član Kraljeve družbe, ⋆ 1.5.1641, Ljubljana - † 16.11.1693, Krško.<br>Bil je vsestransko izobražena osebnost, njegovo delo ni bilo omejeno samo na eno področje ali znanost, ampak je obsegalo več raznovrstnih področij. Čeprav je bil po poklicu vojak, je večino svojega življenja zapisal znanosti, zbirateljstvu in preučevanju Kranjske, osrednjega dela današnje Slovenije. Tako je zapustil obširno znanstveno delo.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[12],
     questionImg:
@@ -1599,7 +1944,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "13",
-    question: "Slovenski fizik, matematik, elektrotehnik in pesnik, ⋆ 24.3.1835, Šempeter pri Žrelcu - † 7.1.1893, Dunaj.<br>Raziskoval je na vseh tedanjih področjih fizike: mehaniki, hidrodinamiki, akustiki, termodinamiki, kinetični teoriji plinov, kaloriki, teoriji toplotnega sevanja, elektromagnetizmu, optiki. Vse svoje znanstvene razprave je napisal v nemščini. Najbolj je znan po določitvi fizikalnega zakona, ki ga je eksperimentalno odkril leta 1879, ki povezuje celotno izsevano energijo črnega telesa j* s četrto potenco termodinamične temperature T. To je edini zakon, ki je poimenovan po kakšnem Slovencu. Zaradi njegovih zaslug na področju znanosti ga je odlikoval sam avstrijski cesar.",
+    question:
+      "Slovenski fizik, matematik, elektrotehnik in pesnik, ⋆ 24.3.1835, Šempeter pri Žrelcu - † 7.1.1893, Dunaj.<br>Raziskoval je na vseh tedanjih področjih fizike: mehaniki, hidrodinamiki, akustiki, termodinamiki, kinetični teoriji plinov, kaloriki, teoriji toplotnega sevanja, elektromagnetizmu, optiki. Vse svoje znanstvene razprave je napisal v nemščini. Najbolj je znan po določitvi fizikalnega zakona, ki ga je eksperimentalno odkril leta 1879, ki povezuje celotno izsevano energijo črnega telesa j* s četrto potenco termodinamične temperature T. To je edini zakon, ki je poimenovan po kakšnem Slovencu. Zaradi njegovih zaslug na področju znanosti ga je odlikoval sam avstrijski cesar.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[13],
     questionImg:
@@ -1607,7 +1953,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "14",
-    question: "Slovenski arhitekt, ⋆ 23.1.1872, Ljubljana - † 7.1.1957, Ljubljana.<br>Bil je arhitekt, ki si je močno prizadeval, da bi z lastnim umetniškim ustvarjanjem dal slovenski in evropski arhitekturi izrazito prepoznavnost. Zaradi njegovega kakovostnega in raznolikega dela na Dunaju, Pragi in Ljubljani ter Sloveniji in na področju nekdanje Jugoslavije je prejel vrsto nagrad in odlikovanj. Na njegov stil je imel velik vpliv njegov profesor Wagner, a tudi antika in lokalno izročilo. V Ljubljani je načrtal tržnico, zapornico, NUK, Tromostovje, Čevljarski most, Žale ter prenovo Ljubljanskega gradu. Zamislil si je tudi zgradbo slovenskega parlamenta, Katedralo svobode, ki pa ni bila nikoli uresničena.",
+    question:
+      "Slovenski arhitekt, ⋆ 23.1.1872, Ljubljana - † 7.1.1957, Ljubljana.<br>Bil je arhitekt, ki si je močno prizadeval, da bi z lastnim umetniškim ustvarjanjem dal slovenski in evropski arhitekturi izrazito prepoznavnost. Zaradi njegovega kakovostnega in raznolikega dela na Dunaju, Pragi in Ljubljani ter Sloveniji in na področju nekdanje Jugoslavije je prejel vrsto nagrad in odlikovanj. Na njegov stil je imel velik vpliv njegov profesor Wagner, a tudi antika in lokalno izročilo. V Ljubljani je načrtal tržnico, zapornico, NUK, Tromostovje, Čevljarski most, Žale ter prenovo Ljubljanskega gradu. Zamislil si je tudi zgradbo slovenskega parlamenta, Katedralo svobode, ki pa ni bila nikoli uresničena.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[14],
     questionImg:
@@ -1615,15 +1962,16 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "15",
-    question: "Slovenski matematik, fizik, geodet, meteorolog, plemič in topniški častnik, ⋆ 23.3.1754, Dol pri Ljubljani - † 26.12.1802, Dunaj.<br>Leta 1783 je objavil tablice logaritmov z desetiško osnovo, leta 1789 pa je izračunal vrednost π na 140 decimalk in s tem postavil takratni svetovni rekord, ki je trajal kar 52 let. Leta 1794 je izdal knjigo z izračuni logaritmov števil od 1 do 100.000 na sedem decimalk. Avstrijskemu cesarju je tudi predlagal uvedbo metričnega merskega sistema, a ta ni imel posluha zanj, čeprav so ga nazadnje vseeno uvedli, a s 100-letno zamudo.",
+    question:
+      "Slovenski matematik, fizik, geodet, meteorolog, plemič in topniški častnik, ⋆ 23.3.1754, Dol pri Ljubljani - † 26.12.1802, Dunaj.<br>Leta 1783 je objavil tablice logaritmov z desetiško osnovo, leta 1789 pa je izračunal vrednost π na 140 decimalk in s tem postavil takratni svetovni rekord, ki je trajal kar 52 let. Leta 1794 je izdal knjigo z izračuni logaritmov števil od 1 do 100.000 na sedem decimalk. Avstrijskemu cesarju je tudi predlagal uvedbo metričnega merskega sistema, a ta ni imel posluha zanj, čeprav so ga nazadnje vseeno uvedli, a s 100-letno zamudo.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[15],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-jurijvega.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-jurijvega.png",
   },
   {
     id: "16",
-    question: "Slovenski pesnik, prevajalec, partizan in narodni heroj, ⋆ 13.12.1922, Šoštanj - † 22.2.1944, Šentvid pri Zavodnjah.<br>Ob napadu na Jugoslavijo, 6. aprila 1941, se je s skupino somišljenikov podal v Zasavsko hribovje, da bi se priključili uporu jugoslovanske vojske. V Ljubljani se je vključil v ilegalo, postal sodelavec partizanske tajne službe in komunistične partije. Na silvestrovanju konec leta 1941 je spoznal Silvo, ki je postala njegova velika ljubezen. Ljubezen do domovine in Silve je združil v ciklu ljubezenskih pesmi, ki jih je ljubljenemu dekletu in njunemu nikoli rojenemu otroku v številnih občutenih, strastnih in nežnih pismih pošiljal v italijanski zapor, kjer je bila Silva zaprta. Umrl je v nemški zaseda ob premiku 14. divizije na Štajersko leta 1944. Najbolj znani so njegovi verzi »Lepo je, veš mama, lepo je živeti. Toda za kar sem umrl bi hotel še enkrat umreti.«",
+    question:
+      "Slovenski pesnik, prevajalec, partizan in narodni heroj, ⋆ 13.12.1922, Šoštanj - † 22.2.1944, Šentvid pri Zavodnjah.<br>Ob napadu na Jugoslavijo, 6. aprila 1941, se je s skupino somišljenikov podal v Zasavsko hribovje, da bi se priključili uporu jugoslovanske vojske. V Ljubljani se je vključil v ilegalo, postal sodelavec partizanske tajne službe in komunistične partije. Na silvestrovanju konec leta 1941 je spoznal Silvo, ki je postala njegova velika ljubezen. Ljubezen do domovine in Silve je združil v ciklu ljubezenskih pesmi, ki jih je ljubljenemu dekletu in njunemu nikoli rojenemu otroku v številnih občutenih, strastnih in nežnih pismih pošiljal v italijanski zapor, kjer je bila Silva zaprta. Umrl je v nemški zaseda ob premiku 14. divizije na Štajersko leta 1944. Najbolj znani so njegovi verzi »<i>Lepo je, veš mama, lepo je živeti. Toda za kar sem umrl bi hotel še enkrat umreti.</i>«",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[16],
     questionImg:
@@ -1631,7 +1979,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "17",
-    question: "Slovenska igralka, ⋆ 23.9.1976, Slovenj Gradec.<br>Na televiziji se je pri rosnih dvanajstih letih prvič pojavila leta 1988 v reklami za Cockto. Njena mednarodna igralska kariera se je začela z vlogo Gabriele v filmu The Guard, režiserja John M. McDonagh-a. Njena najvidnešja vloga do sedaj je v filmu Martina Scorseseja Volk z Wall Streeta.",
+    question:
+      "Slovenska igralka, ⋆ 23.9.1976, Slovenj Gradec.<br>Na televiziji se je pri rosnih dvanajstih letih prvič pojavila leta 1988 v reklami za Cockto. Njena mednarodna igralska kariera se je začela z vlogo Gabriele v filmu The Guard, režiserja John M. McDonagh-a. Njena najvidnešja vloga do sedaj je v filmu Martina Scorseseja Volk z Wall Streeta.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[17],
     questionImg:
@@ -1639,7 +1988,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "18",
-    question: "Slovenski zborovodja, skladatelj in antifašist, ⋆ 17.2.1902, Gorica - † 16.2.1937, Gorica.<br>Z vodenjem slovenskim pevskih zborov je pomagal ohranjati slovenščino v Goriški, ki je bila po priključitvi Italije z Rapalsko pogodbo podvržena poitalijančevanju. Večkrat je bil zaradi domoljubja in ljubezni do slovenskega jezika zaprt, njegovo delovanje je šlo v nos fašistom. Tako so ga leta 1936 po koncu maše zajeli, hudo pretepli in ga prisilili, da spije mešanico bencina in strojnega olja. Zastrupitev je povzročila razpad jeter in ledvic, tako je po dveh mesecih peklenskih bolečin zapustil ženo z dvema otrokoma in umrl.",
+    question:
+      "Slovenski zborovodja, skladatelj in antifašist, ⋆ 17.2.1902, Gorica - † 16.2.1937, Gorica.<br>Z vodenjem slovenskim pevskih zborov je pomagal ohranjati slovenščino v Goriški, ki je bila po priključitvi Italije z Rapalsko pogodbo podvržena poitalijančevanju. Večkrat je bil zaradi domoljubja in ljubezni do slovenskega jezika zaprt, njegovo delovanje je šlo v nos fašistom. Tako so ga leta 1936 po koncu maše zajeli, hudo pretepli in ga prisilili, da spije mešanico bencina in strojnega olja. Zastrupitev je povzročila razpad jeter in ledvic, tako je po dveh mesecih peklenskih bolečin zapustil ženo z dvema otrokoma in umrl.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[18],
     questionImg:
@@ -1647,7 +1997,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "19",
-    question: "Slovenski pesnik in mučenec, ⋆ 27.5.1923, Tržišče - † 1.1.1943, Mirna.<br>Šolal se je v Ljubljani, obiskoval je klasično gimnazijo in postal odličen dijak. Zadnja leta gimnazije pa je preživel v napetosti bližajoče se druge svetovne vojne. Med počitnicami se je hotel vrniti domov k mami, kljub svarilom o naraščajočem nasilju in nevarnosti. Na novo leto je bil pri maši, nato pa se je hotel z vlakom odpraviti na pot. Ker so partizani progo minirali, se je odločil, da se bo na pot podal kar peš. Pri prvi hiši ga je prijela partizanska straža, ki je na njem našla molitvenik. Sumili so, da je ovaduh, in ga zato po hitrem sojenju usmrtili. Njegovo truplo so našli dva meseca pozneje v sledečem stanju: vsi prsti so bili prerezani, na rokah je imel odtis vrvi s katero je bil privezan, desno uho je bilo odrezano, desne ustnice tudi, vsa lična koža je bila potegnjena z obraza, desno oko je bilo izrezano, na glavi pa je bila 8 cm dolga in 6 cm široka rana. Njegovi beatifikaciji je prisostvovalo 50.000 vernikov.",
+    question:
+      "Slovenski pesnik in mučenec, ⋆ 27.5.1923, Tržišče - † 1.1.1943, Mirna.<br>Šolal se je v Ljubljani, obiskoval je klasično gimnazijo in postal odličen dijak. Zadnja leta gimnazije pa je preživel v napetosti bližajoče se druge svetovne vojne. Med počitnicami se je hotel vrniti domov k mami, kljub svarilom o naraščajočem nasilju in nevarnosti. Na novo leto je bil pri maši, nato pa se je hotel z vlakom odpraviti na pot. Ker so partizani progo minirali, se je odločil, da se bo na pot podal kar peš. Pri prvi hiši ga je prijela partizanska straža, ki je na njem našla molitvenik. Sumili so, da je ovaduh, in ga zato po hitrem sojenju usmrtili. Njegovo truplo so našli dva meseca pozneje v sledečem stanju: vsi prsti so bili prerezani, na rokah je imel odtis vrvi s katero je bil privezan, desno uho je bilo odrezano, desne ustnice tudi, vsa lična koža je bila potegnjena z obraza, desno oko je bilo izrezano, na glavi pa je bila 8 cm dolga in 6 cm široka rana. Njegovi beatifikaciji je prisostvovalo 50.000 vernikov.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[19],
     questionImg:
@@ -1655,7 +2006,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "20",
-    question: "Slovenska manekenka in prva ameriška dama, ⋆ 26.4.1970, Novo mesto.<br>Je žena nepremičninskega mogotca Donalda Trumpa, med njegovim predsedniškim mandatom je bila prva dama Združenih držav Amerike. Odraščala je v Sevnici in delala kot manekenka prek agencij v evropskih modnih prestolnicah Milanu in Parizu, leta 1996 pa se je preselila v New York. Leta 2006 sta z Donaldom dobila sina Barrona, ki ima tudi slovensko državljanstvo, s katerim se mama pogovarja v slovenskem jeziku, saj ju na tak način Donald Trump ne more razumeti.",
+    question:
+      "Slovenska manekenka in prva ameriška dama, ⋆ 26.4.1970, Novo mesto.<br>Je žena nepremičninskega mogotca Donalda Trumpa, med njegovim predsedniškim mandatom je bila prva dama Združenih držav Amerike. Odraščala je v Sevnici in delala kot manekenka prek agencij v evropskih modnih prestolnicah Milanu in Parizu, leta 1996 pa se je preselila v New York. Leta 2006 sta z Donaldom dobila sina Barrona, ki ima tudi slovensko državljanstvo, s katerim se mama pogovarja v slovenskem jeziku, saj ju na tak način Donald Trump ne more razumeti.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[20],
     questionImg:
@@ -1663,15 +2015,16 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "21",
-    question: "Slovenski politik, ⋆ 14.1.1941, Križevci.<br>Prekmurec po rodu, v času Jugoslavije je bil sekretar Zveze komunistov Slovenije in član predsedstva Centralnega komiteja zveze komunistov Jugoslavije. Med osamosvojitvenimi procesi je predsednik Predsedstva Republike Slovenije in tako postal prvi slovenski predsednik, nakar je bil še enkrat izvoljen. Njegov mandat se je zaključil leta 2002.",
+    question:
+      "Slovenski politik, ⋆ 14.1.1941, Križevci.<br>Prekmurec po rodu, v času Jugoslavije je bil sekretar Zveze komunistov Slovenije in član predsedstva Centralnega komiteja zveze komunistov Jugoslavije. Med osamosvojitvenimi procesi je predsednik Predsedstva Republike Slovenije in tako postal prvi slovenski predsednik, nakar je bil še enkrat izvoljen. Njegov mandat se je zaključil leta 2002.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[21],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-milankucan.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-milankucan.png",
   },
   {
     id: "22",
-    question: "Slovenski pesnik, dramatik in prevajalec, ⋆ 23.1.1878, Vinica - † 11.6.1949, Ljubljana.<br>Belokranjec, eden izmed predstavnikov slovenske moderne, časni meščan Ljubljane. Med drugo svetovno vojno je bil povezan z NOB-jem. Po koncu druge svetovne vojne je sodeloval v javnem in političnem življenju, bil je poslanec ljudske skupščine LRS in član njenega Prezidija. Spomenik žrtvam vseh vojn v Ljubljani nosi njegove verze »Domovina je ena, nam vsem dodeljena, in eno življenje in ena smrt!«.",
+    question:
+      "Slovenski pesnik, dramatik in prevajalec, ⋆ 23.1.1878, Vinica - † 11.6.1949, Ljubljana.<br>Belokranjec, eden izmed predstavnikov slovenske moderne, časni meščan Ljubljane. Med drugo svetovno vojno je bil povezan z NOB-jem. Po koncu druge svetovne vojne je sodeloval v javnem in političnem življenju, bil je poslanec ljudske skupščine LRS in član njenega Prezidija. Spomenik žrtvam vseh vojn v Ljubljani nosi njegove verze »<i>Domovina je ena, nam vsem dodeljena, in eno življenje in ena smrt!</i>«.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[22],
     questionImg:
@@ -1679,7 +2032,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "23",
-    question: "Slovenski komunist in narodni heroj, ⋆ 20.3.1915, Trst - † 15.12.1941, Opčine.<br>Leta 1927 je italijanski fašistični režim razpustil vse slovenske organizacije, med drugim tudi mladinske, kar ga je še posebno prizadelo. Posledično se je pridružil nekaterim mladinskim skupinam, ki so ilegalno nadaljevale svoje dejavnosti, zlasti v smeri narodnega boja in antifašizma. V Trstu se je zato družil s tigrovci in mladino, ki je načrtovala oborožen upor. Leta 1940 je bil aretiran; iz skupine 300 aretirancev so izbrali 60 osumljencev, ki so bili nato udeleženi v drugem tržaškem procesu. Njega so obsodili na smrt.",
+    question:
+      "Slovenski komunist in narodni heroj, ⋆ 20.3.1915, Trst - † 15.12.1941, Opčine.<br>Leta 1927 je italijanski fašistični režim razpustil vse slovenske organizacije, med drugim tudi mladinske, kar ga je še posebno prizadelo. Posledično se je pridružil nekaterim mladinskim skupinam, ki so ilegalno nadaljevale svoje dejavnosti, zlasti v smeri narodnega boja in antifašizma. V Trstu se je zato družil s tigrovci in mladino, ki je načrtovala oborožen upor. Leta 1940 je bil aretiran; iz skupine 300 aretirancev so izbrali 60 osumljencev, ki so bili nato udeleženi v drugem tržaškem procesu. Njega so obsodili na smrt.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[23],
     questionImg:
@@ -1687,7 +2041,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "24",
-    question: "Slovenski protestantski duhovnik in pisec, ⋆ 8.6.1508, Rašica - † 28.6.1586, Tübingen.<br>Bil je osrednja osebnost reformacije na Kranjskem, znan pa je predvsem kot avtor prvih natisnjenih knjig v slovenskem jeziku, Katekizma in Abecednika. Zato velja Trubar za utemeljitelja slovenskega knjižnega jezika, za osrednji lik slovenske kulturne zgodovine in v različnih pogledih celo glavno zgodovinsko osebnost. Svoje nagovore je vedno začel s frazo »Lubi Slovenci!«.",
+    question:
+      "Slovenski protestantski duhovnik in pisec, ⋆ 8.6.1508, Rašica - † 28.6.1586, Tübingen.<br>Bil je osrednja osebnost reformacije na Kranjskem, znan pa je predvsem kot avtor prvih natisnjenih knjig v slovenskem jeziku, Katekizma in Abecednika. Zato velja Trubar za utemeljitelja slovenskega knjižnega jezika, za osrednji lik slovenske kulturne zgodovine in v različnih pogledih celo glavno zgodovinsko osebnost. Svoje nagovore je vedno začel s frazo »<i>Lubi Slovenci!</i>«.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[24],
     questionImg:
@@ -1695,7 +2050,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "25",
-    question: "Slovenski pesnik, general in borec za severno mejo, ⋆ 29.3.1874, Kamnik - † 26.7.1934, Unec.<br>Na Dunaju je dokončal častniški študij, kasneje pa se je šolal v armadni strelski šoli. Ob začetku prve svetovne vojne je bil imenovan za poveljnika Maribora, to vlogo je opravljal do konca vojne, ko so Avstrijci razglasili Maribor za nemško ozemlje. Dan zatem je izjavil »Ne priznavam teh točk. Maribor razglašam za posest države SHS in prevzemam poveljstvo nad mestom.«, nakar so njegovi vojaki še isto popoldne prevzeli celotno kritično infrastrukturo mesta. Nato je s prostovoljci, zbralo se jih je 5.000, začel osvobajati slovenske kraje na Spodnjem Štajerskem in Koroškem in tako preprečil, da bi Maribor oziroma večji del današnje Slovenije postal nemški.",
+    question:
+      "Slovenski pesnik, general in borec za severno mejo, ⋆ 29.3.1874, Kamnik - † 26.7.1934, Unec.<br>Na Dunaju je dokončal častniški študij, kasneje pa se je šolal v armadni strelski šoli. Ob začetku prve svetovne vojne je bil imenovan za poveljnika Maribora, to vlogo je opravljal do konca vojne, ko so Avstrijci razglasili Maribor za nemško ozemlje. Dan zatem je izjavil »<i>Ne priznavam teh točk. Maribor razglašam za posest države SHS in prevzemam poveljstvo nad mestom.</i>«, nakar so njegovi vojaki še isto popoldne prevzeli celotno kritično infrastrukturo mesta. Nato je s prostovoljci, zbralo se jih je 5.000, začel osvobajati slovenske kraje na Spodnjem Štajerskem in Koroškem in tako preprečil, da bi Maribor oziroma večji del današnje Slovenije postal nemški.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[25],
     questionImg:
@@ -1703,7 +2059,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "26",
-    question: "Slovenski pesnik in duhovnik, ⋆ 15.10.1844, Vrsno - † 24.11.1906, Gorica.<br>Njegovo pesništvo se navezuje še na predromantične in romantične vzore. Pisal je ljubezenske, domovinske in življenjsko izpovedne pesmi, pa tudi nekaj epskih pesmi. Njegovo zanimanje za slovstvo se je začelo že v gimnaziji. Njegovi verzi so izraz njegove mehke duše, njegovega pesniškega in človeškega značaja.",
+    question:
+      "Slovenski pesnik in duhovnik, ⋆ 15.10.1844, Vrsno - † 24.11.1906, Gorica.<br>Njegovo pesništvo se navezuje še na predromantične in romantične vzore. Pisal je ljubezenske, domovinske in življenjsko izpovedne pesmi, pa tudi nekaj epskih pesmi. Njegovo zanimanje za slovstvo se je začelo že v gimnaziji. Njegovi verzi so izraz njegove mehke duše, njegovega pesniškega in človeškega značaja.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[26],
     questionImg:
@@ -1711,7 +2068,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "27",
-    question: "Slovenski glasbenik in skladatelj, ⋆ 26.11.1929, Begunje na Gorenjskem - † 2.7.2015, Begunje na Gorenjskem.<br>Napisal je preko 1000 skladb in s svojim delom postal utemeljitelj narodno-zabavne glasbe v Sloveniji. Njegov ansambel je bil zelo priljubljen po vsem svetu, še posebej pa v Sloveniji, Avstriji, Nemčiji in Švici. Skupno je prodal skoraj 35 milijonov plošč.",
+    question:
+      "Slovenski glasbenik in skladatelj, ⋆ 26.11.1929, Begunje na Gorenjskem - † 2.7.2015, Begunje na Gorenjskem.<br>Napisal je preko 1000 skladb in s svojim delom postal utemeljitelj narodno-zabavne glasbe v Sloveniji. Njegov ansambel je bil zelo priljubljen po vsem svetu, še posebej pa v Sloveniji, Avstriji, Nemčiji in Švici. Skupno je prodal skoraj 35 milijonov plošč.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[27],
     questionImg:
@@ -1719,7 +2077,8 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "28",
-    question: "Slovenski filozof, kulturni kritih in psihoanalitik, ⋆ 21.3.1949, Ljubljana.<br>Doktoriral je iz filozofije, bil je imenovan 'Elvis filozofije' in 'akademska rock zvezda'. V mladih letih so ga zanimala dela Karla Marxa in Friedricha Wilhelma Josepha Schellinga. Bil je profesor na evropski podiplomski šoli, mednarodni direktor Birkbeck Inštituta za humanistične študije in višji raziskovalec na Inštitutu za sociologijo Univerze v Ljubljani.",
+    question:
+      "Slovenski filozof, kulturni kritih in psihoanalitik, ⋆ 21.3.1949, Ljubljana.<br>Doktoriral je iz filozofije, bil je imenovan 'Elvis filozofije' in 'akademska rock zvezda'. V mladih letih so ga zanimala dela Karla Marxa in Friedricha Wilhelma Josepha Schellinga. Bil je profesor na evropski podiplomski šoli, mednarodni direktor Birkbeck Inštituta za humanistične študije in višji raziskovalec na Inštitutu za sociologijo Univerze v Ljubljani.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[28],
     questionImg:
@@ -1727,19 +2086,19 @@ let znaneosebnostiQuiz = [
   },
   {
     id: "29",
-    question: "Jugoslovanski maršal in politik, ⋆ 7.5.1892, Kumrovec - † 4.5.1980, Ljubljana.<br>Rodil se je hrvaškemu očetu in slovenski mami v zelo revni kmečki družini. Med prvo svetovno vojno je bil ujet v Galiciji, po vojni pa je sodeloval v oktobrski revoluciji v Rusiji. Po tem se je vrnil v Jugoslavijo, kjer je začel spoprijateljevati s komunisti, zaradi česar je bil večkrat tudi zaprt. Po nemškem napadu na Jugoslavijo je postal vodja organiziranega upora partizanov, in z zbrano vojsko milijona ljudi osvobodil večino ozemlja takratne Jugoslavije ter Trst in dele Koroške. Po koncu vojne je bil izvoljen za dosmrtnega predsednika socialistične Jugoslavije. Bil je priljubljen državni vodja, spoštovan doma in po svetu.",
+    question:
+      "Jugoslovanski maršal in politik, ⋆ 7.5.1892, Kumrovec - † 4.5.1980, Ljubljana.<br>Rodil se je hrvaškemu očetu in slovenski mami v zelo revni kmečki družini. Med prvo svetovno vojno je bil ujet v Galiciji, po vojni pa je sodeloval v oktobrski revoluciji v Rusiji. Po tem se je vrnil v Jugoslavijo, kjer je začel spoprijateljevati s komunisti, zaradi česar je bil večkrat tudi zaprt. Po nemškem napadu na Jugoslavijo je postal vodja organiziranega upora partizanov, in z zbrano vojsko milijona ljudi osvobodil večino ozemlja takratne Jugoslavije ter Trst in dele Koroške. Po koncu vojne je bil izvoljen za dosmrtnega predsednika socialistične Jugoslavije. Bil je priljubljen državni vodja, spoštovan doma in po svetu.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[29],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-tito.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-tito.png",
   },
   {
     id: "30",
-    question: "Slovenski razsvetljenec, gospodarstvenik, podjetnik, mecen in mineralog, ⋆ 23.11.1747, Trst - † 10.11.1819, Ljubljana.<br>Bil je mecen najuglednejših slovenskih razsvetljencev, materialno jih je podpiral, spodbujal in usmerjal ter bil tako središčna osebnost. Zavzemal se je za ideale izobrazbe in vzgoje, ki sta glavni pogoj za materialni in duhovni napredek. Navduševal se je nad zoologijo, botaniko ter predvsem nad mineralogijo, po njem je tudi poimenovan zelo zanimiv in barvit mineral (cojzit), njegova afriška varianta pa se imenuje tanzanit.",
+    question:
+      "Slovenski razsvetljenec, gospodarstvenik, podjetnik, mecen in mineralog, ⋆ 23.11.1747, Trst - † 10.11.1819, Ljubljana.<br>Bil je mecen najuglednejših slovenskih razsvetljencev, materialno jih je podpiral, spodbujal in usmerjal ter bil tako središčna osebnost. Zavzemal se je za ideale izobrazbe in vzgoje, ki sta glavni pogoj za materialni in duhovni napredek. Navduševal se je nad zoologijo, botaniko ter predvsem nad mineralogijo, po njem je tudi poimenovan zelo zanimiv in barvit mineral (cojzit), njegova afriška varianta pa se imenuje tanzanit.",
     options: znaneosebnostiQuizOptions,
     correct: znaneosebnostiQuizOptions[30],
-    questionImg:
-      "media/znaneosebnosti/slovenija-znaneosebnosti-zigazois.png",
+    questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-zigazois.png",
   },
 ];
 
