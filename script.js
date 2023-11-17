@@ -38,28 +38,32 @@ let casopisiQuizOptions = [
 let casopisiQuiz = [
   {
     id: "0",
-    question: "Časopis je nastal v Ljubljani z združitvijo časopisov Ljudska pravica in Slovenski poročevalec. Prva številka je izšla leta 1959, leta 1991 pa je časopis ustanovil tabloid Slovenske novice. Izhaja dnevno od ponedeljka do sobote in ima 8 rednih prilog (od kuhinjskih receptov in finačnih komentarjev do modnih trendov).",
+    question:
+      "Časopis je nastal v Ljubljani z združitvijo časopisov Ljudska pravica in Slovenski poročevalec. Prva številka je izšla leta 1959, leta 1991 pa je časopis ustanovil tabloid Slovenske novice. Izhaja dnevno od ponedeljka do sobote in ima 8 rednih prilog (od kuhinjskih receptov in finačnih komentarjev do modnih trendov).",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[0],
     questionImg: "media/casopisi/slovenija-casopisi-delo.png",
   },
   {
     id: "1",
-    question: "Časopis je leta 1951 ustanovila Socialistična zveza delovnega ljudstva Slovenije. Pokrival je predvsem Ljubljansko kotlino in del Gorenjske in Dolenjske, sprva pa izhajal kot popoldnevnik, do leta 1988 pa je izhajal že po vsej Sloveniji.",
+    question:
+      "Časopis je leta 1951 ustanovila Socialistična zveza delovnega ljudstva Slovenije. Pokrival je predvsem Ljubljansko kotlino in del Gorenjske in Dolenjske, sprva pa izhajal kot popoldnevnik, do leta 1988 pa je izhajal že po vsej Sloveniji.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[1],
     questionImg: "media/casopisi/slovenija-casopisi-dnevnik.png",
   },
   {
     id: "2",
-    question: "V obdobju med 1876 in 1928 je bil politično glasilo tržaških Slovencev, pa tudi na širšem področju Primorske in Istre. Časopis je prenehal obstajati zaradi prisilne ukinitve s strani fašističnega režima, ki je prepovedoval javno rabo slovenskega jezika.",
+    question:
+      "V obdobju med 1876 in 1928 je bil politično glasilo tržaških Slovencev, pa tudi na širšem področju Primorske in Istre. Časopis je prenehal obstajati zaradi prisilne ukinitve s strani fašističnega režima, ki je prepovedoval javno rabo slovenskega jezika.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[2],
     questionImg: "media/casopisi/slovenija-casopisi-edinost.png",
   },
   {
     id: "3",
-    question: "Slovenski časnik, ki je izhajal med letoma 1843 in 1902. V kulturnem smislu je bil zelo pomemben, saj je utrdil enoten slovenski knjižni jezik, splošni sprejem gajice in nasploh vsestranski kulturni razvoj slovenskega naroda. Objavljal je tudi Prešernova, Levstikova, Jenkova in Jurčičeva dela.",
+    question:
+      "Slovenski časnik, ki je izhajal med letoma 1843 in 1902. V kulturnem smislu je bil zelo pomemben, saj je utrdil enoten slovenski knjižni jezik, splošni sprejem gajice in nasploh vsestranski kulturni razvoj slovenskega naroda. Objavljal je tudi Prešernova, Levstikova, Jenkova in Jurčičeva dela.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[3],
     questionImg:
@@ -67,42 +71,48 @@ let casopisiQuiz = [
   },
   {
     id: "4",
-    question: "Od leta 1881 do 1941 je bil osrednji slovenski literarni mesečnik. Skoraj ves čas izhajanja je bil med vodilnimi slovenskimi literarnimi revijami. Poleg leposlovja, kateremu je bil v prvi vrsti namenjen, je prinašal še umetnostno kritiko ter razprave in eseje o umetnosti.",
+    question:
+      "Od leta 1881 do 1941 je bil osrednji slovenski literarni mesečnik. Skoraj ves čas izhajanja je bil med vodilnimi slovenskimi literarnimi revijami. Poleg leposlovja, kateremu je bil v prvi vrsti namenjen, je prinašal še umetnostno kritiko ter razprave in eseje o umetnosti.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[4],
     questionImg: "media/casopisi/slovenija-casopisi-ljubljanskizvon.png",
   },
   {
     id: "5",
-    question: "Njegov predhodnik je bil Partizanski dnevnik, ki je začel izhajati leta 1943 kot edini tiskani dnevnik protifašističnega partizanskega odpora v okupirani Evropi. Sedaj ima sedež v Trstu, velja pa za edini dnevnik Slovencev v Italiji.",
+    question:
+      "Njegov predhodnik je bil Partizanski dnevnik, ki je začel izhajati leta 1943 kot edini tiskani dnevnik protifašističnega partizanskega odpora v okupirani Evropi. Sedaj ima sedež v Trstu, velja pa za edini dnevnik Slovencev v Italiji.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[5],
     questionImg: "media/casopisi/slovenija-casopisi-primorskidnevnik.png",
   },
   {
     id: "6",
-    question: "V letih 1873 - 1945 je bil vodilni časnik političnega katolicizma na Slovenskem. Časnik se je kljub večkratni zamenjavi oblasti in vsem svetovnim ter domačim krizam obdržal vse do konca druge svetovne vojne leta 1945, ko so ga nove oblasti ukinile.",
+    question:
+      "V letih 1873 - 1945 je bil vodilni časnik političnega katolicizma na Slovenskem. Časnik se je kljub večkratni zamenjavi oblasti in vsem svetovnim ter domačim krizam obdržal vse do konca druge svetovne vojne leta 1945, ko so ga nove oblasti ukinile.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[6],
     questionImg: "media/casopisi/slovenija-casopisi-slovenec.png",
   },
   {
     id: "7",
-    question: "V letih 1868 - 1943 je bil politični časopis in prvi slovenski dnevnik. V času okupacije so bila v njem poročila okupacijskih oblasti in obtožbe Osvobodilne fronte. Ko so oblast na ljubljanskem območju prevzeli Nemci, je zaradi pomanjkanja papirja časopis nehal izhajati.",
+    question:
+      "V letih 1868 - 1943 je bil politični časopis in prvi slovenski dnevnik. V času okupacije so bila v njem poročila okupacijskih oblasti in obtožbe Osvobodilne fronte. Ko so oblast na ljubljanskem območju prevzeli Nemci, je zaradi pomanjkanja papirja časopis nehal izhajati.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[7],
     questionImg: "media/casopisi/slovenija-casopisi-slovenskinarod.png",
   },
   {
     id: "8",
-    question: "Časopis, ki je svojo pot začel kot ilegalno glasilo Komunistične partije Slovenije, kasneje pa je postal glasilo Osvobodilne fronte. Leta 1959 se je z združitvijo s časopisom Ljudske pravice preimenoval v Delo.",
+    question:
+      "Časopis, ki je svojo pot začel kot ilegalno glasilo Komunistične partije Slovenije, kasneje pa je postal glasilo Osvobodilne fronte. Leta 1959 se je z združitvijo s časopisom Ljudske pravice preimenoval v Delo.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[8],
     questionImg: "media/casopisi/slovenija-casopisi-slovenskiporocevalec.png",
   },
   {
     id: "9",
-    question: "Slovenski splošnoinformativni dnevni časopis, ki ga izdaja podjetje s sedežem v Mariboru. Poleg splošnih novic pokriva predvsem območje Štajerske in je eden najbolj branih slovenskih časopisov.",
+    question:
+      "Slovenski splošnoinformativni dnevni časopis, ki ga izdaja podjetje s sedežem v Mariboru. Poleg splošnih novic pokriva predvsem območje Štajerske in je eden najbolj branih slovenskih časopisov.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[9],
     questionImg: "media/casopisi/slovenija-casopisi-vecer.png",
@@ -995,19 +1005,168 @@ let pokrajineQuiz = [
   },
 ];
 
+let praznikiQuizOptions = [
+    "50. dan po veliki noči",
+    "25. december",
+    "25. junij",
+    "31. oktober",
+    "23. november",
+    "26. december",
+    "23. september",
+    "1. november",
+    "25. oktober",
+    "27. april",
+    "15. september",
+    "15. avgust",
+    "11. november",
+    "6. december",
+    "1. in 2. januar",
+    "1. in 2. maj",
+    "8. februar",
+    "Sedem tednov pred veliko nočjo",
+    "Prva nedelja po prvi pomladni polni luni",
+    "17. avgust",
+];
 let praznikiQuiz = [
   {
     id: "0",
-    question: "praznikiQuiz",
-    options: [
-      "Da, gotovina.",
-      "Ne, kartica bo.",
-      "Ne gotovina, cash.",
-      "Oboje.",
-    ],
-    correct: "Ne gotovina, cash.",
-    questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+    question: "Binkošti ali praznik Svetega Duha je verski praznik. Beseda binkošti izvira iz starogrške besede pentekoste, kar pomeni 'petdeseti'. Praznuje se prihod svetega Duha nad Jezusove apostole.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[0],
+    questionImg: "media/prazniki/slovenija-prazniki-binkosti.png",
+  },
+  {
+    id: "1",
+    question: "Božič je tradicionalni krščanski praznik, ki obuja spomin na rojstvo Jezusa Kristusa. Praznik zaključuje čas adventa in začenja božični čas. Slovensko ime božič za praznik Jezusovega rojstva namreč izhaja iz pomena »majhen bog«.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[1],
+    questionImg: "media/prazniki/slovenija-prazniki-bozic.png",
+  },
+  {
+    id: "2",
+    question: "Dan državnosti je državni praznik. Obeležuje spomin na 25. junij 1991, ko je Slovenija formalno postala neodvisna. Na ta dan je bila sprejeta Deklaracija o neodvisnosti Slovenije, ki je bila slavnostno razglašena naslednji dan, 26. junija, na Trgu republike v Ljubljani. Dva dni kasneje se je začela slovenska osamosvojitvena vojna, v kateri je Slovenija obranila neodvisnost.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[2],
+    questionImg: "media/prazniki/slovenija-prazniki-dandrzavnosti.png",
+  },
+  {
+    id: "3",
+    question: "Dan reformacije je v Sloveniji dela prost dan. Posvečen je reformaciji, tj. verskemu, družbeno-političnemu in kulturnemu gibanju v 16. stoletju, ki je Slovencem prineslo prve tiskane knjige v slovenščini, prvo slovnico in s tem slovenski knjižni jezik.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[3],
+    questionImg: "media/prazniki/slovenija-prazniki-danreformacije.png",
+  },
+  {
+    id: "4",
+    question: "Dan Rudolfa Maistra je državni praznik. Na ta dan je Rudolf Maister leta 1918 s svojo vojsko razorožil nemško stražo in jo razpustil, s tem dogodkom pa je k Sloveniji priključil večji del slovenskega narodnostnega in govornega območja Štajerske in Koroške.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[4],
+    questionImg: "media/prazniki/slovenija-prazniki-danrudolfamaistra.png",
+  },
+  {
+    id: "5",
+    question: "Dan samostojnosti in enotnosti je državni praznik, na ta dan se obeležuje razglasitev izidov plebiscita o samostojnosti leta 1990, na katerem je 95% volilcev na vprašanje »Ali naj Slovenija postane samostojna in neodvisna država?« odgovorilo pritrdilno, s čimer se je začela osamosvojitev Slovenije.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[5],
+    questionImg: "media/prazniki/slovenija-prazniki-dansamostojnostiinenotnosti.png",
+  },
+  {
+    id: "6",
+    question: "Dan slovenskega športa je državni praznik ki je bil uveden leta 2020 na pobudo Olimpijskega komiteja Slovenije. Datum je izbran kot obletnica na dogodke leta 2000, ko je ob zmagi veslačev Iztoka Čopa in Luke Špika ter strelca Rajmonda Debevca na poletnih olimpijskih igrah v Sydneyju prvič zaigrala slovenska himna Zdravljica.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[6],
+    questionImg: "media/prazniki/slovenija-prazniki-danslovenskegasporta.png",
+  },
+  {
+    id: "7",
+    question: "Dan spomina na mrtve je v Sloveniji državni praznik, ki se praznuje kot spomin na umrle praznuje.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[7],
+    questionImg: "media/prazniki/slovenija-prazniki-danspominanamrtve.png",
+  },
+  {
+    id: "8",
+    question: "Dan suverenosti je praznik, s katerim obeležujemo enega ključnih dogodkov v procesu osamosvojitve Slovenije, dan, ko je po osamosvojitveni vojni zadnji jugoslovanski vojak zapustil slovensko ozemlje.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[8],
+    questionImg: "media/prazniki/slovenija-prazniki-dansuverenosti.png",
+  },
+  {
+    id: "9",
+    question: "Dan upora proti okupatorju je državni praznik, ki spominja na dogodke leta 1941, ko je bila v Ljubljani ustanovljena Osvobodilna fronta, organizacija odpora proti italijanskemu in nemškemu okupatorju med drugo svetovno vojno.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[9],
+    questionImg: "media/prazniki/slovenija-prazniki-danuporaprotiokupatorju.png",
+  },
+  {
+    id: "10",
+    question: "Dan vrnitve Primorske k matični domovini je državni praznik, ki ga praznujemo na obletnico dogodkov iz leta 1947, ko je bila uveljavljena pariška mirovna pogodba z Italijo, ki je Sloveniji vrnila velik del ugrabljene Primorske.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[10],
+    questionImg: "media/prazniki/slovenija-prazniki-danvrnitveprimorskekmaticnidomovini.png",
+  },
+  {
+    id: "11",
+    question: "Marijino vnebovzétje (tudi veliki šmaren) je eden izmed največjih krščanskih praznikov, slavili so ga že v apostolskih časih. Na ta dan se kristjani spominjajo, da je bila Devica Marija z dušo in telesom vzeta v nebesa.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[11],
+    questionImg: "media/prazniki/slovenija-prazniki-marijinovnebovzetje.png",
+  },
+  {
+    id: "12",
+    question: "Martinovo ali god sv. Martina je dan, na katerega se evropske države spominjajo svetnika, ki je dal svoj plašč beraču, da bi lahko skril svojo revščino. V Sloveniji se dan sv. Martina praznuje predvsem kot praznik vina. Do tega dne se mošt obravnava kot nečisto in grešno novo vino, ki se ob blagoslovitvi spremeni v pravo vino.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[12],
+    questionImg: "media/prazniki/slovenija-prazniki-martinovo.png",
+  },
+  {
+    id: "13",
+    question: "Sv. Miklavž je verski praznik. Miklavž naj bi se rodil v premožni družini, vendar je vse podedovano bogastvo razdal revnim, zato se ga od nekdaj drži sloves radodarnega svetnika. Na Slovenskem je zato ta dan posvečen obdarovanju mlajših.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[13],
+    questionImg: "media/prazniki/slovenija-prazniki-miklavz.png",
+  },
+  {
+    id: "14",
+    question: "Novo leto je praznični dan, ki obeležuje začetek novega koledarskega leta.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[14],
+    questionImg: "media/prazniki/slovenija-prazniki-novoleto.png",
+  },
+  {
+    id: "15",
+    question: "Praznik dela se po slovenski tradiciji obeležuje zlasti s kresovi in nošnjo nageljnov. Na ta dan se obuja spomin na trpljenje in dosežke delavskega razreda.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[15],
+    questionImg: "media/prazniki/slovenija-prazniki-praznikdela.png",
+  },
+  {
+    id: "16",
+    question: "Prešernov dan je osrednji slovenski kulturni praznik, ki ga praznujemo na obletnico smrti največjega slovenskega pesnika Franceta Prešerna.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[16],
+    questionImg: "media/prazniki/slovenija-prazniki-presernovdan.png",
+  },
+  {
+    id: "17",
+    question: "Pust je čas, ko se napravimo v pustno šemo, maškaro. Beseda pust je verjetno nastala iz »mesopust«, to je iz besed meso in pustiti, kar bi bil dobeseden prevod iz italijanskega izraza »carneleva« v pomenu.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[17],
+    questionImg: "media/prazniki/slovenija-prazniki-pust.png",
+  },
+  {
+    id: "18",
+    question: "Velika noč (Vuzem) je najpomembnejši krščanski praznik. Velika noč obsega posebno praznovanje, ki ga imenujemo velikonočno tridnevje. Za kristjane je praznik veselja in upanja, verujejo, da je Jezus s svojim vstajenjem premagal telesno in duhovno smrt ter za vse prinesel upanje.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[18],
+    questionImg: "media/prazniki/slovenija-prazniki-velikanoc.png",
+  },
+  {
+    id: "19",
+    question: "Združitev prekmurskih Slovencev z matičnim narodom je praznik, ki ga praznujemo na dan, ko je bilo Prekmurje po določilih Pariške mirovne konference združeno s Kraljevino SHS, s tem pa so bili prekmurski Slovenci po stoletjih madžarske oblasti znova združeni s slovenskim narodom.",
+    options: praznikiQuizOptions,
+    correct: praznikiQuizOptions[19],
+    questionImg: "media/prazniki/slovenija-prazniki-zdruzitevprekmurcevzmaticnimnarodom.png",
   },
 ];
 
