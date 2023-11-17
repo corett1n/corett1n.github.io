@@ -23,15 +23,89 @@ let atLeastOneCategoryIsSelected = false;
 
 let selectedCategories = {};
 
-let casopisiQuizOptions = [];
+let casopisiQuizOptions = [
+  "Delo",
+  "Dnevnik",
+  "Edinost",
+  "Kmetijske in rokodelske novice",
+  "Ljubljanski zvon",
+  "Primorski dnevnik",
+  "Slovenec",
+  "Slovenski narod",
+  "Slovenski poročevalec",
+  "Večer",
+];
 let casopisiQuiz = [
   {
     id: "0",
-    question: "casopisiQuiz",
+    question: "Časopis je nastal v Ljubljani z združitvijo časopisov Ljudska pravica in Slovenski poročevalec. Prva številka je izšla leta 1959, leta 1991 pa je časopis ustanovil tabloid Slovenske novice. Izhaja dnevno od ponedeljka do sobote in ima 8 rednih prilog (od kuhinjskih receptov in finačnih komentarjev do modnih trendov).",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[0],
+    questionImg: "media/casopisi/slovenija-casopisi-delo.png",
+  },
+  {
+    id: "1",
+    question: "Časopis je leta 1951 ustanovila Socialistična zveza delovnega ljudstva Slovenije. Pokrival je predvsem Ljubljansko kotlino in del Gorenjske in Dolenjske, sprva pa izhajal kot popoldnevnik, do leta 1988 pa je izhajal že po vsej Sloveniji.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[1],
+    questionImg: "media/casopisi/slovenija-casopisi-dnevnik.png",
+  },
+  {
+    id: "2",
+    question: "V obdobju med 1876 in 1928 je bil politično glasilo tržaških Slovencev, pa tudi na širšem področju Primorske in Istre. Časopis je prenehal obstajati zaradi prisilne ukinitve s strani fašističnega režima, ki je prepovedoval javno rabo slovenskega jezika.",
     options: casopisiQuizOptions,
     correct: casopisiQuizOptions[2],
+    questionImg: "media/casopisi/slovenija-casopisi-edinost.png",
+  },
+  {
+    id: "3",
+    question: "Slovenski časnik, ki je izhajal med letoma 1843 in 1902. V kulturnem smislu je bil zelo pomemben, saj je utrdil enoten slovenski knjižni jezik, splošni sprejem gajice in nasploh vsestranski kulturni razvoj slovenskega naroda. Objavljal je tudi Prešernova, Levstikova, Jenkova in Jurčičeva dela.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[3],
     questionImg:
-      "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
+      "media/casopisi/slovenija-casopisi-kmetijskeinrokodelskenovice.png",
+  },
+  {
+    id: "4",
+    question: "Od leta 1881 do 1941 je bil osrednji slovenski literarni mesečnik. Skoraj ves čas izhajanja je bil med vodilnimi slovenskimi literarnimi revijami. Poleg leposlovja, kateremu je bil v prvi vrsti namenjen, je prinašal še umetnostno kritiko ter razprave in eseje o umetnosti.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[4],
+    questionImg: "media/casopisi/slovenija-casopisi-ljubljanskizvon.png",
+  },
+  {
+    id: "5",
+    question: "Njegov predhodnik je bil Partizanski dnevnik, ki je začel izhajati leta 1943 kot edini tiskani dnevnik protifašističnega partizanskega odpora v okupirani Evropi. Sedaj ima sedež v Trstu, velja pa za edini dnevnik Slovencev v Italiji.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[5],
+    questionImg: "media/casopisi/slovenija-casopisi-primorskidnevnik.png",
+  },
+  {
+    id: "6",
+    question: "V letih 1873 - 1945 je bil vodilni časnik političnega katolicizma na Slovenskem. Časnik se je kljub večkratni zamenjavi oblasti in vsem svetovnim ter domačim krizam obdržal vse do konca druge svetovne vojne leta 1945, ko so ga nove oblasti ukinile.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[6],
+    questionImg: "media/casopisi/slovenija-casopisi-slovenec.png",
+  },
+  {
+    id: "7",
+    question: "V letih 1868 - 1943 je bil politični časopis in prvi slovenski dnevnik. V času okupacije so bila v njem poročila okupacijskih oblasti in obtožbe Osvobodilne fronte. Ko so oblast na ljubljanskem območju prevzeli Nemci, je zaradi pomanjkanja papirja časopis nehal izhajati.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[7],
+    questionImg: "media/casopisi/slovenija-casopisi-slovenskinarod.png",
+  },
+  {
+    id: "8",
+    question: "Časopis, ki je svojo pot začel kot ilegalno glasilo Komunistične partije Slovenije, kasneje pa je postal glasilo Osvobodilne fronte. Leta 1959 se je z združitvijo s časopisom Ljudske pravice preimenoval v Delo.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[8],
+    questionImg: "media/casopisi/slovenija-casopisi-slovenskiporocevalec.png",
+  },
+  {
+    id: "9",
+    question: "Slovenski splošnoinformativni dnevni časopis, ki ga izdaja podjetje s sedežem v Mariboru. Poleg splošnih novic pokriva predvsem območje Štajerske in je eden najbolj branih slovenskih časopisov.",
+    options: casopisiQuizOptions,
+    correct: casopisiQuizOptions[9],
+    questionImg: "media/casopisi/slovenija-casopisi-vecer.png",
   },
 ];
 
@@ -1614,8 +1688,7 @@ let zanimivostiQuiz = [
     question: "",
     options: zanimivostiQuizOptions,
     correct: zanimivostiQuizOptions[9],
-    questionImg:
-      "media/zanimivosti/slovenija-zanimivosti-murskarepublika.png",
+    questionImg: "media/zanimivosti/slovenija-zanimivosti-murskarepublika.png",
   },
   {
     id: "10",
@@ -1750,8 +1823,7 @@ let zanimivostiQuiz = [
     question: "",
     options: zanimivostiQuizOptions,
     correct: zanimivostiQuizOptions[26],
-    questionImg:
-      "media/zanimivosti/slovenija-zanimivosti-veckot500gradov.png",
+    questionImg: "media/zanimivosti/slovenija-zanimivosti-veckot500gradov.png",
   },
   {
     id: "27",
@@ -1766,8 +1838,7 @@ let zanimivostiQuiz = [
     question: "",
     options: zanimivostiQuizOptions,
     correct: zanimivostiQuizOptions[28],
-    questionImg:
-      "media/zanimivosti/slovenija-zanimivosti-veckot10000jam.png",
+    questionImg: "media/zanimivosti/slovenija-zanimivosti-veckot10000jam.png",
   },
   {
     id: "29",
