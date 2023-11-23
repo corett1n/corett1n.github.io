@@ -971,6 +971,7 @@ let podjetjaQuizOptions = [
   "Ljubljansko prehrambeno podjetje",
   "Podjetje, ki se ukvarja z izdelovanjem nakita in drugih izdelkov iz zlata in srebra",
   "Koprsko podjetje, ki izdeluje avtomobilske dele",
+  "Koprsko podjetje, ki je izdelovalo motorna kolesa",
 ];
 let podjetjaQuiz = [
   {
@@ -1266,6 +1267,13 @@ let podjetjaQuiz = [
     options: podjetjaQuizOptions,
     correct: podjetjaQuizOptions[41],
     questionImg: "media/podjetja/slovenija-podjetja-cimos.png",
+  },
+  {
+    id: "42",
+    question: "",
+    options: podjetjaQuizOptions,
+    correct: podjetjaQuizOptions[42],
+    questionImg: "media/podjetja/slovenija-podjetja-tomos.png",
   },
 ];
 
