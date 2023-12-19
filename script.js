@@ -15,7 +15,7 @@ let surpriseButton = document.getElementById("to-the-code");
 let userScoreWin = document.getElementById("user-score-win");
 let questionCount;
 let scoreCount = 0;
-let timecount = 20;
+let timecount = 60;
 let countdown;
 let atLeastOneCategoryIsSelected = false;
 
@@ -1984,7 +1984,7 @@ let splosnakulturaQuiz = [
   },
   {
     id: "5",
-    question: "Slovenija je 29. marca 2004 postala...",
+    question: "Slovenija je 29. marca 2004 postala članica...",
     options: ["Evropske Unije", "NATO", "Schengena", "OECD"],
     correct: "NATO",
     questionImg: "media/splosnakultura/slovenija-splosnakultura-nato.png",
@@ -3537,7 +3537,7 @@ nextBtn.addEventListener(
       quizDisplay(questionCount);
       count = timecount;
       clearInterval(countdown);
-      //timerDisplay(); todo: disabled timer
+      timerDisplay();
     }
   })
 );
@@ -3662,6 +3662,13 @@ function checker(userOption) {
       }
     });
   }
+  for(let div of quizContainer.children) { // to hide the clicked answer
+    for(let button of div.children) {
+      if(button.innerText == quizArray[questionCount].correct) {
+        button.classList.add("removedOption");
+      }
+    }
+  }
 
   //clear interval(stop timer)
   clearInterval(countdown);
@@ -3678,7 +3685,7 @@ function initial() {
   scoreCount = 0;
   count = timecount;
   clearInterval(countdown);
-  //timerDisplay(); todo: disabled timer
+  timerDisplay();
   quizCreator();
   quizDisplay(questionCount);
 }
