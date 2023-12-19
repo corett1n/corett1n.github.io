@@ -13,6 +13,7 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let surpriseButton = document.getElementById("to-the-code");
 let userScoreWin = document.getElementById("user-score-win");
+let vseKategorijeButton = document.getElementById("vsekategorije");
 let questionCount;
 let scoreCount = 0;
 let timecount = 60;
@@ -3694,6 +3695,15 @@ function initial() {
 startButton.addEventListener("click", () => {
   startScreen.classList.add("hide");
   categoriesScreen.classList.remove("hide");
+});
+
+//when user wants to select all categories
+vseKategorijeButton.addEventListener("click", () => {
+  let isVseKategorijeChecked = vseKategorijeButton.checked;
+  let checkboxes = document.getElementsByTagName("input");
+  for(let checkbox of checkboxes) {
+    checkbox.checked = isVseKategorijeChecked;
+  }
 });
 
 //when user click on start button
