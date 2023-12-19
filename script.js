@@ -2554,6 +2554,7 @@ let zanimivostiQuizOptions = [
   "V Sloveniji je več kot 10.000 jam, le nekaj deset pa je odprtih za turiste",
   "Na Zalarjevem vrhu je mogoče zaslediti prave stopinje dinozavrov",
   "Slovenijo je lani obiskalo 6 milijonov turistov in 2 milijona jih je obiskalo Piran",
+  "Gasilska zveza Slovenije je največja humanitarna in prostovoljska organizacija Slovenije, ki šteje več kot 160.000 članov",
 ];
 let zanimivostiQuiz = [
   {
@@ -2800,6 +2801,14 @@ let zanimivostiQuiz = [
     correct: zanimivostiQuizOptions[30],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-slovenijojeleta2022obiskalo6mioturistovodtegaje2mioobiskalopiran.png",
+  },
+  {
+    id: "31",
+    question: "",
+    options: zanimivostiQuizOptions,
+    correct: zanimivostiQuizOptions[31],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-najvecjahumanitarnainprostovoljskaorganizacija.png",
   },
 ];
 
