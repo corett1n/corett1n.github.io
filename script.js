@@ -3,6 +3,7 @@ let timeLeft = document.querySelector(".time-left");
 let quizContainer = document.getElementById("container");
 let selectCategoriesBtn = document.getElementById("select-categories");
 let nextBtn = document.getElementById("next-button");
+let endBtn = document.getElementById("end-button");
 let countOfQuestion = document.querySelector(".number-of-question");
 let displayContainer = document.getElementById("display-container");
 let categoriesScreen = document.querySelector(".categories-screen");
@@ -3542,6 +3543,13 @@ nextBtn.addEventListener(
     }
   })
 );
+
+//End Button
+endBtn.addEventListener("click", () => {
+  displayContainer.classList.add("hide");
+  categoriesScreen.classList.remove("hide");
+  initial();
+});
 
 //Timer
 const timerDisplay = () => {
