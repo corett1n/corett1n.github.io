@@ -123,11 +123,11 @@ let casopisiQuiz = [
 
 let geografskipolozajQuizOptions = [
   "Jadransko morje",
-  "Avstrija",
-  "Hrvaška",
-  "Italija",
-  "Madžarska",
-  "Srednja Evropa",
+  "Z Avstrijo",
+  "S Hrvaško",
+  "Z Italijo",
+  "Z Madžarsko",
+  "V Srednji Evropi",
 ];
 let geografskipolozajQuiz = [
   {
