@@ -3523,8 +3523,9 @@ nextBtn.addEventListener(
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
       //user score
+      let userScorePercentage = (scoreCount*100/questionCount).toFixed(1);
       userScore.innerHTML =
-        "Imate " + scoreCount + " od " + questionCount + " točk.";
+        "Imate " + scoreCount + " od " + questionCount + " točk (" + userScorePercentage + "%).";
       if (scoreCount >= questionCount) {
         // TODO 1->questionCount
         userScoreWin.classList.remove("hide");
@@ -3747,6 +3748,7 @@ selectCategoriesBtn.addEventListener("click", () => {
   if (!atLeastOneCategoryIsSelected) return;
   atLeastOneCategoryIsSelected = false;
 
+  userScoreWin.classList.add("hide");
   categoriesScreen.classList.add("hide");
   displayContainer.classList.remove("hide");
   initial();
