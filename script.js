@@ -2862,6 +2862,7 @@ let zgodovinaQuizOptions = [
   "Schengensko območje",
   "Na Wolfovi 8 v Ljubljani",
   "Zedinjena Slovenija",
+  "Prva slovenska vlada",
 ];
 let zgodovinaQuiz = [
   {
@@ -3192,6 +3193,13 @@ let zgodovinaQuiz = [
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[46],
     questionImg: "media/zgodovina/slovenija-zgodovina-zedinjenaslovenija.png",
+  },
+  {
+    id: "47",
+    question: "Leta 1945 je bila v Ajdovščini ustanovljena...",
+    options: zgodovinaQuizOptions,
+    correct: zgodovinaQuizOptions[47],
+    questionImg: "media/zgodovina/slovenija-zgodovina-prvaslovenskavlada.png",
   },
 ];
 
