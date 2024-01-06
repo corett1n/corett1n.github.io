@@ -2319,6 +2319,7 @@ let turisticnedestinacijeQuizOptions = [
   "Mesečev zaliv",
   "Cerkniško jezero",
   "Pohorje",
+  "smučišča",
 ];
 let turisticnedestinacijeQuiz = [
   {
@@ -2536,6 +2537,14 @@ let turisticnedestinacijeQuiz = [
     correct: turisticnedestinacijeQuizOptions[26],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-pohorje.png",
+  },
+  {
+    id: "27",
+    question: "",
+    options: turisticnedestinacijeQuizOptions,
+    correct: turisticnedestinacijeQuizOptions[27],
+    questionImg:
+      "media/turisticnedestinacije/slovenija-turisticnedestinacije-smucisca.png",
   },
 ];
 
