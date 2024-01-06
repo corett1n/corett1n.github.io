@@ -2991,28 +2991,32 @@ let zgodovinaQuiz = [
   },
   {
     id: "1",
-    question: "Ferdo Bidovec, Fran Marušič, Zvonimir Miloš in Alojzij Valenčič so simbol slovenskega upora italijanskim fašističnim oblastem. Pravimo jim tudi...",
+    question:
+      "Ferdo Bidovec, Fran Marušič, Zvonimir Miloš in Alojzij Valenčič so simbol slovenskega upora italijanskim fašističnim oblastem. Pravimo jim tudi...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[1],
     questionImg: "media/zgodovina/slovenija-zgodovina-bazoviskijunaki.png",
   },
   {
     id: "2",
-    question: "V letih 1918-19 so potekali boji za severno mejo po tem, ko je Avstro-Ogrska razpadla. Slovenci, z generalom Rudolfom Maistrom na čelu, so tako preprečili izgubo slovenskega narodnega ozemlja...",
+    question:
+      "V letih 1918-19 so potekali boji za severno mejo po tem, ko je Avstro-Ogrska razpadla. Slovenci, z generalom Rudolfom Maistrom na čelu, so tako preprečili izgubo slovenskega narodnega ozemlja...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[2],
     questionImg: "media/zgodovina/slovenija-zgodovina-bojizasevernomejo.png",
   },
   {
     id: "3",
-    question: "Plemiška rodbina, ki je vladala na Slovenskem, Hrvaškem in Avstrijskem od 12. do 15. stoletja, je nosila ime...",
+    question:
+      "Plemiška rodbina, ki je vladala na Slovenskem, Hrvaškem in Avstrijskem od 12. do 15. stoletja, je nosila ime...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[3],
     questionImg: "media/zgodovina/slovenija-zgodovina-celjskigrofje.png",
   },
   {
     id: "4",
-    question: "Po koncu druge svetovne vojne je bilo tržaško ozemlje razdeljeno na dve coni, jugoslovansko in italijansko. Trst je na koncu pripadal Italiji, s tem pa je več 100.000 Slovencev bilo ponovno odrezanih od...",
+    question:
+      "Po koncu druge svetovne vojne je bilo tržaško ozemlje razdeljeno na dve coni, jugoslovansko in italijansko. Trst je na koncu pripadal Italiji, s tem pa je več 100.000 Slovencev bilo ponovno odrezanih od...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[4],
     questionImg: "media/zgodovina/slovenija-zgodovina-conaab.png",
@@ -3026,7 +3030,8 @@ let zgodovinaQuiz = [
   },
   {
     id: "6",
-    question: "Med drugo svetovno vojno so se nasprotniki partizanov in komunizma združili v...",
+    question:
+      "Med drugo svetovno vojno so se nasprotniki partizanov in komunizma združili v...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[6],
     questionImg: "media/zgodovina/slovenija-zgodovina-domobranci.png",
@@ -3040,105 +3045,122 @@ let zgodovinaQuiz = [
   },
   {
     id: "8",
-    question: "Po koncu prve svetovne vojne je celotno ozemlje Primorske pripadalo Italiji, ki je hotela Slovence iztrebiti, zato je...",
+    question:
+      "Po koncu prve svetovne vojne je celotno ozemlje Primorske pripadalo Italiji, ki je hotela Slovence iztrebiti, zato je...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[8],
     questionImg: "media/zgodovina/slovenija-zgodovina-fasizemnaprimorskem.png",
   },
   {
     id: "9",
-    question: "Ko je postalo jasno, da Trst ne bo pripadal Jugoslaviji, se je slovensko vodstvo tajno odločilo za...",
+    question:
+      "Ko je postalo jasno, da Trst ne bo pripadal Jugoslaviji, se je slovensko vodstvo tajno odločilo za...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[9],
     questionImg: "media/zgodovina/slovenija-zgodovina-gradnjalukekoper.png",
   },
   {
     id: "10",
-    question: "Preden bi se Slovenija leta 1991 končno osamosvojila, je potekala izbira novih državnih simbolov. Nova državna zastava še ni bila izbrana, zato so na predvečer osamosvojitve na vrh Triglava izobesili...",
+    question:
+      "Preden bi se Slovenija leta 1991 končno osamosvojila, je potekala izbira novih državnih simbolov. Nova državna zastava še ni bila izbrana, zato so na predvečer osamosvojitve na vrh Triglava izobesili...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[10],
-    questionImg: "media/zgodovina/slovenija-zgodovina-izbiradrzavnihsimbolov.png",
+    questionImg:
+      "media/zgodovina/slovenija-zgodovina-izbiradrzavnihsimbolov.png",
   },
   {
     id: "11",
-    question: "Prvi slovenski in nasploh slovanski državi, ki je nastala v 7. stoletju na območju Vzhodnih Alp, je bilo ime...",
+    question:
+      "Prvi slovenski in nasploh slovanski državi, ki je nastala v 7. stoletju na območju Vzhodnih Alp, je bilo ime...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[11],
     questionImg: "media/zgodovina/slovenija-zgodovina-karantanija.png",
   },
   {
     id: "12",
-    question: "Zaradi turških vpadov, težav v trgovini in vedno višjih dajatev od 15. do 17. stoletja, so se ljudje organizirali in začeli...",
+    question:
+      "Zaradi turških vpadov, težav v trgovini in vedno višjih dajatev od 15. do 17. stoletja, so se ljudje organizirali in začeli...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[12],
     questionImg: "media/zgodovina/slovenija-zgodovina-kmeckiupori.png",
   },
   {
     id: "13",
-    question: "Po bojih za severno mejo so leta 1920 na Koroškem organizirali plebiscit, na katerem so se ljudje odločali, če bi raje živeli v Avstriji ali Jugoslaviji. Rezultat plebiscita je...",
+    question:
+      "Po bojih za severno mejo so leta 1920 na Koroškem organizirali plebiscit, na katerem so se ljudje odločali, če bi raje živeli v Avstriji ali Jugoslaviji. Rezultat plebiscita je...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[13],
     questionImg: "media/zgodovina/slovenija-zgodovina-koroskiplebiscit.png",
   },
   {
     id: "14",
-    question: "Na Ljubljanskem kongresu leta 1821 so se voditelji vseh evropskih držav dogovarjali o...",
+    question:
+      "Na Ljubljanskem kongresu leta 1821 so se voditelji vseh evropskih držav dogovarjali o...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[14],
     questionImg: "media/zgodovina/slovenija-zgodovina-ljubljanskikongres.png",
   },
   {
     id: "15",
-    question: "Anton Korošec je leta 1917 v dunajskem parlamentu prebral zapis, s katerim so slovanski narodi zahtevali združitev znotraj monarhije v posebno avtonomno enoto. Izjavi pravimo...",
+    question:
+      "Anton Korošec je leta 1917 v dunajskem parlamentu prebral zapis, s katerim so slovanski narodi zahtevali združitev znotraj monarhije v posebno avtonomno enoto. Izjavi pravimo...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[15],
     questionImg: "media/zgodovina/slovenija-zgodovina-majniskadeklaracija.png",
   },
   {
     id: "16",
-    question: "Takoj po razglasitvi samostojnosti Slovenije leta 1991 je bilo potrebno namestiti...",
+    question:
+      "Takoj po razglasitvi samostojnosti Slovenije leta 1991 je bilo potrebno namestiti...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[16],
     questionImg: "media/zgodovina/slovenija-zgodovina-menjavatabel.png",
   },
   {
     id: "17",
-    question: "Konec leta 2015 je po Evropi vladala migrantska kriza, ki je samo čez Slovenijo pripeljala...",
+    question:
+      "Konec leta 2015 je po Evropi vladala migrantska kriza, ki je samo čez Slovenijo pripeljala...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[17],
     questionImg: "media/zgodovina/slovenija-zgodovina-migrantskakriza.png",
   },
   {
     id: "18",
-    question: "Slovenci so se skupaj z ostalimi slovanskimi narodi naselili v Vzhodne Alpe v...",
+    question:
+      "Slovenci so se skupaj z ostalimi slovanskimi narodi naselili v Vzhodne Alpe v...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[18],
     questionImg: "media/zgodovina/slovenija-zgodovina-naselitevslovanov.png",
   },
   {
     id: "19",
-    question: "25. oktobra 1991 je zadnji jugoslovanski vojak, po koncu desetdnevne vojne v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado, zapustil Slovenijo. Na ta dan praznujemo...",
+    question:
+      "25. oktobra 1991 je zadnji jugoslovanski vojak, po koncu desetdnevne vojne v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado, zapustil Slovenijo. Na ta dan praznujemo...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[19],
-    questionImg: "media/zgodovina/slovenija-zgodovina-odhodzadnjegajlavojakaizslovenije.png",
+    questionImg:
+      "media/zgodovina/slovenija-zgodovina-odhodzadnjegajlavojakaizslovenije.png",
   },
   {
     id: "20",
-    question: "Kmalu po nacistični in fašistični okupaciji Slovenije leta 1941 so se slovenski predstavniki javnega življenja dogovorili za oborožen upor. 27. aprila 1941 je bila ustanovljena...",
+    question:
+      "Kmalu po nacistični in fašistični okupaciji Slovenije leta 1941 so se slovenski predstavniki javnega življenja dogovorili za oborožen upor. 27. aprila 1941 je bila ustanovljena...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[20],
     questionImg: "media/zgodovina/slovenija-zgodovina-of.png",
   },
   {
     id: "21",
-    question: "Nacistični in fašistični okupatorji so želeli iztrebiti slovenski narod. V letih 1941-1945 je zaradi njih umrlo preko...",
+    question:
+      "Nacistični in fašistični okupatorji so želeli iztrebiti slovenski narod. V letih 1941-1945 je zaradi njih umrlo preko...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[21],
     questionImg: "media/zgodovina/slovenija-zgodovina-okupacija.png",
   },
   {
     id: "22",
-    question: "Leta 1945 so slovenski partizani osvobodili večino slovenskega ozemlja, tudi Koroško. Slika prikazuje dva partizana ob...",
+    question:
+      "Leta 1945 so slovenski partizani osvobodili večino slovenskega ozemlja, tudi Koroško. Slika prikazuje dva partizana ob...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[22],
     questionImg: "media/zgodovina/slovenija-zgodovina-osvoboditevkoroske.png",
@@ -3152,7 +3174,8 @@ let zgodovinaQuiz = [
   },
   {
     id: "24",
-    question: "1. maja so slovenski partizani IX. korpusa, celo pred Ljubljano, osvobodili...",
+    question:
+      "1. maja so slovenski partizani IX. korpusa, celo pred Ljubljano, osvobodili...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[24],
     questionImg: "media/zgodovina/slovenija-zgodovina-osvoboditevtrsta.png",
@@ -3166,105 +3189,122 @@ let zgodovinaQuiz = [
   },
   {
     id: "26",
-    question: "23. decembra 1990 je v Sloveniji potekal plebiscit za samostojno Slovenijo, na katerem se je za samostojnost opredelilo...",
+    question:
+      "23. decembra 1990 je v Sloveniji potekal plebiscit za samostojno Slovenijo, na katerem se je za samostojnost opredelilo...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[26],
     questionImg: "media/zgodovina/slovenija-zgodovina-plebiscit.png",
   },
   {
     id: "27",
-    question: "Avgusta 2023 so se v Sloveniji zgodile najhujše poplave vseh časov, ki so ustvarile za...",
+    question:
+      "Avgusta 2023 so se v Sloveniji zgodile najhujše poplave vseh časov, ki so ustvarile za...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[27],
     questionImg: "media/zgodovina/slovenija-zgodovina-poplave.png",
   },
   {
     id: "28",
-    question: "Med Izolo in Koprom so angleški piloti leta 1944 potopili ponos italijanskega ladjevja, luksuzno čezoceansko ladjo Rex. Njeno sidro se danes nahaja...",
+    question:
+      "Med Izolo in Koprom so angleški piloti leta 1944 potopili ponos italijanskega ladjevja, luksuzno čezoceansko ladjo Rex. Njeno sidro se danes nahaja...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[28],
     questionImg: "media/zgodovina/slovenija-zgodovina-potopitevrexa.png",
   },
   {
     id: "29",
-    question: "Na velikonočno nedeljo leta 1895 je Ljubljano stresel uničujoč...",
+    question:
+      "Na velikonočno nedeljo leta 1895 je Ljubljano stresel uničujoč...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[29],
     questionImg: "media/zgodovina/slovenija-zgodovina-potresvljubljani.png",
   },
   {
     id: "30",
-    question: "Konec maja 1988 so jugoslovanske tajne službe aretirale štiri novinarje zaradi izdaje zaupnih dokumentov. Sodili so jim na vojaškem sodišču, kar je sprožilo val ogorčenja med ljudmi, ki so zahtevali njihovo pomilostitev. Med aretiranimi novinarji je bil tudi...",
+    question:
+      "Konec maja 1988 so jugoslovanske tajne službe aretirale štiri novinarje zaradi izdaje zaupnih dokumentov. Sodili so jim na vojaškem sodišču, kar je sprožilo val ogorčenja med ljudmi, ki so zahtevali njihovo pomilostitev. Med aretiranimi novinarji je bil tudi...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[30],
     questionImg: "media/zgodovina/slovenija-zgodovina-procesproticetverici.png",
   },
   {
     id: "31",
-    question: "17. decembra 1990 se je slovenski politični vrh udeležil prvega postroja Teritorialne obrambe, ki je v vojni za Slovenijo odigrala najpomembnejšo vlogo. Takrat je...",
+    question:
+      "17. decembra 1990 se je slovenski politični vrh udeležil prvega postroja Teritorialne obrambe, ki je v vojni za Slovenijo odigrala najpomembnejšo vlogo. Takrat je...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[31],
     questionImg: "media/zgodovina/slovenija-zgodovina-prvipostrojto.png",
   },
   {
     id: "32",
-    question: "Junija 2001 sta se v Sloveniji srečala voditelja dveh svetovnih velesil: George Bush, predsednik ZDA ter...",
+    question:
+      "Junija 2001 sta se v Sloveniji srečala voditelja dveh svetovnih velesil: George Bush, predsednik ZDA ter...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[32],
-    questionImg: "media/zgodovina/slovenija-zgodovina-putininbushvsloveniji.png",
+    questionImg:
+      "media/zgodovina/slovenija-zgodovina-putininbushvsloveniji.png",
   },
   {
     id: "33",
-    question: "25. junija 1991 je bila na Trgu republike v Ljubljani razglašena...",
+    question:
+      "25. junija 1991 je bila na Trgu republike v Ljubljani razglašena...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[33],
-    questionImg: "media/zgodovina/slovenija-zgodovina-razglasitevsamostojnosti.png",
+    questionImg:
+      "media/zgodovina/slovenija-zgodovina-razglasitevsamostojnosti.png",
   },
   {
     id: "34",
-    question: "Leta 1550 je z izidom prvih dveh knjig v slovenskem jeziku, Abecednik in Katekizem, postavil temelje slovenskega knjižnega jezika...",
+    question:
+      "Leta 1550 je z izidom prvih dveh knjig v slovenskem jeziku, Abecednik in Katekizem, postavil temelje slovenskega knjižnega jezika...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[34],
     questionImg: "media/zgodovina/slovenija-zgodovina-reformacija.png",
   },
   {
     id: "35",
-    question: "Leta 1918, po dokončnem razpadu Avstro-Ogrske, je bila na Kongresnem trgu v Ljubljani razglašena...",
+    question:
+      "Leta 1918, po dokončnem razpadu Avstro-Ogrske, je bila na Kongresnem trgu v Ljubljani razglašena...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[35],
     questionImg: "media/zgodovina/slovenija-zgodovina-shs.png",
   },
   {
     id: "36",
-    question: "Na slovenski zahodni narodnostni meji je med letoma 1915 in 1917 potekala soška fronta - vrsta bitk med Italijo in Avstro-Ogrsko. Italijani so neuspešno poskušali prebiti avstrijske obrambne linije kar...",
+    question:
+      "Na slovenski zahodni narodnostni meji je med letoma 1915 in 1917 potekala soška fronta - vrsta bitk med Italijo in Avstro-Ogrsko. Italijani so neuspešno poskušali prebiti avstrijske obrambne linije kar...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[36],
     questionImg: "media/zgodovina/slovenija-zgodovina-soskafronta.png",
   },
   {
     id: "37",
-    question: "Leta 2002 se je slovenska nogometna reprezentanca prvič uvrstila na...",
+    question:
+      "Leta 2002 se je slovenska nogometna reprezentanca prvič uvrstila na...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[37],
     questionImg: "media/zgodovina/slovenija-zgodovina-svetovnoprvenstvo.png",
   },
   {
     id: "38",
-    question: "Primorski domoljubi so kot odgovor na fašistično okupacijo in zatiranje odgovorili z ustanovitvijo organizacije TIGR, ki pomeni...",
+    question:
+      "Primorski domoljubi so kot odgovor na fašistično okupacijo in zatiranje odgovorili z ustanovitvijo organizacije TIGR, ki pomeni...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[38],
     questionImg: "media/zgodovina/slovenija-zgodovina-tigr.png",
   },
   {
     id: "39",
-    question: "8. maja 1980 je v ljubljanskem kliničnem centru, najboljši bolnišnici v tedanji Jugoslaviji, umrl...",
+    question:
+      "8. maja 1980 je v ljubljanskem kliničnem centru, najboljši bolnišnici v tedanji Jugoslaviji, umrl...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[39],
     questionImg: "media/zgodovina/slovenija-zgodovina-titoumrevljubljani.png",
   },
   {
     id: "40",
-    question: "Od leta 1991 do leta 2006, ko je Slovenija uvedla evro, je Slovenija imela svojo valuto z imenom...",
+    question:
+      "Od leta 1991 do leta 2006, ko je Slovenija uvedla evro, je Slovenija imela svojo valuto z imenom...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[40],
     questionImg: "media/zgodovina/slovenija-zgodovina-tolarji.png",
@@ -3278,7 +3318,8 @@ let zgodovinaQuiz = [
   },
   {
     id: "42",
-    question: "Razglasitvi samostojnosti Slovenije 25. junija 1991 je sledila vojna, v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado. Tej vojni pravimo tudi...",
+    question:
+      "Razglasitvi samostojnosti Slovenije 25. junija 1991 je sledila vojna, v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado. Tej vojni pravimo tudi...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[42],
     questionImg: "media/zgodovina/slovenija-zgodovina-vojnazaslovenijo.png",
@@ -3299,14 +3340,16 @@ let zgodovinaQuiz = [
   },
   {
     id: "45",
-    question: "Slovenski študent Lovro Toman je leta 1848 prvič izobesil slovensko narodno zastavo kot odgovor na plapolanje nemške zastave na Ljubljanskem gradu. Zastavo je izobesil...",
+    question:
+      "Slovenski študent Lovro Toman je leta 1848 prvič izobesil slovensko narodno zastavo kot odgovor na plapolanje nemške zastave na Ljubljanskem gradu. Zastavo je izobesil...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[45],
     questionImg: "media/zgodovina/slovenija-zgodovina-wolfova8.png",
   },
   {
     id: "46",
-    question: "Program, predstavljen leta 1848, ki je zahteval združitev vseh Slovencev v eno državo, se je imenoval...",
+    question:
+      "Program, predstavljen leta 1848, ki je zahteval združitev vseh Slovencev v eno državo, se je imenoval...",
     options: zgodovinaQuizOptions,
     correct: zgodovinaQuizOptions[46],
     questionImg: "media/zgodovina/slovenija-zgodovina-zedinjenaslovenija.png",
@@ -3648,9 +3691,15 @@ nextBtn.addEventListener(
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
       //user score
-      let userScorePercentage = (scoreCount*100/questionCount).toFixed(1);
+      let userScorePercentage = ((scoreCount * 100) / questionCount).toFixed(1);
       userScore.innerHTML =
-        "Imate " + scoreCount + " od " + questionCount + " točk (" + userScorePercentage + "%).";
+        "Imate " +
+        scoreCount +
+        " od " +
+        questionCount +
+        " točk (" +
+        userScorePercentage +
+        "%).";
       if (scoreCount >= questionCount) {
         // TODO 1->questionCount
         userScoreWin.classList.remove("hide");
@@ -3761,13 +3810,20 @@ function quizCreator() {
     question_DIV.innerHTML = i.question;
     div.appendChild(question_DIV);
 
-    // ***
+    // question image
     let question_IMG = document.createElement("img");
     question_IMG.src = i.questionImg;
     question_IMG.classList.add("question-image");
-
     div.appendChild(question_IMG);
-    // ***
+
+    // progress bar
+    let progressBar = document.createElement("progress");
+    progressBar.value = 0;
+    progressBar.max = 50;
+    progressBar.id = "progressBar";
+    progressBar.classList.add("hide");
+    div.appendChild(progressBar);
+    div.appendChild(document.createElement("br"));
 
     //options
     i.options.forEach((option) => {
@@ -3788,6 +3844,20 @@ function checker(userOption) {
   if (userSolution === quizArray[questionCount].correct) {
     userOption.classList.add("correct");
     scoreCount++;
+
+    document.getElementsByTagName("progress")[questionCount].classList.remove("hide");
+    var timeleft = 50;
+    var downloadTimer = setInterval(function () {
+      if (timeleft <= 0) {
+        clearInterval(downloadTimer);
+      }
+      document.getElementsByTagName("progress")[questionCount].value = 50 - timeleft;
+      timeleft -= 1;
+    }, 40);
+
+    setTimeout(function () {
+      nextBtn.click();
+    }, 2250);
   } else {
     userOption.classList.add("incorrect");
     //For marking the correct option
@@ -3797,9 +3867,10 @@ function checker(userOption) {
       }
     });
   }
-  for(let div of quizContainer.children) { // to hide the clicked answer
-    for(let button of div.children) {
-      if(button.innerText == quizArray[questionCount].correct) {
+  for (let div of quizContainer.children) {
+    // to hide the clicked answer
+    for (let button of div.children) {
+      if (button.innerText == quizArray[questionCount].correct) {
         button.classList.add("removedOption");
       }
     }
@@ -3835,7 +3906,7 @@ startButton.addEventListener("click", () => {
 vseKategorijeButton.addEventListener("click", () => {
   let isVseKategorijeChecked = vseKategorijeButton.checked;
   let checkboxes = document.getElementsByTagName("input");
-  for(let checkbox of checkboxes) {
+  for (let checkbox of checkboxes) {
     checkbox.checked = isVseKategorijeChecked;
   }
 });

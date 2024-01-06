@@ -177,6 +177,12 @@ button:hover {
 {
   transform: scale(2.25);
 }
+progress {
+  position:relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .card {
   background-color: #ffffff;
