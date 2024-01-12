@@ -383,6 +383,107 @@ let hribovjaQuiz = [
   },
 ];
 
+let izumiteljiQuizOptions = [
+  "Razvil je elektronko, podmornico brez posadke in samokrmiljeni torpedo na raketni pogon",
+  "Izdelal je prvi slovenski avto Triglav in izumil ključavnico za železniške vagone",
+  "Izumil je razpršilec za parfumsko steklenico, okvir za fotografije in zračne blazine za avto",
+  "Izumil je prijemalne klešče dvigalnih naprav in izdelal ljubljanske tramvaje",
+  "Izumil je najhitrelši motor na svetu leta 1906 (77 km/h) in patentiral 13 vozil",
+  "Izumil je glasbilo, ki je posnemalo zvok citer, harfe in godala",
+  "Načrtoval je letalo s turboreakcijskim motorjem",
+  "Izumil je lesen fotoaparat, mikroskop in vrtalni stroj",
+  "Izumil je konvertiplan, ki je prvič poletel leta 1936 - današnji helikopter",
+  "Izumil je vodno turbino in razpršilec za škropilnico",
+  "Zasnoval je cepelin, strojno šifriranje sporočil, zračni torpedo in detektor elektromagnetnega sevanja",
+  "Ukvarjal se je s konstrukcijo rakete, zamislil si je vesoljsko postajo",
+];
+let izumiteljiQuiz = [
+  {
+    id: "0",
+    question: "Julij Nardin, ⋆1877 - †1959.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[0],
+    questionImg: "media/izumitelji/slovenija-izumitelji-julijnardin.png",
+  },
+  {
+    id: "1",
+    question: "Stanko Bloudek, ⋆1890 - †1959.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[1],
+    questionImg: "media/izumitelji/slovenija-izumitelji-stankobloudek.png",
+  },
+  {
+    id: "2",
+    question: "Peter Florjančič, ⋆1919 - †2020.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[2],
+    questionImg: "media/izumitelji/slovenija-izumitelji-peterflorjancic.png",
+  },
+  {
+    id: "3",
+    question: "Feliks Lobe, ⋆1894 - †1970.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[3],
+    questionImg: "media/izumitelji/slovenija-izumitelji-felikslobe.png",
+  },
+  {
+    id: "4",
+    question: "Janez Puh, ⋆1862 - †1914.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[4],
+    questionImg: "media/izumitelji/slovenija-izumitelji-janezpuh.png",
+  },
+  {
+    id: "5",
+    question: "Ivan Bajde, ⋆1855 - †1920.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[5],
+    questionImg: "media/izumitelji/slovenija-izumitelji-ivanbajde.png",
+  },
+  {
+    id: "6",
+    question: "Franjo Bratina, ⋆1886 - †1977.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[6],
+    questionImg: "media/izumitelji/slovenija-izumitelji-franjobratina.png",
+  },
+  {
+    id: "7",
+    question: "Anton Jamnik, ⋆1862 - †1942.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[7],
+    questionImg: "media/izumitelji/slovenija-izumitelji-antonjamnik.png",
+  },
+  {
+    id: "8",
+    question: "Ivan Slokar, ⋆1884 - †1970.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[8],
+    questionImg: "media/izumitelji/slovenija-izumitelji-ivanslokar.png",
+  },
+  {
+    id: "9",
+    question: "Valentin Matija Živic, ⋆1828 - †1917.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[9],
+    questionImg: "media/izumitelji/slovenija-izumitelji-valentinmatijazivic.png",
+  },
+  {
+    id: "10",
+    question: "Anton Codelli, ⋆1875 - †1954.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[10],
+    questionImg: "media/izumitelji/slovenija-izumitelji-antoncodelli.png",
+  },
+  {
+    id: "11",
+    question: "Herman Potočnik, ⋆1892 - †1929.<br>",
+    options: izumiteljiQuizOptions,
+    correct: izumiteljiQuizOptions[11],
+    questionImg: "media/izumitelji/slovenija-izumitelji-hermanpotocnik.png",
+  },
+];
+
 let junakiQuizOptions = [
   "Erazem Predjamski",
   "Kekec",
@@ -3762,6 +3863,8 @@ function quizCreator() {
   if (selectedCategories.hrana) hranaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.hribovja)
     hribovjaQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.izumitelji)
+    izumiteljiQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.junaki) junakiQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.mesta) mestaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.narodnisimboli)
@@ -3845,13 +3948,16 @@ function checker(userOption) {
     userOption.classList.add("correct");
     scoreCount++;
 
-    document.getElementsByTagName("progress")[questionCount].classList.remove("hide");
+    document
+      .getElementsByTagName("progress")
+      [questionCount].classList.remove("hide");
     var timeleft = 50;
     var downloadTimer = setInterval(function () {
       if (timeleft <= 0) {
         clearInterval(downloadTimer);
       }
-      document.getElementsByTagName("progress")[questionCount].value = 50 - timeleft;
+      document.getElementsByTagName("progress")[questionCount].value =
+        50 - timeleft;
       timeleft -= 1;
     }, 40);
 
@@ -3918,6 +4024,7 @@ selectCategoriesBtn.addEventListener("click", () => {
     geografskipolozaj: document.querySelector("#geografskipolozaj").checked,
     hrana: document.querySelector("#hrana").checked,
     hribovja: document.querySelector("#hribovja").checked,
+    izumitelji: document.querySelector("#izumitelji").checked,
     junaki: document.querySelector("#junaki").checked,
     mesta: document.querySelector("#mesta").checked,
     narodnisimboli: document.querySelector("#narodnisimboli").checked,
