@@ -400,84 +400,84 @@ let izumiteljiQuizOptions = [
 let izumiteljiQuiz = [
   {
     id: "0",
-    question: "Julij Nardin, ⋆1877 - †1959.<br>",
+    question: "Julij Nardin, ⋆ 1877 - † 1959.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[0]),
     correct: izumiteljiQuizOptions[0],
     questionImg: "media/izumitelji/slovenija-izumitelji-julijnardin.png",
   },
   {
     id: "1",
-    question: "Stanko Bloudek, ⋆1890 - †1959.<br>",
+    question: "Stanko Bloudek, ⋆ 1890 - † 1959.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[1]),
     correct: izumiteljiQuizOptions[1],
     questionImg: "media/izumitelji/slovenija-izumitelji-stankobloudek.png",
   },
   {
     id: "2",
-    question: "Peter Florjančič, ⋆1919 - †2020.<br>",
+    question: "Peter Florjančič, ⋆ 1919 - † 2020.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[2]),
     correct: izumiteljiQuizOptions[2],
     questionImg: "media/izumitelji/slovenija-izumitelji-peterflorjancic.png",
   },
   {
     id: "3",
-    question: "Feliks Lobe, ⋆1894 - †1970.<br>",
+    question: "Feliks Lobe, ⋆ 1894 - † 1970.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[3]),
     correct: izumiteljiQuizOptions[3],
     questionImg: "media/izumitelji/slovenija-izumitelji-felikslobe.png",
   },
   {
     id: "4",
-    question: "Janez Puh, ⋆1862 - †1914.<br>",
+    question: "Janez Puh, ⋆ 1862 - † 1914.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[4]),
     correct: izumiteljiQuizOptions[4],
     questionImg: "media/izumitelji/slovenija-izumitelji-janezpuh.png",
   },
   {
     id: "5",
-    question: "Ivan Bajde, ⋆1855 - †1920.<br>",
+    question: "Ivan Bajde, ⋆ 1855 - † 1920.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[5]),
     correct: izumiteljiQuizOptions[5],
     questionImg: "media/izumitelji/slovenija-izumitelji-ivanbajde.png",
   },
   {
     id: "6",
-    question: "Franjo Bratina, ⋆1886 - †1977.<br>",
+    question: "Franjo Bratina, ⋆ 1886 - † 1977.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[6]),
     correct: izumiteljiQuizOptions[6],
     questionImg: "media/izumitelji/slovenija-izumitelji-franjobratina.png",
   },
   {
     id: "7",
-    question: "Anton Jamnik, ⋆1862 - †1942.<br>",
+    question: "Anton Jamnik, ⋆ 1862 - † 1942.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[7]),
     correct: izumiteljiQuizOptions[7],
     questionImg: "media/izumitelji/slovenija-izumitelji-antonjamnik.png",
   },
   {
     id: "8",
-    question: "Ivan Slokar, ⋆1884 - †1970.<br>",
+    question: "Ivan Slokar, ⋆ 1884 - † 1970.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[8]),
     correct: izumiteljiQuizOptions[8],
     questionImg: "media/izumitelji/slovenija-izumitelji-ivanslokar.png",
   },
   {
     id: "9",
-    question: "Valentin Matija Živic, ⋆1828 - †1917.<br>",
+    question: "Valentin Matija Živic, ⋆ 1828 - † 1917.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[9]),
     correct: izumiteljiQuizOptions[9],
     questionImg: "media/izumitelji/slovenija-izumitelji-valentinmatijazivic.png",
   },
   {
     id: "10",
-    question: "Anton Codelli, ⋆1875 - †1954.<br>",
+    question: "Anton Codelli, ⋆ 1875 - † 1954.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[10]),
     correct: izumiteljiQuizOptions[10],
     questionImg: "media/izumitelji/slovenija-izumitelji-antoncodelli.png",
   },
   {
     id: "11",
-    question: "Herman Potočnik, ⋆1892 - †1929.<br>",
+    question: "Herman Potočnik, ⋆ 1892 - † 1929.<br>",
     options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[11]),
     correct: izumiteljiQuizOptions[11],
     questionImg: "media/izumitelji/slovenija-izumitelji-hermanpotocnik.png",
@@ -2213,7 +2213,7 @@ let sportnikiQuiz = [
     id: "0",
     question:
       "Prvi slovenski hokejski igralec, ki je zaigral v severnoameriški profesionalni hokejski ligi NHL, igra pa v moštvu Los Angeles Kings. Leta 2016 je bil kapetan moštva Evropa na svetovnem prvenstvu, na katerem je dosegel srebrno mesto. Leta 2021 je na tekmi dosegel tisočo točko in se s tem kot 91. član uvrstil v »<i>Klub tisočih točk</i>«. ",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[0]),
     correct: sportnikiQuizOptions[0],
     questionImg: "media/sportniki/slovenija-sportniki-anzekopitar.png",
   },
@@ -2221,7 +2221,7 @@ let sportnikiQuiz = [
     id: "1",
     question:
       "Rojena leta 1999, visoka le 164 cm, težka pa 47 kg. Pri 17. letih je osvojila naslov svetovne prvakinje v težavnostnem plezanju, pri 18. je postala evropska podprvakinja in evropska prvakinja v kombinaciji, pri 20. pa osvojila tri naslove prvakinje, v balvanskem in težavnostnem plezanju ter kombinaciji. Na olimpijskih igrah Tokio 2020 je osvojila zlato medaljo.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[1]),
     correct: sportnikiQuizOptions[1],
     questionImg: "media/sportniki/slovenija-sportniki-janjagarnbret.png",
   },
@@ -2229,7 +2229,7 @@ let sportnikiQuiz = [
     id: "2",
     question:
       "Eden najuspešnejših sodobnih vratarjev, pot ga je vodila od Škofje Loke do Olimpije Ljubljana ter od Benfice do Atletico Madrida, s katerim je zmagal pokala UEFA Europa League in UEFA Super Cup. Igra za slovensko nogometno reprezentanco.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[2]),
     correct: sportnikiQuizOptions[2],
     questionImg: "media/sportniki/slovenija-sportniki-janoblak.png",
   },
@@ -2237,7 +2237,7 @@ let sportnikiQuiz = [
     id: "3",
     question:
       "Nanj je imelo odločujoč vpliv novomeško športno združenje Sokol, v mladih letih je osvojil 20 kolajn: 8 zlatih, 6 srebrnih in 6 bronastih. Samo na olimpijskih igrah je skupno osvojil 6 kolajn, kar ga uvršča v sam vrh športnikov na območju nekdanje Jugoslavije.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[3]),
     correct: sportnikiQuizOptions[3],
     questionImg: "media/sportniki/slovenija-sportniki-leonstukelj.png",
   },
@@ -2245,7 +2245,7 @@ let sportnikiQuiz = [
     id: "4",
     question:
       "Že v njegovih najstniških letih so mu strokovnjaki priznavali, da je eden največjih slovenskih in evropskih talentov. Zelo mlad je zaigral za Real Madrid v močni španski ligi in tudi v najmočnejšem evropskem klubskem tekmovanju, Evroligi in v obeh še mladoleten osvajal posamične in klubske nagrade. Leta 2018 je postal dvanajsti slovenski košarkar izbran v ligo NBA. Zaradi svoje vsestranskosti in številnih odlik ga mediji opisujejosamih superlativih. Leta 2020 je postal prvi Slovenec izbran v prvo postavo tekme vseh zvezd. Velja za najboljšega evropskega košarkarja in enega najboljšega košarkarja vseh časov.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[4]),
     correct: sportnikiQuizOptions[4],
     questionImg: "media/sportniki/slovenija-sportniki-lukadoncic.png",
   },
@@ -2253,7 +2253,7 @@ let sportnikiQuiz = [
     id: "5",
     question:
       "Eden najuspešnejših športnikov na območju nekdanje Jugoslavije, osvojil je tri medalje na olimpijskih igrah, od tega dva naslova olimpijskega prvaka, sedem medalj na svetovnih prvenstvih, od tega pet naslovov svetovnega prvaka, in petnajst medalj na evropskih prvenstvih, od tega devet naslovov evropskega prvaka.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[5]),
     correct: sportnikiQuizOptions[5],
     questionImg: "media/sportniki/slovenija-sportniki-miroslavcerar.png",
   },
@@ -2261,7 +2261,7 @@ let sportnikiQuiz = [
     id: "6",
     question:
       "Leta 2015 je kot drugi slovenski skakalec postavil nov svetovni rekord s poletom dolgim 250 m in postal prvi v zgodovini, ki je preletel 250 metrov. Osvojil je štiri kolajne na olimpijskih igrah in sedem kolajn na svetovnih prvenstvih v smučarskih skokih.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[6]),
     correct: sportnikiQuizOptions[6],
     questionImg: "media/sportniki/slovenija-sportniki-peterprevc.png",
   },
@@ -2269,7 +2269,7 @@ let sportnikiQuiz = [
     id: "7",
     question:
       "Kot prvemu Slovencu mu je uspelo osvojiti etapo in rumeno majico na Dirki po Franciji. Na olimpijskih igrah v Tokiu je leta 2021 v kronometru osvojil zlato kolajno. Trikrat zapored je osvojil Dirko po Španiji. Leta 2023 pa je kot prvi slovenski kolesar osvojil tudi Dirko po Italiji. Leta 2020 je kot prvi Slovenec dobil kolesarski spomenik, belgijsko dirko Liège–Bastogne–Liège, eno izmed petih najprestižnejših, najdaljših, najstarejših in najzahtevnejših enodnevnih klasik na svetu. Kot edini kolesar v zgodovini je zmagal na šestih od sedmih največjih enotedenskih etapnih dirkah.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[7]),
     correct: sportnikiQuizOptions[7],
     questionImg: "media/sportniki/slovenija-sportniki-primozroglic.png",
   },
@@ -2277,7 +2277,7 @@ let sportnikiQuiz = [
     id: "8",
     question:
       "Sodeloval je na osmih zaporednih olimpijskih igrah od Los Angelesa 1984 do Londona 2012, na katerih je v streljanju osvojil tri medalje.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[8]),
     correct: sportnikiQuizOptions[8],
     questionImg: "media/sportniki/slovenija-sportniki-rajmonddebevec.png",
   },
@@ -2285,7 +2285,7 @@ let sportnikiQuiz = [
     id: "9",
     question:
       "Leta 2020 je postal prvi Slovenec z zmago na Dirki po Franciji, naslednje leto pa je zmago ubranil in s tem postal najmlajši dvakratni zmagovalec Toura, kjer je osvojil 11 etap, rumeno majico vodilnega je nosil 21 dni, pikčasto majico najboljšega gorskega kolesarja je osvojil dvakrat in belo majico za najboljšega mladega kolesarja rekordnih 4–krat. V svojem prvem nastopu na olimpijskih igrah leta 2021 v Tokiu je osvojil prvo kolesarko olimpijsko kolanjo za Slovenijo, bron na cestni dirki.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[9]),
     correct: sportnikiQuizOptions[9],
     questionImg: "media/sportniki/slovenija-sportniki-tadejpogacar.png",
   },
@@ -2293,7 +2293,7 @@ let sportnikiQuiz = [
     id: "10",
     question:
       "Tekmuje za moštvo Honde, s katerim je leta 2015 osvojil naslov svetovnega prvaka. V letu 2016 je prestopil v elitni razred in osvojil naslov svetovnega prvaka. Uspeh je ponovil v letih 2019, 2020 in 2022. Številka na njegovem motorju je tudi letnica rojstva njegovega pokojnega brata Žana, ki se je rodil 24. marca.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[10]),
     correct: sportnikiQuizOptions[10],
     questionImg: "media/sportniki/slovenija-sportniki-timgajser.png",
   },
@@ -2301,7 +2301,7 @@ let sportnikiQuiz = [
     id: "11",
     question:
       "Absolutna zmagovalka ženskega svetovnega pokala v alpskem smučanju. Leta 2013 je z 11 zmagami in 24 uvrstitvami na stopničke osvojila svetovni pokal, kar ji je skupaj prineslo 2414 točk in s tem postavilo rekord vseh časov. Postala je tudi tretja športnica na svetu, ki je v eni sezoni zmagala v vseh disciplinah alpskega smučanja. Na svetovnem prvenstvu 2015 je osvojila srebrno medaljo v ter dve zlati. Je rekorderka s 26 zmagami v svetovnem pokalu in štirimi kolajnami iz olimpijskih iger.",
-    options: sportnikiQuizOptions,
+    options: [...sportnikiQuizOptions.filter(el => {return el!=sportnikiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(sportnikiQuizOptions[11]),
     correct: sportnikiQuizOptions[11],
     questionImg: "media/sportniki/slovenija-sportniki-tinamaze.png",
   },
@@ -2323,70 +2323,70 @@ let tabliceQuiz = [
   {
     id: "0",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[0]),
     correct: tabliceQuizOptions[0],
     questionImg: "media/tablice/slovenija-tablice-ce.png",
   },
   {
     id: "1",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[1]),
     correct: tabliceQuizOptions[1],
     questionImg: "media/tablice/slovenija-tablice-go.png",
   },
   {
     id: "2",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[2]),
     correct: tabliceQuizOptions[2],
     questionImg: "media/tablice/slovenija-tablice-kk.png",
   },
   {
     id: "3",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[3]),
     correct: tabliceQuizOptions[3],
     questionImg: "media/tablice/slovenija-tablice-kp.png",
   },
   {
     id: "4",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[4]),
     correct: tabliceQuizOptions[4],
     questionImg: "media/tablice/slovenija-tablice-kr.png",
   },
   {
     id: "5",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[5]),
     correct: tabliceQuizOptions[5],
     questionImg: "media/tablice/slovenija-tablice-lj.png",
   },
   {
     id: "6",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[6]),
     correct: tabliceQuizOptions[6],
     questionImg: "media/tablice/slovenija-tablice-mb.png",
   },
   {
     id: "7",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[7]),
     correct: tabliceQuizOptions[7],
     questionImg: "media/tablice/slovenija-tablice-ms.png",
   },
   {
     id: "8",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[8]),
     correct: tabliceQuizOptions[8],
     questionImg: "media/tablice/slovenija-tablice-nm.png",
   },
   {
     id: "9",
     question: "",
-    options: tabliceQuizOptions,
+    options: [...tabliceQuizOptions.filter(el => {return el!=tabliceQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(tabliceQuizOptions[9]),
     correct: tabliceQuizOptions[9],
     questionImg: "media/tablice/slovenija-tablice-sg.png",
   },
@@ -2426,7 +2426,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "0",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[0]),
     correct: turisticnedestinacijeQuizOptions[0],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-bled.png",
@@ -2434,7 +2434,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "1",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[1]),
     correct: turisticnedestinacijeQuizOptions[1],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-bohinj.png",
@@ -2442,7 +2442,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "2",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[2]),
     correct: turisticnedestinacijeQuizOptions[2],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-celje.png",
@@ -2450,7 +2450,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "3",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[3]),
     correct: turisticnedestinacijeQuizOptions[3],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-koper.png",
@@ -2458,7 +2458,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "4",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[4]),
     correct: turisticnedestinacijeQuizOptions[4],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-kranjskagora.png",
@@ -2466,7 +2466,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "5",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[5]),
     correct: turisticnedestinacijeQuizOptions[5],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-lipica.png",
@@ -2474,7 +2474,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "6",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[6]),
     correct: turisticnedestinacijeQuizOptions[6],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-ljubljana.png",
@@ -2482,7 +2482,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "7",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[7]),
     correct: turisticnedestinacijeQuizOptions[7],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-maribor.png",
@@ -2490,7 +2490,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "8",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[8]),
     correct: turisticnedestinacijeQuizOptions[8],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-piran.png",
@@ -2498,7 +2498,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "9",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[9]),
     correct: turisticnedestinacijeQuizOptions[9],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-postojna.png",
@@ -2506,7 +2506,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "10",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[10]),
     correct: turisticnedestinacijeQuizOptions[10],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-predjama.png",
@@ -2514,7 +2514,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "11",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[11]),
     correct: turisticnedestinacijeQuizOptions[11],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-soca.png",
@@ -2522,7 +2522,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "12",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[12]),
     correct: turisticnedestinacijeQuizOptions[12],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-toplice.png",
@@ -2530,7 +2530,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "13",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[13]),
     correct: turisticnedestinacijeQuizOptions[13],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-triglavskinarodnipark.png",
@@ -2538,7 +2538,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "14",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[14]),
     correct: turisticnedestinacijeQuizOptions[14],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-velikaplanina.png",
@@ -2546,7 +2546,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "15",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[15]),
     correct: turisticnedestinacijeQuizOptions[15],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-secovlje.png",
@@ -2554,7 +2554,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "16",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[16]),
     correct: turisticnedestinacijeQuizOptions[16],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-kranj.png",
@@ -2562,7 +2562,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "17",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[17]),
     correct: turisticnedestinacijeQuizOptions[17],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-novomesto.png",
@@ -2570,7 +2570,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "18",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[18]),
     correct: turisticnedestinacijeQuizOptions[18],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-triglav.png",
@@ -2578,7 +2578,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "19",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[19]),
     correct: turisticnedestinacijeQuizOptions[19],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-ptuj.png",
@@ -2586,7 +2586,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "20",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[20]),
     correct: turisticnedestinacijeQuizOptions[20],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-skofjaloka.png",
@@ -2594,7 +2594,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "21",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[21]),
     correct: turisticnedestinacijeQuizOptions[21],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-logarskadolina.png",
@@ -2602,7 +2602,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "22",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[22]),
     correct: turisticnedestinacijeQuizOptions[22],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-portoroz.png",
@@ -2610,7 +2610,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "23",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[23]),
     correct: turisticnedestinacijeQuizOptions[23],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-izola.png",
@@ -2618,7 +2618,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "24",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[24]),
     correct: turisticnedestinacijeQuizOptions[24],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-mesecevzaliv.png",
@@ -2626,7 +2626,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "25",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[25]),
     correct: turisticnedestinacijeQuizOptions[25],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-cerkniskojezero.png",
@@ -2634,7 +2634,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "26",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[26]),
     correct: turisticnedestinacijeQuizOptions[26],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-pohorje.png",
@@ -2642,7 +2642,7 @@ let turisticnedestinacijeQuiz = [
   {
     id: "27",
     question: "",
-    options: turisticnedestinacijeQuizOptions,
+    options: [...turisticnedestinacijeQuizOptions.filter(el => {return el!=turisticnedestinacijeQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(turisticnedestinacijeQuizOptions[27]),
     correct: turisticnedestinacijeQuizOptions[27],
     questionImg:
       "media/turisticnedestinacije/slovenija-turisticnedestinacije-smucisca.png",
@@ -2666,77 +2666,77 @@ let vinaQuiz = [
   {
     id: "0",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[0]),
     correct: vinaQuizOptions[0],
     questionImg: "media/vina/slovenija-vina-belokranjec.png",
   },
   {
     id: "1",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[1]),
     correct: vinaQuizOptions[1],
     questionImg: "media/vina/slovenija-vina-bizeljcan.png",
   },
   {
     id: "2",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[2]),
     correct: vinaQuizOptions[2],
     questionImg: "media/vina/slovenija-vina-cvicek.png",
   },
   {
     id: "3",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[3]),
     correct: vinaQuizOptions[3],
     questionImg: "media/vina/slovenija-vina-malvazija.png",
   },
   {
     id: "4",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[4]),
     correct: vinaQuizOptions[4],
     questionImg: "media/vina/slovenija-vina-modrafrankinja.png",
   },
   {
     id: "5",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[5]),
     correct: vinaQuizOptions[5],
     questionImg: "media/vina/slovenija-vina-rebula.png",
   },
   {
     id: "6",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[6]),
     correct: vinaQuizOptions[6],
     questionImg: "media/vina/slovenija-vina-refosk.png",
   },
   {
     id: "7",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[7]),
     correct: vinaQuizOptions[7],
     questionImg: "media/vina/slovenija-vina-sipon.png",
   },
   {
     id: "8",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[8]),
     correct: vinaQuizOptions[8],
     questionImg: "media/vina/slovenija-vina-teran.png",
   },
   {
     id: "9",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[9]),
     correct: vinaQuizOptions[9],
     questionImg: "media/vina/slovenija-vina-vipavec.png",
   },
   {
     id: "10",
     question: "",
-    options: vinaQuizOptions,
+    options: [...vinaQuizOptions.filter(el => {return el!=vinaQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(vinaQuizOptions[10]),
     correct: vinaQuizOptions[10],
     questionImg: "media/vina/slovenija-vina-vitovska.png",
   },
@@ -2780,7 +2780,7 @@ let zanimivostiQuiz = [
   {
     id: "0",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[0]),
     correct: zanimivostiQuizOptions[0],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-celicahostelbivsizapor.png",
@@ -2788,7 +2788,7 @@ let zanimivostiQuiz = [
   {
     id: "1",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[1]),
     correct: zanimivostiQuizOptions[1],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-davokarnicarprvikijesmucalizeveresta.png",
@@ -2796,7 +2796,7 @@ let zanimivostiQuiz = [
   {
     id: "2",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[2]),
     correct: zanimivostiQuizOptions[2],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-drugadrzavanasvetupostevilumedaljnaprebivalca.png",
@@ -2804,7 +2804,7 @@ let zanimivostiQuiz = [
   {
     id: "3",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[3]),
     correct: zanimivostiQuizOptions[3],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-dvetretjinislovenijepokrivajogozdovi.png",
@@ -2812,7 +2812,7 @@ let zanimivostiQuiz = [
   {
     id: "4",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[4]),
     correct: zanimivostiQuizOptions[4],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-edinadrzavakiimabesedolove.png",
@@ -2820,7 +2820,7 @@ let zanimivostiQuiz = [
   {
     id: "5",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[5]),
     correct: zanimivostiQuizOptions[5],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-enaizmednajstarejsihlekarnvevropi.png",
@@ -2828,7 +2828,7 @@ let zanimivostiQuiz = [
   {
     id: "6",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[6]),
     correct: zanimivostiQuizOptions[6],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-kranjskacebelajeprvasortacebelevevropiindruganasvetu.png",
@@ -2836,7 +2836,7 @@ let zanimivostiQuiz = [
   {
     id: "7",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[7]),
     correct: zanimivostiQuizOptions[7],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-kranjskaklobasavvesolju.png",
@@ -2844,7 +2844,7 @@ let zanimivostiQuiz = [
   {
     id: "8",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[8]),
     correct: zanimivostiQuizOptions[8],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-moznosizenopo99stopnicahzenamorabitipopolnomatiho.png",
@@ -2852,14 +2852,14 @@ let zanimivostiQuiz = [
   {
     id: "9",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[9]),
     correct: zanimivostiQuizOptions[9],
     questionImg: "media/zanimivosti/slovenija-zanimivosti-murskarepublika.png",
   },
   {
     id: "10",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[10]),
     correct: zanimivostiQuizOptions[10],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najboljobiskanajamavevropiinedinanasvetustracnicami.png",
@@ -2867,7 +2867,7 @@ let zanimivostiQuiz = [
   {
     id: "11",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[11]),
     correct: zanimivostiQuizOptions[11],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najdaljsikamnitimostnasvetu.png",
@@ -2875,7 +2875,7 @@ let zanimivostiQuiz = [
   {
     id: "12",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[12]),
     correct: zanimivostiQuizOptions[12],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najglobljajedilnicavevropi.png",
@@ -2883,7 +2883,7 @@ let zanimivostiQuiz = [
   {
     id: "13",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[13]),
     correct: zanimivostiQuizOptions[13],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najstarejsaevropskakobilarnavlipici.png",
@@ -2891,7 +2891,7 @@ let zanimivostiQuiz = [
   {
     id: "14",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[14]),
     correct: zanimivostiQuizOptions[14],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najstarejsatrtanasvetuvmariboru.png",
@@ -2899,7 +2899,7 @@ let zanimivostiQuiz = [
   {
     id: "15",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[15]),
     correct: zanimivostiQuizOptions[15],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najstarejseglasbilonasvetu.png",
@@ -2907,7 +2907,7 @@ let zanimivostiQuiz = [
   {
     id: "16",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[16]),
     correct: zanimivostiQuizOptions[16],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najstarejsekolonasvetu.png",
@@ -2915,7 +2915,7 @@ let zanimivostiQuiz = [
   {
     id: "17",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[17]),
     correct: zanimivostiQuizOptions[17],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najveccrkvanaprebivalcavevropi.png",
@@ -2923,7 +2923,7 @@ let zanimivostiQuiz = [
   {
     id: "18",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[18]),
     correct: zanimivostiQuizOptions[18],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najvecjiziplineparkvevropi.png",
@@ -2931,7 +2931,7 @@ let zanimivostiQuiz = [
   {
     id: "19",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[19]),
     correct: zanimivostiQuizOptions[19],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najvectraktorjevnaprebivalcanasvetu.png",
@@ -2939,7 +2939,7 @@ let zanimivostiQuiz = [
   {
     id: "20",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[20]),
     correct: zanimivostiQuizOptions[20],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najvisjidimnikvevropi.png",
@@ -2947,7 +2947,7 @@ let zanimivostiQuiz = [
   {
     id: "21",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[21]),
     correct: zanimivostiQuizOptions[21],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-planicanajvecjaletalnicanasvetu.png",
@@ -2955,7 +2955,7 @@ let zanimivostiQuiz = [
   {
     id: "22",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[22]),
     correct: zanimivostiQuizOptions[22],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-princeofnarniasnemanobsoci.png",
@@ -2963,7 +2963,7 @@ let zanimivostiQuiz = [
   {
     id: "23",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[23]),
     correct: zanimivostiQuizOptions[23],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-prvainedinaexyudrzavassatelitivvesolju.png",
@@ -2971,7 +2971,7 @@ let zanimivostiQuiz = [
   {
     id: "24",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[24]),
     correct: zanimivostiQuizOptions[24],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-prvavojnavevropipoww2.png",
@@ -2979,7 +2979,7 @@ let zanimivostiQuiz = [
   {
     id: "25",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[25]),
     correct: zanimivostiQuizOptions[25],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-slovenijajepodobnakokosi.png",
@@ -2987,14 +2987,14 @@ let zanimivostiQuiz = [
   {
     id: "26",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[26]),
     correct: zanimivostiQuizOptions[26],
     questionImg: "media/zanimivosti/slovenija-zanimivosti-veckot500gradov.png",
   },
   {
     id: "27",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[27]),
     correct: zanimivostiQuizOptions[27],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-veckot900medvedov.png",
@@ -3002,14 +3002,14 @@ let zanimivostiQuiz = [
   {
     id: "28",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[28]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[28]),
     correct: zanimivostiQuizOptions[28],
     questionImg: "media/zanimivosti/slovenija-zanimivosti-veckot10000jam.png",
   },
   {
     id: "29",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[29]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[29]),
     correct: zanimivostiQuizOptions[29],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-zalarjevvrhsledidinozavrov.png",
@@ -3017,7 +3017,7 @@ let zanimivostiQuiz = [
   {
     id: "30",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[30]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[30]),
     correct: zanimivostiQuizOptions[30],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-slovenijojeleta2022obiskalo6mioturistovodtegaje2mioobiskalopiran.png",
@@ -3025,7 +3025,7 @@ let zanimivostiQuiz = [
   {
     id: "31",
     question: "",
-    options: zanimivostiQuizOptions,
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[31]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[31]),
     correct: zanimivostiQuizOptions[31],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najvecjahumanitarnainprostovoljskaorganizacija.png",
@@ -3086,7 +3086,7 @@ let zgodovinaQuiz = [
   {
     id: "0",
     question: "Slovenske dežele so bile skoraj 600 let pod vladavino...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[0]),
     correct: zgodovinaQuizOptions[0],
     questionImg: "media/zgodovina/slovenija-zgodovina-avstroogrska.png",
   },
@@ -3094,7 +3094,7 @@ let zgodovinaQuiz = [
     id: "1",
     question:
       "Ferdo Bidovec, Fran Marušič, Zvonimir Miloš in Alojzij Valenčič so simbol slovenskega upora italijanskim fašističnim oblastem. Pravimo jim tudi...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[1]),
     correct: zgodovinaQuizOptions[1],
     questionImg: "media/zgodovina/slovenija-zgodovina-bazoviskijunaki.png",
   },
@@ -3102,7 +3102,7 @@ let zgodovinaQuiz = [
     id: "2",
     question:
       "V letih 1918-19 so potekali boji za severno mejo po tem, ko je Avstro-Ogrska razpadla. Slovenci, z generalom Rudolfom Maistrom na čelu, so tako preprečili izgubo slovenskega narodnega ozemlja...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[2]),
     correct: zgodovinaQuizOptions[2],
     questionImg: "media/zgodovina/slovenija-zgodovina-bojizasevernomejo.png",
   },
@@ -3110,7 +3110,7 @@ let zgodovinaQuiz = [
     id: "3",
     question:
       "Plemiška rodbina, ki je vladala na Slovenskem, Hrvaškem in Avstrijskem od 12. do 15. stoletja, je nosila ime...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[3]),
     correct: zgodovinaQuizOptions[3],
     questionImg: "media/zgodovina/slovenija-zgodovina-celjskigrofje.png",
   },
@@ -3118,14 +3118,14 @@ let zgodovinaQuiz = [
     id: "4",
     question:
       "Po koncu druge svetovne vojne je bilo tržaško ozemlje razdeljeno na dve coni, jugoslovansko in italijansko. Trst je na koncu pripadal Italiji, s tem pa je več 100.000 Slovencev bilo ponovno odrezanih od...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[4]),
     correct: zgodovinaQuizOptions[4],
     questionImg: "media/zgodovina/slovenija-zgodovina-conaab.png",
   },
   {
     id: "5",
     question: "Leta 2020 je Slovenijo in ves svet zajela pandemija...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[5]),
     correct: zgodovinaQuizOptions[5],
     questionImg: "media/zgodovina/slovenija-zgodovina-covid.png",
   },
@@ -3133,14 +3133,14 @@ let zgodovinaQuiz = [
     id: "6",
     question:
       "Med drugo svetovno vojno so se nasprotniki partizanov in komunizma združili v...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[6]),
     correct: zgodovinaQuizOptions[6],
     questionImg: "media/zgodovina/slovenija-zgodovina-domobranci.png",
   },
   {
     id: "7",
     question: "Slovenija je leta 2017 postala...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[7]),
     correct: zgodovinaQuizOptions[7],
     questionImg: "media/zgodovina/slovenija-zgodovina-eurobasket2017.png",
   },
@@ -3148,7 +3148,7 @@ let zgodovinaQuiz = [
     id: "8",
     question:
       "Po koncu prve svetovne vojne je celotno ozemlje Primorske pripadalo Italiji, ki je hotela Slovence iztrebiti, zato je...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[8]),
     correct: zgodovinaQuizOptions[8],
     questionImg: "media/zgodovina/slovenija-zgodovina-fasizemnaprimorskem.png",
   },
@@ -3156,7 +3156,7 @@ let zgodovinaQuiz = [
     id: "9",
     question:
       "Ko je postalo jasno, da Trst ne bo pripadal Jugoslaviji, se je slovensko vodstvo tajno odločilo za...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[9]),
     correct: zgodovinaQuizOptions[9],
     questionImg: "media/zgodovina/slovenija-zgodovina-gradnjalukekoper.png",
   },
@@ -3164,7 +3164,7 @@ let zgodovinaQuiz = [
     id: "10",
     question:
       "Preden bi se Slovenija leta 1991 končno osamosvojila, je potekala izbira novih državnih simbolov. Nova državna zastava še ni bila izbrana, zato so na predvečer osamosvojitve na vrh Triglava izobesili...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[10]),
     correct: zgodovinaQuizOptions[10],
     questionImg:
       "media/zgodovina/slovenija-zgodovina-izbiradrzavnihsimbolov.png",
@@ -3173,7 +3173,7 @@ let zgodovinaQuiz = [
     id: "11",
     question:
       "Prvi slovenski in nasploh slovanski državi, ki je nastala v 7. stoletju na območju Vzhodnih Alp, je bilo ime...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[11]),
     correct: zgodovinaQuizOptions[11],
     questionImg: "media/zgodovina/slovenija-zgodovina-karantanija.png",
   },
@@ -3181,7 +3181,7 @@ let zgodovinaQuiz = [
     id: "12",
     question:
       "Zaradi turških vpadov, težav v trgovini in vedno višjih dajatev od 15. do 17. stoletja, so se ljudje organizirali in začeli...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[12]),
     correct: zgodovinaQuizOptions[12],
     questionImg: "media/zgodovina/slovenija-zgodovina-kmeckiupori.png",
   },
@@ -3189,7 +3189,7 @@ let zgodovinaQuiz = [
     id: "13",
     question:
       "Po bojih za severno mejo so leta 1920 na Koroškem organizirali plebiscit, na katerem so se ljudje odločali, če bi raje živeli v Avstriji ali Jugoslaviji. Rezultat plebiscita je...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[13]),
     correct: zgodovinaQuizOptions[13],
     questionImg: "media/zgodovina/slovenija-zgodovina-koroskiplebiscit.png",
   },
@@ -3197,7 +3197,7 @@ let zgodovinaQuiz = [
     id: "14",
     question:
       "Na Ljubljanskem kongresu leta 1821 so se voditelji vseh evropskih držav dogovarjali o...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[14]),
     correct: zgodovinaQuizOptions[14],
     questionImg: "media/zgodovina/slovenija-zgodovina-ljubljanskikongres.png",
   },
@@ -3205,7 +3205,7 @@ let zgodovinaQuiz = [
     id: "15",
     question:
       "Anton Korošec je leta 1917 v dunajskem parlamentu prebral zapis, s katerim so slovanski narodi zahtevali združitev znotraj monarhije v posebno avtonomno enoto. Izjavi pravimo...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[15]),
     correct: zgodovinaQuizOptions[15],
     questionImg: "media/zgodovina/slovenija-zgodovina-majniskadeklaracija.png",
   },
@@ -3213,7 +3213,7 @@ let zgodovinaQuiz = [
     id: "16",
     question:
       "Takoj po razglasitvi samostojnosti Slovenije leta 1991 je bilo potrebno namestiti...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[16]),
     correct: zgodovinaQuizOptions[16],
     questionImg: "media/zgodovina/slovenija-zgodovina-menjavatabel.png",
   },
@@ -3221,7 +3221,7 @@ let zgodovinaQuiz = [
     id: "17",
     question:
       "Konec leta 2015 je po Evropi vladala migrantska kriza, ki je samo čez Slovenijo pripeljala...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[17]),
     correct: zgodovinaQuizOptions[17],
     questionImg: "media/zgodovina/slovenija-zgodovina-migrantskakriza.png",
   },
@@ -3229,7 +3229,7 @@ let zgodovinaQuiz = [
     id: "18",
     question:
       "Slovenci so se skupaj z ostalimi slovanskimi narodi naselili v Vzhodne Alpe v...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[18]),
     correct: zgodovinaQuizOptions[18],
     questionImg: "media/zgodovina/slovenija-zgodovina-naselitevslovanov.png",
   },
@@ -3237,7 +3237,7 @@ let zgodovinaQuiz = [
     id: "19",
     question:
       "25. oktobra 1991 je zadnji jugoslovanski vojak, po koncu desetdnevne vojne v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado, zapustil Slovenijo. Na ta dan praznujemo...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[19]),
     correct: zgodovinaQuizOptions[19],
     questionImg:
       "media/zgodovina/slovenija-zgodovina-odhodzadnjegajlavojakaizslovenije.png",
@@ -3246,7 +3246,7 @@ let zgodovinaQuiz = [
     id: "20",
     question:
       "Kmalu po nacistični in fašistični okupaciji Slovenije leta 1941 so se slovenski predstavniki javnega življenja dogovorili za oborožen upor. 27. aprila 1941 je bila ustanovljena...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[20]),
     correct: zgodovinaQuizOptions[20],
     questionImg: "media/zgodovina/slovenija-zgodovina-of.png",
   },
@@ -3254,7 +3254,7 @@ let zgodovinaQuiz = [
     id: "21",
     question:
       "Nacistični in fašistični okupatorji so želeli iztrebiti slovenski narod. V letih 1941-1945 je zaradi njih umrlo preko...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[21]),
     correct: zgodovinaQuizOptions[21],
     questionImg: "media/zgodovina/slovenija-zgodovina-okupacija.png",
   },
@@ -3262,14 +3262,14 @@ let zgodovinaQuiz = [
     id: "22",
     question:
       "Leta 1945 so slovenski partizani osvobodili večino slovenskega ozemlja, tudi Koroško. Slika prikazuje dva partizana ob...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[22]),
     correct: zgodovinaQuizOptions[22],
     questionImg: "media/zgodovina/slovenija-zgodovina-osvoboditevkoroske.png",
   },
   {
     id: "23",
     question: "9. maja 1945 so partizani osvobodili in vkorakali v...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[23]),
     correct: zgodovinaQuizOptions[23],
     questionImg: "media/zgodovina/slovenija-zgodovina-osvoboditevljubljane.png",
   },
@@ -3277,14 +3277,14 @@ let zgodovinaQuiz = [
     id: "24",
     question:
       "1. maja so slovenski partizani IX. korpusa, celo pred Ljubljano, osvobodili...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[24]),
     correct: zgodovinaQuizOptions[24],
     questionImg: "media/zgodovina/slovenija-zgodovina-osvoboditevtrsta.png",
   },
   {
     id: "25",
     question: "Slovenijo je leta 1996 obiskal...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[25]),
     correct: zgodovinaQuizOptions[25],
     questionImg: "media/zgodovina/slovenija-zgodovina-papezevobisk.png",
   },
@@ -3292,7 +3292,7 @@ let zgodovinaQuiz = [
     id: "26",
     question:
       "23. decembra 1990 je v Sloveniji potekal plebiscit za samostojno Slovenijo, na katerem se je za samostojnost opredelilo...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[26]),
     correct: zgodovinaQuizOptions[26],
     questionImg: "media/zgodovina/slovenija-zgodovina-plebiscit.png",
   },
@@ -3300,7 +3300,7 @@ let zgodovinaQuiz = [
     id: "27",
     question:
       "Avgusta 2023 so se v Sloveniji zgodile najhujše poplave vseh časov, ki so ustvarile za...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[27]),
     correct: zgodovinaQuizOptions[27],
     questionImg: "media/zgodovina/slovenija-zgodovina-poplave.png",
   },
@@ -3308,7 +3308,7 @@ let zgodovinaQuiz = [
     id: "28",
     question:
       "Med Izolo in Koprom so angleški piloti leta 1944 potopili ponos italijanskega ladjevja, luksuzno čezoceansko ladjo Rex. Njeno sidro se danes nahaja...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[28]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[28]),
     correct: zgodovinaQuizOptions[28],
     questionImg: "media/zgodovina/slovenija-zgodovina-potopitevrexa.png",
   },
@@ -3316,7 +3316,7 @@ let zgodovinaQuiz = [
     id: "29",
     question:
       "Na velikonočno nedeljo leta 1895 je Ljubljano stresel uničujoč...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[29]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[29]),
     correct: zgodovinaQuizOptions[29],
     questionImg: "media/zgodovina/slovenija-zgodovina-potresvljubljani.png",
   },
@@ -3324,7 +3324,7 @@ let zgodovinaQuiz = [
     id: "30",
     question:
       "Konec maja 1988 so jugoslovanske tajne službe aretirale štiri novinarje zaradi izdaje zaupnih dokumentov. Sodili so jim na vojaškem sodišču, kar je sprožilo val ogorčenja med ljudmi, ki so zahtevali njihovo pomilostitev. Med aretiranimi novinarji je bil tudi...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[30]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[30]),
     correct: zgodovinaQuizOptions[30],
     questionImg: "media/zgodovina/slovenija-zgodovina-procesproticetverici.png",
   },
@@ -3332,7 +3332,7 @@ let zgodovinaQuiz = [
     id: "31",
     question:
       "17. decembra 1990 se je slovenski politični vrh udeležil prvega postroja Teritorialne obrambe, ki je v vojni za Slovenijo odigrala najpomembnejšo vlogo. Takrat je...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[31]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[31]),
     correct: zgodovinaQuizOptions[31],
     questionImg: "media/zgodovina/slovenija-zgodovina-prvipostrojto.png",
   },
@@ -3340,7 +3340,7 @@ let zgodovinaQuiz = [
     id: "32",
     question:
       "Junija 2001 sta se v Sloveniji srečala voditelja dveh svetovnih velesil: George Bush, predsednik ZDA ter...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[32]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[32]),
     correct: zgodovinaQuizOptions[32],
     questionImg:
       "media/zgodovina/slovenija-zgodovina-putininbushvsloveniji.png",
@@ -3349,7 +3349,7 @@ let zgodovinaQuiz = [
     id: "33",
     question:
       "25. junija 1991 je bila na Trgu republike v Ljubljani razglašena...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[33]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[33]),
     correct: zgodovinaQuizOptions[33],
     questionImg:
       "media/zgodovina/slovenija-zgodovina-razglasitevsamostojnosti.png",
@@ -3358,7 +3358,7 @@ let zgodovinaQuiz = [
     id: "34",
     question:
       "Leta 1550 je z izidom prvih dveh knjig v slovenskem jeziku, Abecednik in Katekizem, postavil temelje slovenskega knjižnega jezika...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[34]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[34]),
     correct: zgodovinaQuizOptions[34],
     questionImg: "media/zgodovina/slovenija-zgodovina-reformacija.png",
   },
@@ -3366,7 +3366,7 @@ let zgodovinaQuiz = [
     id: "35",
     question:
       "Leta 1918, po dokončnem razpadu Avstro-Ogrske, je bila na Kongresnem trgu v Ljubljani razglašena...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[35]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[35]),
     correct: zgodovinaQuizOptions[35],
     questionImg: "media/zgodovina/slovenija-zgodovina-shs.png",
   },
@@ -3374,7 +3374,7 @@ let zgodovinaQuiz = [
     id: "36",
     question:
       "Na slovenski zahodni narodnostni meji je med letoma 1915 in 1917 potekala soška fronta - vrsta bitk med Italijo in Avstro-Ogrsko. Italijani so neuspešno poskušali prebiti avstrijske obrambne linije kar...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[36]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[36]),
     correct: zgodovinaQuizOptions[36],
     questionImg: "media/zgodovina/slovenija-zgodovina-soskafronta.png",
   },
@@ -3382,7 +3382,7 @@ let zgodovinaQuiz = [
     id: "37",
     question:
       "Leta 2002 se je slovenska nogometna reprezentanca prvič uvrstila na...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[37]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[37]),
     correct: zgodovinaQuizOptions[37],
     questionImg: "media/zgodovina/slovenija-zgodovina-svetovnoprvenstvo.png",
   },
@@ -3390,7 +3390,7 @@ let zgodovinaQuiz = [
     id: "38",
     question:
       "Primorski domoljubi so kot odgovor na fašistično okupacijo in zatiranje odgovorili z ustanovitvijo organizacije TIGR, ki pomeni...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[38]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[38]),
     correct: zgodovinaQuizOptions[38],
     questionImg: "media/zgodovina/slovenija-zgodovina-tigr.png",
   },
@@ -3398,7 +3398,7 @@ let zgodovinaQuiz = [
     id: "39",
     question:
       "8. maja 1980 je v ljubljanskem kliničnem centru, najboljši bolnišnici v tedanji Jugoslaviji, umrl...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[39]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[39]),
     correct: zgodovinaQuizOptions[39],
     questionImg: "media/zgodovina/slovenija-zgodovina-titoumrevljubljani.png",
   },
@@ -3406,14 +3406,14 @@ let zgodovinaQuiz = [
     id: "40",
     question:
       "Od leta 1991 do leta 2006, ko je Slovenija uvedla evro, je Slovenija imela svojo valuto z imenom...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[40]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[40]),
     correct: zgodovinaQuizOptions[40],
     questionImg: "media/zgodovina/slovenija-zgodovina-tolarji.png",
   },
   {
     id: "41",
     question: "Od 15. do 16. stoletja so na slovensko ozemlje vdirali...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[41]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[41]),
     correct: zgodovinaQuizOptions[41],
     questionImg: "media/zgodovina/slovenija-zgodovina-turskivpadi.png",
   },
@@ -3421,21 +3421,21 @@ let zgodovinaQuiz = [
     id: "42",
     question:
       "Razglasitvi samostojnosti Slovenije 25. junija 1991 je sledila vojna, v kateri je slovenska Teritorialna obramba premagala Jugoslovansko ljudsko armado. Tej vojni pravimo tudi...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[42]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[42]),
     correct: zgodovinaQuizOptions[42],
     questionImg: "media/zgodovina/slovenija-zgodovina-vojnazaslovenijo.png",
   },
   {
     id: "43",
     question: "1. maja leta 2004 je Slovenija vstopila v...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[43]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[43]),
     correct: zgodovinaQuizOptions[43],
     questionImg: "media/zgodovina/slovenija-zgodovina-vstopveu.png",
   },
   {
     id: "44",
     question: "21. decembra 2007 je Slovenija vstopila v...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[44]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[44]),
     correct: zgodovinaQuizOptions[44],
     questionImg: "media/zgodovina/slovenija-zgodovina-vstopvschengen.png",
   },
@@ -3443,7 +3443,7 @@ let zgodovinaQuiz = [
     id: "45",
     question:
       "Slovenski študent Lovro Toman je leta 1848 prvič izobesil slovensko narodno zastavo kot odgovor na plapolanje nemške zastave na Ljubljanskem gradu. Zastavo je izobesil...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[45]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[45]),
     correct: zgodovinaQuizOptions[45],
     questionImg: "media/zgodovina/slovenija-zgodovina-wolfova8.png",
   },
@@ -3451,14 +3451,14 @@ let zgodovinaQuiz = [
     id: "46",
     question:
       "Program, predstavljen leta 1848, ki je zahteval združitev vseh Slovencev v eno državo, se je imenoval...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[46]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[46]),
     correct: zgodovinaQuizOptions[46],
     questionImg: "media/zgodovina/slovenija-zgodovina-zedinjenaslovenija.png",
   },
   {
     id: "47",
     question: "Leta 1945 je bila v Ajdovščini ustanovljena...",
-    options: zgodovinaQuizOptions,
+    options: [...zgodovinaQuizOptions.filter(el => {return el!=zgodovinaQuizOptions[47]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zgodovinaQuizOptions[47]),
     correct: zgodovinaQuizOptions[47],
     questionImg: "media/zgodovina/slovenija-zgodovina-prvaslovenskavlada.png",
   },
@@ -3502,7 +3502,7 @@ let znaneosebnostiQuiz = [
     id: "0",
     question:
       "Slovenski odvetnik in nogometni funkcionar, ⋆ 13.10.1967, Ljubljana.<br>Diplomiral je na ljubljanski pravni fakulteti iz kazenskega prava. V svoji pravni karieri je kot mlad odvetnik že zelo zgodaj opozoril nase, ko je kot zagovornik nastopal v odmevnih primerih. Opravljal je funkcijo predsednika Nogometne zveze Slovenije (NZS), leta 2016 pa je postal predsednik Evropske nogometne zveze (UEFA) in podpredsednik Svetovne nogometne zveze (FIFA) z veliko večino glasov. Leta 2019 in 2023 so mu potrdili ponovno izvolitev tako, da zdaj teče že njegov tretji mandat.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[0]),
     correct: znaneosebnostiQuizOptions[0],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-aleksanderceferin.png",
@@ -3511,7 +3511,7 @@ let znaneosebnostiQuiz = [
     id: "1",
     question:
       "Slovenski škof, pisatelj in pesnik, ⋆ 26.11.1800, Slom pri Mariboru - † 24.9.1862, Maribor.<br>Ker je zgodaj postal sirota, se je na posebnem učiteljskem tečaju v 3. razredu gimnazije z odliko usposobil za inštruktorja učencev, da se je s poučevanjem lahko preživljal. Leta 1824 je postal duhovnik, iz vneme za slovenščino je že med študijem teologije ustanovil slovensko društvo, poučeval bogoslovce v slovenščini in jih navduševal za pisne in govorne vaje in jih navajal k prevajanju knjig v slovenski jezik. Znan je njegov rek »<i>Sveta vera bodi vam luč, materni jezik pa ključ do zveličavne omike</i>«. Leta 1999 ga je papež Janez Pavel II. beatificiral.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[1]),
     correct: znaneosebnostiQuizOptions[1],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-antonmartinslomsek.png",
@@ -3520,7 +3520,7 @@ let znaneosebnostiQuiz = [
     id: "2",
     question:
       "Slovenski pisatelj, ⋆ 26.8.1913, Trst - † 30.5.2022, Trst.<br>Veljal je za enega najpomembnejših slovenskih pisateljev, obenem je tudi eden najbolj prevajanih slovenskih avtorjev. Njegova dela so prevedena v francoščino, nemščino, srbohrvaščino, madžarščino, angleščino, španščino, italijanščino, katalonščino, finščino in esperanto. Na prvem mestu med prevodi je Nekropola, roman o pisateljevem življenju v taborišču Natzweiler-Struthof, ki je bil preveden v 18 jezikov. Večkrat so ga omenjali kot kandidata za Nobelovo nagrado za književnost. Bil je globoki antifašist in pričevalec o fašističnem nasilju nad Slovenci v Italiji ter trpljenju v nemških koncentracijskih taboriščih med drugo svetovno vojno.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[2]),
     correct: znaneosebnostiQuizOptions[2],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-borispahor.png",
   },
@@ -3528,7 +3528,7 @@ let znaneosebnostiQuiz = [
     id: "3",
     question:
       "Slovenski didžej, glasbenik in producent, ⋆ 16.5.1976, Ljubljana.<br>Svojo kariero je začel v 90. letih, kmalu je postal zelo priljubljen doma in naokoli. Na lestvici TOP 100 didžejev in producentov pri najpomembnejši reviji za plesno glasbo DJ Mag se je leta 2007 uvrstil na 29. mesto. Skupaj z zvezdniškimi imeni, kot so na primer Carl Cox, Jeff Mills in Sven Väth je bil leta 2009 nominiran za prestižno priznanje DJ Awards v kategoriji tehna.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[3]),
     correct: znaneosebnostiQuizOptions[3],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-urosumek.png",
   },
@@ -3536,7 +3536,7 @@ let znaneosebnostiQuiz = [
     id: "4",
     question:
       "Slovenski politik, pisatelj, učitelj, partizan in narodni heroj, ⋆ 27.1.1910, Ljubljana - † 10.2.1979, Ljubljana.<br>Eden izmed vodilnih članov Komunistične partije Slovenije pred drugo svetovno vojno, med vojno pa eden izmed glavnih voditeljev osvobodilne fronte. Po vojni je vodil mirovna pogajanja z Italijo. Bil je glavni ustvarjalec jugoslovanskega sistema delavskega samoupravljanja, postavil je tudi temelj zunanje politike z oblikovanjem ideološke osnovne jugoslovanske politike neskladnosti v petdesetih in šestdesetih letih 20. stoletja. Bil je druga najpomembnejša oseba v Jugoslaviji, takoj za Titom.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[4]),
     correct: znaneosebnostiQuizOptions[4],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-edvardkardelj.png",
@@ -3545,7 +3545,7 @@ let znaneosebnostiQuiz = [
     id: "5",
     question:
       "Slovenski letalski konstruktor, pilot in pionir letalstva, ⋆ 6.6.1886, Trst - † 9.1.1911, Beograd.<br>Z bratom sta bila prva slovenska letalca, ki sta se po dosežkih lahko primerjala z bratoma Wright v ZDA. Njegova unikatnost je bila v tem, da sta bila z bratom načrtovalca, konstruktorja in pilota istočasno, brez nobenega predhodnega znanja ali bogatih finančnih sredstev. Leta 1911 se je odpravil na promocijsko turnejo po Balkanu. Januarja se je znašel v Beogradu, kjer je bilo vreme vetrovno, a je kljub svarilom poletel, dokler ni njegovemu letalu močan sunek zlomil krila. Lrilo je padlo v Savo, letalo pa je strmoglavilo. Utrpel je hude poškodbe in umrl med prevozom v bolnišnico. Njegovemu pogrebu je prisostvovalo 15 tisoč ljudi. Po njem je poimenovano letališče v Mariboru in asteroid v vesolju.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[5]),
     correct: znaneosebnostiQuizOptions[5],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-edvardrusjan.png",
@@ -3554,7 +3554,7 @@ let znaneosebnostiQuiz = [
     id: "6",
     question:
       "Slovenski pesnik, ⋆ 29.11.1921, Kamnik - † 24.11.1943, Grahovo.<br>Zaradi vojne se je njegovo šolanje predčasno prekinilo potem, ko so ga Italijani odpeljali v koncentracijsko taborišče Gonars v Furlanijo, saj so sumili, da je povezan z osvobodilno fronto. Že tako bolan se je vrnil v Ljubljano, kjer se je pozneje pridružil vaškim stražam. Enkrat je uspel uiti smrti, drugič pa je med partizanskim obleganjem domobranske postojanke v Grahovem živ zgorel. Pisal je sonete, ki so razodevali tegobno stanje njegove družine, nekaj pesmi je posvetil tudi svoji prvi ljubezni, Marjetici, živahni dijakinji trgovske akademije. To so bile erotično zasnovane lirične izpovedi in refleksivni utrinki. Najbolj znana je njegova zbirka V ognju groze plapolam, ki je izšla leto dni po njegovi smrti. Njegova dela so bila v Jugoslaviji prepovedana, zato jih je vse do osamosvojitve Slovenije gojila slovenska skupnost v Argentini.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[6]),
     correct: znaneosebnostiQuizOptions[6],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-francebalantic.png",
@@ -3563,7 +3563,7 @@ let znaneosebnostiQuiz = [
     id: "7",
     question:
       "Slovenski pesnik, ⋆ 3.12.1800, Vrba - † 8.2.1849, Kranj. Rodil se je v kmečki družini.<br>V osnovni šoli je bil tako priden, da so ga zapisali v zlato knjigo. Po uspešno zaključenem študiju na dunajski pravni fakulteti se je vrnil v Ljubljano, kjer je delal kot odvetnik. V tem času je napisal večino svojih pesmi, pri pisanju katerih ga je pomembno usmerjal prijatelj Matija Čop. Bil je prvi Slovenec, ki se je po kakovosti svojega pisanja lahko kosal s sodobniki po Evropi, kjer je tedaj vladala romantična usmeritev. Življenjska pot pesnika, nesrečno zaljubljenega v bogato Primičevo Julijo, se je končala v znamenju z malodušja in težav z alkoholom, kar je nazadnje povzročilo njegovo smrt.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[7]),
     correct: znaneosebnostiQuizOptions[7],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-francepreseren.png",
@@ -3572,7 +3572,7 @@ let znaneosebnostiQuiz = [
     id: "8",
     question:
       "Slovenski raketni inženir, častnik in pionir kozmonavtike, ⋆ 22.12.1892, Pulj - † 27.8.1929, Dunaj.<br>Kot strokovnjak za mostovne in inženirske gradnje je moral na fronto, kjer je zbolel za tuberkolozo, zato so ga leta 1919 upokojili. Naslednja leta se je z bratom popolnoma posvetil načrtovanju prodora v vesolje. Leta 1928 je v Berlinu izšla njegova knjiga Problem vožnje po vesolju - Raketni motor, ki velja za eno temeljnih del prve generacije raziskovalcev vesolja, kjer je opisal načrt za preboj v vesolje in ureditev stalne vesoljske postaje z namenom opazovanja zemlje. V Berlinu so njegove zamisli vzeli resno medtem, ko so dunajski inženirji ocenili njegovo delo za domišljijo, čeprav je postala temelj za nadaljnje osvajanje vesolja. Je eden prvih snovateljev na svetu, ki je načrtoval izvorne rešitve in zasnove naprav za vesolje. Z izdajo knjige je postal eden izmed najpomembnejših svetovnih utemeljiteljev potovanja in bivanja v vesolju, njegova knjiga je bila temelj nemškega, ameriškega in sovjetskega vesoljskega programa.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[8]),
     correct: znaneosebnostiQuizOptions[8],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-hermanpotocnik.png",
@@ -3581,7 +3581,7 @@ let znaneosebnostiQuiz = [
     id: "9",
     question:
       "Slovenski pisatelj, esejist, dramatik in pesnik, ⋆ 10.5.1876, Vrhnika - † 11.12.1918, Ljubljana.<br>Letnica 1899 je letnica izida njegove prve pesniške zbirke Erotika in Župančičeve Čaše opojnosti in velja za začetek slovenske moderne. V svoji pesniški zbirki je zbral mladostne ljubezenske pesmi, balade in romance. V svojih dunajskih letih je sodeloval pri literarnem krožku slovenskih študentov.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[9]),
     correct: znaneosebnostiQuizOptions[9],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-ivancankar.png",
   },
@@ -3589,7 +3589,7 @@ let znaneosebnostiQuiz = [
     id: "10",
     question:
       "Slovenski letalec, poslovnež in politik, ⋆ 15.4.1956, Postojna.<br>Je eden najuspešnejših slovenskih podjetnikov in ustanovitelj ter dolgoletni direktor podjetja Pipistrel, ki proizvaja ultra lahka letala, ustanovljeno leta 1987 kot prvo zasebno tovarno letal v Jugoslaviji. Leta 2022 je prodal večinski delež Pipistrela američanom za skoraj 250 milijonov dolarjev. Znan je tudi po radodarnosti: domači občini je podaril 25 milijonov evrov, gasilcem pa 2 milijona evrov za gašenje ob hudem požaru na Krasu.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[10]),
     correct: znaneosebnostiQuizOptions[10],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-ivoboscarol.png",
@@ -3598,7 +3598,7 @@ let znaneosebnostiQuiz = [
     id: "11",
     question:
       "Slovenski izumitelj, mehanik in proizvajalec vozil, ⋆ 27.6.1862, Slovenske gorice - † 19.7.1914, Zagreb.<br>Pri mladih letih je obiskal Daimlerja in Benza ter preštudiral njune motorje, ker je hotel z njimi opremiti svoja kolesa. Pri konstrukciji motocikla se je kmalu ločil od vzora kolesa in iskal prikladnejše oblike. Po daljšem preskušanju in izpopolnjevanju mu je uspelo zgraditi motocikel. Leta 1906 je ta zmagal na sloviti dirki za pokal Gordon-Bennet – vozil je s povprečno hitrostjo 77 km/h. S svojimi vozili je začel oskrbovati celo avstrijski dvor, njegova tovarna pa je leta 1912 izdelala 17.000 vozil, kar je bilo za takratne razmere ogromno.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[11]),
     correct: znaneosebnostiQuizOptions[11],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-janezpuh.png",
   },
@@ -3606,7 +3606,7 @@ let znaneosebnostiQuiz = [
     id: "12",
     question:
       "Kranjski plemič in član Kraljeve družbe, ⋆ 1.5.1641, Ljubljana - † 16.11.1693, Krško.<br>Bil je vsestransko izobražena osebnost, njegovo delo ni bilo omejeno samo na eno področje ali znanost, ampak je obsegalo več raznovrstnih področij. Čeprav je bil po poklicu vojak, je večino svojega življenja zapisal znanosti, zbirateljstvu in preučevanju Kranjske, osrednjega dela današnje Slovenije. Tako je zapustil obširno znanstveno delo.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[12]),
     correct: znaneosebnostiQuizOptions[12],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-janezvajkardvalvazor.png",
@@ -3615,7 +3615,7 @@ let znaneosebnostiQuiz = [
     id: "13",
     question:
       "Slovenski fizik, matematik, elektrotehnik in pesnik, ⋆ 24.3.1835, Šempeter pri Žrelcu - † 7.1.1893, Dunaj.<br>Raziskoval je na vseh tedanjih področjih fizike: mehaniki, hidrodinamiki, akustiki, termodinamiki, kinetični teoriji plinov, kaloriki, teoriji toplotnega sevanja, elektromagnetizmu, optiki. Vse svoje znanstvene razprave je napisal v nemščini. Najbolj je znan po določitvi fizikalnega zakona, ki ga je eksperimentalno odkril leta 1879, ki povezuje celotno izsevano energijo črnega telesa j* s četrto potenco termodinamične temperature T. To je edini zakon, ki je poimenovan po kakšnem Slovencu. Zaradi njegovih zaslug na področju znanosti ga je odlikoval sam avstrijski cesar.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[13]),
     correct: znaneosebnostiQuizOptions[13],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-jozefstefan.png",
@@ -3624,7 +3624,7 @@ let znaneosebnostiQuiz = [
     id: "14",
     question:
       "Slovenski arhitekt, ⋆ 23.1.1872, Ljubljana - † 7.1.1957, Ljubljana.<br>Bil je arhitekt, ki si je močno prizadeval, da bi z lastnim umetniškim ustvarjanjem dal slovenski in evropski arhitekturi izrazito prepoznavnost. Zaradi njegovega kakovostnega in raznolikega dela na Dunaju, Pragi in Ljubljani ter Sloveniji in na področju nekdanje Jugoslavije je prejel vrsto nagrad in odlikovanj. Na njegov stil je imel velik vpliv njegov profesor Wagner, a tudi antika in lokalno izročilo. V Ljubljani je načrtal tržnico, zapornico, NUK, Tromostovje, Čevljarski most, Žale ter prenovo Ljubljanskega gradu. Zamislil si je tudi zgradbo slovenskega parlamenta, Katedralo svobode, ki pa ni bila nikoli uresničena.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[14]),
     correct: znaneosebnostiQuizOptions[14],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-jozeplecnik.png",
@@ -3633,7 +3633,7 @@ let znaneosebnostiQuiz = [
     id: "15",
     question:
       "Slovenski matematik, fizik, geodet, meteorolog, plemič in topniški častnik, ⋆ 23.3.1754, Dol pri Ljubljani - † 26.12.1802, Dunaj.<br>Leta 1783 je objavil tablice logaritmov z desetiško osnovo, leta 1789 pa je izračunal vrednost π na 140 decimalk in s tem postavil takratni svetovni rekord, ki je trajal kar 52 let. Leta 1794 je izdal knjigo z izračuni logaritmov števil od 1 do 100.000 na sedem decimalk. Avstrijskemu cesarju je tudi predlagal uvedbo metričnega merskega sistema, a ta ni imel posluha zanj, čeprav so ga nazadnje vseeno uvedli, a s 100-letno zamudo.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[15]),
     correct: znaneosebnostiQuizOptions[15],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-jurijvega.png",
   },
@@ -3641,7 +3641,7 @@ let znaneosebnostiQuiz = [
     id: "16",
     question:
       "Slovenski pesnik, prevajalec, partizan in narodni heroj, ⋆ 13.12.1922, Šoštanj - † 22.2.1944, Šentvid pri Zavodnjah.<br>Ob napadu na Jugoslavijo, 6. aprila 1941, se je s skupino somišljenikov podal v Zasavsko hribovje, da bi se priključili uporu jugoslovanske vojske. V Ljubljani se je vključil v ilegalo, postal sodelavec partizanske tajne službe in komunistične partije. Na silvestrovanju konec leta 1941 je spoznal Silvo, ki je postala njegova velika ljubezen. Ljubezen do domovine in Silve je združil v ciklu ljubezenskih pesmi, ki jih je ljubljenemu dekletu in njunemu nikoli rojenemu otroku v številnih občutenih, strastnih in nežnih pismih pošiljal v italijanski zapor, kjer je bila Silva zaprta. Umrl je v nemški zaseda ob premiku 14. divizije na Štajersko leta 1944. Najbolj znani so njegovi verzi »<i>Lepo je, veš mama, lepo je živeti. Toda za kar sem umrl bi hotel še enkrat umreti.</i>«",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[16]),
     correct: znaneosebnostiQuizOptions[16],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-kareldestovnikkajuh.png",
@@ -3650,7 +3650,7 @@ let znaneosebnostiQuiz = [
     id: "17",
     question:
       "Slovenska igralka, ⋆ 23.9.1976, Slovenj Gradec.<br>Na televiziji se je pri rosnih dvanajstih letih prvič pojavila leta 1988 v reklami za Cockto. Njena mednarodna igralska kariera se je začela z vlogo Gabriele v filmu The Guard, režiserja John M. McDonagh-a. Njena najvidnešja vloga do sedaj je v filmu Martina Scorseseja Volk z Wall Streeta.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[17]),
     correct: znaneosebnostiQuizOptions[17],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-katarinacas.png",
@@ -3659,7 +3659,7 @@ let znaneosebnostiQuiz = [
     id: "18",
     question:
       "Slovenski zborovodja, skladatelj in antifašist, ⋆ 17.2.1902, Gorica - † 16.2.1937, Gorica.<br>Z vodenjem slovenskim pevskih zborov je pomagal ohranjati slovenščino v Goriški, ki je bila po priključitvi Italije z Rapalsko pogodbo podvržena poitalijančevanju. Večkrat je bil zaradi domoljubja in ljubezni do slovenskega jezika zaprt, njegovo delovanje je šlo v nos fašistom. Tako so ga leta 1936 po koncu maše zajeli, hudo pretepli in ga prisilili, da spije mešanico bencina in strojnega olja. Zastrupitev je povzročila razpad jeter in ledvic, tako je po dveh mesecih peklenskih bolečin zapustil ženo z dvema otrokoma in umrl.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[18]),
     correct: znaneosebnostiQuizOptions[18],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-lojzebratuz.png",
@@ -3668,7 +3668,7 @@ let znaneosebnostiQuiz = [
     id: "19",
     question:
       "Slovenski pesnik in mučenec, ⋆ 27.5.1923, Tržišče - † 1.1.1943, Mirna.<br>Šolal se je v Ljubljani, obiskoval je klasično gimnazijo in postal odličen dijak. Zadnja leta gimnazije pa je preživel v napetosti bližajoče se druge svetovne vojne. Med počitnicami se je hotel vrniti domov k mami, kljub svarilom o naraščajočem nasilju in nevarnosti. Na novo leto je bil pri maši, nato pa se je hotel z vlakom odpraviti na pot. Ker so partizani progo minirali, se je odločil, da se bo na pot podal kar peš. Pri prvi hiši ga je prijela partizanska straža, ki je na njem našla molitvenik. Sumili so, da je ovaduh, in ga zato po hitrem sojenju usmrtili. Njegovo truplo so našli dva meseca pozneje v sledečem stanju: vsi prsti so bili prerezani, na rokah je imel odtis vrvi s katero je bil privezan, desno uho je bilo odrezano, desne ustnice tudi, vsa lična koža je bila potegnjena z obraza, desno oko je bilo izrezano, na glavi pa je bila 8 cm dolga in 6 cm široka rana. Njegovi beatifikaciji je prisostvovalo 50.000 vernikov.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[19]),
     correct: znaneosebnostiQuizOptions[19],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-lojzegrozde.png",
@@ -3677,7 +3677,7 @@ let znaneosebnostiQuiz = [
     id: "20",
     question:
       "Slovenska manekenka in prva ameriška dama, ⋆ 26.4.1970, Novo mesto.<br>Je žena nepremičninskega mogotca Donalda Trumpa, med njegovim predsedniškim mandatom je bila prva dama Združenih držav Amerike. Odraščala je v Sevnici in delala kot manekenka prek agencij v evropskih modnih prestolnicah Milanu in Parizu, leta 1996 pa se je preselila v New York. Leta 2006 sta z Donaldom dobila sina Barrona, ki ima tudi slovensko državljanstvo, s katerim se mama pogovarja v slovenskem jeziku, saj ju na tak način Donald Trump ne more razumeti.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[20]),
     correct: znaneosebnostiQuizOptions[20],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-melanijaknavs.png",
@@ -3686,7 +3686,7 @@ let znaneosebnostiQuiz = [
     id: "21",
     question:
       "Slovenski politik, ⋆ 14.1.1941, Križevci.<br>Prekmurec po rodu, v času Jugoslavije je bil sekretar Zveze komunistov Slovenije in član predsedstva Centralnega komiteja zveze komunistov Jugoslavije. Med osamosvojitvenimi procesi je predsednik Predsedstva Republike Slovenije in tako postal prvi slovenski predsednik, nakar je bil še enkrat izvoljen. Njegov mandat se je zaključil leta 2002.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[21]),
     correct: znaneosebnostiQuizOptions[21],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-milankucan.png",
   },
@@ -3694,7 +3694,7 @@ let znaneosebnostiQuiz = [
     id: "22",
     question:
       "Slovenski pesnik, dramatik in prevajalec, ⋆ 23.1.1878, Vinica - † 11.6.1949, Ljubljana.<br>Belokranjec, eden izmed predstavnikov slovenske moderne, časni meščan Ljubljane. Med drugo svetovno vojno je bil povezan z NOB-jem. Po koncu druge svetovne vojne je sodeloval v javnem in političnem življenju, bil je poslanec ljudske skupščine LRS in član njenega Prezidija. Spomenik žrtvam vseh vojn v Ljubljani nosi njegove verze »<i>Domovina je ena, nam vsem dodeljena, in eno življenje in ena smrt!</i>«.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[22]),
     correct: znaneosebnostiQuizOptions[22],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-otonzupancic.png",
@@ -3703,7 +3703,7 @@ let znaneosebnostiQuiz = [
     id: "23",
     question:
       "Slovenski komunist in narodni heroj, ⋆ 20.3.1915, Trst - † 15.12.1941, Opčine.<br>Leta 1927 je italijanski fašistični režim razpustil vse slovenske organizacije, med drugim tudi mladinske, kar ga je še posebno prizadelo. Posledično se je pridružil nekaterim mladinskim skupinam, ki so ilegalno nadaljevale svoje dejavnosti, zlasti v smeri narodnega boja in antifašizma. V Trstu se je zato družil s tigrovci in mladino, ki je načrtovala oborožen upor. Leta 1940 je bil aretiran; iz skupine 300 aretirancev so izbrali 60 osumljencev, ki so bili nato udeleženi v drugem tržaškem procesu. Njega so obsodili na smrt.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[23]),
     correct: znaneosebnostiQuizOptions[23],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-pinkotomazic.png",
@@ -3712,7 +3712,7 @@ let znaneosebnostiQuiz = [
     id: "24",
     question:
       "Slovenski protestantski duhovnik in pisec, ⋆ 8.6.1508, Rašica - † 28.6.1586, Tübingen.<br>Bil je osrednja osebnost reformacije na Kranjskem, znan pa je predvsem kot avtor prvih natisnjenih knjig v slovenskem jeziku, Katekizma in Abecednika. Zato velja Trubar za utemeljitelja slovenskega knjižnega jezika, za osrednji lik slovenske kulturne zgodovine in v različnih pogledih celo glavno zgodovinsko osebnost. Svoje nagovore je vedno začel s frazo »<i>Lubi Slovenci!</i>«.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[24]),
     correct: znaneosebnostiQuizOptions[24],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-primoztrubar.png",
@@ -3721,7 +3721,7 @@ let znaneosebnostiQuiz = [
     id: "25",
     question:
       "Slovenski pesnik, general in borec za severno mejo, ⋆ 29.3.1874, Kamnik - † 26.7.1934, Unec.<br>Na Dunaju je dokončal častniški študij, kasneje pa se je šolal v armadni strelski šoli. Ob začetku prve svetovne vojne je bil imenovan za poveljnika Maribora, to vlogo je opravljal do konca vojne, ko so Avstrijci razglasili Maribor za nemško ozemlje. Dan zatem je izjavil »<i>Ne priznavam teh točk. Maribor razglašam za posest države SHS in prevzemam poveljstvo nad mestom.</i>«, nakar so njegovi vojaki še isto popoldne prevzeli celotno kritično infrastrukturo mesta. Nato je s prostovoljci, zbralo se jih je 5.000, začel osvobajati slovenske kraje na Spodnjem Štajerskem in Koroškem in tako preprečil, da bi Maribor oziroma večji del današnje Slovenije postal nemški.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[25]),
     correct: znaneosebnostiQuizOptions[25],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-rudolfmaister.png",
@@ -3730,7 +3730,7 @@ let znaneosebnostiQuiz = [
     id: "26",
     question:
       "Slovenski pesnik in duhovnik, ⋆ 15.10.1844, Vrsno - † 24.11.1906, Gorica.<br>Njegovo pesništvo se navezuje še na predromantične in romantične vzore. Pisal je ljubezenske, domovinske in življenjsko izpovedne pesmi, pa tudi nekaj epskih pesmi. Njegovo zanimanje za slovstvo se je začelo že v gimnaziji. Njegovi verzi so izraz njegove mehke duše, njegovega pesniškega in človeškega značaja.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[26]),
     correct: znaneosebnostiQuizOptions[26],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-simongregorcic.png",
@@ -3739,7 +3739,7 @@ let znaneosebnostiQuiz = [
     id: "27",
     question:
       "Slovenski glasbenik in skladatelj, ⋆ 26.11.1929, Begunje na Gorenjskem - † 2.7.2015, Begunje na Gorenjskem.<br>Napisal je preko 1000 skladb in s svojim delom postal utemeljitelj narodno-zabavne glasbe v Sloveniji. Njegov ansambel je bil zelo priljubljen po vsem svetu, še posebej pa v Sloveniji, Avstriji, Nemčiji in Švici. Skupno je prodal skoraj 35 milijonov plošč.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[27]),
     correct: znaneosebnostiQuizOptions[27],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-slavkoavsenik.png",
@@ -3748,7 +3748,7 @@ let znaneosebnostiQuiz = [
     id: "28",
     question:
       "Slovenski filozof, kulturni kritih in psihoanalitik, ⋆ 21.3.1949, Ljubljana.<br>Doktoriral je iz filozofije, bil je imenovan 'Elvis filozofije' in 'akademska rock zvezda'. V mladih letih so ga zanimala dela Karla Marxa in Friedricha Wilhelma Josepha Schellinga. Bil je profesor na evropski podiplomski šoli, mednarodni direktor Birkbeck Inštituta za humanistične študije in višji raziskovalec na Inštitutu za sociologijo Univerze v Ljubljani.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[28]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[28]),
     correct: znaneosebnostiQuizOptions[28],
     questionImg:
       "media/znaneosebnosti/slovenija-znaneosebnosti-slavojzizek.png",
@@ -3757,7 +3757,7 @@ let znaneosebnostiQuiz = [
     id: "29",
     question:
       "Jugoslovanski maršal in politik, ⋆ 7.5.1892, Kumrovec - † 4.5.1980, Ljubljana.<br>Rodil se je hrvaškemu očetu in slovenski mami v zelo revni kmečki družini. Med prvo svetovno vojno je bil ujet v Galiciji, po vojni pa je sodeloval v oktobrski revoluciji v Rusiji. Po tem se je vrnil v Jugoslavijo, kjer je začel spoprijateljevati s komunisti, zaradi česar je bil večkrat tudi zaprt. Po nemškem napadu na Jugoslavijo je postal vodja organiziranega upora partizanov, in z zbrano vojsko milijona ljudi osvobodil večino ozemlja takratne Jugoslavije ter Trst in dele Koroške. Po koncu vojne je bil izvoljen za dosmrtnega predsednika socialistične Jugoslavije. Bil je priljubljen državni vodja, spoštovan doma in po svetu.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[29]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[29]),
     correct: znaneosebnostiQuizOptions[29],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-tito.png",
   },
@@ -3765,7 +3765,7 @@ let znaneosebnostiQuiz = [
     id: "30",
     question:
       "Slovenski razsvetljenec, gospodarstvenik, podjetnik, mecen in mineralog, ⋆ 23.11.1747, Trst - † 10.11.1819, Ljubljana.<br>Bil je mecen najuglednejših slovenskih razsvetljencev, materialno jih je podpiral, spodbujal in usmerjal ter bil tako središčna osebnost. Zavzemal se je za ideale izobrazbe in vzgoje, ki sta glavni pogoj za materialni in duhovni napredek. Navduševal se je nad zoologijo, botaniko ter predvsem nad mineralogijo, po njem je tudi poimenovan zelo zanimiv in barvit mineral (cojzit), njegova afriška varianta pa se imenuje tanzanit.",
-    options: znaneosebnostiQuizOptions,
+    options: [...znaneosebnostiQuizOptions.filter(el => {return el!=znaneosebnostiQuizOptions[30]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(znaneosebnostiQuizOptions[30]),
     correct: znaneosebnostiQuizOptions[30],
     questionImg: "media/znaneosebnosti/slovenija-znaneosebnosti-zigazois.png",
   },
