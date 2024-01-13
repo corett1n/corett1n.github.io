@@ -42,7 +42,7 @@ let casopisiQuiz = [
     id: "0",
     question:
       "Časopis je nastal v Ljubljani z združitvijo časopisov Ljudska pravica in Slovenski poročevalec. Prva številka je izšla leta 1959, leta 1991 pa je časopis ustanovil tabloid Slovenske novice. Izhaja dnevno od ponedeljka do sobote in ima 8 rednih prilog (od kuhinjskih receptov in finačnih komentarjev do modnih trendov).",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[0]),
     correct: casopisiQuizOptions[0],
     questionImg: "media/casopisi/slovenija-casopisi-delo.png",
   },
@@ -50,7 +50,7 @@ let casopisiQuiz = [
     id: "1",
     question:
       "Časopis je leta 1951 ustanovila Socialistična zveza delovnega ljudstva Slovenije. Pokrival je predvsem Ljubljansko kotlino in del Gorenjske in Dolenjske, sprva pa izhajal kot popoldnevnik, do leta 1988 pa je izhajal že po vsej Sloveniji.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[1]),
     correct: casopisiQuizOptions[1],
     questionImg: "media/casopisi/slovenija-casopisi-dnevnik.png",
   },
@@ -58,7 +58,7 @@ let casopisiQuiz = [
     id: "2",
     question:
       "V obdobju med 1876 in 1928 je bil politično glasilo tržaških Slovencev, pa tudi na širšem področju Primorske in Istre. Časopis je prenehal obstajati zaradi prisilne ukinitve s strani fašističnega režima, ki je prepovedoval javno rabo slovenskega jezika.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[2]),
     correct: casopisiQuizOptions[2],
     questionImg: "media/casopisi/slovenija-casopisi-edinost.png",
   },
@@ -66,7 +66,7 @@ let casopisiQuiz = [
     id: "3",
     question:
       "Slovenski časnik, ki je izhajal med letoma 1843 in 1902. V kulturnem smislu je bil zelo pomemben, saj je utrdil enoten slovenski knjižni jezik, splošni sprejem gajice in nasploh vsestranski kulturni razvoj slovenskega naroda. Objavljal je tudi Prešernova, Levstikova, Jenkova in Jurčičeva dela.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[3]),
     correct: casopisiQuizOptions[3],
     questionImg:
       "media/casopisi/slovenija-casopisi-kmetijskeinrokodelskenovice.png",
@@ -75,7 +75,7 @@ let casopisiQuiz = [
     id: "4",
     question:
       "Od leta 1881 do 1941 je bil osrednji slovenski literarni mesečnik. Skoraj ves čas izhajanja je bil med vodilnimi slovenskimi literarnimi revijami. Poleg leposlovja, kateremu je bil v prvi vrsti namenjen, je prinašal še umetnostno kritiko ter razprave in eseje o umetnosti.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[4]),
     correct: casopisiQuizOptions[4],
     questionImg: "media/casopisi/slovenija-casopisi-ljubljanskizvon.png",
   },
@@ -83,7 +83,7 @@ let casopisiQuiz = [
     id: "5",
     question:
       "Njegov predhodnik je bil Partizanski dnevnik, ki je začel izhajati leta 1943 kot edini tiskani dnevnik protifašističnega partizanskega odpora v okupirani Evropi. Sedaj ima sedež v Trstu, velja pa za edini dnevnik Slovencev v Italiji.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[5]),
     correct: casopisiQuizOptions[5],
     questionImg: "media/casopisi/slovenija-casopisi-primorskidnevnik.png",
   },
@@ -91,7 +91,7 @@ let casopisiQuiz = [
     id: "6",
     question:
       "V letih 1873 - 1945 je bil vodilni časnik političnega katolicizma na Slovenskem. Časnik se je kljub večkratni zamenjavi oblasti in vsem svetovnim ter domačim krizam obdržal vse do konca druge svetovne vojne leta 1945, ko so ga nove oblasti ukinile.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[6]),
     correct: casopisiQuizOptions[6],
     questionImg: "media/casopisi/slovenija-casopisi-slovenec.png",
   },
@@ -99,7 +99,7 @@ let casopisiQuiz = [
     id: "7",
     question:
       "V letih 1868 - 1943 je bil politični časopis in prvi slovenski dnevnik. V času okupacije so bila v njem poročila okupacijskih oblasti in obtožbe Osvobodilne fronte. Ko so oblast na ljubljanskem območju prevzeli Nemci, je zaradi pomanjkanja papirja časopis nehal izhajati.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[7]),
     correct: casopisiQuizOptions[7],
     questionImg: "media/casopisi/slovenija-casopisi-slovenskinarod.png",
   },
@@ -107,7 +107,7 @@ let casopisiQuiz = [
     id: "8",
     question:
       "Časopis, ki je svojo pot začel kot ilegalno glasilo Komunistične partije Slovenije, kasneje pa je postal glasilo Osvobodilne fronte. Leta 1959 se je z združitvijo s časopisom Ljudske pravice preimenoval v Delo.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[8]),
     correct: casopisiQuizOptions[8],
     questionImg: "media/casopisi/slovenija-casopisi-slovenskiporocevalec.png",
   },
@@ -115,7 +115,7 @@ let casopisiQuiz = [
     id: "9",
     question:
       "Slovenski splošnoinformativni dnevni časopis, ki ga izdaja podjetje s sedežem v Mariboru. Poleg splošnih novic pokriva predvsem območje Štajerske in je eden najbolj branih slovenskih časopisov.",
-    options: casopisiQuizOptions,
+    options: [...casopisiQuizOptions.filter(el => {return el!=casopisiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(casopisiQuizOptions[9]),
     correct: casopisiQuizOptions[9],
     questionImg: "media/casopisi/slovenija-casopisi-vecer.png",
   },
@@ -134,7 +134,7 @@ let geografskipolozajQuiz = [
     id: "0",
     question:
       "Teritorialno morje Republike Slovenije obsega 326 km², dolžina obale pa je približno 45 km. Morju pa je ime...",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[0]),
     correct: geografskipolozajQuizOptions[0],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-jadranskomorje.png",
@@ -142,7 +142,7 @@ let geografskipolozajQuiz = [
   {
     id: "1",
     question: "S katero državo meji Slovenija na severu?",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[1]),
     correct: geografskipolozajQuizOptions[1],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-avstrija.png",
@@ -150,7 +150,7 @@ let geografskipolozajQuiz = [
   {
     id: "2",
     question: "S katero državo meji Slovenija na jugu?",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[2]),
     correct: geografskipolozajQuizOptions[2],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-hrvaska.png",
@@ -158,7 +158,7 @@ let geografskipolozajQuiz = [
   {
     id: "3",
     question: "S katero državo meji Slovenija na zahodu?",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[3]),
     correct: geografskipolozajQuizOptions[3],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-italija.png",
@@ -166,7 +166,7 @@ let geografskipolozajQuiz = [
   {
     id: "4",
     question: "S katero državo meji Slovenija na vzhodu?",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[4]),
     correct: geografskipolozajQuizOptions[4],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-sosede-madzarska.png",
@@ -174,7 +174,7 @@ let geografskipolozajQuiz = [
   {
     id: "5",
     question: "V katerem delu Evrope se nahaja Slovenija?",
-    options: geografskipolozajQuizOptions,
+    options: [...geografskipolozajQuizOptions.filter(el => {return el!=geografskipolozajQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(geografskipolozajQuizOptions[5]),
     correct: geografskipolozajQuizOptions[5],
     questionImg:
       "media/geografskipolozaj/slovenija-geografskipolozaj-srednjaevropa.png",
@@ -204,7 +204,7 @@ let hranaQuiz = [
     id: "0",
     question:
       "Po tradiciji se ta dolenjska dobrota na mizo prinese še topla, nakar si jo jedci z rokami sproti lomijo. Proizvod, zaščiten na ravni EU, je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[0]),
     correct: hranaQuizOptions[0],
     questionImg: "media/hrana/slovenija-hrana-belokranjskapogaca.png",
   },
@@ -212,7 +212,7 @@ let hranaQuiz = [
     id: "1",
     question:
       "Tipično istrsko pecivo, ki jih istrske gospodinje pripravijo predvsem v pustnem času, pa tudi ob raznih slavjih, kot so poroke in šagre. Pravijo jim flancati ali...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[1]),
     correct: hranaQuizOptions[1],
     questionImg: "media/hrana/slovenija-hrana-hrostule.png",
   },
@@ -220,7 +220,7 @@ let hranaQuiz = [
     id: "2",
     question:
       "Zgledajo kot majhni klobuki, postreže se jih z omako od pečenke, polnjeni pa so s krompirjem in začimbami. Ponudijo se lahko kot predjed ali glavna jed in so zaščiteni na ravni EU. To so...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[2]),
     correct: hranaQuizOptions[2],
     questionImg: "media/hrana/slovenija-hrana-idrijskizlikrofi.png",
   },
@@ -228,7 +228,7 @@ let hranaQuiz = [
     id: "3",
     question:
       "Tipična primorska jed, ki se lahko postreže z mesom ali brez. Pozimi se je toplo, poleti pa hladno. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[3]),
     correct: hranaQuizOptions[3],
     questionImg: "media/hrana/slovenija-hrana-jota.png",
   },
@@ -236,7 +236,7 @@ let hranaQuiz = [
     id: "4",
     question:
       "Legenda pravi, da ji je ime dal avstrijski cesar, ki se je med potovanjem ustavil na Gorenjskem. Tu so mu postregli to jed, on pa je navdušeno vzkliknil: 'To ni navadna klobasa, to je...'",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[4]),
     correct: hranaQuizOptions[4],
     questionImg: "media/hrana/slovenija-hrana-kranjskaklobasa.png",
   },
@@ -244,7 +244,7 @@ let hranaQuiz = [
     id: "5",
     question:
       "Nosi EU zaščiteno geografsko oznako, suši se na vetru do 20 mesecev, dodana pa mu je morska sol. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[5]),
     correct: hranaQuizOptions[5],
     questionImg: "media/hrana/slovenija-hrana-kraskiprsut.png",
   },
@@ -252,7 +252,7 @@ let hranaQuiz = [
     id: "6",
     question:
       "Na Bledu so jih v zadnjih 60 letih spekli približno 15 milijonov. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[6]),
     correct: hranaQuizOptions[6],
     questionImg: "media/hrana/slovenija-hrana-kremsnita.png",
   },
@@ -260,7 +260,7 @@ let hranaQuiz = [
     id: "7",
     question:
       "Ta koroška jed je povezana s kolinami ob zakolu prašiča v poznem jesenskem ali zimskem času, jedli pa so jo ob romanjih, krstih in porokah. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[7]),
     correct: hranaQuizOptions[7],
     questionImg: "media/hrana/slovenija-hrana-mezerli.png",
   },
@@ -268,7 +268,7 @@ let hranaQuiz = [
     id: "8",
     question:
       "Tipična primorska pustna jed, veliko enostavnejša za pripravo kot krofi. Ocvre se jih v vročem olju, lahko pa se jim tudi doda rozine. To so...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[8]),
     correct: hranaQuizOptions[8],
     questionImg: "media/hrana/slovenija-hrana-miske.png",
   },
@@ -276,7 +276,7 @@ let hranaQuiz = [
     id: "9",
     question:
       "Prvi jo je v pisni obliki omenil Primož Trubar leta 1575. Pozna jo ves svet, tudi Donald Trump po Melanijini zaslugi. Obstaja orehova, pehtranova, medena...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[9]),
     correct: hranaQuizOptions[9],
     questionImg: "media/hrana/slovenija-hrana-potica.png",
   },
@@ -284,7 +284,7 @@ let hranaQuiz = [
     id: "10",
     question:
       "Zelo priljubljena primorska jed, ki je zelo nasitna. Kuha se dve uri, skupen čas priprave pa znaša vsaj 10 ur. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[10]),
     correct: hranaQuizOptions[10],
     questionImg: "media/hrana/slovenija-hrana-pastafizol.png",
   },
@@ -292,7 +292,7 @@ let hranaQuiz = [
     id: "11",
     question:
       "Tipična velikonočna jed iz Primorske, ki si jo lahko privoščimo ob zajtrku ali topli kavi. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[11]),
     correct: hranaQuizOptions[11],
     questionImg: "media/hrana/slovenija-hrana-pinca.png",
   },
@@ -300,7 +300,7 @@ let hranaQuiz = [
     id: "12",
     question:
       "Ta štajerska specialiteta je nastala v letu 1952, vanjo pa sodi izključno brusnični nadev. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[12]),
     correct: hranaQuizOptions[12],
     questionImg: "media/hrana/slovenija-hrana-pohorskaomleta.png",
   },
@@ -308,7 +308,7 @@ let hranaQuiz = [
     id: "13",
     question:
       "Jed je zelo kalorična, saj je vsaka plast prelita z obilo sladke smetane, jajc in masla. Prav zato se je postregla le ob svečanih priložnostih, saj izdelava ni bila poceni. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[13]),
     correct: hranaQuizOptions[13],
     questionImg: "media/hrana/slovenija-hrana-prekmurskagibanica.png",
   },
@@ -316,7 +316,7 @@ let hranaQuiz = [
     id: "14",
     question:
       "Lahko so slani ali sladki, ponudijo pa se lahko kot izvrstna samostojna jed, priloga ali posladek, uporabljajo pa se tudi kot dodatek juhi. To so dolenjski...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[14]),
     correct: hranaQuizOptions[14],
     questionImg: "media/hrana/slovenija-hrana-skutinistruklji.png",
   },
@@ -324,7 +324,7 @@ let hranaQuiz = [
     id: "15",
     question:
       "Preprosta samostojna kmečka jed iz Primorske. Pomembno je, da se pri pripravi uporabljajo sezonske sestavine. To je...",
-    options: hranaQuizOptions,
+    options: [...hranaQuizOptions.filter(el => {return el!=hranaQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hranaQuizOptions[15]),
     correct: hranaQuizOptions[15],
     questionImg: "media/hrana/slovenija-hrana-zeliscnafrtalja.png",
   },
@@ -342,42 +342,42 @@ let hribovjaQuiz = [
   {
     id: "0",
     question: "Najvišji vrh ima 1495 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[0]),
     correct: hribovjaQuizOptions[0],
     questionImg: "media/hribovja/slovenija-gore-gorisko.png",
   },
   {
     id: "1",
     question: "Najvišji vrh ima 2864 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[1]),
     correct: hribovjaQuizOptions[1],
     questionImg: "media/hribovja/slovenija-gore-julijci.png",
   },
   {
     id: "2",
     question: "Najvišji vrh ima 2558 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[2]),
     correct: hribovjaQuizOptions[2],
     questionImg: "media/hribovja/slovenija-gore-kamniskosavinjske.png",
   },
   {
     id: "3",
     question: "Najvišji vrh ima 2236 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[3]),
     correct: hribovjaQuizOptions[3],
     questionImg: "media/hribovja/slovenija-gore-karavanke.png",
   },
   {
     id: "4",
     question: "Najvišji vrh ima 1543 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[4]),
     correct: hribovjaQuizOptions[4],
     questionImg: "media/hribovja/slovenija-gore-pohorje.png",
   },
   {
     id: "5",
     question: "Najvišji vrh ima 1796 m.",
-    options: hribovjaQuizOptions,
+    options: [...hribovjaQuizOptions.filter(el => {return el!=hribovjaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(hribovjaQuizOptions[5]),
     correct: hribovjaQuizOptions[5],
     questionImg: "media/hribovja/slovenija-gore-sneznisko.png",
   },
@@ -401,84 +401,84 @@ let izumiteljiQuiz = [
   {
     id: "0",
     question: "Julij Nardin, ⋆1877 - †1959.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[0]),
     correct: izumiteljiQuizOptions[0],
     questionImg: "media/izumitelji/slovenija-izumitelji-julijnardin.png",
   },
   {
     id: "1",
     question: "Stanko Bloudek, ⋆1890 - †1959.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[1]),
     correct: izumiteljiQuizOptions[1],
     questionImg: "media/izumitelji/slovenija-izumitelji-stankobloudek.png",
   },
   {
     id: "2",
     question: "Peter Florjančič, ⋆1919 - †2020.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[2]),
     correct: izumiteljiQuizOptions[2],
     questionImg: "media/izumitelji/slovenija-izumitelji-peterflorjancic.png",
   },
   {
     id: "3",
     question: "Feliks Lobe, ⋆1894 - †1970.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[3]),
     correct: izumiteljiQuizOptions[3],
     questionImg: "media/izumitelji/slovenija-izumitelji-felikslobe.png",
   },
   {
     id: "4",
     question: "Janez Puh, ⋆1862 - †1914.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[4]),
     correct: izumiteljiQuizOptions[4],
     questionImg: "media/izumitelji/slovenija-izumitelji-janezpuh.png",
   },
   {
     id: "5",
     question: "Ivan Bajde, ⋆1855 - †1920.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[5]),
     correct: izumiteljiQuizOptions[5],
     questionImg: "media/izumitelji/slovenija-izumitelji-ivanbajde.png",
   },
   {
     id: "6",
     question: "Franjo Bratina, ⋆1886 - †1977.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[6]),
     correct: izumiteljiQuizOptions[6],
     questionImg: "media/izumitelji/slovenija-izumitelji-franjobratina.png",
   },
   {
     id: "7",
     question: "Anton Jamnik, ⋆1862 - †1942.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[7]),
     correct: izumiteljiQuizOptions[7],
     questionImg: "media/izumitelji/slovenija-izumitelji-antonjamnik.png",
   },
   {
     id: "8",
     question: "Ivan Slokar, ⋆1884 - †1970.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[8]),
     correct: izumiteljiQuizOptions[8],
     questionImg: "media/izumitelji/slovenija-izumitelji-ivanslokar.png",
   },
   {
     id: "9",
     question: "Valentin Matija Živic, ⋆1828 - †1917.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[9]),
     correct: izumiteljiQuizOptions[9],
     questionImg: "media/izumitelji/slovenija-izumitelji-valentinmatijazivic.png",
   },
   {
     id: "10",
     question: "Anton Codelli, ⋆1875 - †1954.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[10]),
     correct: izumiteljiQuizOptions[10],
     questionImg: "media/izumitelji/slovenija-izumitelji-antoncodelli.png",
   },
   {
     id: "11",
     question: "Herman Potočnik, ⋆1892 - †1929.<br>",
-    options: izumiteljiQuizOptions,
+    options: [...izumiteljiQuizOptions.filter(el => {return el!=izumiteljiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(izumiteljiQuizOptions[11]),
     correct: izumiteljiQuizOptions[11],
     questionImg: "media/izumitelji/slovenija-izumitelji-hermanpotocnik.png",
   },
@@ -499,7 +499,7 @@ let junakiQuiz = [
     id: "0",
     question:
       "Sin tržaškega cesarskega glavarja Nikolaja, znan predvsem kot ropar. Kmalu je zaslovel kot hraber bojevnik, a ker se je sprl s cesarjem, se je bil primoran umakniti na domači grad, ki ga je oblegala cesarska vojska. Brez težav je prenašal obleganje, saj je bilo pod gradom veliko rovov, po katerih so prenašali hrano. Cesarjevi vojaki so po naključju streljali na grad in ga ubili.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[0]),
     correct: junakiQuizOptions[0],
     questionImg: "media/junaki/slovenija-junaki-erazempredjamski.png",
   },
@@ -507,7 +507,7 @@ let junakiQuiz = [
     id: "1",
     question:
       "Je pogumen in prijazen pastirček, ki na visokogorskih pašnikih doživi marsikaj zanimivega. Medtem, ko se njegova čreda ovac in goveda mirno pase, se on sprehaja in raziskuje po gorskih travnikih in poteh.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[1]),
     correct: junakiQuizOptions[1],
     questionImg: "media/junaki/slovenija-junaki-kekec.png",
   },
@@ -515,7 +515,7 @@ let junakiQuiz = [
     id: "2",
     question:
       "Med ljudmi je bil zelo priljubljen, saj je pomagal vsem in je bil zelo radodaren. Zaradi njegove priljubljenosti so se ostali vladarji odločili, da ga ubijejo. Legenda pravi, da je zaspal pod goro Peco na Koroškem, kamor se je zatekel pred sovražniki. Ko se mu bo brada devetkrat ovila okoli kamnite mize, pa se bo zbudil in bo spet zavladal. To pomeni, da bodo za Koroško nastopili spet dobri časi.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[2]),
     correct: junakiQuizOptions[2],
     questionImg: "media/junaki/slovenija-junaki-kraljmatjaz.png",
   },
@@ -523,7 +523,7 @@ let junakiQuiz = [
     id: "3",
     question:
       "V mladih letih je bil trgovec, zaradi izjemne bojevitosti pa je postal vladar prve slovanske organizirane zveze, Karantanije, ki je obsegala ozemlje današnje Češke, Slovaške, Avstrije in Slovenije. Imel je 12 žena, 35 sinov in 15 hčera.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[3]),
     correct: junakiQuizOptions[3],
     questionImg: "media/junaki/slovenija-junaki-kraljsamo.png",
   },
@@ -531,7 +531,7 @@ let junakiQuiz = [
     id: "4",
     question:
       "Lik, ki simbolizira hrepenenje po nedosegljivem, po sanjah, ki ostajajo le sanje, po željah, ki so neuresničljive.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[4]),
     correct: junakiQuizOptions[4],
     questionImg: "media/junaki/slovenija-junaki-lepavida.png",
   },
@@ -539,7 +539,7 @@ let junakiQuiz = [
     id: "5",
     question:
       "Bil je močan in samosvoj človek. Tihotapljal je angleško sol, zaradi česar ga je oblast preganjala. Nekoč je na cesti srečal cesarja, ta ga je ogovoril, saj ga je njegova fizična moč navdušila - hotel je namreč pomoč v boju s turškim banditom. Tihotapec soli se je tako odpravil na Dunaj in turškemu banditu odsekal glavo z lipovo vejo. Za nagrado je od cesarja dobil dovoljenje za tovorjenje angleške soli.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[5]),
     correct: junakiQuizOptions[5],
     questionImg: "media/junaki/slovenija-junaki-martinkrpan.png",
   },
@@ -547,7 +547,7 @@ let junakiQuiz = [
     id: "6",
     question:
       "Na Starem trgu se odvija ples, na katerem Urška zavrača fante enega za drugim. Plesa je že skoraj konec, ko zagleda mladeniča, ki ga želi omrežiti. Ta jo prosi za ples in Urška privoli. Kljub grmenju in vetru se vrtita vse hitreje, dokler se ne zavrtita do brega in izgineta v vrtincu Ljubljanice.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[6]),
     correct: junakiQuizOptions[6],
     questionImg: "media/junaki/slovenija-junaki-povodnimoz.png",
   },
@@ -555,7 +555,7 @@ let junakiQuiz = [
     id: "7",
     question:
       "Moški, oblečen v brezove veje, ki hodi od hiše do hiše in na vrata zatika vejice, ki vasem in družinam prinaša srečo in zagotovilo, da bo letina dobra. Če družina vejice ne dobi, je to za njih velika sramota.",
-    options: junakiQuizOptions,
+    options: [...junakiQuizOptions.filter(el => {return el!=junakiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(junakiQuizOptions[7]),
     correct: junakiQuizOptions[7],
     questionImg: "media/junaki/slovenija-junaki-zelenijurij.png",
   },
@@ -588,7 +588,7 @@ let mestaQuiz = [
     id: "0",
     question:
       "Tretje največje slovensko mesto s 40.000 prebivalci, znano po grofih in vitezih.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[0]),
     correct: mestaQuizOptions[0],
     questionImg: "media/mesta/slovenija-mesta-celje.png",
   },
@@ -596,14 +596,14 @@ let mestaQuiz = [
     id: "1",
     question:
       "Mesto s 15.000 prebivalci v Ljubljanski kotlini. Športno mesto, saj imata tu sedež nogometni in košarkarski klub.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[1]),
     correct: mestaQuizOptions[1],
     questionImg: "media/mesta/slovenija-mesta-domzale.png",
   },
   {
     id: "2",
     question: "Bivši otok in ribiško naselje, danes mesto s 13.000 prebivalci.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[2]),
     correct: mestaQuizOptions[2],
     questionImg: "media/mesta/slovenija-mesta-izola.png",
   },
@@ -611,7 +611,7 @@ let mestaQuiz = [
     id: "3",
     question:
       "Mesto s 14.000 prebivalci pod Karavankami, ki ima bogato železarsko tradicijo.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[3]),
     correct: mestaQuizOptions[3],
     questionImg: "media/mesta/slovenija-mesta-jesenice.png",
   },
@@ -619,7 +619,7 @@ let mestaQuiz = [
     id: "4",
     question:
       "Mesto, ki šteje 15.000 prebivalcev, z odlično ohranjenim srednjeveškim mestnim jedrom.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[4]),
     correct: mestaQuizOptions[4],
     questionImg: "media/mesta/slovenija-mesta-kamnik.png",
   },
@@ -627,7 +627,7 @@ let mestaQuiz = [
     id: "5",
     question:
       "Mesto s 10.000 prebivalci, ki ponuja lepote neokrnjene narave in ogromno možnosti za rekreacijo.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[5]),
     correct: mestaQuizOptions[5],
     questionImg: "media/mesta/slovenija-mesta-kocevje.png",
   },
@@ -635,7 +635,7 @@ let mestaQuiz = [
     id: "6",
     question:
       "Nekoč otok, danes peto največje slovensko mesto s 27.000 prebivalci. V njem se nahaja eno najpomembnejših pristanišč v Jadranu.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[6]),
     correct: mestaQuizOptions[6],
     questionImg: "media/mesta/slovenija-mesta-koper.png",
   },
@@ -643,7 +643,7 @@ let mestaQuiz = [
     id: "7",
     question:
       "S 38.000 prebivalci je četrto največje slovensko mesto, znano tudi kot Prešernovo mesto.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[7]),
     correct: mestaQuizOptions[7],
     questionImg: "media/mesta/slovenija-mesta-kranj.png",
   },
@@ -651,7 +651,7 @@ let mestaQuiz = [
     id: "8",
     question:
       "Prestolnica Republike Slovenije, šteje 300.000 prebivalcev, njeno ime izvira iz besede 'ljubezen'.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[8]),
     correct: mestaQuizOptions[8],
     questionImg: "media/mesta/slovenija-mesta-ljubljana.png",
   },
@@ -659,7 +659,7 @@ let mestaQuiz = [
     id: "9",
     question:
       "Mesto z 11.000 prebivalci, v bližini se nahaja Napoleonov lipov drevored.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[9]),
     correct: mestaQuizOptions[9],
     questionImg: "media/mesta/slovenija-mesta-logatec.png",
   },
@@ -667,7 +667,7 @@ let mestaQuiz = [
     id: "10",
     question:
       "Drugo največje slovensko mesto s 100.000 prebivalci. Tu raste in vzgaja najstarejša trta na svetu.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[10]),
     correct: mestaQuizOptions[10],
     questionImg: "media/mesta/slovenija-mesta-maribor.png",
   },
@@ -675,7 +675,7 @@ let mestaQuiz = [
     id: "11",
     question:
       "Mesto z 11.000 prebivalci, ime je dobilo po sejmih, ki so se v mestu odvijali ob sobotah.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[11]),
     correct: mestaQuizOptions[11],
     questionImg: "media/mesta/slovenija-mesta-murskasobota.png",
   },
@@ -683,7 +683,7 @@ let mestaQuiz = [
     id: "12",
     question:
       "Najnovejše slovensko mesto s 13.000 prebivalci, saj je bilo ustanovaljeno komaj leta 1947.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[12]),
     correct: mestaQuizOptions[12],
     questionImg: "media/mesta/slovenija-mesta-novagorica.png",
   },
@@ -691,14 +691,14 @@ let mestaQuiz = [
     id: "13",
     question:
       "Sedmo največje slovensko mesto s 25.000 prebivalci, pomemben sedež farmacevtske in avtomobilske industrije.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[13]),
     correct: mestaQuizOptions[13],
     questionImg: "media/mesta/slovenija-mesta-novomesto.png",
   },
   {
     id: "14",
     question: "Mesto z 10.000 prebivalci, ki živi skoraj izključno od turizma.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[14]),
     correct: mestaQuizOptions[14],
     questionImg: "media/mesta/slovenija-mesta-postojna.png",
   },
@@ -706,7 +706,7 @@ let mestaQuiz = [
     id: "15",
     question:
       "Najstarejše slovensko mesto z 18.000 prebivalci, ustanovili so ga Rimljani okoli leta 69.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[15]),
     correct: mestaQuizOptions[15],
     questionImg: "media/mesta/slovenija-mesta-ptuj.png",
   },
@@ -714,7 +714,7 @@ let mestaQuiz = [
     id: "16",
     question:
       "Mesto z 12.000 prebivalci, velja za najbolje ohranjeno srednjeveško mesto v Sloveniji.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[16]),
     correct: mestaQuizOptions[16],
     questionImg: "media/mesta/slovenija-mesta-skofjaloka.png",
   },
@@ -722,7 +722,7 @@ let mestaQuiz = [
     id: "17",
     question:
       "Mesto s 14.000 prebivalci, v njem se nahaja najvišja zgradba v Sloveniji.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[17]),
     correct: mestaQuizOptions[17],
     questionImg: "media/mesta/slovenija-mesta-trbovlje.png",
   },
@@ -730,7 +730,7 @@ let mestaQuiz = [
     id: "18",
     question:
       "Šesto največje slovensko mesto z 25.000 prebivalci, znano tudi kot mesto knapov.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[18]),
     correct: mestaQuizOptions[18],
     questionImg: "media/mesta/slovenija-mesta-velenje.png",
   },
@@ -738,7 +738,7 @@ let mestaQuiz = [
     id: "19",
     question:
       "Mesto z 10.000 prebivalci, tu se je rodil in deloval pisatelj Ivan Cankar.",
-    options: mestaQuizOptions,
+    options: [...mestaQuizOptions.filter(el => {return el!=mestaQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(mestaQuizOptions[19]),
     correct: mestaQuizOptions[19],
     questionImg: "media/mesta/slovenija-mesta-vrhnika.png",
   },
@@ -779,7 +779,7 @@ let narodnisimboliQuiz = [
     id: "0",
     question:
       "Prva slovenska tiskana knjiga, izdana v letu 1550. Trubar jo je napisal z namenom, da se preprosti Slovenci naučijo brati in pisati. V njej je prvič omenjena beseda 'Slovenci'.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[0]),
     correct: narodnisimboliQuizOptions[0],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-abecednik.png",
   },
@@ -787,7 +787,7 @@ let narodnisimboliQuiz = [
     id: "1",
     question:
       "Župnik Jakob Aljaž ni maral zanimanja tujcev za slovenske gore, zato se je temu skušal upreti z nakupom vrha Triglava za en goldinar, na katerega je dal leta 1895 postaviti gorsko zavetišče.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[1]),
     correct: narodnisimboliQuizOptions[1],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-aljazevstolp.png",
@@ -796,7 +796,7 @@ let narodnisimboliQuiz = [
     id: "2",
     question:
       "Najstarejši zapis v slovenskem jeziku in kateremkoli slovanskem jeziku v latinici. Nastal je leta 972, v njem pa so obrazci za spoved.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[2]),
     correct: narodnisimboliQuizOptions[2],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-brizinskispomeniki.png",
@@ -805,7 +805,7 @@ let narodnisimboliQuiz = [
     id: "3",
     question:
       "Živi izključno v podzemeljskih vodah, saj je zelo občutljiva na svetlobo. Živi lahko do 100 let, nekoč pa so se jih ljudje bali, saj so zgledali kot mali zmaji.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[3]),
     correct: narodnisimboliQuizOptions[3],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-cloveskaribica.png",
@@ -814,7 +814,7 @@ let narodnisimboliQuiz = [
     id: "4",
     question:
       "Ima obliko ščita, na katerem je simbol Triglava, trije šestokrake zveze celjskih grofov in valova, ki prikazujeta slovensko morje in reke.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[4]),
     correct: narodnisimboliQuizOptions[4],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-grb.png",
   },
@@ -822,7 +822,7 @@ let narodnisimboliQuiz = [
     id: "5",
     question:
       "Zgodovinski grb Štajerske, je simbol domoljubja. Dandanes je kot simbol uporabljen tako v vojski kot v policiji.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[5]),
     correct: narodnisimboliQuizOptions[5],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-karantanskipanter.png",
@@ -831,7 +831,7 @@ let narodnisimboliQuiz = [
     id: "6",
     question:
       "Obrnjen spodnji del rimskega stebra, na njem je potekalo ustoličevanje karantanskih knezov in koroških vojvod.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[6]),
     correct: narodnisimboliQuizOptions[6],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-knezjikamen.png",
@@ -840,7 +840,7 @@ let narodnisimboliQuiz = [
     id: "7",
     question:
       "Lesena, s strani odprta stavba za sušenje žita in trave, značilna za slovensko podeželje. Nahajajo se le v krajih, kjer živijo Slovenci.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[7]),
     correct: narodnisimboliQuizOptions[7],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-kozolec.png",
   },
@@ -848,7 +848,7 @@ let narodnisimboliQuiz = [
     id: "8",
     question:
       "Njena domovina je Gorenjska, je zelo vitka in umirjena. Velja za drugo najbolj razširjeno sorto na svetu.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[8]),
     correct: narodnisimboliQuizOptions[8],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-kranjskacebela.png",
@@ -857,7 +857,7 @@ let narodnisimboliQuiz = [
     id: "9",
     question:
       "Zgodovinski grb dežele Kranjske, ki obsega današnjo Gorenjsko, Notranjsko, Dolenjsko in del Primorske. Nastal naj bi v 12. stoletju.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[9]),
     correct: narodnisimboliQuizOptions[9],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-kranjskiorel.png",
@@ -866,7 +866,7 @@ let narodnisimboliQuiz = [
     id: "10",
     question:
       "Edina slovenska avtohtona sorta psov. Je srednje velik, mišičast, z gosto in bujno železno sivo dlako. Ima prijazen in rahlo otožen pogled.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[10]),
     correct: narodnisimboliQuizOptions[10],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-kraskiovcar.png",
@@ -875,7 +875,7 @@ let narodnisimboliQuiz = [
     id: "11",
     question:
       "Značilni pustni lik iz Ptuja in okolice. S poskakovanjem in hudim truščem iz dežele odganjajo zimo in zlo, vanjo pa kličejo pomlad.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[11]),
     correct: narodnisimboliQuizOptions[11],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-kurenti.png",
   },
@@ -883,7 +883,7 @@ let narodnisimboliQuiz = [
     id: "12",
     question:
       "V vaseh so se ob njej zbrali vaščani, da bi obravnavali medsebojne spore, sprejemali odločitve o medsebojni pomoči, volili, pod njo pa so se tudi zbirali na praznovanjih, veselicah in plesih. Ima pomen središča skupnosti.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[12]),
     correct: narodnisimboliQuizOptions[12],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-lipa.png",
   },
@@ -891,7 +891,7 @@ let narodnisimboliQuiz = [
     id: "13",
     question:
       "Slovenska avtohtona sorta, ki sega v leto 1580. Žrebijo se temne barve, s starostjo pa postanejo povsem bele barve. Ima živahen temperament, a je dobro učljiv.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[13]),
     correct: narodnisimboliQuizOptions[13],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-lipicanec.png",
   },
@@ -899,7 +899,7 @@ let narodnisimboliQuiz = [
     id: "14",
     question:
       "Sliko je naslikal Marko Pernhart, prvi slovenski realistični krajinski slikar, doma iz Koroške. Naslikal je tudi Gospo Sveto, Krnski grad, Vrbsko in Blejsko jezero, Šmarno goro in Kranj.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[14]),
     correct: narodnisimboliQuizOptions[14],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-markopernhartovtriglav.png",
@@ -908,7 +908,7 @@ let narodnisimboliQuiz = [
     id: "15",
     question:
       "Prva slovenska roža, ki nosi velik simbolni pomen ljubezni in slovenstva. Ob krstu in poroki je bel, ob slovesu pa rdeč. ",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[15]),
     correct: narodnisimboliQuizOptions[15],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-nagelj.png",
   },
@@ -916,7 +916,7 @@ let narodnisimboliQuiz = [
     id: "16",
     question:
       "Odražale so družbeni položaj ljudi. Po vzorcih, vezenju in barvi so se razlikovale po vaseh, vsaka pa ima svojo zgodovino, ki sega tudi več stoletij v preteklost. Najdragocenejše so istrske, saj je njihova izdelava zahtevala največ časa in ročnega dela.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[16]),
     correct: narodnisimboliQuizOptions[16],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-narodnanosa.png",
@@ -925,7 +925,7 @@ let narodnisimboliQuiz = [
     id: "17",
     question:
       "Likovna umetnost, ki se v vseh časih razvija, izpopolnjuje in dopolnjuje. Slovenska se bistveno razlikuje od drugih že v zasnovi in pojmovanju.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[17]),
     correct: narodnisimboliQuizOptions[17],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-ornament.png",
   },
@@ -933,7 +933,7 @@ let narodnisimboliQuiz = [
     id: "18",
     question:
       "Impresionistična slika Ivana Groharja. V središču slike je kmet pri delu, v ozadju pa stoji kozolec.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[18]),
     correct: narodnisimboliQuizOptions[18],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-sejalec.png",
   },
@@ -941,7 +941,7 @@ let narodnisimboliQuiz = [
     id: "19",
     question:
       "Knjigo je napisal Janez Vajkard Valvazor leta 1689, velja pa za eno najpomembnejših znanstvenih del o Kranjski.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[19]),
     correct: narodnisimboliQuizOptions[19],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-slavavojvodinekranjske.png",
@@ -950,7 +950,7 @@ let narodnisimboliQuiz = [
     id: "20",
     question:
       "Prikazuje najvišjo slovensko goro, visoko kar 2864 m. Ime je verjetno dobila po njeni obliki, kot je vidna iz Bohinja. Nastopa v slovenskih grbih že več stoletij.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[20]),
     correct: narodnisimboliQuizOptions[20],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-triglav.png",
   },
@@ -958,7 +958,7 @@ let narodnisimboliQuiz = [
     id: "21",
     question:
       "Prvič jo je 7. aprila 1848 v Ljubljani izobesil domoljubni študent Lovro Toman na Wolfovi ulici 8, kot odgovor na izobešanje nemške zastave na Ljubljanskem gradu.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[21]),
     correct: narodnisimboliQuizOptions[21],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-trobojnica.png",
   },
@@ -966,7 +966,7 @@ let narodnisimboliQuiz = [
     id: "22",
     question:
       "Stoji na Gosposvetskem polju na Koroškem, na njem so ustoličevali koroške vojvode v slovenskem jeziku.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[22]),
     correct: narodnisimboliQuizOptions[22],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-vojvodskiprestol.png",
@@ -975,7 +975,7 @@ let narodnisimboliQuiz = [
     id: "23",
     question:
       "Ob gradnji so zavrgli prvotne ideje o dunajskih okrasih, namesto njih pa so na fasado narisali tipične slovenske motive ornamentike.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[23]),
     correct: narodnisimboliQuizOptions[23],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
@@ -984,7 +984,7 @@ let narodnisimboliQuiz = [
     id: "24",
     question:
       "Sestavljajo jo slovenske narodne barve in grb s Triglavom. Uradna je od leta 1991, ko je Slovenija postala samostojna država.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[24]),
     correct: narodnisimboliQuizOptions[24],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-zastava.png",
   },
@@ -992,7 +992,7 @@ let narodnisimboliQuiz = [
     id: "25",
     question:
       "Napisal jo je France Prešeren leta 1848, v njej je predstavljena ideja o svobodi in zedinjenosti Slovencev. Napisana je v obliki čaše, saj gre za napitnico. Danes je njena sedma kitica himna Republike Slovenije.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[25]),
     correct: narodnisimboliQuizOptions[25],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-zdravljica.png",
   },
@@ -1000,7 +1000,7 @@ let narodnisimboliQuiz = [
     id: "26",
     question:
       "Narisal ga je Peter Kozler, saj se je kot narodno zaveden Slovenec zavzemal za idejo Zedinjene Slovenije. Peter Kozler je tudi ustanovitelj Pivovarne Union.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[26]),
     correct: narodnisimboliQuizOptions[26],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-zemljevidslovenskihdezel.png",
@@ -1009,7 +1009,7 @@ let narodnisimboliQuiz = [
     id: "27",
     question:
       "Vedno ga spremljajo tri device, ki varujejo skriti zaklad. Legenda pravi, da so ga številni ljudje poskušali ujeti, da bi se dokopali do zaklada. Nekega dne ga je pohlepnemu lovcu uspelo ubiti, iz njegove rane pa je stekla kri, ki je vzklila triglavsko rožo, ki ima čudežne zdravilne učinke.",
-    options: narodnisimboliQuizOptions,
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[27]),
     correct: narodnisimboliQuizOptions[27],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-zlatorog.png",
   },
@@ -1052,7 +1052,7 @@ let navadeQuiz = [
   {
     id: "0",
     question: "Advent je čas duhovne priprave na Božič, zato v tem času ni...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[0]),
     correct: navadeQuizOptions[0],
     questionImg:
       "media/navade/slovenija-navade-adventjeduhovnapripravanabozicobadventuniporokinveselic.png",
@@ -1061,7 +1061,7 @@ let navadeQuiz = [
     id: "1",
     question:
       "Božič je najpomembnejši dan v letu, zato je na ta dan prepovedano delati, velja pa, da...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[1]),
     correct: navadeQuizOptions[1],
     questionImg:
       "media/navade/slovenija-navade-bozicjenajpomembnejsidanvletuzatojeprepovedanodelatiampakmizamorabiticeldanpolnashranoinpijaco.png",
@@ -1070,7 +1070,7 @@ let navadeQuiz = [
     id: "2",
     question:
       "Božič traja vse do svetih treh kraljev, na ta dan pa se blagoslovi dom in...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[2]),
     correct: navadeQuizOptions[2],
     questionImg:
       "media/navade/slovenija-navade-bozictrajavsedosvetihtrehkraljevkoseblagoslovidominnapisekraticeimenakraljevnadvhodnavrata.png",
@@ -1079,7 +1079,7 @@ let navadeQuiz = [
     id: "3",
     question:
       "Ko je nekdo umrl, so ga pokopali, na njegovem domu pa so molili zanj...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[3]),
     correct: navadeQuizOptions[3],
     questionImg:
       "media/navade/slovenija-navade-kojenekdoumrlsogapokopalisedemdnipopogrebupazanjmolilinanjegovemdomu.png",
@@ -1087,7 +1087,7 @@ let navadeQuiz = [
   {
     id: "4",
     question: "Ko prideš k nekomu domov, ti vedno ponudijo...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[4]),
     correct: navadeQuizOptions[4],
     questionImg:
       "media/navade/slovenija-navade-kopridesknekomudomovtiponudijocopate.png",
@@ -1095,7 +1095,7 @@ let navadeQuiz = [
   {
     id: "5",
     question: "Ko osvojiš Triglav, te morajo najprej...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[5]),
     correct: navadeQuizOptions[5],
     questionImg:
       "media/navade/slovenija-navade-kopridesnatriglavtemorajokrstiti.png",
@@ -1103,7 +1103,7 @@ let navadeQuiz = [
   {
     id: "6",
     question: "Na Božični predvečer se družina zbere in skupaj pripravi...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[6]),
     correct: navadeQuizOptions[6],
     questionImg:
       "media/navade/slovenija-navade-nabozicnipredvecerceladruzinapostavijasliceinbozicnodrevesce.png",
@@ -1111,7 +1111,7 @@ let navadeQuiz = [
   {
     id: "7",
     question: "Na cvetno nedeljo se da blagosloviti...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[7]),
     correct: navadeQuizOptions[7],
     questionImg:
       "media/navade/slovenija-navade-nacvetnonedeljosekblagoslovunesejovelikonocnebutarice.png",
@@ -1120,7 +1120,7 @@ let navadeQuiz = [
     id: "8",
     question:
       "Na Gregorjevo otroci spuščajo osvetljene barčice po potokih in rekah. Gregorjevemu pravimo tudi...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[8]),
     correct: navadeQuizOptions[8],
     questionImg:
       "media/navade/slovenija-navade-nagregorjevoprvidanpomladiozdanzaljubljencevsootrocispuscaliosvetljenebarcicepopotokihinrekah.png",
@@ -1129,7 +1129,7 @@ let navadeQuiz = [
     id: "9",
     question:
       "Na Martinovo poteka po vsej Sloveniji veliko število prireditev v znamenju...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[9]),
     correct: navadeQuizOptions[9],
     questionImg:
       "media/navade/slovenija-navade-namartinovopotekavelikoprireditevvznamenjuvina.png",
@@ -1138,7 +1138,7 @@ let navadeQuiz = [
     id: "10",
     question:
       "Na Miklavžev predvečer se mladi neporočeni fantje oblečejo v parkljne zato, da...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[10]),
     correct: navadeQuizOptions[10],
     questionImg:
       "media/navade/slovenija-navade-namiklavzevpredvecermladiinneporocenifanjteseoblecejovparkljneinobdarujejopridneotrokelumpepaokarajo.png",
@@ -1147,7 +1147,7 @@ let navadeQuiz = [
     id: "11",
     question:
       "Na predvečer goda so harmonikarji igrali slavitelju pod okno, vse dokler...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[11]),
     correct: navadeQuizOptions[11],
     questionImg:
       "media/navade/slovenija-navade-napredvecergodasoharmonikarjiigralipodoknomdoklerjihgospodarnipogostil.png",
@@ -1155,7 +1155,7 @@ let navadeQuiz = [
   {
     id: "12",
     question: "Na prvi maj potekajo po vsej Sloveniji...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[12]),
     correct: navadeQuizOptions[12],
     questionImg:
       "media/navade/slovenija-navade-naprvimajpotekaprvomajskabudnica.png",
@@ -1163,7 +1163,7 @@ let navadeQuiz = [
   {
     id: "13",
     question: "Na prvomajski predvečer zagorijo...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[13]),
     correct: navadeQuizOptions[13],
     questionImg:
       "media/navade/slovenija-navade-naprvomajskipredvecerzagorijokresovi.png",
@@ -1172,7 +1172,7 @@ let navadeQuiz = [
     id: "14",
     question:
       "Ob silvestrski polnoči se prepeva skladba Alfija Nipiča z naslovom...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[14]),
     correct: navadeQuizOptions[14],
     questionImg:
       "media/navade/slovenija-navade-nasilvestrovoobpolnocisepojepesemsilvestrskipoljub.png",
@@ -1180,7 +1180,7 @@ let navadeQuiz = [
   {
     id: "15",
     question: "Na veliki šmaren se ljudje odpravijo na Brezje v...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[15]),
     correct: navadeQuizOptions[15],
     questionImg:
       "media/navade/slovenija-navade-navelikismarenseogromnoljudiodpravinabrezjevmarijinosvetisce.png",
@@ -1188,7 +1188,7 @@ let navadeQuiz = [
   {
     id: "16",
     question: "Na Veliko noč otroci sekajo pirhe oziroma...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[16]),
     correct: navadeQuizOptions[16],
     questionImg:
       "media/navade/slovenija-navade-navelikonocotrocisekajopirheozmecejokovancevnje.png",
@@ -1196,7 +1196,7 @@ let navadeQuiz = [
   {
     id: "17",
     question: "Na Veliko noč se je...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[17]),
     correct: navadeQuizOptions[17],
     questionImg:
       "media/navade/slovenija-navade-navelikonocsejeblagosovljenahrana.png",
@@ -1204,7 +1204,7 @@ let navadeQuiz = [
   {
     id: "18",
     question: "Na veliko soboto poteka...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[18]),
     correct: navadeQuizOptions[18],
     questionImg:
       "media/navade/slovenija-navade-navelikosobotopotekablagoslovhrane.png",
@@ -1212,7 +1212,7 @@ let navadeQuiz = [
   {
     id: "19",
     question: "Nisi pravi Slovenec, vse dokler nisi bil...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[19]),
     correct: navadeQuizOptions[19],
     questionImg:
       "media/navade/slovenija-navade-nisisloveneccesenisibilnatriglavu.png",
@@ -1221,7 +1221,7 @@ let navadeQuiz = [
     id: "20",
     question:
       "Ob birmi se otroka zelo lepo obleče, sorodniki pa mu podarijo veliko dragocenih stvari, ponavadi zlato uro, lahko pa tudi...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[20]),
     correct: navadeQuizOptions[20],
     questionImg:
       "media/navade/slovenija-navade-obbirmiseotrokazelolepoobleceinpodaridragocenestvarizlatouroavtoteren.png",
@@ -1230,7 +1230,7 @@ let navadeQuiz = [
     id: "21",
     question:
       "Pri krstu je prvi otrok dobil ime po očetu, hči po mami, vsi ostali pa po...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[21]),
     correct: navadeQuizOptions[21],
     questionImg:
       "media/navade/slovenija-navade-obkrstusootrokalepooblekliprvisinjedobilimepoocetuhcipomamiostalipaposvetnikihnadangoda.png",
@@ -1238,7 +1238,7 @@ let navadeQuiz = [
   {
     id: "22",
     question: "Ob praznikih in velikih dogodkih se ljudje oblečejo v...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[22]),
     correct: navadeQuizOptions[22],
     questionImg:
       "media/navade/slovenija-navade-obpraznikihinvelikihdogodkihseljudjeoblecejovnarodnenose.png",
@@ -1246,7 +1246,7 @@ let navadeQuiz = [
   {
     id: "23",
     question: "Vsako nedeljo se družina odpravi...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[23]),
     correct: navadeQuizOptions[23],
     questionImg: "media/navade/slovenija-navade-obprostemcasuhodimovhribe.png",
   },
@@ -1254,7 +1254,7 @@ let navadeQuiz = [
     id: "24",
     question:
       "Ob rojstvu otroka se mami skuha govejo juho, zraven pa se ji za moč da še...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[24]),
     correct: navadeQuizOptions[24],
     questionImg:
       "media/navade/slovenija-navade-obrojstvuotrokasemamiskuhagovejojuhoinkozarecvinazamoc.png",
@@ -1262,7 +1262,7 @@ let navadeQuiz = [
   {
     id: "25",
     question: "Poroka in poročna gostija sta vedno potekala v domačem kraju...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[25]),
     correct: navadeQuizOptions[25],
     questionImg:
       "media/navade/slovenija-navade-porokainkosilastavednopotekalavnevestinemdomacemkraju.png",
@@ -1270,7 +1270,7 @@ let navadeQuiz = [
   {
     id: "26",
     question: "Vsak pravi Slovenec mora imeti lepši vrt od...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[26]),
     correct: navadeQuizOptions[26],
     questionImg:
       "media/navade/slovenija-navade-pravislovenecmoraimetilepsivrtodsoseda.png",
@@ -1279,7 +1279,7 @@ let navadeQuiz = [
     id: "27",
     question:
       "Slovenci spijejo res veliko alkohola, zato je običajno, da te prijatelj ne povabi na kavo, ampak na...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[27]),
     correct: navadeQuizOptions[27],
     questionImg:
       "media/navade/slovenija-navade-slovenciljubijoalkoholzatokosrecasprijateljagapovabisnapivo.png",
@@ -1287,7 +1287,7 @@ let navadeQuiz = [
   {
     id: "28",
     question: "Nedeljsko kosilo mora biti sestavljeno iz...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[29]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[29]),
     correct: navadeQuizOptions[28],
     questionImg:
       "media/navade/slovenija-navade-tipicnonedeljskokosilogovejajuhamesoskrompirjemsolatainsladica.png",
@@ -1295,7 +1295,7 @@ let navadeQuiz = [
   {
     id: "29",
     question: "Na Božični predvečer se družina odpravi k...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[30]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[30]),
     correct: navadeQuizOptions[29],
     questionImg:
       "media/navade/slovenija-navade-zabozicsedruzinaodpravikpolnocnici.png",
@@ -1304,7 +1304,7 @@ let navadeQuiz = [
     id: "30",
     question:
       "Za pust se ljudje oblečejo v pustne šeme in ne govorijo, ampak...",
-    options: navadeQuizOptions,
+    options: [...navadeQuizOptions.filter(el => {return el!=navadeQuizOptions[31]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(navadeQuizOptions[31]),
     correct: navadeQuizOptions[30],
     questionImg:
       "media/navade/slovenija-navade-zapustseljudjeoblecejovpustnesemeinnegovorijoampaksamodelajohrup.png",
@@ -1360,301 +1360,301 @@ let podjetjaQuiz = [
   {
     id: "0",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[0]),
     correct: podjetjaQuizOptions[0],
     questionImg: "media/podjetja/slovenija-podjetja-adriamobil.png",
   },
   {
     id: "1",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[1]),
     correct: podjetjaQuizOptions[1],
     questionImg: "media/podjetja/slovenija-podjetja-akrapovic.png",
   },
   {
     id: "2",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[2]),
     correct: podjetjaQuizOptions[2],
     questionImg: "media/podjetja/slovenija-podjetja-alpina.png",
   },
   {
     id: "3",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[3]),
     correct: podjetjaQuizOptions[3],
     questionImg: "media/podjetja/slovenija-podjetja-argeta.png",
   },
   {
     id: "4",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[4]),
     correct: podjetjaQuizOptions[4],
     questionImg: "media/podjetja/slovenija-podjetja-barcaffe.png",
   },
   {
     id: "5",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[5]),
     correct: podjetjaQuizOptions[5],
     questionImg: "media/podjetja/slovenija-podjetja-dars.png",
   },
   {
     id: "6",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[6]),
     correct: podjetjaQuizOptions[6],
     questionImg: "media/podjetja/slovenija-podjetja-delamaris.png",
   },
   {
     id: "7",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[7]),
     correct: podjetjaQuizOptions[7],
     questionImg: "media/podjetja/slovenija-podjetja-elan.png",
   },
   {
     id: "8",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[8]),
     correct: podjetjaQuizOptions[8],
     questionImg: "media/podjetja/slovenija-podjetja-fotona.png",
   },
   {
     id: "9",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[9]),
     correct: podjetjaQuizOptions[9],
     questionImg: "media/podjetja/slovenija-podjetja-fructal.png",
   },
   {
     id: "10",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[10]),
     correct: podjetjaQuizOptions[10],
     questionImg: "media/podjetja/slovenija-podjetja-gorenje.png",
   },
   {
     id: "11",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[11]),
     correct: podjetjaQuizOptions[11],
     questionImg: "media/podjetja/slovenija-podjetja-gorenjka.png",
   },
   {
     id: "12",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[12]),
     correct: podjetjaQuizOptions[12],
     questionImg: "media/podjetja/slovenija-podjetja-intereuropa.png",
   },
   {
     id: "13",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[13]),
     correct: podjetjaQuizOptions[13],
     questionImg: "media/podjetja/slovenija-podjetja-iskra.png",
   },
   {
     id: "14",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[14]),
     correct: podjetjaQuizOptions[14],
     questionImg: "media/podjetja/slovenija-podjetja-kolektor.png",
   },
   {
     id: "15",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[15]),
     correct: podjetjaQuizOptions[15],
     questionImg: "media/podjetja/slovenija-podjetja-krka.png",
   },
   {
     id: "16",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[16]),
     correct: podjetjaQuizOptions[16],
     questionImg: "media/podjetja/slovenija-podjetja-lasko.png",
   },
   {
     id: "17",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[17]),
     correct: podjetjaQuizOptions[17],
     questionImg: "media/podjetja/slovenija-podjetja-lek.png",
   },
   {
     id: "18",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[18]),
     correct: podjetjaQuizOptions[18],
     questionImg: "media/podjetja/slovenija-podjetja-lisca.png",
   },
   {
     id: "19",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[19]),
     correct: podjetjaQuizOptions[19],
     questionImg: "media/podjetja/slovenija-podjetja-lukakoper.png",
   },
   {
     id: "20",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[20]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[20]),
     correct: podjetjaQuizOptions[20],
     questionImg: "media/podjetja/slovenija-podjetja-mercator.png",
   },
   {
     id: "21",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[21]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[21]),
     correct: podjetjaQuizOptions[21],
     questionImg: "media/podjetja/slovenija-podjetja-mlinotest.png",
   },
   {
     id: "22",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[22]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[22]),
     correct: podjetjaQuizOptions[22],
     questionImg: "media/podjetja/slovenija-podjetja-natureta.png",
   },
   {
     id: "23",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[23]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[23]),
     correct: podjetjaQuizOptions[23],
     questionImg: "media/podjetja/slovenija-podjetja-nlb.png",
   },
   {
     id: "24",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[24]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[24]),
     correct: podjetjaQuizOptions[24],
     questionImg: "media/podjetja/slovenija-podjetja-outfit7.png",
   },
   {
     id: "25",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[25]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[25]),
     correct: podjetjaQuizOptions[25],
     questionImg: "media/podjetja/slovenija-podjetja-perutninaptuj.png",
   },
   {
     id: "26",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[26]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[26]),
     correct: podjetjaQuizOptions[26],
     questionImg: "media/podjetja/slovenija-podjetja-petrol.png",
   },
   {
     id: "27",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[27]),
     correct: podjetjaQuizOptions[27],
     questionImg: "media/podjetja/slovenija-podjetja-pipistrel.png",
   },
   {
     id: "28",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[28]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[28]),
     correct: podjetjaQuizOptions[28],
     questionImg: "media/podjetja/slovenija-podjetja-radenska.png",
   },
   {
     id: "29",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[29]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[29]),
     correct: podjetjaQuizOptions[29],
     questionImg: "media/podjetja/slovenija-podjetja-revoz.png",
   },
   {
     id: "30",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[30]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[30]),
     correct: podjetjaQuizOptions[30],
     questionImg: "media/podjetja/slovenija-podjetja-sava.png",
   },
   {
     id: "31",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[31]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[31]),
     correct: podjetjaQuizOptions[31],
     questionImg: "media/podjetja/slovenija-podjetja-sintal.png",
   },
   {
     id: "32",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[32]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[32]),
     correct: podjetjaQuizOptions[32],
     questionImg: "media/podjetja/slovenija-podjetja-slowatch.png",
   },
   {
     id: "33",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[33]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[33]),
     correct: podjetjaQuizOptions[33],
     questionImg: "media/podjetja/slovenija-podjetja-steklarnarogaska.png",
   },
   {
     id: "34",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[34]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[34]),
     correct: podjetjaQuizOptions[34],
     questionImg: "media/podjetja/slovenija-podjetja-triglav.png",
   },
   {
     id: "35",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[35]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[35]),
     correct: podjetjaQuizOptions[35],
     questionImg: "media/podjetja/slovenija-podjetja-tus.png",
   },
   {
     id: "36",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[36]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[36]),
     correct: podjetjaQuizOptions[36],
     questionImg: "media/podjetja/slovenija-podjetja-ufpro.png",
   },
   {
     id: "37",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[37]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[37]),
     correct: podjetjaQuizOptions[37],
     questionImg: "media/podjetja/slovenija-podjetja-union.png",
   },
   {
     id: "38",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[38]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[38]),
     correct: podjetjaQuizOptions[38],
     questionImg: "media/podjetja/slovenija-podjetja-vinakoper.png",
   },
   {
     id: "39",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[39]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[39]),
     correct: podjetjaQuizOptions[39],
     questionImg: "media/podjetja/slovenija-podjetja-zito.png",
   },
   {
     id: "40",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[40]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[40]),
     correct: podjetjaQuizOptions[40],
     questionImg: "media/podjetja/slovenija-podjetja-zlatarnacelje.png",
   },
   {
     id: "41",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[41]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[41]),
     correct: podjetjaQuizOptions[41],
     questionImg: "media/podjetja/slovenija-podjetja-cimos.png",
   },
   {
     id: "42",
     question: "",
-    options: podjetjaQuizOptions,
+    options: [...podjetjaQuizOptions.filter(el => {return el!=podjetjaQuizOptions[42]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(podjetjaQuizOptions[42]),
     correct: podjetjaQuizOptions[42],
     questionImg: "media/podjetja/slovenija-podjetja-tomos.png",
   },
@@ -1673,49 +1673,49 @@ let pokrajineQuiz = [
   {
     id: "0",
     question: "Njeno središče je Novo mesto.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[0]),
     correct: pokrajineQuizOptions[0],
     questionImg: "media/pokrajine/slovenija-pokrajine-dolenjska.png",
   },
   {
     id: "1",
     question: "Njeno središče je Kranj.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[1]),
     correct: pokrajineQuizOptions[1],
     questionImg: "media/pokrajine/slovenija-pokrajine-gorenjska.png",
   },
   {
     id: "2",
     question: "Njeno središče je Slovenj Gradec.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[2]),
     correct: pokrajineQuizOptions[2],
     questionImg: "media/pokrajine/slovenija-pokrajine-koroska.png",
   },
   {
     id: "3",
     question: "Njeno središče je Postojna.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[3]),
     correct: pokrajineQuizOptions[3],
     questionImg: "media/pokrajine/slovenija-pokrajine-notranjska.png",
   },
   {
     id: "4",
     question: "Njeno središče je Murska Sobota.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[4]),
     correct: pokrajineQuizOptions[4],
     questionImg: "media/pokrajine/slovenija-pokrajine-prekmurje.png",
   },
   {
     id: "5",
     question: "Njeno središče je Koper.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[5]),
     correct: pokrajineQuizOptions[5],
     questionImg: "media/pokrajine/slovenija-pokrajine-primorska.png",
   },
   {
     id: "6",
     question: "Njeno središče je Maribor.",
-    options: pokrajineQuizOptions,
+    options: [...pokrajineQuizOptions.filter(el => {return el!=pokrajineQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(pokrajineQuizOptions[6]),
     correct: pokrajineQuizOptions[6],
     questionImg: "media/pokrajine/slovenija-pokrajine-stajerska.png",
   },
@@ -1748,7 +1748,7 @@ let praznikiQuiz = [
     id: "0",
     question:
       "Binkošti ali praznik Svetega Duha je verski praznik. Beseda binkošti izvira iz starogrške besede pentekoste, kar pomeni 'petdeseti'. Praznuje se prihod svetega Duha nad Jezusove apostole.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[0]),
     correct: praznikiQuizOptions[0],
     questionImg: "media/prazniki/slovenija-prazniki-binkosti.png",
   },
@@ -1756,15 +1756,15 @@ let praznikiQuiz = [
     id: "1",
     question:
       "Božič je tradicionalni krščanski praznik, ki obuja spomin na rojstvo Jezusa Kristusa. Praznik zaključuje čas adventa in začenja božični čas. Slovensko ime božič za praznik Jezusovega rojstva namreč izhaja iz pomena »majhen bog«.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[1]),
     correct: praznikiQuizOptions[1],
     questionImg: "media/prazniki/slovenija-prazniki-bozic.png",
   },
   {
     id: "2",
     question:
-      "Dan državnosti je državni praznik. Obeležuje spomin na 25. junij 1991, ko je Slovenija formalno postala neodvisna. Na ta dan je bila sprejeta Deklaracija o neodvisnosti Slovenije, ki je bila slavnostno razglašena naslednji dan, 26. junija, na Trgu republike v Ljubljani. Dva dni kasneje se je začela slovenska osamosvojitvena vojna, v kateri je Slovenija obranila neodvisnost.",
-    options: praznikiQuizOptions,
+      "Dan državnosti je državni praznik. Obeležuje spomin na dogodke, ko je Slovenija formalno postala neodvisna. Na ta dan je bila sprejeta Deklaracija o neodvisnosti Slovenije, ki je bila slavnostno razglašena naslednji dan na Trgu republike v Ljubljani. Dva dni kasneje se je začela slovenska osamosvojitvena vojna, v kateri je Slovenija obranila neodvisnost.",
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[2]),
     correct: praznikiQuizOptions[2],
     questionImg: "media/prazniki/slovenija-prazniki-dandrzavnosti.png",
   },
@@ -1772,7 +1772,7 @@ let praznikiQuiz = [
     id: "3",
     question:
       "Dan reformacije je v Sloveniji dela prost dan. Posvečen je reformaciji, tj. verskemu, družbeno-političnemu in kulturnemu gibanju v 16. stoletju, ki je Slovencem prineslo prve tiskane knjige v slovenščini, prvo slovnico in s tem slovenski knjižni jezik.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[3]),
     correct: praznikiQuizOptions[3],
     questionImg: "media/prazniki/slovenija-prazniki-danreformacije.png",
   },
@@ -1780,7 +1780,7 @@ let praznikiQuiz = [
     id: "4",
     question:
       "Dan Rudolfa Maistra je državni praznik. Na ta dan je Rudolf Maister leta 1918 s svojo vojsko razorožil nemško stražo in jo razpustil, s tem dogodkom pa je k Sloveniji priključil večji del slovenskega narodnostnega in govornega območja Štajerske in Koroške.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[4]),
     correct: praznikiQuizOptions[4],
     questionImg: "media/prazniki/slovenija-prazniki-danrudolfamaistra.png",
   },
@@ -1788,7 +1788,7 @@ let praznikiQuiz = [
     id: "5",
     question:
       "Dan samostojnosti in enotnosti je državni praznik, na ta dan se obeležuje razglasitev izidov plebiscita o samostojnosti leta 1990, na katerem je 95% volilcev na vprašanje »Ali naj Slovenija postane samostojna in neodvisna država?« odgovorilo pritrdilno, s čimer se je začela osamosvojitev Slovenije.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[5]),
     correct: praznikiQuizOptions[5],
     questionImg:
       "media/prazniki/slovenija-prazniki-dansamostojnostiinenotnosti.png",
@@ -1797,7 +1797,7 @@ let praznikiQuiz = [
     id: "6",
     question:
       "Dan slovenskega športa je državni praznik ki je bil uveden leta 2020 na pobudo Olimpijskega komiteja Slovenije. Datum je izbran kot obletnica na dogodke leta 2000, ko je ob zmagi veslačev Iztoka Čopa in Luke Špika ter strelca Rajmonda Debevca na poletnih olimpijskih igrah v Sydneyju prvič zaigrala slovenska himna Zdravljica.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[6]),
     correct: praznikiQuizOptions[6],
     questionImg: "media/prazniki/slovenija-prazniki-danslovenskegasporta.png",
   },
@@ -1805,7 +1805,7 @@ let praznikiQuiz = [
     id: "7",
     question:
       "Dan spomina na mrtve je v Sloveniji državni praznik, ki se praznuje kot spomin na umrle praznuje.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[7]),
     correct: praznikiQuizOptions[7],
     questionImg: "media/prazniki/slovenija-prazniki-danspominanamrtve.png",
   },
@@ -1813,7 +1813,7 @@ let praznikiQuiz = [
     id: "8",
     question:
       "Dan suverenosti je praznik, s katerim obeležujemo enega ključnih dogodkov v procesu osamosvojitve Slovenije, dan, ko je po osamosvojitveni vojni zadnji jugoslovanski vojak zapustil slovensko ozemlje.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[8]),
     correct: praznikiQuizOptions[8],
     questionImg: "media/prazniki/slovenija-prazniki-dansuverenosti.png",
   },
@@ -1821,7 +1821,7 @@ let praznikiQuiz = [
     id: "9",
     question:
       "Dan upora proti okupatorju je državni praznik, ki spominja na dogodke leta 1941, ko je bila v Ljubljani ustanovljena Osvobodilna fronta, organizacija odpora proti italijanskemu in nemškemu okupatorju med drugo svetovno vojno.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[9]),
     correct: praznikiQuizOptions[9],
     questionImg:
       "media/prazniki/slovenija-prazniki-danuporaprotiokupatorju.png",
@@ -1830,7 +1830,7 @@ let praznikiQuiz = [
     id: "10",
     question:
       "Dan vrnitve Primorske k matični domovini je državni praznik, ki ga praznujemo na obletnico dogodkov iz leta 1947, ko je bila uveljavljena pariška mirovna pogodba z Italijo, ki je Sloveniji vrnila velik del ugrabljene Primorske.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[10]),
     correct: praznikiQuizOptions[10],
     questionImg:
       "media/prazniki/slovenija-prazniki-danvrnitveprimorskekmaticnidomovini.png",
@@ -1839,7 +1839,7 @@ let praznikiQuiz = [
     id: "11",
     question:
       "Marijino vnebovzétje (tudi veliki šmaren) je eden izmed največjih krščanskih praznikov, slavili so ga že v apostolskih časih. Na ta dan se kristjani spominjajo, da je bila Devica Marija z dušo in telesom vzeta v nebesa.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[11]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[11]),
     correct: praznikiQuizOptions[11],
     questionImg: "media/prazniki/slovenija-prazniki-marijinovnebovzetje.png",
   },
@@ -1847,7 +1847,7 @@ let praznikiQuiz = [
     id: "12",
     question:
       "Martinovo ali god sv. Martina je dan, na katerega se evropske države spominjajo svetnika, ki je dal svoj plašč beraču, da bi lahko skril svojo revščino. V Sloveniji se dan sv. Martina praznuje predvsem kot praznik vina. Do tega dne se mošt obravnava kot nečisto in grešno novo vino, ki se ob blagoslovitvi spremeni v pravo vino.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[12]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[12]),
     correct: praznikiQuizOptions[12],
     questionImg: "media/prazniki/slovenija-prazniki-martinovo.png",
   },
@@ -1855,7 +1855,7 @@ let praznikiQuiz = [
     id: "13",
     question:
       "Sv. Miklavž je verski praznik. Miklavž naj bi se rodil v premožni družini, vendar je vse podedovano bogastvo razdal revnim, zato se ga od nekdaj drži sloves radodarnega svetnika. Na Slovenskem je zato ta dan posvečen obdarovanju mlajših.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[13]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[13]),
     correct: praznikiQuizOptions[13],
     questionImg: "media/prazniki/slovenija-prazniki-miklavz.png",
   },
@@ -1863,7 +1863,7 @@ let praznikiQuiz = [
     id: "14",
     question:
       "Novo leto je praznični dan, ki obeležuje začetek novega koledarskega leta.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[14]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[14]),
     correct: praznikiQuizOptions[14],
     questionImg: "media/prazniki/slovenija-prazniki-novoleto.png",
   },
@@ -1871,7 +1871,7 @@ let praznikiQuiz = [
     id: "15",
     question:
       "Praznik dela se po slovenski tradiciji obeležuje zlasti s kresovi in nošnjo nageljnov. Na ta dan se obuja spomin na trpljenje in dosežke delavskega razreda.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[15]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[15]),
     correct: praznikiQuizOptions[15],
     questionImg: "media/prazniki/slovenija-prazniki-praznikdela.png",
   },
@@ -1879,7 +1879,7 @@ let praznikiQuiz = [
     id: "16",
     question:
       "Prešernov dan je osrednji slovenski kulturni praznik, ki ga praznujemo na obletnico smrti največjega slovenskega pesnika Franceta Prešerna.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[16]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[16]),
     correct: praznikiQuizOptions[16],
     questionImg: "media/prazniki/slovenija-prazniki-presernovdan.png",
   },
@@ -1887,7 +1887,7 @@ let praznikiQuiz = [
     id: "17",
     question:
       "Pust je čas, ko se napravimo v pustno šemo, maškaro. Beseda pust je verjetno nastala iz »mesopust«, to je iz besed meso in pustiti, kar bi bil dobeseden prevod iz italijanskega izraza »carneleva« v pomenu.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[17]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[17]),
     correct: praznikiQuizOptions[17],
     questionImg: "media/prazniki/slovenija-prazniki-pust.png",
   },
@@ -1895,7 +1895,7 @@ let praznikiQuiz = [
     id: "18",
     question:
       "Velika noč (Vuzem) je najpomembnejši krščanski praznik. Velika noč obsega posebno praznovanje, ki ga imenujemo velikonočno tridnevje. Za kristjane je praznik veselja in upanja, verujejo, da je Jezus s svojim vstajenjem premagal telesno in duhovno smrt ter za vse prinesel upanje.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[18]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[18]),
     correct: praznikiQuizOptions[18],
     questionImg: "media/prazniki/slovenija-prazniki-velikanoc.png",
   },
@@ -1903,7 +1903,7 @@ let praznikiQuiz = [
     id: "19",
     question:
       "Združitev prekmurskih Slovencev z matičnim narodom je praznik, ki ga praznujemo na dan, ko je bilo Prekmurje po določilih Pariške mirovne konference združeno s Kraljevino SHS, s tem pa so bili prekmurski Slovenci po stoletjih madžarske oblasti znova združeni s slovenskim narodom.",
-    options: praznikiQuizOptions,
+    options: [...praznikiQuizOptions.filter(el => {return el!=praznikiQuizOptions[19]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(praznikiQuizOptions[19]),
     correct: praznikiQuizOptions[19],
     questionImg:
       "media/prazniki/slovenija-prazniki-zdruzitevprekmurcevzmaticnimnarodom.png",
@@ -1944,7 +1944,7 @@ let rekeQuiz = [
     id: "0",
     question:
       "Izvira v Toblachu na Južnem Tirolskem, izliva pa se v Donavo blizu Osijeka. Dolga je 749 km, od tega 117 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[0]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[0]),
     correct: rekeQuizOptions[0],
     questionImg: "media/reke/slovenija-reke-drava.png",
   },
@@ -1952,7 +1952,7 @@ let rekeQuiz = [
     id: "1",
     question:
       "Izvira v Gorskem kotarju, izliva pa se v Savo blizu Sisaka. Dolga je 294 km, od tega 118 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[1]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[1]),
     correct: rekeQuizOptions[1],
     questionImg: "media/reke/slovenija-reke-kolpa.png",
   },
@@ -1960,7 +1960,7 @@ let rekeQuiz = [
     id: "2",
     question:
       "Izvira v bližini Ivančne Gorice, izliva pa se v Savo blizu Brežic. Dolga je 94 km.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[2]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[2]),
     correct: rekeQuizOptions[2],
     questionImg: "media/reke/slovenija-reke-krka.png",
   },
@@ -1968,7 +1968,7 @@ let rekeQuiz = [
     id: "3",
     question:
       "Izvira v bližini Vrhnike, izliva pa se v Savo pri Podgradu. Dolga je 41 km.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[3]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[3]),
     correct: rekeQuizOptions[3],
     questionImg: "media/reke/slovenija-reke-ljubljanica.png",
   },
@@ -1976,7 +1976,7 @@ let rekeQuiz = [
     id: "4",
     question:
       "Izvira v Visokih Turah, izliva pa se v Dravo pri Legradu. Dolga je 438 km, od tega 95 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[4]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[4]),
     correct: rekeQuizOptions[4],
     questionImg: "media/reke/slovenija-reke-mura.png",
   },
@@ -1984,7 +1984,7 @@ let rekeQuiz = [
     id: "5",
     question:
       "Izvira v bližini Klane, izliva pa se v Škocjanskih jamah. Dolga je 54 km, od tega 51 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[5]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[5]),
     correct: rekeQuizOptions[5],
     questionImg: "media/reke/slovenija-reke-reka.png",
   },
@@ -1992,7 +1992,7 @@ let rekeQuiz = [
     id: "6",
     question:
       "Izvira v Zelencih pri Kranjski gori, izliva pa se v Donavo pri Beogradu. Dolga je 947 km, od tega 225 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[6]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[6]),
     correct: rekeQuizOptions[6],
     questionImg: "media/reke/slovenija-reke-sava.png",
   },
@@ -2000,7 +2000,7 @@ let rekeQuiz = [
     id: "7",
     question:
       "Izvira nad slapom Rinka, izliva pa se v Savo pri Zidanem Mostu. Dolga je 102 km.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[7]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[7]),
     correct: rekeQuizOptions[7],
     questionImg: "media/reke/slovenija-reke-savinja.png",
   },
@@ -2008,7 +2008,7 @@ let rekeQuiz = [
     id: "8",
     question:
       "Izvira v Triglavskem narodnem parku, izliva pa se v Jadransko morje blizu Tržiča. Dolga je 138 km, od tega 96 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[8]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[8]),
     correct: rekeQuizOptions[8],
     questionImg: "media/reke/slovenija-reke-soca.png",
   },
@@ -2016,7 +2016,7 @@ let rekeQuiz = [
     id: "9",
     question:
       "Izvira v bližini Škofje Loke, izliva pa se v Savo pri Medvodah. Dolga je 52 km.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[9]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[9]),
     correct: rekeQuizOptions[9],
     questionImg: "media/reke/slovenija-reke-sora.png",
   },
@@ -2024,7 +2024,7 @@ let rekeQuiz = [
     id: "10",
     question:
       "Izvira v bližini Vipave, izliva pa se v Sočo pri Sovodnjah. Dolga je 49 km, od tega 44 km v Sloveniji.",
-    options: rekeQuizOptions,
+    options: [...rekeQuizOptions.filter(el => {return el!=rekeQuizOptions[10]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(rekeQuizOptions[10]),
     correct: rekeQuizOptions[10],
     questionImg: "media/reke/slovenija-reke-vipava.png",
   },
@@ -2765,7 +2765,7 @@ let zanimivostiQuizOptions = [
   "Slovenija je prva na svetu po številu traktorjev na prebivalca",
   "V Trbovljah se nahaja najvišji dimnik v Evropi, visok kar 360 m",
   "V Planici se nahaja največja letalnica za smučarske skoke na svetu",
-  "Ob Soči so snemali film »<i>Prince of Narnia</i>«",
+  "Ob Soči so snemali film »Prince of Narnia«",
   "Slovenija je prva in edina država na območju nekdanje Jugoslavije, ki ima v vesolju svoje satelite",
   "Slovenska osamosvojitvena vojna je bila prva vojna v Evropi po koncu druge svetovne vojne",
   "Oblika Slovenije spominja na kokoš",
@@ -3972,14 +3972,6 @@ function checker(userOption) {
         element.classList.add("correct");
       }
     });
-  }
-  for (let div of quizContainer.children) {
-    // to hide the clicked answer
-    for (let button of div.children) {
-      if (button.innerText == quizArray[questionCount].correct) {
-        button.classList.add("removedOption");
-      }
-    }
   }
 
   //clear interval(stop timer)

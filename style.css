@@ -150,10 +150,6 @@ button:hover {
   color: #689f38;
   border-color: #689f38;
 }
-.removedOption {
-  pointer-events: none;
-  opacity: 33%;
-}
 #user-score,
 #user-score-win {
   font-size: 1.5em;
