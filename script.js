@@ -773,6 +773,7 @@ let narodnisimboliQuizOptions = [
   "Zdravljica",
   "Zemljevid slovenskih dežel",
   "Zlatorog",
+  "Idrijske čipke"
 ];
 let narodnisimboliQuiz = [
   {
@@ -1012,6 +1013,14 @@ let narodnisimboliQuiz = [
     options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[27]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[27]),
     correct: narodnisimboliQuizOptions[27],
     questionImg: "media/narodnisimboli/slovenija-narodnisimboli-zlatorog.png",
+  },
+  {
+    id: "28",
+    question:
+      "Klekljanje se je začelo pred približno 350 leti, konec 19. stoletja pa so ti ročni izdelki zasloveli po vsem svetu zaradi unikatnosti, prefinjenosti, izvirnosti in kakovosti. So globoko zakoreninjeni v slovenski kulturi in tradiciji.",
+    options: [...narodnisimboliQuizOptions.filter(el => {return el!=narodnisimboliQuizOptions[28]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(narodnisimboliQuizOptions[28]),
+    correct: narodnisimboliQuizOptions[28],
+    questionImg: "media/narodnisimboli/slovenija-narodnisimboli-idrijskecipke.png",
   },
 ];
 
@@ -2775,6 +2784,7 @@ let zanimivostiQuizOptions = [
   "Na Zalarjevem vrhu je mogoče zaslediti prave stopinje dinozavrov",
   "Slovenijo je lani obiskalo 6 milijonov turistov in 2 milijona jih je obiskalo Piran",
   "Gasilska zveza Slovenije je največja humanitarna in prostovoljska organizacija Slovenije, ki šteje več kot 160.000 članov",
+  "V Idriji deluje šola čipkarstva že od leta 1876, idrijske čipke pa so del Unescove svetovne dediščine",
 ];
 let zanimivostiQuiz = [
   {
@@ -3029,6 +3039,14 @@ let zanimivostiQuiz = [
     correct: zanimivostiQuizOptions[31],
     questionImg:
       "media/zanimivosti/slovenija-zanimivosti-najvecjahumanitarnainprostovoljskaorganizacija.png",
+  },
+  {
+    id: "32",
+    question: "",
+    options: [...zanimivostiQuizOptions.filter(el => {return el!=zanimivostiQuizOptions[32]})].sort(() => 0.5 - Math.random()).slice(0, 5).concat(zanimivostiQuizOptions[32]),
+    correct: zanimivostiQuizOptions[32],
+    questionImg:
+      "media/zanimivosti/slovenija-zanimivosti-idrijskecipkeunesco.png",
   },
 ];
 
