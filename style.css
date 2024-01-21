@@ -120,7 +120,7 @@ button:hover {
 #event-button-no,
 #next-button-intro {
   font-size: 1em;
-  margin-top: 1.5em;
+  margin-top: 1em;
   background-color: #78a221;
   color: #ffffff;
   padding: 0.7em 1.8em;
@@ -129,7 +129,7 @@ button:hover {
 }
 #end-button {
   font-size: 1em;
-  margin-top: 1.5em;
+  margin-top: 1em;
   background-color: #DB5757;
   color: #ffffff;
   padding: 0.7em 1.8em;
