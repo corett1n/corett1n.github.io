@@ -170,7 +170,7 @@ button:hover {
 }
 .question-image:hover
 {
-  transform: scale(2.25);
+  transform: scale(2.5);
 }
 progress {
   position:relative;
