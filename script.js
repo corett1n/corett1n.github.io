@@ -2246,12 +2246,12 @@ let navadeQuiz = [
     question: "Nedeljsko kosilo mora biti sestavljeno iz...",
     options: [
       ...navadeQuizOptions.filter((el) => {
-        return el != navadeQuizOptions[29];
+        return el != navadeQuizOptions[28];
       }),
     ]
       .sort(() => 0.5 - Math.random())
       .slice(0, numOtherAnsw)
-      .concat(navadeQuizOptions[29]),
+      .concat(navadeQuizOptions[28]),
     correct: navadeQuizOptions[28],
     questionImg:
       "media/navade/slovenija-navade-tipicnonedeljskokosilogovejajuhamesoskrompirjemsolatainsladica.png",
@@ -2261,12 +2261,12 @@ let navadeQuiz = [
     question: "Na Božični predvečer se družina odpravi k...",
     options: [
       ...navadeQuizOptions.filter((el) => {
-        return el != navadeQuizOptions[30];
+        return el != navadeQuizOptions[29];
       }),
     ]
       .sort(() => 0.5 - Math.random())
       .slice(0, numOtherAnsw)
-      .concat(navadeQuizOptions[30]),
+      .concat(navadeQuizOptions[29]),
     correct: navadeQuizOptions[29],
     questionImg:
       "media/navade/slovenija-navade-zabozicsedruzinaodpravikpolnocnici.png",
@@ -2277,12 +2277,12 @@ let navadeQuiz = [
       "Za pust se ljudje oblečejo v pustne šeme in ne govorijo, ampak...",
     options: [
       ...navadeQuizOptions.filter((el) => {
-        return el != navadeQuizOptions[31];
+        return el != navadeQuizOptions[30];
       }),
     ]
       .sort(() => 0.5 - Math.random())
       .slice(0, numOtherAnsw)
-      .concat(navadeQuizOptions[31]),
+      .concat(navadeQuizOptions[30]),
     correct: navadeQuizOptions[30],
     questionImg:
       "media/navade/slovenija-navade-zapustseljudjeoblecejovpustnesemeinnegovorijoampaksamodelajohrup.png",
@@ -3379,6 +3379,7 @@ let praznikiQuiz = [
 ];
 
 let pregovoriQuiz = [
+  /*
   {
     id: "0",
     question: "pregovoriQuiz",
@@ -3392,6 +3393,7 @@ let pregovoriQuiz = [
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-vurnikovahisa.png",
   },
+  */
 ];
 
 let rekeQuizOptions = [
