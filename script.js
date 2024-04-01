@@ -1322,6 +1322,7 @@ let narodnisimboliQuizOptions = [
   "Zemljevid slovenskih dežel",
   "Zlatorog",
   "Idrijske čipke",
+  "Panjske končnice",
 ];
 let narodnisimboliQuiz = [
   {
@@ -1773,6 +1774,23 @@ let narodnisimboliQuiz = [
     correct: narodnisimboliQuizOptions[28],
     questionImg:
       "media/narodnisimboli/slovenija-narodnisimboli-idrijskecipke.png",
+  },
+
+  {
+    id: "29",
+    question:
+      "Poslikave panjev, ki jih ne najdemo nikjer drugje po svetu, saj gre za slovensko posebnost. Ljudje so nanje slikali prizore iz cerkvenega življenja in lepote slovenske pokrajine.",
+    options: [
+      ...narodnisimboliQuizOptions.filter((el) => {
+        return el != narodnisimboliQuizOptions[29];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(narodnisimboliQuizOptions[29]),
+    correct: narodnisimboliQuizOptions[29],
+    questionImg:
+      "media/narodnisimboli/slovenija-narodnisimboli-panjskekoncnice.png",
   },
 ];
 
@@ -6744,11 +6762,11 @@ function checker(userOption) {
         document.getElementsByTagName("progress")[questionCount].value =
           50 - timeleft;
         timeleft -= 1;
-      }, 40);
+      }, 28);
 
       setTimeout(function () {
         nextBtn.click();
-      }, 2250);
+      }, 1500);
     }
     
   } else {
