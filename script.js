@@ -2392,7 +2392,7 @@ let nogometniklubiQuiz = [
       "media/nogometniklubi/slovenija-nogometniklubi-koper.png",
   },{
     id: "5",
-    question: "Edini klub poleg Olimpije, ki ni nikoli izpadel iz prve lige. Zelo prepoznaven klub, saj je od leta 1960 tudi večkrat igral v Ligi prvakov (angl. Champions League), njegove <i>viole</i> pa večkrat poskrbijo za kak incident.",
+    question: "Edini klub poleg Olimpije, ki ni nikoli izpadel iz prve lige. Zelo prepoznaven klub, saj je od leta 1960 tudi večkrat igral v Ligi prvakov (angl. Champions League), njegove <i>viole</i> pa večkrat poskrbijo za kak incident v Ljudskem vrtu.",
     options: [
       ...nogometniklubiQuizOptions.filter((el) => {
         return el != nogometniklubiQuizOptions[5];
