@@ -2307,6 +2307,162 @@ let navadeQuiz = [
   },
 ];
 
+let nogometniklubiQuizOptions = [
+  "NK Bravo",
+  "NK Celje",
+  "NK Domžale",
+  "NK Radomlje",
+  "FC Koper",
+  "NK Maribor",
+  "NŠ Mura",
+  "NK Nafta",
+  "NK Olimpija Ljubljana",
+  "ND Primorje",
+];
+let nogometniklubiQuiz = [
+  {
+    id: "0",
+    question: "Ljubljanski nogometni klub, ustanovljen leta 2006, ki igra domače tekme na stadionu Športnega Parka Šiška (ŽAK). Pravijo jim <i>Šiškarji</i>.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[0];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[0]),
+    correct: nogometniklubiQuizOptions[0],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-bravo.png",
+  },{
+    id: "1",
+    question: "Štajerski nogometni klub, prvak sezone 2023/24. <i>Grofje</i> jih na domačem stadionu Z'dežele podpirajo vse od leta 1919.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[1];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[1]),
+    correct: nogometniklubiQuizOptions[1],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-celje.png",
+  },{
+    id: "2",
+    question: "<i>Rumeni</i> so od ustanovitve leta 1920 osvojili naslov državnega prvaka dvakrat.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[2];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[2]),
+    correct: nogometniklubiQuizOptions[2],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-domzale.png",
+  },{
+    id: "3",
+    question: "Nogometni klub iz okolice Ljubljane, ustanovljen leta 1972. Njegovi navijači so znani kot <i>mlinarji</i>.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[3];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[3]),
+    correct: nogometniklubiQuizOptions[3],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-radomlje.png",
+  },{
+    id: "4",
+    question: "Največji obalni nogometni klub, ki je bil ustanovljen leta 1920. Njegovi <i>tifozi</i> radi zahajajo na tekme v Bonifiko.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[4];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[4]),
+    correct: nogometniklubiQuizOptions[4],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-koper.png",
+  },{
+    id: "5",
+    question: "Edini klub poleg Olimpije, ki ni nikoli izpadel iz prve lige. Zelo prepoznaven klub, saj je od leta 1960 tudi večkrat igral v Ligi prvakov (angl. Champions League), njegove <i>viole</i> pa večkrat poskrbijo za kak incident.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[5];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[5]),
+    correct: nogometniklubiQuizOptions[5],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-maribor.png",
+  },{
+    id: "6",
+    question: "Klub, ki je bil ustanovljen leta 2012, svoje tekme odigra v murskosoboški Fazaneriji. Najbolj vroče so tekme prekmurskega derbija.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[6];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[6]),
+    correct: nogometniklubiQuizOptions[6],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-mura.png",
+  },{
+    id: "7",
+    question: "Klub je bil ustanovljen leta 1903, navijačem iz Lendave pa pravimo <i>plavi</i>.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[7];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[7]),
+    correct: nogometniklubiQuizOptions[7],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-nafta.png",
+  },{
+    id: "8",
+    question: "Ljubljanski klub, ustanovljen leta 1911, ki svoje tekme odigra v največjem slovenskem stadionu, Stožicah. <i>Zmaje</i> podpirajo <i>green dragonsi</i>, predvsem na večnem derbiju proti ekipi NK Maribor.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[8];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[8]),
+    correct: nogometniklubiQuizOptions[8],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-olimpija.png",
+  },{
+    id: "9",
+    question: "Klub je bil ustanovljen v Ajdovščini leta 1921, znani pa so kot <i>sinovi burje</i>.",
+    options: [
+      ...nogometniklubiQuizOptions.filter((el) => {
+        return el != nogometniklubiQuizOptions[9];
+      }),
+    ]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numOtherAnsw)
+      .concat(nogometniklubiQuizOptions[9]),
+    correct: nogometniklubiQuizOptions[9],
+    questionImg:
+      "media/nogometniklubi/slovenija-nogometniklubi-primorje.png",
+  },
+];
+
 let podjetjaQuizOptions = [
   "Novomeško podjetje, ki proizvaja avtodome in počitniške prikolice",
   "Proizvajalec izpušnih sistemov za motocikle in športne avtomobile",
@@ -6671,6 +6827,7 @@ function quizCreator() {
   if (selectedCategories.narodnisimboli)
     narodnisimboliQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.navade) navadeQuiz.forEach((el) => quizArray.push(el));
+  if (selectedCategories.nogometniklubi) nogometniklubiQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.podjetja)
     podjetjaQuiz.forEach((el) => quizArray.push(el));
   if (selectedCategories.pokrajine)
@@ -6826,6 +6983,7 @@ selectCategoriesBtn.addEventListener("click", () => {
     mesta: document.querySelector("#mesta").checked,
     narodnisimboli: document.querySelector("#narodnisimboli").checked,
     navade: document.querySelector("#navade").checked,
+    nogometniklubi: document.querySelector("#nogometniklubi").checked,
     podjetja: document.querySelector("#podjetja").checked,
     pokrajine: document.querySelector("#pokrajine").checked,
     prazniki: document.querySelector("#prazniki").checked,
