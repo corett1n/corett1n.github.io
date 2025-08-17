@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tablice Slovenije 🇸🇮</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #quiz-container {
+        background: white;
+        border-radius: 20px;
+        padding: 25px 20px;
+        width: 95%;
+        max-width: 450px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        position: relative;
+        flex-direction: column;
+      }
+
+      /* Floating score badge */
+      #score-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #2980b9;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      /* Timer */
+      #timer {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      /* Question Image */
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+
+      /* Buttons */
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 18px;
+        margin: 12px 0;
+        border: none;
+        border-radius: 12px;
+        background: #2980b9;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #1f6391;
+      }
+
+      .correct {
+        background: #2ecc71 !important;
+      }
+      .wrong {
+        background: #e74c3c !important;
+      }
+
+      #start-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #3498db;
+        color: white;
+        text-align: center;
+      }
+
+      #start-btn {
+        padding: 18px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 12px;
+        background: #2ecc71;
+        color: white;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+
+      #start-btn:hover {
+        background: #27ae60;
+      }
+
+      /* Result text */
+      #result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 25px;
+        white-space: pre-line;
+      }
+
+      #question-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 400px) {
+        #question-text {
+          font-size: 16px;
+        }
+        #quiz-container {
+          padding: 20px;
+        }
+        .btn {
+          font-size: 16px;
+          padding: 15px;
+        }
+        #timer,
+        #score-badge {
+          font-size: 16px;
+        }
+        #result {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h1>Registrske tablice Slovenije 🇸🇮</h1>
+      <button id="start-btn">Začni</button>
+    </div>
+
+    <!-- Quiz Container (hidden initially) -->
+    <div id="quiz-container" style="display: none">
+      <div id="score-badge">0/40 (0%)</div>
+      <div id="timer">Preostali čas: 10s</div>
+      <img id="question-image" src="" alt="Question Image" />
+      <div id="question-text"></div>
+      <div id="answers"></div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          image: "images/ce-celje.png",
+          text: "Grb je prevzet po delu grba Celjskih grofov.",
+          answers: ["Celje", "Laško", "Šentjur pri Celju", "Šmarje pri Jelšah"],
+          correct: 0, // index of correct answer
+        },
+        {
+          image: "images/ce-lasko.png",
+          text: "Grb s tremi lilijami na modrem polju je morda izpeljan iz grba Celjskih grofov.",
+          answers: ["Celje", "Laško", "Šentjur pri Celju", "Šmarje pri Jelšah"],
+          correct: 1,
+        },
+        {
+          image: "images/ce-sentjurpricelju.png",
+          text: "Grb prikazuje Sv. Jurija, ki prebada zelenega zmaja.",
+          answers: [
+            "Slovenske Konjice",
+            "Laško",
+            "Šentjur pri Celju",
+            "Šmarje pri Jelšah",
+          ],
+          correct: 2,
+        },
+        {
+          image: "images/ce-slovenskekonjice.png",
+          text: "Na grbu je upodobljen neosedlan konj bele barve.",
+          answers: [
+            "Celje",
+            "Slovenske Konjice",
+            "Šentjur pri Celju",
+            "Šmarje pri Jelšah",
+          ],
+          correct: 1,
+        },
+        {
+          image: "images/ce-smarjeprijelsah.png",
+          text: "Prikazan je grb rodbine Gaisruckov ter jelševa vejica.",
+          answers: [
+            "Velenje",
+            "Laško",
+            "Šentjur pri Celju",
+            "Šmarje pri Jelšah",
+          ],
+          correct: 3,
+        },
+        {
+          image: "images/ce-velenje.png",
+          text: "Grb simbolizira sožitje starega in novega s simbolnim pogledom na stolpnico novega mesta skozi obzidje starega gradu.",
+          answers: ["Celje", "Velenje", "Slovenske Konjice", "Slovenj Gradec"],
+          correct: 1,
+        },
+        {
+          image: "images/go-ajdovscina.png",
+          text: "Zgornji del grba predstavlja rimski stolp s štirimi cinami.",
+          answers: ["Ajdovščina", "Nova Gorica", "Tolmin", "Idrija"],
+          correct: 0,
+        },
+        {
+          image: "images/go-idrija.png",
+          text: "Na grbu je upodobljen rimski bog trgovanja Merkur (opozarja na živo srebro).",
+          answers: ["Ajdovščina", "Nova Gorica", "Tolmin", "Idrija"],
+          correct: 3,
+        },
+        {
+          image: "images/go-novagorica.png",
+          text: "Grb simbolizira tradicijo gojenja vrtnic v Rožni Dolini.",
+          answers: ["Ajdovščina", "Nova Gorica", "Tolmin", "Idrija"],
+          correct: 1,
+        },
+        {
+          image: "images/go-tolmin.png",
+          text: "Grb simbolizira pomemben zgodovinski dogodek - veliki punt (kmečki upor) iz leta 1713.",
+          answers: ["Ajdovščina", "Nova Gorica", "Tolmin", "Idrija"],
+          correct: 2,
+        },
+        {
+          image: "images/kk-brezice.png",
+          text: "Osnova današnjemu grbu je mestni grb iz leta 1501, ki ga je mestu podelil svetorimski kralj Maksimilijan I. Habsburški.",
+          answers: ["Brežice", "Krško", "Sevnica", "Kostanjevica na Krki"],
+          correct: 0,
+        },
+        {
+          image: "images/kk-krsko.png",
+          text: "Na grbu je Sv. Janez Evangelist s kelihom v levici, iz katerega izvirajo tri kače.",
+          answers: ["Brežice", "Krško", "Sevnica", "Kostanjevica na Krki"],
+          correct: 1,
+        },
+        {
+          image: "images/kp-ilirskabistrica.png",
+          text: "Osrednji motiv na svetlo modri podlagi grba predstavlja zlatorumena ladja liburna (majhna ladja ilirskih plemen).",
+          answers: ["Ilirska Bistrica", "Izola", "Koper", "Sežana"],
+          correct: 0,
+        },
+        {
+          image: "images/kp-izola.png",
+          text: "Grb prikazuje napad na mesto - legenda pravi, da se je iz zvonika cerkve spustila bleščeče bela golobica in zaslepila napadalce, ki so morali odpluti nazaj, ne da bi se dotaknili mesta.",
+          answers: ["Ilirska Bistrica", "Izola", "Koper", "Piran"],
+          correct: 1,
+        },
+        {
+          image: "images/kp-koper.png",
+          text: "Na grbu je rumeno stilizirano sonce, upodobljeno s človeškim obrazom in šestnajstimi žarki.",
+          answers: ["Ilirska Bistrica", "Izola", "Koper", "Piran"],
+          correct: 2,
+        },
+        {
+          image: "images/kp-piran.png",
+          text: "Na grbu je upodobljen polkrožni križ Sv. Jurija.",
+          answers: ["Ilirska Bistrica", "Izola", "Koper", "Piran"],
+          correct: 3,
+        },
+        {
+          image: "images/kp-sezana.png",
+          text: "Osrednji motiv grba je vodnjak, iz katerega raste borovec z od vetra upognjenim deblom ter krošnjo.",
+          answers: ["Ilirska Bistrica", "Izola", "Sežana", "Piran"],
+          correct: 2,
+        },
+        {
+          image: "images/kr-jesenice.png",
+          text: "Na grbu je upodobljen znak za železo in začetnica mesta.",
+          answers: ["Jesenice", "Kranj", "Radovljica", "Tržič"],
+          correct: 0,
+        },
+        {
+          image: "images/kr-kranj.png",
+          text: "Na grbu je uprizorjen andeški orel, simbol mestnih gospodov.",
+          answers: ["Jesenice", "Kranj", "Radovljica", "Tržič"],
+          correct: 1,
+        },
+        {
+          image: "images/kr-radovljica.png",
+          text: "Osnova grba je pečat mesta iz leta 1514.",
+          answers: ["Jesenice", "Kranj", "Radovljica", "Tržič"],
+          correct: 2,
+        },
+        {
+          image: "images/kr-trzic.png",
+          text: "Na grbu je upodobljeno srebrno obzidje iz sedmih vrst klesanega kamna in štirimi strelnimi linami.",
+          answers: ["Jesenice", "Kranj", "Radovljica", "Tržič"],
+          correct: 3,
+        },
+        {
+          image: "images/lj-cerknica.png",
+          text: "Na grbu so stilizirane značilnosti naravne krajine.",
+          answers: ["Ljubljana", "Cerknica", "Domžale", "Kamnik"],
+          correct: 1,
+        },
+        {
+          image: "images/lj-domzale.png",
+          text: "Grb sestavljajo trije zlati žitni klasi na modrem ozadju, med seboj prepleteni v slamnikarsko kito.",
+          answers: ["Logatec", "Cerknica", "Domžale", "Kamnik"],
+          correct: 2,
+        },
+        {
+          image: "images/lj-kamnik.png",
+          text: "Na grbu je uprizorjen grajski stolp. Med vrati stolpa s streho je upodobljena Veronika, pol kot ženska in pol kot kača s krono na glavi.",
+          answers: ["Litija", "Cerknica", "Domžale", "Kamnik"],
+          correct: 3,
+        },
+        {
+          image: "images/lj-kocevje.png",
+          text: "Na grbu je upodobljen sveti Jernej, zaščitnik mesta, v ozadju je utrdba, v ospredju pa pleten obrambni zid rjave barve.",
+          answers: ["Kočevje", "Cerknica", "Domžale", "Kamnik"],
+          correct: 0,
+        },
+        {
+          image: "images/lj-ljubljana.png",
+          text: "Na vrhu gradu je upodobljen zmaj, ki ponazarja moč, pogum in veličino.",
+          answers: ["Ljubljana", "Kamnik", "Logatec", "Vrhnika"],
+          correct: 0,
+        },
+        {
+          image: "images/lj-logatec.png",
+          text: "Na grbu je na rdeči podlagi upodobljeno zlato kolo vprežnega voza, krasi ga pet lipovih listov.",
+          answers: ["Domžale", "Kamnik", "Logatec", "Vrhnika"],
+          correct: 2,
+        },
+        {
+          image: "images/lj-ribnica.png",
+          text: "Modra, poševno-vzpenjajoča riba izvira iz Valvasorjevih časov.",
+          answers: ["Ribnica", "Kamnik", "Domžale", "Vrhnika"],
+          correct: 0,
+        },
+        {
+          image: "images/lj-vrhnika.png",
+          text: "Osrednji motiv predstavlja Jazonova ladja na valovih Ljubljanice.",
+          answers: ["Litija", "Kamnik", "Logatec", "Vrhnika"],
+          correct: 3,
+        },
+        {
+          image: "images/mb-maribor.png",
+          text: "Nad obzidjem gradu lebdi srebrn, na glavo obrnjen, golob z razprtimi krili.",
+          answers: ["Maribor", "Slovenska Bistrica", "Ptuj", "Lenart"],
+          correct: 0,
+        },
+        {
+          image: "images/mb-ptuj.png",
+          text: "Eden izmed najstarejših mestnih grbov prikazuje križ Sv. Jurija.",
+          answers: ["Maribor", "Slovenska Bistrica", "Ptuj", "Lenart"],
+          correct: 2,
+        },
+        {
+          image: "images/mb-slovenskabistrica.png",
+          text: "Na grbu je upodobljeno nazobčano obzidje srebrne barve s petimi cinami, za katerim se dvigajo trije stolpi srebrne barve.",
+          answers: ["Maribor", "Slovenska Bistrica", "Ptuj", "Lenart"],
+          correct: 1,
+        },
+        {
+          image: "images/ms-lendava.png",
+          text: "Izhodiščna osnova za grb je grad, ki stoji na hribu, pod njim so stilizirani trije potoki.",
+          answers: ["Murska Sobota", "Lendava", "Ormož", "Ljutomer"],
+          correct: 1,
+        },
+        {
+          image: "images/ms-murskasobota.png",
+          text: "Grb na sodoben način povzema podobo ravninskega mesta, ki se kot srebrna črta blešči na robu horizonta nad katerim vzhaja in zahaja sonce.",
+          answers: ["Murska Sobota", "Lendava", "Ormož", "Ljutomer"],
+          correct: 0,
+        },
+        {
+          image: "images/nm-crnomelj.png",
+          text: "Na grbu je rdeči grajski stolp na črnem ozadju.",
+          answers: ["Črnomelj", "Metlika", "Novo mesto", "Trebnje"],
+          correct: 0,
+        },
+        {
+          image: "images/nm-metlika.png",
+          text: "Dno grba pokrivajo zelena tla, na katerih stoji rdeče obzidje.",
+          answers: ["Črnomelj", "Metlika", "Novo mesto", "Trebnje"],
+          correct: 1,
+        },
+        {
+          image: "images/nm-novomesto.png",
+          text: "Na sredini grba je upodobljen ustanovitelj mesta, nadvojvoda Rudolf IV. Habsburški.",
+          answers: ["Črnomelj", "Metlika", "Novo mesto", "Trebnje"],
+          correct: 2,
+        },
+        {
+          image: "images/po-postojna.png",
+          text: "V grbu je srebrni orel belorepec z zlatim kljunom in kremplji, pod njim pa človeška ribica.",
+          answers: ["Postojna", "Ilirska Bistrica", "Vrhnika", "Idrija"],
+          correct: 0,
+        },
+        {
+          image: "images/sg-dravograd.png",
+          text: "Osnova grba je pečat trga iz leta 1575.",
+          answers: [
+            "Slovenj Gradec",
+            "Dravograd",
+            "Ravne na Koroškem",
+            "Radlje ob Dravi",
+          ],
+          correct: 1,
+        },
+        {
+          image: "images/sg-slovenjgradec.png",
+          text: "Grbu mesta je osnova mestni pečat iz začetka 14. stoletja.",
+          answers: [
+            "Slovenj Gradec",
+            "Dravograd",
+            "Ravne na Koroškem",
+            "Radlje ob Dravi",
+          ],
+          correct: 0,
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+      let timer;
+      let timeLeft = 10;
+
+      const timerEl = document.getElementById("timer");
+      const text = document.getElementById("question-text");
+      const imageEl = document.getElementById("question-image");
+      const answersEl = document.getElementById("answers");
+      const resultEl = document.getElementById("result");
+      let currentAnswerOptions = []; // store shuffled answers for the current question
+
+      function updateScore() {
+        const percentScore = Math.round((score / questions.length) * 100);
+        document.getElementById(
+          "score-badge"
+        ).textContent = `${score}/${questions.length} (${percentScore}%)`;
+      }
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      function startTimer() {
+        timeLeft = 10;
+        timerEl.textContent = `Preostali čas: ${timeLeft} s`;
+        timer = setInterval(() => {
+          timeLeft--;
+          timerEl.textContent = `Preostali čas: ${timeLeft} s`;
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            showCorrectAnswer();
+            setTimeout(nextQuestion, 2000);
+          }
+        }, 1000);
+      }
+
+      function showQuestion() {
+        if (currentQuestion >= questions.length) {
+          showFinalResult();
+          return;
+        }
+
+        const q = questions[currentQuestion];
+        document.getElementById("question-text").textContent = q.text;
+        imageEl.src = q.image;
+        answersEl.innerHTML = "";
+        resultEl.textContent = "";
+
+        // Create answer objects with correctness
+        currentAnswerOptions = q.answers.map((text, idx) => ({
+          text: text,
+          isCorrect: idx === q.correct,
+        }));
+
+        // Shuffle them
+        shuffle(currentAnswerOptions);
+
+        // Display buttons
+        currentAnswerOptions.forEach((option) => {
+          const btn = document.createElement("button");
+          btn.textContent = option.text;
+          btn.classList.add("btn");
+          btn.addEventListener("click", () => selectAnswer(option));
+          answersEl.appendChild(btn);
+        });
+
+        startTimer();
+        updateScore();
+      }
+
+      function selectAnswer(option) {
+        clearInterval(timer);
+        const buttons = document.querySelectorAll(".btn");
+
+        if (option.isCorrect) {
+          // User clicked correct
+          buttons.forEach((btn) => {
+            if (btn.textContent === option.text) btn.classList.add("correct");
+          });
+          score++;
+        } else {
+          // User clicked wrong
+          buttons.forEach((btn) => {
+            if (btn.textContent === option.text) btn.classList.add("wrong");
+            // Highlight the correct answer
+            const correctAnswer = currentAnswerOptions.find((a) => a.isCorrect);
+            if (btn.textContent === correctAnswer.text)
+              btn.classList.add("correct");
+          });
+        }
+
+        updateScore();
+        setTimeout(nextQuestion, 2000);
+      }
+
+      function showCorrectAnswer() {
+        const q = questions[currentQuestion];
+        const buttons = document.querySelectorAll(".btn");
+        buttons[q.correct].classList.add("correct");
+      }
+
+      function nextQuestion() {
+        currentQuestion++;
+        showQuestion();
+      }
+
+      function showFinalResult() {
+        imageEl.style.display = "none";
+        text.style.display = "none";
+        answersEl.innerHTML = "";
+        timerEl.style.display = "none";
+        resultEl.textContent = `Konec!\n\nTvoj uspeh: ${score}/${
+          questions.length
+        } (${(score * 100) / questions.length}%)`;
+      }
+
+      // Start quiz
+      document.getElementById("start-btn").addEventListener("click", () => {
+        // Hide start screen
+        document.getElementById("start-screen").style.display = "none";
+        // Show quiz container
+        document.getElementById("quiz-container").style.display = "flex";
+
+        // Shuffle questions if you want random order
+        shuffle(questions);
+
+        // Start the quiz
+        showQuestion();
+      });
+    </script>
+  </body>
+</html>
