@@ -128,24 +128,32 @@
         margin-bottom: 30px;
       }
 
-      /* --- Mobile Scaling --- */
+      /* --- Make Quiz Container Full-Screen-Like on Mobile --- */
       @media (max-width: 768px) {
         #quiz-container {
-          max-width: 95%; /* almost full width */
-          padding: 30px;
+          width: 95%;
+          max-width: 600px;
+          min-height: 90vh; /* almost full viewport height */
+          padding: 25px;
+          flex-direction: column;
+          justify-content: space-between; /* spread elements vertically */
+          box-sizing: border-box;
+        }
+
+        #question-image {
+          max-height: 45vh; /* bigger image without overflowing */
         }
 
         #question-text {
           font-size: 22px;
-        }
-
-        #question-image {
-          max-height: 40vh; /* scales nicely on phones */
+          margin-bottom: 20px;
         }
 
         .btn {
-          padding: 22px;
-          font-size: 20px;
+          width: 100%; /* full width */
+          padding: 22px 0; /* taller buttons */
+          font-size: 20px; /* bigger text */
+          margin: 12px 0; /* spacing between buttons */
         }
 
         #score-badge {
@@ -155,25 +163,29 @@
 
         #timer {
           font-size: 18px;
+          margin-bottom: 10px;
         }
 
         #result {
-          font-size: 26px;
+          font-size: 28px;
         }
       }
 
-      /* --- Very Small Devices (iPhone SE / 15 mini) --- */
+      /* --- Very Small Devices (iPhone 15 / mini) --- */
       @media (max-width: 400px) {
         #quiz-container {
-          padding: 25px;
-          min-height: 380px;
+          min-height: 85vh; /* slightly smaller for tiny screens */
+          padding: 20px;
+        }
+        #question-image {
+          max-height: 40vh;
         }
         #question-text {
           font-size: 20px;
         }
         .btn {
-          padding: 18px;
-          font-size: 18px;
+          padding: 20px 0; /* slightly smaller padding for tiny screens */
+          font-size: 18px; /* adjust font size */
         }
         #score-badge {
           font-size: 16px;
