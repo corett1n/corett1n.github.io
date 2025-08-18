@@ -128,42 +128,41 @@
         margin-bottom: 30px;
       }
 
-      /* --- Make Quiz Container Full-Screen-Like on Mobile --- */
+      /* --- Mobile adjustments for iPhone 15 / smaller devices --- */
       @media (max-width: 768px) {
         #quiz-container {
           width: 95%;
-          max-width: 600px;
-          min-height: 90vh; /* almost full viewport height */
-          padding: 25px;
-          flex-direction: column;
-          justify-content: space-between; /* spread elements vertically */
-          box-sizing: border-box;
-        }
-
-        #question-image {
-          max-height: 45vh; /* bigger image without overflowing */
+          max-width: 600px; /* bigger container */
+          padding: 30px; /* more padding */
+          border-radius: 20px; /* bigger rounded corners */
         }
 
         #question-text {
-          font-size: 22px;
-          margin-bottom: 20px;
+          font-size: 22px; /* bigger question text */
+          margin-bottom: 25px;
+        }
+
+        #question-image {
+          max-height: 50vh; /* bigger image relative to viewport */
+          margin-bottom: 25px;
         }
 
         .btn {
-          width: 100%; /* full width */
-          padding: 22px 0; /* taller buttons */
+          width: 100%; /* full width buttons */
+          padding: 24px 0; /* taller buttons for easier tapping */
           font-size: 20px; /* bigger text */
-          margin: 12px 0; /* spacing between buttons */
+          margin: 12px 0;
+          border-radius: 14px;
         }
 
         #score-badge {
-          font-size: 18px;
+          font-size: 20px;
           padding: 10px 16px;
         }
 
         #timer {
-          font-size: 18px;
-          margin-bottom: 10px;
+          font-size: 20px;
+          padding: 8px 16px;
         }
 
         #result {
@@ -171,29 +170,26 @@
         }
       }
 
-      /* --- Very Small Devices (iPhone 15 / mini) --- */
+      /* For very small devices */
       @media (max-width: 400px) {
         #quiz-container {
-          min-height: 85vh; /* slightly smaller for tiny screens */
           padding: 20px;
         }
-        #question-image {
-          max-height: 40vh;
-        }
+
         #question-text {
           font-size: 20px;
         }
+
         .btn {
-          padding: 20px 0; /* slightly smaller padding for tiny screens */
-          font-size: 18px; /* adjust font size */
+          font-size: 18px;
+          padding: 20px 0;
         }
-        #score-badge {
-          font-size: 16px;
-          padding: 8px 12px;
-        }
+
+        #score-badge,
         #timer {
-          font-size: 16px;
+          font-size: 18px;
         }
+
         #result {
           font-size: 24px;
         }
