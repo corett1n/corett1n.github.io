@@ -128,40 +128,62 @@
         margin-bottom: 30px;
       }
 
-      /* Mobile adjustments */
+      /* --- Mobile Scaling --- */
       @media (max-width: 768px) {
         #quiz-container {
-          max-width: 95%; /* use almost full width */
-          min-height: 80vh; /* take 80% of viewport height */
-          padding: 24px; /* bigger padding */
-          border-radius: 16px;
-        }
-
-        .btn:hover {
-          background: #529dba;
-        }
-
-        #question-image {
-          max-height: 40vh; /* image scales nicely */
+          max-width: 95%; /* almost full width */
+          padding: 30px;
         }
 
         #question-text {
-          font-size: 20px; /* bigger text for readability */
+          font-size: 22px;
         }
 
-        .answer-btn {
-          font-size: 18px;
-          padding: 18px;
+        #question-image {
+          max-height: 40vh; /* scales nicely on phones */
+        }
+
+        .btn {
+          padding: 22px;
+          font-size: 20px;
         }
 
         #score-badge {
-          font-size: 16px;
-          padding: 8px 14px;
+          font-size: 18px;
+          padding: 10px 16px;
         }
 
         #timer {
+          font-size: 18px;
+        }
+
+        #result {
+          font-size: 26px;
+        }
+      }
+
+      /* --- Very Small Devices (iPhone SE / 15 mini) --- */
+      @media (max-width: 400px) {
+        #quiz-container {
+          padding: 25px;
+          min-height: 380px;
+        }
+        #question-text {
+          font-size: 20px;
+        }
+        .btn {
+          padding: 18px;
+          font-size: 18px;
+        }
+        #score-badge {
           font-size: 16px;
-          padding: 8px 14px;
+          padding: 8px 12px;
+        }
+        #timer {
+          font-size: 16px;
+        }
+        #result {
+          font-size: 24px;
         }
       }
     </style>
@@ -207,7 +229,7 @@
             "Šmarje pri Jelšah",
           ],
           correct: 2,
-        }, /*
+        },
         {
           image: "images/ce-slovenskekonjice.png",
           text: "Na grbu je upodobljen neosedlan konj bele barve.",
@@ -449,7 +471,7 @@
             "Radlje ob Dravi",
           ],
           correct: 0,
-        },*/,
+        },
       ];
 
       let currentQuestion = 0;
