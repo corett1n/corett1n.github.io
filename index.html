@@ -19,7 +19,6 @@
         width: 95%;
         position: relative;
         max-width: 450px; /* was 400px → bigger */
-        min-height: 250px; /* ensures card is tall enough */
         background: #fff;
         border-radius: 20px;
         padding: 25px;
@@ -111,12 +110,15 @@
         background: #27ae60;
       }
 
-      /* Result text */
+      #quiz-container#show-result {
+        justify-content: center;
+        align-items: center;
+      }
       #result {
         font-size: 24px;
         font-weight: bold;
-        margin-top: 25px;
         white-space: pre-line;
+        text-align: center;
       }
 
       #question-text {
@@ -205,7 +207,7 @@
             "Šmarje pri Jelšah",
           ],
           correct: 2,
-        },
+        }, /*
         {
           image: "images/ce-slovenskekonjice.png",
           text: "Na grbu je upodobljen neosedlan konj bele barve.",
@@ -447,7 +449,7 @@
             "Radlje ob Dravi",
           ],
           correct: 0,
-        },
+        },*/,
       ];
 
       let currentQuestion = 0;
@@ -550,9 +552,14 @@
       }
 
       function showCorrectAnswer() {
-        const q = questions[currentQuestion];
         const buttons = document.querySelectorAll(".btn");
-        buttons[q.correct].classList.add("correct");
+        const correctAnswer = currentAnswerOptions.find((a) => a.isCorrect);
+
+        buttons.forEach((btn) => {
+          if (btn.textContent === correctAnswer.text) {
+            btn.classList.add("correct");
+          }
+        });
       }
 
       function nextQuestion() {
