@@ -6,7 +6,7 @@
     <style>
       body {
         font-family: "Arial", sans-serif;
-        background: #3498db;
+        background: #529DBA;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,16 +16,18 @@
       }
 
       #quiz-container {
-        background: white;
-        border-radius: 20px;
-        padding: 25px 20px;
         width: 95%;
-        max-width: 450px;
-        text-align: center;
-        box-sizing: border-box;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         position: relative;
+        max-width: 450px; /* was 400px → bigger */
+        min-height: 250px; /* ensures card is tall enough */
+        background: #fff;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       /* Floating score badge */
@@ -33,7 +35,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        background: #2980b9;
+        background: #529DBA;
         color: white;
         padding: 8px 12px;
         border-radius: 12px;
@@ -49,22 +51,22 @@
       }
 
       /* Question Image */
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        object-fit: cover;
+      #question-image {
+        max-width: 100%;
+        max-height: 300px; /* was 200px */
+        border-radius: 12px; /* optional: more rounded corners */
+        margin-bottom: 20px; /* a bit more spacing */
+        object-fit: contain; /* keeps aspect ratio */
       }
 
       /* Buttons */
       .btn {
-        display: block;
         width: 100%;
         padding: 18px;
         margin: 12px 0;
         border: none;
         border-radius: 12px;
-        background: #2980b9;
+        background: #529DBA;
         color: white;
         font-size: 18px;
         cursor: pointer;
@@ -88,7 +90,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: #3498db;
+        background: #529DBA;
         color: white;
         text-align: center;
       }
@@ -118,29 +120,42 @@
       }
 
       #question-text {
+        text-align: center;
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 30px;
       }
 
       /* Mobile adjustments */
-      @media (max-width: 400px) {
-        #question-text {
-          font-size: 16px;
-        }
+      @media (max-width: 768px) {
         #quiz-container {
-          padding: 20px;
+          max-width: 95%; /* use almost full width */
+          min-height: 80vh; /* take 80% of viewport height */
+          padding: 24px; /* bigger padding */
+          border-radius: 16px;
         }
-        .btn {
-          font-size: 16px;
-          padding: 15px;
+
+        #question-image {
+          max-height: 40vh; /* image scales nicely */
         }
-        #timer,
+
+        #question-text {
+          font-size: 20px; /* bigger text for readability */
+        }
+
+        .answer-btn {
+          font-size: 18px;
+          padding: 18px;
+        }
+
         #score-badge {
           font-size: 16px;
+          padding: 8px 14px;
         }
-        #result {
-          font-size: 20px;
+
+        #timer {
+          font-size: 16px;
+          padding: 8px 14px;
         }
       }
     </style>
@@ -259,7 +274,7 @@
         },
         {
           image: "images/kp-izola.png",
-          text: "Grb prikazuje napad na mesto - legenda pravi, da se je iz zvonika cerkve spustila bleščeče bela golobica in zaslepila napadalce, ki so morali odpluti nazaj, ne da bi se dotaknili mesta.",
+          text: "Grb prikazuje napad na mesto, ko se je iz zvonika cerkve spustila bela golobica in zaslepila napadalce, ki so morali odpluti nazaj, ne da bi se dotaknili mesta.",
           answers: ["Ilirska Bistrica", "Izola", "Koper", "Piran"],
           correct: 1,
         },
@@ -355,7 +370,7 @@
         },
         {
           image: "images/mb-maribor.png",
-          text: "Nad obzidjem gradu lebdi srebrn, na glavo obrnjen, golob z razprtimi krili.",
+          text: "Nad obzidjem gradu lebdi srebrn, na glavo obrnjen golob z razprtimi krili.",
           answers: ["Maribor", "Slovenska Bistrica", "Ptuj", "Lenart"],
           correct: 0,
         },
@@ -443,11 +458,10 @@
       const resultEl = document.getElementById("result");
       let currentAnswerOptions = []; // store shuffled answers for the current question
 
-      function updateScore() {
-        const percentScore = Math.round((score / questions.length) * 100);
-        document.getElementById(
-          "score-badge"
-        ).textContent = `${score}/${questions.length} (${percentScore}%)`;
+      function updateScoreBadge() {
+        const badge = document.getElementById("score-badge");
+        const percentage = Math.round((score / questions.length) * 100);
+        badge.textContent = `${currentQuestion + 1}/${questions.length}`;
       }
 
       function shuffle(array) {
@@ -503,7 +517,7 @@
         });
 
         startTimer();
-        updateScore();
+        updateScoreBadge();
       }
 
       function selectAnswer(option) {
@@ -527,7 +541,7 @@
           });
         }
 
-        updateScore();
+        updateScoreBadge();
         setTimeout(nextQuestion, 2000);
       }
 
