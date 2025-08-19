@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tablice Slovenije 🇸🇮</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -115,7 +115,7 @@
         align-items: center;
       }
       #result {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
         white-space: pre-line;
         text-align: center;
@@ -194,6 +194,9 @@
       <div id="question-text"></div>
       <div id="answers"></div>
       <div id="result"></div>
+      <button id="restart-btn" class="btn" style="display: none">
+        Začni znova
+      </button>
     </div>
 
     <script>
@@ -220,7 +223,7 @@
             "Šmarje pri Jelšah",
           ],
           correct: 2,
-        },
+        } /*
         {
           image: "images/ce-slovenskekonjice.png",
           text: "Na grbu je upodobljen neosedlan konj bele barve.",
@@ -462,7 +465,7 @@
             "Radlje ob Dravi",
           ],
           correct: 0,
-        },
+        },*/,
       ];
 
       let currentQuestion = 0;
@@ -476,6 +479,7 @@
       const answersEl = document.getElementById("answers");
       const resultEl = document.getElementById("result");
       let currentAnswerOptions = []; // store shuffled answers for the current question
+      const restartBtn = document.getElementById("restart-btn");
 
       function updateScoreBadge() {
         const badge = document.getElementById("score-badge");
@@ -585,10 +589,32 @@
         text.style.display = "none";
         answersEl.innerHTML = "";
         timerEl.style.display = "none";
+        resultEl.style.display = "block";
         resultEl.textContent = `Konec!\n\nTvoj uspeh: ${score}/${
           questions.length
-        } (${(score * 100) / questions.length}%)`;
+        } (${Math.round((score * 100) / questions.length)}%)`;
+
+        // Show restart button
+        restartBtn.style.display = "block";
       }
+
+      // Restart quiz logic
+      restartBtn.addEventListener("click", () => {
+        currentQuestion = 0;
+        score = 0;
+
+        // Hide result and restart button
+        resultEl.style.display = "none";
+        restartBtn.style.display = "none";
+        imageEl.style.display = "block";
+        text.style.display = "block";
+        answersEl.innerHTML = "";
+        timerEl.style.display = "block";
+
+        // Restart the quiz
+        showQuestion();
+        updateScoreBadge();
+      });
 
       // Start quiz
       document.getElementById("start-btn").addEventListener("click", () => {
