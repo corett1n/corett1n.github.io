@@ -465,7 +465,7 @@
             "Radlje ob Dravi",
           ],
           correct: 0,
-        },/**/
+        } /**/,
         {
           image: "images/ce-mozirje.png",
           text: "Osrednji motiv na grbu je srebrna cerkev z rdečo streho, ki stoji na zelenem hribu in s tem simbolno opiše trg mesta.",
@@ -475,7 +475,12 @@
         {
           image: "images/ce-zalec.png",
           text: "V polju ima grb narisan stiliziran zlato rumen znak hmeljeve kobule.",
-          answers: ["Žalec", "Mozirje", "Šmarje pri Jelšah", "Slovenske Konjice"],
+          answers: [
+            "Žalec",
+            "Mozirje",
+            "Šmarje pri Jelšah",
+            "Slovenske Konjice",
+          ],
           correct: 0,
         },
         {
@@ -559,13 +564,23 @@
         {
           image: "images/sg-radljeobdravi.png",
           text: "Grb temelji na pečatu iz 17. stoletja, ki prikazuje srebrnega nadangela Mihaela, ki stoji nad mrtvim zmajem.",
-          answers: ["Radlje ob Dravi", "Dravograd", "Ravne na Koroškem", "Slovenj Gradec"],
+          answers: [
+            "Radlje ob Dravi",
+            "Dravograd",
+            "Ravne na Koroškem",
+            "Slovenj Gradec",
+          ],
           correct: 0,
         },
         {
           image: "images/sg-ravnenakoroskem.png",
           text: "Grb sestavlja bujna krošnja in trije griči.",
-          answers: ["Radlje ob Dravi", "Dravograd", "Ravne na Koroškem", "Slovenj Gradec"],
+          answers: [
+            "Radlje ob Dravi",
+            "Dravograd",
+            "Ravne na Koroškem",
+            "Slovenj Gradec",
+          ],
           correct: 0,
         },
         {
@@ -596,11 +611,20 @@
       }
 
       function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+          // Pick a remaining element...
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+          ];
         }
-        return array;
       }
 
       function startTimer() {
