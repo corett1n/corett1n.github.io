@@ -186,9 +186,27 @@
       <button id="start-btn">Začni</button>
     </div>
 
-    <!-- Quiz Container (hidden initially) -->
-    <div id="quiz-container" style="display: none">
-      <div id="score-badge">0/40 (0%)</div>
+    <div
+      id="quiz-container"
+      style="
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <!-- Difficulty Selection Card -->
+      <div id="difficulty-card" style="display: none; text-align: center">
+        <h2>Izberi težavnost 🏆</h2>
+        <button class="difficulty-btn btn" data-difficulty="0">
+          Enostavno
+        </button>
+        <button class="difficulty-btn btn" data-difficulty="1">Srednje</button>
+        <button class="difficulty-btn btn" data-difficulty="2">Težko</button>
+      </div>
+
+      <!-- Score badge, timer, question elements (same as before) -->
+      <div id="score-badge">0/40</div>
       <div id="timer">Preostali čas: 10s</div>
       <img id="question-image" src="" alt="Question Image" />
       <div id="question-text"></div>
@@ -661,11 +679,13 @@
       const resultEl = document.getElementById("result");
       let currentAnswerOptions = []; // store shuffled answers for the current question
       const restartBtn = document.getElementById("restart-btn");
+      const difficultyButtons = document.querySelectorAll(".difficulty-btn");
+      let questionsToUse = [];
 
       function updateScoreBadge() {
         const badge = document.getElementById("score-badge");
-        const percentage = Math.round((score / questions.length) * 100);
-        badge.textContent = `${currentQuestion + 1}/${questions.length}`;
+        const percentage = Math.round((score / questionsToUse.length) * 100);
+        badge.textContent = `${currentQuestion + 1}/${questionsToUse.length}`;
       }
 
       function shuffle(array) {
@@ -700,12 +720,12 @@
       }
 
       function showQuestion() {
-        if (currentQuestion >= questions.length) {
+        if (currentQuestion >= questionsToUse.length) {
           showFinalResult();
           return;
         }
 
-        const q = questions[currentQuestion];
+        const q = questionsToUse[currentQuestion];
         document.getElementById("question-text").textContent = q.text;
         imageEl.src = q.image;
         answersEl.innerHTML = "";
@@ -781,8 +801,8 @@
         timerEl.style.display = "none";
         resultEl.style.display = "block";
         resultEl.textContent = `Konec!\n\nTvoj uspeh: ${score}/${
-          questions.length
-        } (${Math.round((score * 100) / questions.length)}%)`;
+          questionsToUse.length
+        } (${Math.round((score * 100) / questionsToUse.length)}%)`;
 
         // Show restart button
         restartBtn.style.display = "block";
@@ -790,34 +810,64 @@
 
       // Restart quiz logic
       restartBtn.addEventListener("click", () => {
-        currentQuestion = 0;
-        score = 0;
-
-        // Hide result and restart button
+        // Hide result and quiz elements
         resultEl.style.display = "none";
         restartBtn.style.display = "none";
-        imageEl.style.display = "block";
-        text.style.display = "block";
+        imageEl.style.display = "none";
+        text.style.display = "none";
         answersEl.innerHTML = "";
-        timerEl.style.display = "block";
+        answersEl.style.display = "none";
+        timerEl.style.display = "none";
+        document.getElementById("score-badge").style.display = "none";
 
-        // Restart the quiz
-        showQuestion();
-        updateScoreBadge();
+        // Show difficulty selection card
+        document.getElementById("difficulty-card").style.display = "block";
       });
 
-      // Start quiz
       document.getElementById("start-btn").addEventListener("click", () => {
-        // Hide start screen
         document.getElementById("start-screen").style.display = "none";
-        // Show quiz container
         document.getElementById("quiz-container").style.display = "flex";
+        document.getElementById("difficulty-card").style.display = "block";
 
-        // Shuffle questions if you want random order
-        shuffle(questions);
+        // Hide quiz elements until difficulty is chosen
+        imageEl.style.display = "none";
+        text.style.display = "none";
+        answersEl.style.display = "none";
+        timerEl.style.display = "none";
+        resultEl.style.display = "none";
+        restartBtn.style.display = "none";
+        document.getElementById("score-badge").style.display = "none";
+      });
 
-        // Start the quiz
-        showQuestion();
+      difficultyButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const selectedDifficulty = parseInt(btn.dataset.difficulty);
+
+          // Filter questions
+          if (selectedDifficulty === 0) {
+            questionsToUse = questions.filter((q) => q.difficulty === 0);
+          } else if (selectedDifficulty === 1) {
+            questionsToUse = questions.filter((q) => q.difficulty <= 1);
+          } else {
+            questionsToUse = [...questions]; // all questions
+          }
+
+          shuffle(questionsToUse);
+
+          // Hide difficulty card and show quiz elements
+          document.getElementById("difficulty-card").style.display = "none";
+          imageEl.style.display = "block";
+          text.style.display = "block";
+          answersEl.style.display = "block";
+          timerEl.style.display = "block";
+          document.getElementById("score-badge").style.display = "block";
+
+          // Start quiz
+          currentQuestion = 0;
+          score = 0;
+          showQuestion();
+          updateScoreBadge();
+        });
       });
     </script>
   </body>
