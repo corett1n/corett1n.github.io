@@ -29,6 +29,31 @@
         align-items: center;
       }
 
+      #quiz-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      #exit-btn {
+        width: auto;
+        background: #e74c3c;
+        padding: 8px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 14px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 0px;
+      }
+
+      #exit-btn:hover {
+        background: #c0392b;
+      }
+
       /* Floating score badge */
       #score-badge {
         position: absolute;
@@ -114,7 +139,8 @@
         justify-content: center;
         align-items: center;
       }
-      #result, #difficulty-card>h2 {
+      #result,
+      #difficulty-card > h2 {
         font-size: 20px;
         font-weight: bold;
         white-space: pre-line;
@@ -163,7 +189,7 @@
           background: #529dba;
         }
 
-        #score-badge {
+        #score-badge, #exit-btn {
           font-size: 40px;
           padding: 10px 16px;
         }
@@ -173,7 +199,8 @@
           padding: 8px 16px;
         }
 
-        #result, #difficulty-card>h2 {
+        #result,
+        #difficulty-card > h2 {
           font-size: 40px;
         }
       }
@@ -206,7 +233,10 @@
       </div>
 
       <!-- Score badge, timer, question elements (same as before) -->
-      <div id="score-badge">0/40</div>
+      <div id="quiz-topbar">
+        <button id="exit-btn" class="btn small">X</button>
+        <div id="score-badge">0/41 (0%)</div>
+      </div>
       <div id="timer">Preostali čas: 10s</div>
       <img id="question-image" src="" alt="Question Image" />
       <div id="question-text"></div>
@@ -678,6 +708,7 @@
       const answersEl = document.getElementById("answers");
       const resultEl = document.getElementById("result");
       let currentAnswerOptions = []; // store shuffled answers for the current question
+      const exitBtn = document.getElementById("exit-btn");
       const restartBtn = document.getElementById("restart-btn");
       const difficultyButtons = document.querySelectorAll(".difficulty-btn");
       let questionsToUse = [];
@@ -795,6 +826,7 @@
       }
 
       function showFinalResult() {
+        exitBtn.style.display = "none";
         imageEl.style.display = "none";
         text.style.display = "none";
         answersEl.innerHTML = "";
@@ -819,6 +851,7 @@
         answersEl.style.display = "none";
         timerEl.style.display = "none";
         document.getElementById("score-badge").style.display = "none";
+        exitBtn.style.display = "none";
 
         // Show difficulty selection card
         document.getElementById("difficulty-card").style.display = "block";
@@ -836,7 +869,29 @@
         timerEl.style.display = "none";
         resultEl.style.display = "none";
         restartBtn.style.display = "none";
+        exitBtn.style.display = "none";
         document.getElementById("score-badge").style.display = "none";
+      });
+
+      exitBtn.addEventListener("click", () => {
+        clearInterval(timer);
+
+        // Hide quiz elements until difficulty is chosen
+        imageEl.style.display = "none";
+        text.style.display = "none";
+        answersEl.style.display = "none";
+        timerEl.style.display = "none";
+        resultEl.style.display = "none";
+        restartBtn.style.display = "none";
+        exitBtn.style.display = "none";
+        document.getElementById("score-badge").style.display = "none";
+
+        // Reset quiz state
+        currentQuestion = 0;
+        score = 0;
+
+        // Show difficulty card again
+        document.getElementById("difficulty-card").style.display = "block";
       });
 
       difficultyButtons.forEach((btn) => {
@@ -860,6 +915,7 @@
           text.style.display = "block";
           answersEl.style.display = "block";
           timerEl.style.display = "block";
+          exitBtn.style.display = "block";
           document.getElementById("score-badge").style.display = "block";
 
           // Start quiz
