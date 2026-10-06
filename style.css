@@ -121,8 +121,8 @@ body {
         0 0 0 1px rgba(255, 255, 255, 0.08);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
 
@@ -150,8 +150,8 @@ body {
     object-fit: cover;
 
     transition:
-        opacity 1s ease,
-        transform 1s ease;
+        opacity 0.5s ease,
+        transform 0.5s ease;
 }
 
 
