@@ -6,7 +6,7 @@ const slides = [
             "images/albanija/2.jpg",
             "images/albanija/3.jpg",
         ],
-        text: "Izlet v Albanijo 🇦🇱"
+        text: "Izlet v Albanijo"
     },
     {
         images: [
@@ -14,7 +14,7 @@ const slides = [
             "images/aranjuez/2.jpg",
             "images/aranjuez/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava v Aranjuez 🇪🇸"
+        text: "Erasmus+ izmenjava v Aranjuez"
     },
     {
         images: [
@@ -22,7 +22,7 @@ const slides = [
             "images/bohinj/2.jpg",
             "images/bohinj/3.jpg",
         ],
-        text: "Naravoslovni tabor v Bohinju 🇸🇮"
+        text: "Naravoslovni tabor v Bohinju"
     },
     {
         images: [
@@ -30,7 +30,7 @@ const slides = [
             "images/bruselj-interreg/2.jpg",
             "images/bruselj-interreg/3.jpg",
         ],
-        text: "Nagradno Interreg potovanje v Bruselj 🇧🇪"
+        text: "Nagradno Interreg potovanje v Bruselj"
     },
     {
         images: [
@@ -38,7 +38,7 @@ const slides = [
             "images/dan-na-snegu/2.jpg",
             "images/dan-na-snegu/3.jpg",
         ],
-        text: "Dan na snegu na Višarjah ⛷️"
+        text: "Dan na snegu na Višarjah"
     },
     {
         images: [
@@ -46,7 +46,7 @@ const slides = [
             "images/obisk-ijs/2.jpg",
             "images/obisk-ijs/3.jpg",
         ],
-        text: "Obisk Instituta Jožef Stefan v Ljubljani 🇸🇮"
+        text: "Obisk Instituta Jožef Stefan v Ljubljani"
     },
     {
         images: [
@@ -54,7 +54,7 @@ const slides = [
             "images/popri/2.jpg",
             "images/popri/3.jpg",
         ],
-        text: "Podjetniško tekmovanje mladih POPRI 💼"
+        text: "Podjetniško tekmovanje mladih POPRI"
     },
     {
         images: [
@@ -62,7 +62,7 @@ const slides = [
             "images/praksa/2.jpg",
             "images/praksa/3.jpg",
         ],
-        text: "Delovna praksa 🛠️"
+        text: "Delovna praksa"
     },
     {
         images: [
@@ -70,7 +70,7 @@ const slides = [
             "images/rim1/2.jpg",
             "images/rim1/3.jpg",
         ],
-        text: "Izlet v Rim 🇮🇹"
+        text: "Izlet v Rim"
     },
     {
         images: [
@@ -78,7 +78,7 @@ const slides = [
             "images/rim2/2.jpg",
             "images/rim2/3.jpg",
         ],
-        text: "Izlet v Rim 🇮🇹"
+        text: "Izlet v Rim"
     },
     {
         images: [
@@ -86,7 +86,7 @@ const slides = [
             "images/spanci-v-ts/2.jpg",
             "images/spanci-v-ts/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava dijakov iz Aranjueza 🇪🇸"
+        text: "Erasmus+ izmenjava dijakov iz Aranjueza"
     },
     {
         images: [
@@ -94,7 +94,7 @@ const slides = [
             "images/sport/2.jpg",
             "images/sport/3.jpg",
         ],
-        text: "Športna tekmovanja 🏆"
+        text: "Športna tekmovanja"
     },
     {
         images: [
@@ -102,7 +102,7 @@ const slides = [
             "images/sportni-dan/2.jpg",
             "images/sportni-dan/3.jpg",
         ],
-        text: "Športni dan 🏋🏻‍♀️"
+        text: "Športni dan"
     },
     {
         images: [
@@ -110,7 +110,7 @@ const slides = [
             "images/stem-teden1/2.jpg",
             "images/stem-teden1/3.jpg",
         ],
-        text: "STEM teden 🦾"
+        text: "STEM teden"
     },
     {
         images: [
@@ -118,7 +118,7 @@ const slides = [
             "images/stem-teden2/2.jpg",
             "images/stem-teden2/3.jpg",
         ],
-        text: "STEM teden 🔭"
+        text: "STEM teden"
     },
     {
         images: [
@@ -126,7 +126,7 @@ const slides = [
             "images/svedi-v-ts/2.jpg",
             "images/svedi-v-ts/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava dijakov iz Örebra 🇸🇪"
+        text: "Erasmus+ izmenjava dijakov iz Örebra"
     },
     {
         images: [
@@ -134,7 +134,7 @@ const slides = [
             "images/svedska/2.jpg",
             "images/svedska/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava v Örebro 🇸🇪"
+        text: "Erasmus+ izmenjava v Örebro"
     },
     {
         images: [
@@ -142,7 +142,7 @@ const slides = [
             "images/triglav/2.jpg",
             "images/triglav/3.jpg",
         ],
-        text: "Vzpon na Triglav 🇸🇮"
+        text: "Vzpon na Triglav"
     },
     {
         images: [
@@ -150,7 +150,7 @@ const slides = [
             "images/wels/2.jpg",
             "images/wels/3.jpg",
         ],
-        text: "Tečaj varjenja in robotike v Welsu 🇦🇹"
+        text: "Tečav varjenja in robotike v Welsu"
     },
     {
         images: [
@@ -158,7 +158,7 @@ const slides = [
             "images/zagreb1/2.jpg",
             "images/zagreb1/3.jpg",
         ],
-        text: "Izlet v Zagreb 🇭🇷"
+        text: "Izlet v Zagreb"
     },
     {
         images: [
@@ -166,7 +166,7 @@ const slides = [
             "images/zagreb2/2.jpg",
             "images/zagreb2/3.jpg",
         ],
-        text: "Izlet v Zagreb 🇭🇷"
+        text: "Izlet v Zagreb"
     },
 
 ];
