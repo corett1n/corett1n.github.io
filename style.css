@@ -172,7 +172,7 @@ body {
 }
 
 .description p {
-    font-size: clamp(20px, 2.2vw, 32px);
+    font-size: clamp(20px, 1.6vw, 32px);
 
     font-weight: 500;
 
