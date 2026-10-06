@@ -173,7 +173,7 @@ const slides = [
 
 let currentSlide = 0;
 
-const displayTime = 5000;
+const displayTime = 4500;
 
 
 function shuffleSlides() {
