@@ -14,7 +14,7 @@ const slides = [
             "images/aranjuez/2.jpg",
             "images/aranjuez/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava v Aranjuez 🇪🇸"
+        text: "🇪🇺 Erasmus+ izmenjava v Aranjuezu 🇪🇸"
     },
     {
         images: [
@@ -134,7 +134,7 @@ const slides = [
             "images/svedska/2.jpg",
             "images/svedska/3.jpg",
         ],
-        text: "🇪🇺 Erasmus+ izmenjava v Örebro 🇸🇪"
+        text: "🇪🇺 Erasmus+ izmenjava v Örebru 🇸🇪"
     },
     {
         images: [
