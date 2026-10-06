@@ -173,7 +173,7 @@ const slides = [
 
 let currentSlide = 0;
 
-const displayTime = 3500;
+const displayTime = 5000;
 
 
 function shuffleSlides() {
@@ -230,7 +230,7 @@ function showSlide() {
             image.style.opacity = "1";
         });
 
-    }, 300);
+    }, 500);
 
 
     /*
