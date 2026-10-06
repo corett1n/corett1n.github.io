@@ -150,7 +150,7 @@ const slides = [
             "images/wels/2.jpg",
             "images/wels/3.jpg",
         ],
-        text: "Tečav varjenja in robotike v Welsu 🇦🇹"
+        text: "Tečaj varjenja in robotike v Welsu 🇦🇹"
     },
     {
         images: [
