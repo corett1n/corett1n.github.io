@@ -1,5 +1,5 @@
 const slides = [
-
+/*
     {
         images: [
             "images/albanija/1.jpg",
@@ -58,14 +58,6 @@ const slides = [
     },
     {
         images: [
-            "images/praksa/1.jpg",
-            "images/praksa/2.jpg",
-            "images/praksa/3.jpg",
-        ],
-        text: "Delovna praksa 🛠️"
-    },
-    {
-        images: [
             "images/rim1/1.jpg",
             "images/rim1/2.jpg",
             "images/rim1/3.jpg",
@@ -90,35 +82,11 @@ const slides = [
     },
     {
         images: [
-            "images/sport/1.jpg",
-            "images/sport/2.jpg",
-            "images/sport/3.jpg",
-        ],
-        text: "Športna tekmovanja 🏆"
-    },
-    {
-        images: [
             "images/sportni-dan/1.jpg",
             "images/sportni-dan/2.jpg",
             "images/sportni-dan/3.jpg",
         ],
         text: "Športni dan 🏋🏻‍♀️"
-    },
-    {
-        images: [
-            "images/stem-teden1/1.jpg",
-            "images/stem-teden1/2.jpg",
-            "images/stem-teden1/3.jpg",
-        ],
-        text: "STEM teden 🦾"
-    },
-    {
-        images: [
-            "images/stem-teden2/1.jpg",
-            "images/stem-teden2/2.jpg",
-            "images/stem-teden2/3.jpg",
-        ],
-        text: "STEM teden 🔭"
     },
     {
         images: [
@@ -135,14 +103,6 @@ const slides = [
             "images/svedska/3.jpg",
         ],
         text: "🇪🇺 Erasmus+ izmenjava v Örebru 🇸🇪"
-    },
-    {
-        images: [
-            "images/triglav/1.jpg",
-            "images/triglav/2.jpg",
-            "images/triglav/3.jpg",
-        ],
-        text: "Vzpon na Triglav 🇸🇮"
     },
     {
         images: [
@@ -167,6 +127,46 @@ const slides = [
             "images/zagreb2/3.jpg",
         ],
         text: "Izlet v Zagreb 🇭🇷"
+    },*/
+    {
+        images: [
+            "images/stem-teden1/1.jpg",
+            "images/stem-teden1/2.jpg",
+            "images/stem-teden1/3.jpg",
+        ],
+        text: "STEM teden 🦾"
+    },
+    {
+        images: [
+            "images/stem-teden2/1.jpg",
+            "images/stem-teden2/2.jpg",
+            "images/stem-teden2/3.jpg",
+        ],
+        text: "STEM teden 🔭"
+    },
+    {
+        images: [
+            "images/praksa/1.jpg",
+            "images/praksa/2.jpg",
+            "images/praksa/3.jpg",
+        ],
+        text: "Delovna praksa 🛠️"
+    },
+    {
+        images: [
+            "images/triglav/1.jpg",
+            "images/triglav/2.jpg",
+            "images/triglav/3.jpg",
+        ],
+        text: "Vzpon na Triglav 🇸🇮"
+    },
+    {
+        images: [
+            "images/sport/1.jpg",
+            "images/sport/2.jpg",
+            "images/sport/3.jpg",
+        ],
+        text: "Športna tekmovanja 🏆"
     },
     {
         images: [
