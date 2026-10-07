@@ -168,6 +168,22 @@ const slides = [
         ],
         text: "Izlet v Zagreb 🇭🇷"
     },
+    {
+        images: [
+            "images/sprejem1R/1.jpg",
+            "images/sprejem1R/2.jpg",
+            "images/sprejem1R/3.jpg",
+        ],
+        text: "Sprejem dijakov prvih razredov 🤓"
+    },
+    {
+        images: [
+            "images/VR/1.jpg",
+            "images/VR/2.jpg",
+            "images/VR/3.jpg",
+        ],
+        text: "Tečaj VR programiranja 🥽"
+    },
 
 ];
 
