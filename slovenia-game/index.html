@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovenska mesta 🇸🇮</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/5880/5880889.png">
+
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #141f31;
+      --muted: #9baac0;
+      --accent: #45dfb1;
+      --text: #f4f7fb;
+      --danger: #ff7070;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at top, #1b3550 0%, var(--bg) 60%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 24px 16px 40px;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .app {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 850;
+      letter-spacing: -.5px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .pill {
+      background: #243349;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: .85rem;
+      color: #dce7f4;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -1.8px;
+      margin: 10px 0;
+      line-height: 1.08;
+    }
+
+    .intro p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 12px auto;
+      line-height: 1.7;
+    }
+
+    .panel,
+    .stat {
+      background: rgba(20, 31, 49, .95);
+      border: 1px solid #2b3a50;
+      border-radius: 18px;
+    }
+
+    .panel {
+      padding: 18px;
+    }
+
+    .rules-card {
+      max-width: 650px;
+      margin: 28px auto;
+      padding: 25px;
+    }
+
+    .rules-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+    }
+
+    .rules-intro {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .rule {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid #2b3a50;
+    }
+
+    .rule:last-of-type {
+      border-bottom: 0;
+    }
+
+    .rule-icon {
+      flex: 0 0 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #23364a;
+      font-size: 1.3rem;
+    }
+
+    .rule h3 {
+      font-size: .98rem;
+      margin: 0 0 4px;
+    }
+
+    .rule p {
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .stats {
+      grid-area: stats;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 0;
+      align-content: start;
+    }
+
+    .stat {
+      padding: 16px;
+    }
+
+    .stat small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .stat strong {
+      font-size: 1.35rem;
+    }
+
+    #timer {
+      transition: color .2s;
+    }
+
+    #timer.urgent {
+      color: var(--danger);
+      animation: timerPulse .5s infinite alternate;
+    }
+
+    @keyframes timerPulse {
+      to {
+        opacity: .55;
+      }
+    }
+
+    .game-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      grid-template-areas: "main stats";
+      gap: 18px;
+      align-items: start;
+    }
+
+    .game-layout>main {
+      grid-area: main;
+      min-width: 0;
+    }
+
+    .question-label {
+      color: var(--muted);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 750;
+    }
+
+    /* City name and coat of arms */
+
+    .city-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 7px 0 12px;
+      min-width: 0;
+    }
+
+    #cityName {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .coat-wrap {
+      flex: 0 0 62px;
+      width: 62px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      background: #202f43;
+      border: 1px solid #3b4d64;
+      border-radius: 12px;
+      padding: 5px;
+      overflow: hidden;
+    }
+
+    #cityCoat {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .map-hint {
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 0 0 14px;
+      line-height: 1.5;
+    }
+
+    .map-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 13px;
+      background: #edf1f5;
+      border: 1px solid #43536b;
+      line-height: 0;
+      user-select: none;
+    }
+
+    #map {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: crosshair;
+    }
+
+    .map-marker {
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid white;
+      box-shadow: 0 2px 8px #0008;
+      pointer-events: none;
+    }
+
+    .distance-line {
+      position: absolute;
+      height: 0;
+      border-top: 3px dotted #ffffff;
+      transform-origin: 0 50%;
+      pointer-events: none;
+      z-index: 2;
+      filter: drop-shadow(0 1px 2px #000);
+    }
+
+    .guess-marker {
+      background: #ee8a36;
+    }
+
+    .answer-marker {
+      background: #16b88b;
+    }
+
+    .map-credit {
+      color: #aebcd0;
+      font-size: .7rem;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    button.primary {
+      width: 100%;
+      border: 0;
+      background: var(--accent);
+      color: #08231c;
+      padding: 14px 18px;
+      font-weight: 850;
+      border-radius: 12px;
+      margin-top: 14px;
+      transition: transform .15s, opacity .15s;
+    }
+
+    button.primary:hover {
+      transform: translateY(-1px);
+    }
+
+    button.primary:disabled {
+      opacity: .35;
+      cursor: not-allowed;
+    }
+
+    button.secondary {
+      width: 100%;
+      border: 1px solid #3b4d64;
+      background: #1e2b40;
+      color: white;
+      padding: 12px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .result {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 13px;
+      background: #20354a;
+      line-height: 1.7;
+    }
+
+    .result strong {
+      color: var(--accent);
+    }
+
+    .result.timeout strong {
+      color: var(--danger);
+    }
+
+    .side-title {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+    }
+
+    .side-copy {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    /* Final discovery card */
+
+    .final-card {
+      display: none;
+      max-width: 650px;
+      margin: 24px auto 0;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .final-card-header {
+      text-align: center;
+      padding: 25px 22px 18px;
+    }
+
+    .final-card-header h2 {
+      margin: 8px 0;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+    }
+
+    .final-card-header p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 8px 0 0;
+    }
+
+    .final-photo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: #26374a;
+    }
+
+    .final-card-body {
+      padding: 22px;
+    }
+
+    .final-city-heading {
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .final-city-heading h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .final-coat {
+      width: 65px;
+      height: 75px;
+      object-fit: contain;
+      padding: 5px;
+      background: #26374a;
+      border: 1px solid #3b5269;
+      border-radius: 10px;
+    }
+
+    .final-card-body p {
+      color: #c1cfdf;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .final-score-pill {
+      display: inline-block;
+      padding: 8px 13px;
+      background: #203c39;
+      color: var(--accent);
+      border-radius: 999px;
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    #finish {
+      display: none;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 20px;
+    }
+
+    #finish h2 {
+      font-size: 2rem;
+    }
+
+    #finalScore {
+      color: var(--accent);
+      font-size: 2.5rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #74869e;
+      font-size: .75rem;
+      line-height: 1.6;
+      margin-top: 30px;
+    }
+
+    @media(max-width: 760px) {
+      body {
+        padding: 14px 12px 30px;
+      }
+
+      .game-layout {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+          "stats"
+          "main";
+        gap: 12px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        margin: 0;
+      }
+
+      .stat {
+        padding: 12px 9px;
+      }
+
+      .stat strong {
+        font-size: 1.15rem;
+      }
+
+      .panel {
+        padding: 13px;
+      }
+
+      .rules-card {
+        padding: 20px 16px;
+      }
+
+      header {
+        margin-bottom: 15px;
+      }
+
+      .coat-wrap {
+        flex-basis: 54px;
+        width: 54px;
+        height: 62px;
+      }
+
+      .final-card-header {
+        padding: 22px 15px 15px;
+      }
+
+      .final-card-body {
+        padding: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+
+    <header>
+      <div class="brand"><span>SLOVENSKA</span> MESTA 🇸🇮</div>
+    </header>
+
+    <!-- RULES SCREEN -->
+    <section id="welcome">
+      <div class="intro">
+        <div class="eyebrow">KAKO DOBRO POZNAŠ SLOVENIJO?</div>
+        <h1>Najdi iskano mesto.<br>Premagaj čas.</h1>
+      </div>
+
+      <div class="panel rules-card">
+        <h2>🎮 Pravila igre</h2>
+        <p class="rules-intro">
+          Na podlagi imena mesta in njegova grba označi njegovo lokacijo na zemljevidu. Če dosežeš dovolj dober
+          rezultat, te na koncu časa posebna nagrada.
+        </p>
+
+        <div class="rule">
+          <div class="rule-icon">🗺️</div>
+          <div>
+            <h3>1. Najdi mesto</h3>
+            <p>Klikni na približno lokacijo iskanega mesta na zemljevidu.</p>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rule-icon">⏱️</div>
+          <div>
+            <h3>2. Premagaj čas</h3>
+            <p>Če poteče 15 sekund preden uganeš lokacijo, ne dosežeš nobene točke.</p>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rule-icon">🏆</div>
+          <div>
+            <h3>3. Doseži točke</h3>
+            <p>Vsaka runda je vredna največ 100 točk. Bližje kot boš dejanski lokaciji mesta, tem več točk boš dosegla.
+            </p>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rule-icon">📸</div>
+          <div>
+            <h3>4. Posebna nagrada</h3>
+            <p>Če dosežeš vsaj 95% vseh točk, te na koncu čaka prav posebno presenečenje!</p>
+          </div>
+        </div>
+
+        <button class="primary" id="startGame">Začni z izzivom →</button>
+      </div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="game" hidden>
+
+      <div class="game-layout">
+        <main class="panel">
+          <div class="city-heading">
+            <div class="coat-wrap">
+              <img id="cityCoat" alt="City coat of arms">
+            </div>
+            <h2 id="cityName"></h2>
+          </div>
+
+          <p class="map-hint" id="mapHint">
+          </p>
+
+          <div class="map-wrap" id="mapWrap">
+            <img id="map"
+              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Slovenia_location_map.svg/3840px-Slovenia_location_map.svg.png"
+              alt="Map of Slovenia" draggable="false">
+          </div>
+
+          <button class="primary" id="submitGuess" disabled>
+            Potrjujem
+          </button>
+
+          <div class="result" id="result" aria-live="polite"></div>
+          <button class="primary" id="nextRound" hidden>Naslednje mesto →</button>
+        </main>
+
+        <div class="stats">
+          <div class="stat">
+            <small>🏆 Skupne točke</small>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <small>🎯 Runda</small>
+            <strong id="round">1 / 10</strong>
+          </div>
+          <div class="stat">
+            <small>⏱️ Preostali čas</small>
+            <strong id="timer">10 s</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL RESULTS -->
+    <section id="finish">
+      <div class="panel" id="finishPanel">
+        <div class="eyebrow">IZZIVA JE KONEC</div>
+        <div id="finalScore">0</div>
+        <p id="finalMessage"></p>
+        <button class="primary" id="playAgain">Poskusi znova</button>
+      </div>
+
+      <!-- Only visible if the player reaches the score threshold -->
+      <div class="panel final-card" id="finalCard">
+        <div class="final-card-header">
+          <div class="eyebrow">KONEC</div>
+          <h2>✨ Zaslužila si si nagrado! 🏅</h2>
+          <p>Slovenska mesta poznaš, moraš pa odkriti še tega...</p>
+          <div class="final-score-pill" id="finalBadge"></div>
+        </div>
+
+        <img class="final-photo"
+          src="https://images.unsplash.com/photo-1555992828-35627f3b373f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+          id="finalPhoto" alt="Photograph of the featured city">
+
+        <div class="final-card-body">
+          <div class="final-city-heading">
+            <h3 id="finalCityName">Rim 🇮🇹</h3>
+          </div>
+          <p id="finalFact"></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const TOTAL_ROUNDS = 40;
+    const POINTS_PER_ROUND = 100;
+    const ROUND_TIME = 15;
+    const FINAL_CARD_THRESHOLD = TOTAL_ROUNDS * POINTS_PER_ROUND * 0.95; // 95% of total possible points
+    const AUTO_NEXT_DELAY = 5000;
+
+    const CITIES = [
+      {
+        name: "Ljubljana",
+        lat: 46.0569, lon: 14.5058,
+        coatOfArms: "./img/grb-ljubljana.png"
+      },
+      {
+        name: "Maribor",
+        lat: 46.5547, lon: 15.6459,
+        coatOfArms: "./img/grb-maribor.png"
+      },
+      {
+        name: "Koper",
+        lat: 45.5481, lon: 13.7302,
+        coatOfArms: "./img/grb-koper.png"
+      },
+      {
+        name: "Celje",
+        lat: 46.2309, lon: 15.2604,
+        coatOfArms: "./img/grb-celje.png"
+      },
+      {
+        name: "Kranj",
+        lat: 46.2389, lon: 14.3556,
+        coatOfArms: "./img/grb-kranj.png"
+      },
+      {
+        name: "Novo mesto",
+        lat: 45.8011, lon: 15.1710,
+        coatOfArms: "./img/grb-novomesto.png"
+      },
+      {
+        name: "Murska Sobota",
+        lat: 46.6625, lon: 16.1664,
+        coatOfArms: "./img/grb-murskasobota.png"
+      },
+      {
+        name: "Nova Gorica",
+        lat: 45.9560, lon: 13.6484,
+        coatOfArms: "./img/grb-novagorica.png"
+      },
+      {
+        name: "Ptuj",
+        lat: 46.4199, lon: 15.8697,
+        coatOfArms: "./img/grb-ptuj.png"
+      },
+      {
+        name: "Velenje",
+        lat: 46.3592, lon: 15.1103,
+        coatOfArms: "./img/grb-velenje.png"
+      },
+      {
+        name: "Postojna",
+        lat: 45.7743, lon: 14.2136,
+        coatOfArms: "./img/grb-postojna.png"
+      },
+      {
+        name: "Bled",
+        lat: 46.3683, lon: 14.1146,
+        coatOfArms: "./img/grb-bled.png"
+      },
+      {
+        name: "Piran",
+        lat: 45.5283, lon: 13.5683,
+        coatOfArms: "./img/grb-piran.png"
+      },
+      {
+        name: "Izola",
+        lat: 45.5369, lon: 13.6619,
+        coatOfArms: "./img/grb-izola.png"
+      },
+      {
+        name: "Ajdovščina",
+        lat: 45.8860, lon: 13.9095,
+        coatOfArms: "./img/grb-ajdovscina.png"
+      },
+      {
+        name: "Domžale",
+        lat: 46.13774, lon: 14.59371,
+        coatOfArms: "./img/grb-domzale.png"
+      },
+      {
+        name: "Kamnik",
+        lat: 46.22587, lon: 14.61207,
+        coatOfArms: "./img/grb-kamnik.png"
+      },
+      {
+        name: "Slovenska Bistrica",
+        lat: 46.39200, lon: 15.57279,
+        coatOfArms: "./img/grb-slovenskabistrica.png"
+      },
+      {
+        name: "Krško",
+        lat: 45.94833, lon: 15.48583,
+        coatOfArms: "./img/grb-krsko.png"
+      },
+      {
+        name: "Brežice",
+        lat: 45.90726, lon: 15.59319,
+        coatOfArms: "./img/grb-brezice.png"
+      },
+      {
+        name: "Škofja Loka",
+        lat: 46.16551, lon: 14.30626,
+        coatOfArms: "./img/grb-skofjaloka.png"
+      },
+      {
+        name: "Grosuplje",
+        lat: 45.95600, lon: 14.65902,
+        coatOfArms: "./img/grb-grosuplje.png"
+      },
+      {
+        name: "Jesenice",
+        lat: 46.43240, lon: 14.06232,
+        coatOfArms: "./img/grb-jesenice.png"
+      },
+      {
+        name: "Šentjur",
+        lat: 46.21722, lon: 15.39750,
+        coatOfArms: "./img/grb-sentjur.png"
+      },
+      {
+        name: "Vrhnika",
+        lat: 45.96350, lon: 14.29484,
+        coatOfArms: "./img/grb-vrhnika.png"
+      },
+      {
+        name: "Slovenj Gradec",
+        lat: 46.51088, lon: 15.08377,
+        coatOfArms: "./img/grb-slovenjgradec.png"
+      },
+      {
+        name: "Trbovlje",
+        lat: 46.15410, lon: 15.05178,
+        coatOfArms: "./img/grb-trbovlje.png"
+      },
+      {
+        name: "Kočevje",
+        lat: 45.64323, lon: 14.86036,
+        coatOfArms: "./img/grb-kocevje.png"
+      },
+      {
+        name: "Slovenske Konjice",
+        lat: 46.33735, lon: 15.42329,
+        coatOfArms: "./img/grb-slovenskekonjice.png"
+      },
+      {
+        name: "Črnomelj",
+        lat: 45.57111, lon: 15.18889,
+        coatOfArms: "./img/grb-crnomelj.png"
+      },
+      {
+        name: "Ilirska Bistrica",
+        lat: 45.56757, lon: 14.24571,
+        coatOfArms: "./img/grb-ilirskabistrica.png"
+      },
+      {
+        name: "Idrija",
+        lat: 46.00295, lon: 14.02787,
+        coatOfArms: "./img/grb-idrija.png"
+      },
+      {
+        name: "Tolmin",
+        lat: 46.18304, lon: 13.73321,
+        coatOfArms: "./img/grb-tolmin.png"
+      },
+      {
+        name: "Dravograd",
+        lat: 46.58806, lon: 15.01917,
+        coatOfArms: "./img/grb-dravograd.png"
+      },
+      {
+        name: "Mengeš",
+        lat: 46.162583, lon: 14.568031,
+        coatOfArms: "./img/grb-menges.png"
+      },
+      {
+        name: "Ravne na Koroškem",
+        lat: 46.543736, lon: 14.964233,
+        coatOfArms: "./img/grb-ravnenakoroskem.png"
+      },
+      {
+        name: "Logatec",
+        lat: 45.916703, lon: 14.229728,
+        coatOfArms: "./img/grb-logatec.png"
+      },
+      {
+        name: "Litija",
+        lat: 46.067000, lon: 14.817000,
+        coatOfArms: "./img/grb-litija.png"
+      },
+      {
+        name: "Sežana",
+        lat: 45.703403, lon: 13.870603,
+        coatOfArms: "./img/grb-sezana.png"
+      },
+      {
+        name: "Radovljica",
+        lat: 46.342517, lon: 14.172078,
+        coatOfArms: "./img/grb-radovljica.png"
+      }
+    ];
+
+    // Approximate geographic bounds; calibrate for the exact map image.
+    const MAP_BOUNDS = {
+      north: 47.1,
+      south: 45.2,
+      west: 13.2,
+      east: 16.8
+    };
+
+    const $ = id => document.getElementById(id);
+
+    let rounds = [];
+    let currentIndex = 0;
+    let score = 0;
+    let guess = null;
+    let answered = false;
+    let secondsLeft = ROUND_TIME;
+    let timerInterval = null;
+    let advanceTimeout = null;
+    let guessMarker = null;
+    let answerMarker = null;
+
+    function shuffle(array) {
+      const result = [...array];
+
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+      }
+
+      return result;
+    }
+
+    function clearTimers() {
+      clearInterval(timerInterval);
+      clearTimeout(advanceTimeout);
+      timerInterval = null;
+      advanceTimeout = null;
+    }
+
+    function startGame() {
+      clearTimers();
+
+      rounds = shuffle(CITIES).slice(0, TOTAL_ROUNDS);
+      currentIndex = 0;
+      score = 0;
+      guess = null;
+      answered = false;
+
+      $("welcome").hidden = true;
+      $("finish").style.display = "none";
+      $("game").hidden = false;
+
+      $("score").textContent = "0";
+      $("finalCard").style.display = "none";
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      loadRound();
+    }
+
+    function loadRound() {
+      clearTimers();
+
+      const city = rounds[currentIndex];
+
+      guess = null;
+      answered = false;
+      secondsLeft = ROUND_TIME;
+
+      removeMarkers();
+
+      $("cityName").textContent = city.name;
+      $("cityCoat").src = city.coatOfArms;
+      $("cityCoat").style.display = "block";
+      $("round").textContent = `${currentIndex + 1} / ${TOTAL_ROUNDS}`;
+      $("timer").textContent = `${secondsLeft} s`;
+      $("timer").classList.remove("urgent");
+
+      $("submitGuess").disabled = true;
+      $("submitGuess").hidden = false;
+      $("nextRound").hidden = true;
+      $("result").style.display = "none";
+      $("result").className = "result";
+
+      startTimer();
+    }
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        if (answered) return;
+
+        secondsLeft--;
+        $("timer").textContent = `${secondsLeft} s`;
+
+        if (secondsLeft <= 3) {
+          $("timer").classList.add("urgent");
+        }
+
+        if (secondsLeft <= 0) {
+          timeOutRound();
+        }
+      }, 1000);
+    }
+
+    function removeMarkers() {
+      if (guessMarker) guessMarker.remove();
+      if (answerMarker) answerMarker.remove();
+
+      const distanceLine = $("distanceLine");
+      if (distanceLine) distanceLine.remove();
+
+      guessMarker = null;
+      answerMarker = null;
+    }
+
+    function pointOnMap(event) {
+      if (answered) return;
+
+      const rect = $("map").getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+
+      if (x < 0 || x > 1 || y < 0 || y > 1) return;
+
+      guess = { x, y };
+
+      $("submitGuess").disabled = false;
+
+      if (!guessMarker) {
+        guessMarker = document.createElement("div");
+        guessMarker.className = "map-marker guess-marker";
+        $("mapWrap").appendChild(guessMarker);
+      }
+
+      guessMarker.style.left = `${x * 100}%`;
+      guessMarker.style.top = `${y * 100}%`;
+    }
+
+    function cityToXY(city) {
+      return {
+        x: (city.lon - MAP_BOUNDS.west) /
+          (MAP_BOUNDS.east - MAP_BOUNDS.west),
+        y: (MAP_BOUNDS.north - city.lat) /
+          (MAP_BOUNDS.north - MAP_BOUNDS.south)
+      };
+    }
+
+    function haversine(lat1, lon1, lat2, lon2) {
+      const rad = degrees => degrees * Math.PI / 180;
+      const dLat = rad(lat2 - lat1);
+      const dLon = rad(lon2 - lon1);
+
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(rad(lat1)) *
+        Math.cos(rad(lat2)) *
+        Math.sin(dLon / 2) ** 2;
+
+      return 6371 * 2 *
+        Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function guessToLatLon(point) {
+      return {
+        lat: MAP_BOUNDS.north -
+          point.y * (MAP_BOUNDS.north - MAP_BOUNDS.south),
+        lon: MAP_BOUNDS.west +
+          point.x * (MAP_BOUNDS.east - MAP_BOUNDS.west)
+      };
+    }
+
+    function calculatePoints(distance) {
+      return Math.round(
+        POINTS_PER_ROUND * Math.max(0, 1 - distance / 160)
+      );
+    }
+
+    function revealAnswer(city) {
+      const target = cityToXY(city);
+
+      if (!answerMarker) {
+        answerMarker = document.createElement("div");
+        answerMarker.className = "map-marker answer-marker";
+        $("mapWrap").appendChild(answerMarker);
+      }
+
+      answerMarker.style.left = `${target.x * 100}%`;
+      answerMarker.style.top = `${target.y * 100}%`;
+
+      // Draw a dotted line between the guess and the correct location.
+      if (guess) {
+        const map = $("map");
+        const width = map.clientWidth;
+        const height = map.clientHeight;
+
+        let distanceLine = $("distanceLine");
+
+        if (!distanceLine) {
+          distanceLine = document.createElement("div");
+          distanceLine.id = "distanceLine";
+          distanceLine.className = "distance-line";
+          $("mapWrap").appendChild(distanceLine);
+        }
+
+        const x1 = guess.x * width;
+        const y1 = guess.y * height;
+        const x2 = target.x * width;
+        const y2 = target.y * height;
+
+        const dx = x2 - x1;
+        const dy = y2 - y1;
+        const length = Math.sqrt(dx * dx + dy * dy);
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+        distanceLine.style.left = `${x1}px`;
+        distanceLine.style.top = `${y1}px`;
+        distanceLine.style.width = `${length}px`;
+        distanceLine.style.transform = `rotate(${angle}deg)`;
+      }
+    }
+
+    function submitGuess() {
+      if (!guess || answered) return;
+
+      clearInterval(timerInterval);
+      timerInterval = null;
+      answered = true;
+
+      const city = rounds[currentIndex];
+      const target = guessToLatLon(guess);
+
+      const distance = haversine(
+        target.lat, target.lon,
+        city.lat, city.lon
+      );
+
+      const points = calculatePoints(distance);
+      score += points;
+
+      $("score").textContent = score.toLocaleString();
+
+      revealAnswer(city);
+
+      const result = $("result");
+      result.className = "result";
+      result.style.display = "block";
+
+      result.innerHTML = `
+    <strong>+${points.toLocaleString()} točk!</strong><br>
+    Oddaljena si <b>${Math.round(distance)} km</b>.
+  `;
+
+      $("submitGuess").hidden = true;
+      prepareNextButton();
+    }
+
+    function timeOutRound() {
+      if (answered) return;
+
+      clearInterval(timerInterval);
+      timerInterval = null;
+      answered = true;
+      secondsLeft = 0;
+
+      const city = rounds[currentIndex];
+
+      $("timer").textContent = "0 s";
+      $("timer").classList.add("urgent");
+
+      revealAnswer(city);
+
+      const result = $("result");
+      result.className = "result timeout";
+      result.style.display = "block";
+
+      result.innerHTML = `
+    <strong>⏰ Časa je konec! 0 točk...</strong><br>
+  `;
+
+      $("submitGuess").hidden = true;
+      prepareNextButton();
+
+      advanceTimeout = setTimeout(() => {
+        if (answered) nextRound();
+      }, AUTO_NEXT_DELAY);
+    }
+
+    function prepareNextButton() {
+      $("nextRound").hidden = false;
+      $("nextRound").textContent =
+        currentIndex === TOTAL_ROUNDS - 1
+          ? "Končni rezultat →"
+          : "Naslednje mesto →";
+    }
+
+    async function showFinalCard() {
+      $("finishPanel").style.display = "none";
+      $("finalCard").style.display = "block";
+      $("finalBadge").textContent =
+        `${score.toLocaleString()} / ${(TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString()} točk`;
+    }
+
+    function nextRound() {
+      if (!answered) return;
+
+      clearTimers();
+
+      if (currentIndex < TOTAL_ROUNDS - 1) {
+        currentIndex++;
+        loadRound();
+      } else {
+        finishGame();
+      }
+    }
+
+    function finishGame() {
+      clearTimers();
+
+      $("game").hidden = true;
+      $("finish").style.display = "block";
+      $("finalCard").style.display = "none";
+
+      $("finalScore").textContent =
+        `${score.toLocaleString()} točk`;
+
+      $("finalMessage").textContent =
+        `Dosegla si ${score.toLocaleString()} od ` +
+        `${(TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString()} možnih točk, za nagrado pa jih potrebuješ vsaj ${FINAL_CARD_THRESHOLD.toLocaleString()}.`;
+
+      if (score >= FINAL_CARD_THRESHOLD) {
+        showFinalCard();
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function returnToRules() {
+      clearTimers();
+
+      $("game").hidden = true;
+      $("finish").style.display = "none";
+      $("welcome").hidden = false;
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    $("map").addEventListener("click", pointOnMap);
+    $("startGame").addEventListener("click", startGame);
+    $("submitGuess").addEventListener("click", submitGuess);
+    $("nextRound").addEventListener("click", nextRound);
+    $("playAgain").addEventListener("click", returnToRules);
+
+    $("map").addEventListener("error", () => {
+      $("mapHint").textContent =
+        "The map image could not load. Check your internet connection.";
+    });
+  </script>
+</body>
+
+</html>
