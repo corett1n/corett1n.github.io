@@ -169,6 +169,18 @@
       padding: 16px;
     }
 
+    .side-controls {
+      min-width: 0;
+    }
+
+    .side-controls .primary {
+      margin-top: 0;
+    }
+
+    .side-controls .result {
+      overflow-wrap: anywhere;
+    }
+
     .stat small {
       display: block;
       color: var(--muted);
@@ -476,8 +488,8 @@
       .game-layout {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
-          "stats"
-          "main";
+          "main"
+          "stats";
         gap: 12px;
       }
 
@@ -485,6 +497,14 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 7px;
         margin: 0;
+      }
+
+      .side-controls {
+        grid-column: 1 / -1;
+      }
+
+      .side-controls .primary {
+        margin-top: 4px;
       }
 
       .stat {
@@ -603,12 +623,6 @@
               alt="Map of Slovenia" draggable="false">
           </div>
 
-          <button class="primary" id="submitGuess" disabled>
-            Potrjujem
-          </button>
-
-          <div class="result" id="result" aria-live="polite"></div>
-          <button class="primary" id="nextRound" hidden>Naslednje mesto →</button>
         </main>
 
         <div class="stats">
@@ -623,6 +637,12 @@
           <div class="stat">
             <small>⏱️ Preostali čas</small>
             <strong id="timer">10 s</strong>
+          </div>
+
+          <div class="side-controls">
+            <button class="primary" id="submitGuess" disabled>Potrjujem</button>
+            <div class="result" id="result" aria-live="polite"></div>
+            <button class="primary" id="nextRound" hidden>Naslednje mesto →</button>
           </div>
         </div>
       </div>
@@ -662,13 +682,13 @@
   </div>
 
   <script>
-    const TOTAL_ROUNDS = 13;
+    const TOTAL_ROUNDS = 54;
     const POINTS_PER_ROUND = 100;
     const ROUND_TIME = 15;
     const FINAL_CARD_THRESHOLD = TOTAL_ROUNDS * POINTS_PER_ROUND * 0.90; // 90% of total possible points
     const AUTO_NEXT_DELAY = 5000;
 
-    const CITIES = [/*
+    const CITIES = [
       {
         name: "Ljubljana",
         lat: 46.0569, lon: 14.5058,
@@ -868,7 +888,7 @@
         name: "Radovljica",
         lat: 46.342517, lon: 14.172078,
         coatOfArms: "./img/grb-radovljica.png"
-      },*/
+      },
       {
         name: "Bovec",
         lat: 46.33778, lon: 13.55222,
@@ -933,6 +953,11 @@
         name: "Hrastnik",
         lat: 46.14562, lon: 15.08174,
         coatOfArms: "./img/grb-hrastnik.png"
+      },
+      {
+        name: "Cerknica",
+        lat: 45.79639, lon: 14.35806,
+        coatOfArms: "./img/grb-cerknica.png"
       }
     ];
 
@@ -988,7 +1013,7 @@
       $("finish").style.display = "none";
       $("game").hidden = false;
 
-      $("score").textContent = "0";
+      $("score").textContent = "0" + " / " + (TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString();
       $("finalCard").style.display = "none";
 
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1108,7 +1133,7 @@
 
     function calculatePoints(distance) {
       return Math.round(
-        POINTS_PER_ROUND * Math.max(0, 1 - distance / 150)
+        POINTS_PER_ROUND * Math.max(0, 1 - distance / 140)
       );
     }
 
@@ -1174,7 +1199,7 @@
       const points = calculatePoints(distance);
       score += points;
 
-      $("score").textContent = score.toLocaleString();
+      $("score").textContent = score.toLocaleString() + " / " + (TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString();
 
       revealAnswer(city);
 
