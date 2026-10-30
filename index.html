@@ -191,6 +191,23 @@
       font-size: 1.35rem;
     }
 
+    .stat #scorePercentage {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .stat #scorePercentage.low {
+      color: var(--danger);
+      /* Red */
+    }
+
+    .stat #scorePercentage.high {
+      color: var(--accent);
+      /* Green */
+    }
+
     #timer {
       transition: color .2s;
     }
@@ -629,6 +646,7 @@
           <div class="stat">
             <small>🏆 Skupne točke</small>
             <strong id="score">0</strong>
+            <span id="scorePercentage" class="score-percentage"></span>
           </div>
           <div class="stat">
             <small>🎯 Runda</small>
@@ -1013,7 +1031,10 @@
       $("finish").style.display = "none";
       $("game").hidden = false;
 
-      $("score").textContent = "0" + " / " + (TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString();
+      $("score").textContent = "0 / 0";
+
+      $("scorePercentage").textContent = "0%";
+      $("scorePercentage").className = "low";
       $("finalCard").style.display = "none";
 
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1133,7 +1154,7 @@
 
     function calculatePoints(distance) {
       return Math.round(
-        POINTS_PER_ROUND * Math.max(0, 1 - distance / 140)
+        POINTS_PER_ROUND * Math.max(0, 1 - distance / 150)
       );
     }
 
@@ -1199,7 +1220,16 @@
       const points = calculatePoints(distance);
       score += points;
 
-      $("score").textContent = score.toLocaleString() + " / " + (TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString();
+      // Update the maximum possible points only after this round is answered.
+      const availablePoints = (currentIndex + 1) * POINTS_PER_ROUND;
+      $("score").textContent =
+        `${score.toLocaleString()} / ${availablePoints.toLocaleString()}`;
+
+      const percentage = Math.round(score / availablePoints * 100);
+
+      $("scorePercentage").textContent = `${percentage}%`;
+      $("scorePercentage").className =
+        percentage >= 90 ? "high" : "low";
 
       revealAnswer(city);
 
@@ -1223,6 +1253,17 @@
       timerInterval = null;
       answered = true;
       secondsLeft = 0;
+
+      // A timed-out round still counts towards the available points.
+      const availablePoints = (currentIndex + 1) * POINTS_PER_ROUND;
+      $("score").textContent =
+        `${score.toLocaleString()} / ${availablePoints.toLocaleString()}`;
+
+      const percentage = Math.round(score / availablePoints * 100);
+
+      $("scorePercentage").textContent = `${percentage}%`;
+      $("scorePercentage").className =
+        percentage >= 90 ? "high" : "low";
 
       const city = rounds[currentIndex];
 
