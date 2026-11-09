@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="icon" type="image/x-icon" href="img/img-tablice/favicon.png">
+    <title>Registrske tablice 🇸🇮</title>
+
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #141f31;
+            --muted: #9baac0;
+            --accent: #45dfb1;
+            --text: #f4f7fb;
+            --danger: #ff7070;
+            --border: #2b3a50;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 24px 16px 40px;
+            background: radial-gradient(ellipse at top,
+                    #1b3550 0%,
+                    var(--bg) 60%);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .app {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 850;
+            letter-spacing: -.5px;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        /* INTRO */
+
+        .intro {
+            text-align: center;
+            margin: 28px 0;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            font-size: .75rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: -1.8px;
+            margin: 10px 0;
+            line-height: 1.08;
+        }
+
+        .intro p {
+            color: var(--muted);
+            max-width: 550px;
+            margin: 12px auto;
+            line-height: 1.7;
+        }
+
+        /* PANELS */
+
+        .panel,
+        .stat {
+            background: rgba(20, 31, 49, .95);
+            border: 1px solid #2b3a50;
+            border-radius: 18px;
+        }
+
+        .panel {
+            padding: 18px;
+        }
+
+        .rules-card {
+            max-width: 675px;
+            margin: 28px auto;
+            padding: 25px;
+            text-align: left;
+        }
+
+        .rules-card h2 {
+            margin: 0 0 8px;
+            font-size: 1.5rem;
+        }
+
+        .rules-intro {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0 0 22px;
+            max-width: none;
+            text-align: left;
+        }
+
+        .rules-card button.primary {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .rule {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 13px 0;
+            border-bottom: 1px solid #2b3a50;
+        }
+
+        .rule:last-of-type {
+            border-bottom: 0;
+        }
+
+        .rule-icon {
+            flex: 0 0 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #23364a;
+            font-size: 1.3rem;
+        }
+
+        .rule h3 {
+            font-size: .98rem;
+            margin: 0 0 4px;
+        }
+
+        .rule p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* GAME LAYOUT */
+
+        .game-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 210px;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .game-main {
+            min-width: 0;
+        }
+
+        .question-label {
+            color: var(--muted);
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 750;
+        }
+
+        /* COAT OF ARMS */
+
+        .image-panel {
+            position: relative;
+            display: grid;
+            place-items: center;
+            margin-top: 14px;
+            border-radius: 13px;
+            background: #202f43;
+            border: 1px solid #3b4d64;
+            overflow: hidden;
+        }
+
+        .coat-image {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .image-placeholder {
+            color: var(--muted);
+            font-size: .9rem;
+            text-align: center;
+        }
+
+        /* LETTER HINT */
+
+        .hint-title {
+            margin: 25px 0 12px;
+            color: var(--muted);
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 750;
+        }
+
+        .letter-slots {
+            min-height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 12px;
+        }
+
+        .letter-slot {
+            width: 31px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border: 1px solid #3b5269;
+            border-radius: 8px;
+            background: #202f43;
+            color: var(--text);
+            font-size: 1.2rem;
+            font-weight: 850;
+            text-transform: uppercase;
+            transition: background .2s, border-color .2s, color .2s;
+        }
+
+        /* Letters that have been typed */
+        .letter-slot.filled {
+            background: #263449;
+            border-color: #53647a;
+            color: var(--text);
+        }
+
+        /* Correct answer */
+        .letter-slot.correct,
+        .letter-slot.filled.correct {
+            background: rgba(69, 223, 177, 0.2);
+            border-color: #45dfb1;
+            color: #45dfb1;
+        }
+
+        .letter-space {
+            width: 10px;
+            height: 43px;
+            flex: 0 0 14px;
+        }
+
+        /* WRONG ANSWER ANIMATION */
+
+        .letter-slot.wrong {
+            background: #572b35;
+            border-color: var(--danger);
+            color: var(--danger);
+            animation: wrongAnswer .4s ease;
+        }
+
+        @keyframes wrongAnswer {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: translateX(-5px);
+            }
+
+            40%,
+            80% {
+                transform: translateX(5px);
+            }
+
+        }
+
+        .typing-tip {
+            color: var(--muted);
+            font-size: .78rem;
+            text-align: center;
+            margin: 0 0 18px;
+        }
+
+        /* ANSWER INPUT */
+
+        .answer-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .answer-input {
+            min-width: 0;
+            flex: 1;
+            padding: 14px 15px;
+            border: 1px solid #3b4d64;
+            border-radius: 12px;
+            outline: none;
+            color: var(--text);
+            background: #1e2b40;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        .answer-input::placeholder {
+            color: #8292a9;
+        }
+
+        .answer-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(69, 223, 177, .12);
+        }
+
+        .answer-input:disabled {
+            opacity: .5;
+        }
+
+        /* BUTTONS */
+
+        button.primary {
+            border: 0;
+            background: var(--accent);
+            color: #08231c;
+            padding: 14px 20px;
+            font-weight: 850;
+            border-radius: 12px;
+            transition: transform .15s, opacity .15s;
+        }
+
+        button.primary:hover {
+            transform: translateY(-1px);
+        }
+
+        button.primary:disabled {
+            opacity: .35;
+            cursor: not-allowed;
+        }
+
+        button.secondary {
+            border: 1px solid #3b4d64;
+            background: #1e2b40;
+            color: white;
+            padding: 11px 14px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        button.secondary:hover {
+            background: #293b54;
+        }
+
+        .submit-button {
+            min-width: 115px;
+        }
+
+        /* STATISTICS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            align-content: start;
+        }
+
+        .stat {
+            padding: 16px;
+        }
+
+        .stat small {
+            display: block;
+            color: var(--muted);
+            margin-bottom: 5px;
+            font-size: .78rem;
+        }
+
+        .stat strong {
+            font-size: 1.45rem;
+            font-weight: 850;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* TIMER */
+
+        .timer-track {
+            height: 7px;
+            margin-top: 14px;
+            overflow: hidden;
+            border-radius: 99px;
+            background: #2b3a50;
+        }
+
+        .timer-bar {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: var(--accent);
+            transition: width 1s linear, background .2s;
+        }
+
+        #timer {
+            transition: color .2s;
+        }
+
+        #timer.urgent {
+            color: var(--danger);
+            animation: timerPulse .5s infinite alternate;
+        }
+
+        .timer-bar.urgent {
+            background: var(--danger);
+        }
+
+        @keyframes timerPulse {
+            to {
+                opacity: .55;
+            }
+        }
+
+        /* FEEDBACK */
+
+        .result {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 13px;
+            background: #20354a;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+
+            /* Layout */
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .result button {
+            flex-shrink: 0;
+        }
+
+        .result button {
+            flex-shrink: 0;
+        }
+
+        #continueBtn {
+            background: #3498db;
+            color: white;
+            padding: 9px 14px;
+            font-size: 0.85rem;
+            border-radius: 9px;
+        }
+
+        /* Correct answer – green */
+        .result.correct {
+            color: var(--accent);
+        }
+
+        .result.correct strong {
+            color: var(--accent);
+        }
+
+        /* Incorrect answer or timeout – red */
+        .result.wrong,
+        .result.timeout {
+            color: var(--danger);
+        }
+
+        .result.wrong strong,
+        .result.timeout strong {
+            color: var(--danger);
+        }
+
+        .side-controls {
+            min-width: 0;
+        }
+
+        .side-controls button {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        .side-controls .result {
+            margin-top: 12px;
+        }
+
+        .side-copy {
+            color: var(--muted);
+            font-size: .85rem;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        /* BOTTOM CONTROLS */
+
+        .bottom-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: .78rem;
+        }
+
+        /* END SCREEN */
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 5;
+            display: none;
+            place-items: center;
+            padding: 20px;
+            background: rgba(5, 10, 18, .82);
+            backdrop-filter: blur(7px);
+        }
+
+        .overlay.show {
+            display: grid;
+        }
+
+        .result-card {
+            width: min(100%, 420px);
+            padding: 30px;
+            border-radius: 20px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+        }
+
+        .result-emoji {
+            font-size: 3rem;
+        }
+
+        .result-card h2 {
+            margin: 10px 0;
+            font-size: 1.8rem;
+        }
+
+        .result-card p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .result-card .primary {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: #74869e;
+            font-size: .75rem;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+
+        .score-highlight {
+            animation: scoreGain 1s ease;
+        }
+
+        @keyframes scoreGain {
+            0% {
+                color: var(--text);
+                transform: scale(1);
+            }
+
+            35% {
+                color: #45dfb1;
+                transform: scale(1.25);
+            }
+
+            100% {
+                color: var(--text);
+                transform: scale(1);
+            }
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 760px) {
+            body {
+                padding: 14px 12px 30px;
+            }
+
+            .game-layout {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 7px;
+            }
+
+            .stat {
+                padding: 12px 9px;
+            }
+
+            .stat strong {
+                font-size: 1.15rem;
+            }
+
+            .image-panel {
+                min-height: 240px;
+                padding: 14px;
+            }
+
+            .coat-image {
+                height: 210px;
+            }
+
+            .panel {
+                padding: 15px;
+            }
+
+            header {
+                margin-bottom: 15px;
+            }
+
+            .letter-slot {
+                width: 30px;
+                height: 39px;
+            }
+
+            .answer-form {
+                flex-direction: column;
+            }
+
+            .submit-button {
+                width: 100%;
+            }
+
+            .bottom-row {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+
+        <header>
+            <div class="brand">
+                <span style="color:var(--accent)">SLOVENSKE</span> TABLICE 🇸🇮
+            </div>
+        </header>
+
+        <!-- INTRO -->
+
+        <!-- INTRO SCREEN -->
+        <section id="welcome">
+
+            <section class="intro">
+                <div class="eyebrow">KAKO DOBRO POZNAŠ SLOVENSKE REGISTRSKE TABLICE?</div>
+                <h1>Vtipkaj ime kraja.<br>Premagaj čas.</h1>
+                <p>
+                    Znaš prepoznati slovenske kraje na podlagi njihovih registrskih tablic?
+                    Preizkusi se in jih čim več ugani!
+                </p>
+
+                <div class="panel rules-card">
+                    <h2>🎮 Pravila igre</h2>
+
+                    <div class="rule">
+                        <div class="rule-icon">🗺️</div>
+                        <div>
+                            <h3>1. Dobro si oglej registrsko tablico</h3>
+                            <p>Na podlagi prvih dveh črk tablice in grba ugani, za kateri kraj gre.</p>
+                        </div>
+                    </div>
+
+                    <div class="rule">
+                        <div class="rule-icon">⏱️</div>
+                        <div>
+                            <h3>2. Premagaj čas</h3>
+                            <p>Če poteče 10 sekund preden vtipkaš ime kraja, ne dosežeš nobene točke.</p>
+                        </div>
+                    </div>
+
+                    <div class="rule">
+                        <div class="rule-icon">🏆</div>
+                        <div>
+                            <h3>3. Doseži vse točke</h3>
+                            <p>Vsaka runda je vredna natanko eno točko.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rule">
+                        <div class="rule-icon">📸</div>
+                        <div>
+                            <h3>4. Posebna nagrada</h3>
+                            <p>Če dosežeš vse točke, te na koncu čaka prav posebno presenečenje!</p>
+                        </div>
+                    </div>
+
+                    <button class="primary" id="startGame" type="button">ZAČNI →</button>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- GAME -->
+
+        <section id="game" hidden>
+            <section class="game-layout">
+
+                <main class="panel game-main">
+
+                    <div class="question-label">
+                        🛡️ Vtipkaj ime kraja
+                    </div>
+
+                    <!-- COAT OF ARMS -->
+
+                    <div class="image-panel">
+
+                        <img class="coat-image" id="coatImage" src="" alt="City coat of arms">
+
+                        <div class="image-placeholder" id="imagePlaceholder" hidden>
+                            Tablice ne najdem.
+                        </div>
+
+                    </div>
+
+                    <!-- LETTER HINT -->
+
+                    <div class="hint-title">
+                    </div>
+
+                    <div class="letter-slots" id="letterSlots" aria-label="Your answer, one letter per box"></div>
+
+                    <p class="typing-tip">
+                        Vtipkaj ime kraja. Pritisni "Backspace" za brisanje črk.
+                    </p>
+
+                    <!-- ANSWER FORM -->
+
+                    <form class="answer-form" id="answerForm" autocomplete="off">
+
+                        <input class="answer-input" id="answerInput" type="text" placeholder="Vtipkaj ime kraja..."
+                            aria-label="Tvoj odgovor" autocomplete="off" spellcheck="false" required>
+
+                        <button class="primary submit-button" id="submitButton" type="submit">
+                            POTRJUJEM →
+                        </button>
+
+                    </form>
+
+                    <div class="result" id="feedback" aria-live="polite">
+                        <span id="feedbackText"></span>
+
+                        <button class="primary" id="continueBtn" type="button" hidden>
+                            NAPREJ →
+                        </button>
+                    </div>
+
+                    <div class="bottom-row">
+                        <span id="progressText">
+                            Vsak pravilen odgovor ti prinaša eno točko
+                        </span>
+
+                        <button class="secondary" id="restartButton" type="button">
+                            ZAČNI ZNOVA ↻
+                        </button>
+                    </div>
+
+                </main>
+
+                <!-- STATISTICS -->
+
+                <aside class="stats">
+
+                    <div class="stat">
+                        <small>🏆 Skupne točke</small>
+                        <strong id="score">0 / 0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <small>🎯 Runda</small>
+                        <strong id="round">1 / 1</strong>
+                    </div>
+
+                    <div class="stat">
+                        <small>⏱️ Preostali čas</small>
+                        <strong id="timer">10 s</strong>
+
+                        <div class="timer-track">
+                            <div class="timer-bar" id="timerBar"></div>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </section>
+        </section>
+
+    </div>
+
+    <!-- FINAL SCREEN -->
+
+    <div class="overlay" id="endOverlay" role="dialog" aria-modal="true" aria-labelledby="endTitle">
+
+        <div class="result-card">
+
+            <div class="result-emoji">🏆</div>
+
+            <h2 id="endTitle">KONEC!</h2>
+
+            <p id="finalScore"></p>
+
+            <button class="primary" id="playAgainButton" type="button">
+                IGRAJ ZNOVA →
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const CITIES = [
+
+            {name: "Celje", image: "img/img-tablice/ce-celje.png"},
+            {name: "Laško", image: "img/img-tablice/ce-lasko.png"},
+            {name: "Mozirje", image: "img/img-tablice/ce-mozirje.png"},
+            {name: "Šentjur pri Celju", image: "img/img-tablice/ce-sentjurpricelju.png"},
+            {name: "Slovenske Konjice", image: "img/img-tablice/ce-slovenskekonjice.png"},
+            {name: "Šmarje pri Jelšah", image: "img/img-tablice/ce-smarjeprijelsah.png"},
+            {name: "Velenje", image: "img/img-tablice/ce-velenje.png"},
+            {name: "Žalec", image: "img/img-tablice/ce-zalec.png"},
+            {name: "Ajdovščina", image: "img/img-tablice/go-ajdovscina.png"},
+            {name: "Idrija", image: "img/img-tablice/go-idrija.png"},
+            {name: "Nova Gorica", image: "img/img-tablice/go-novagorica.png"},
+            {name: "Tolmin", image: "img/img-tablice/go-tolmin.png"},
+            {name: "Brežice", image: "img/img-tablice/kk-brezice.png"},
+            {name: "Krško", image: "img/img-tablice/kk-krsko.png"},
+            {name: "Sevnica", image: "img/img-tablice/kk-sevnica.png"},
+            {name: "Ilirska Bistrica", image: "img/img-tablice/kp-ilirskabistrica.png"},
+            {name: "Izola", image: "img/img-tablice/kp-izola.png"},
+            {name: "Koper", image: "img/img-tablice/kp-koper.png"},
+            {name: "Piran", image: "img/img-tablice/kp-piran.png"},
+            {name: "Sežana", image: "img/img-tablice/kp-sezana.png"},
+            {name: "Jesenice", image: "img/img-tablice/kr-jesenice.png"},
+            {name: "Kranj", image: "img/img-tablice/kr-kranj.png"},
+            {name: "Radovljica", image: "img/img-tablice/kr-radovljica.png"},
+            {name: "Škofja Loka", image: "img/img-tablice/kr-skofjaloka.png"},
+            {name: "Tržič", image: "img/img-tablice/kr-trzic.png"},
+            {name: "Cerknica", image: "img/img-tablice/lj-cerknica.png"},
+            {name: "Domžale", image: "img/img-tablice/lj-domzale.png"},
+            {name: "Grosuplje", image: "img/img-tablice/lj-grosuplje.png"},
+            {name: "Hrastnik", image: "img/img-tablice/lj-hrastnik.png"},
+            {name: "Kamnik", image: "img/img-tablice/lj-kamnik.png"},
+            {name: "Kočevje", image: "img/img-tablice/lj-kocevje.png"},
+            {name: "Litija", image: "img/img-tablice/lj-litija.png"},
+            {name: "Ljubljana", image: "img/img-tablice/lj-ljubljana.png"},
+            {name: "Logatec", image: "img/img-tablice/lj-logatec.png"},
+            {name: "Ribnica", image: "img/img-tablice/lj-ribnica.png"},
+            {name: "Trbovlje", image: "img/img-tablice/lj-trbovlje.png"},
+            {name: "Vrhnika", image: "img/img-tablice/lj-vrhnika.png"},
+            {name: "Zagorje ob Savi", image: "img/img-tablice/lj-zagorjeobsavi.png"},
+            {name: "Lenart", image: "img/img-tablice/mb-lenart.png"},
+            {name: "Maribor", image: "img/img-tablice/mb-maribor.png"},
+            {name: "Ormož", image: "img/img-tablice/mb-ormoz.png"},
+            {name: "Pesnica", image: "img/img-tablice/mb-pesnica.png"},
+            {name: "Ptuj", image: "img/img-tablice/mb-ptuj.png"},
+            {name: "Ruše", image: "img/img-tablice/mb-ruse.png"},
+            {name: "Slovenska Bistrica", image: "img/img-tablice/mb-slovenskabistrica.png"},
+            {name: "Gornja Radgona", image: "img/img-tablice/ms-gornjaradgona.png"},
+            {name: "Lendava", image: "img/img-tablice/ms-lendava.png"},
+            {name: "Ljutomer", image: "img/img-tablice/ms-ljutomer.png"},
+            {name: "Murska Sobota", image: "img/img-tablice/ms-murskasobota.png"},
+            {name: "Črnomelj", image: "img/img-tablice/nm-crnomelj.png"},
+            {name: "Metlika", image: "img/img-tablice/nm-metlika.png"},
+            {name: "Novo mesto", image: "img/img-tablice/nm-novomesto.png"},
+            {name: "Trebnje", image: "img/img-tablice/nm-trebnje.png"},
+            {name: "Postojna", image: "img/img-tablice/po-postojna.png"},
+            {name: "Dravograd", image: "img/img-tablice/sg-dravograd.png"},
+            {name: "Radlje ob Dravi", image: "img/img-tablice/sg-radljeobdravi.png"},
+            {name: "Ravne na Koroškem", image: "img/img-tablice/sg-ravnenakoroskem.png"},
+            {name: "Slovenj Gradec", image: "img/img-tablice/sg-slovenjgradec.png"},
+
+
+            // Add more cities here:
+            // { name: "Novo mesto", image: "grbi/Novo mesto.png" },
+
+        ];
+
+        const ROUND_TIME = 10;
+
+        // ELEMENTS
+
+        const scoreEl = document.getElementById("score");
+        const roundEl = document.getElementById("round");
+        const timeEl = document.getElementById("timer");
+        const timerBar = document.getElementById("timerBar");
+
+        const coatImage = document.getElementById("coatImage");
+        const imagePlaceholder = document.getElementById("imagePlaceholder");
+
+        const letterSlots = document.getElementById("letterSlots");
+
+        const answerForm = document.getElementById("answerForm");
+        const answerInput = document.getElementById("answerInput");
+        const submitButton = document.getElementById("submitButton");
+
+        const feedback = document.getElementById("feedback");
+        const continueBtn = document.getElementById("continueBtn");
+        const progressText = document.getElementById("progressText");
+        const feedbackText = document.getElementById("feedbackText");
+
+        const restartButton = document.getElementById("restartButton");
+
+        const endOverlay = document.getElementById("endOverlay");
+        const finalScore = document.getElementById("finalScore");
+        const playAgainButton = document.getElementById("playAgainButton");
+
+
+
+        // GAME VARIABLES
+
+        let questions = [];
+        let currentIndex = 0;
+        let score = 0;
+
+        let secondsLeft = ROUND_TIME;
+        let timerInterval = null;
+
+        let acceptingAnswer = false;
+
+        // NORMALIZE CITY NAMES
+
+        function normalizeName(value) {
+
+            return value
+                .toLocaleLowerCase("sl")
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^a-z0-9]/g, "");
+
+        }
+
+        // COUNT LETTERS
+
+        function getLetterCount(name) {
+
+            return [...name].filter(character =>
+                /[\p{L}\p{N}]/u.test(character)
+            ).length;
+
+        }
+
+        // SHUFFLE ARRAY
+
+        function shuffle(array) {
+
+            const copy = [...array];
+
+            for (let i = copy.length - 1; i > 0; i--) {
+
+                const j = Math.floor(Math.random() * (i + 1));
+
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+
+            }
+
+            return copy;
+
+        }
+
+        // FEEDBACK
+
+        function setFeedback(message, type = "") {
+
+            feedbackText.innerHTML = message;
+            feedback.className = "result";
+
+            if (type) {
+                feedback.classList.add(type);
+            }
+
+            feedback.style.display = "flex";
+
+        }
+
+        // UPDATE STATISTICS
+
+        function updateStats() {
+
+            scoreEl.textContent = `${score}`;
+
+            roundEl.textContent =
+                `${Math.min(currentIndex + 1, questions.length)} / ${questions.length}`;
+
+        }
+
+        // CREATE LETTER BOXES
+
+        function renderLengthHint(name) {
+
+            letterSlots.replaceChildren();
+
+            for (const character of name) {
+
+                if (character === " ") {
+
+                    const space = document.createElement("span");
+                    space.className = "letter-space";
+
+                    letterSlots.appendChild(space);
+
+                } else {
+
+                    const slot = document.createElement("span");
+
+                    slot.className = "letter-slot";
+                    slot.setAttribute("aria-hidden", "true");
+
+                    letterSlots.appendChild(slot);
+
+                }
+
+            }
+
+            letterSlots.setAttribute(
+                "aria-label",
+                `${getLetterCount(name)} answer letters`
+            );
+
+            updateLetterSlots();
+
+        }
+
+        // DISPLAY TYPED LETTERS INSIDE BOXES
+
+        function updateLetterSlots() {
+
+            const typedLetters = [...answerInput.value]
+                .filter(character => /[\p{L}\p{N}]/u.test(character));
+
+            const slots = letterSlots.querySelectorAll(".letter-slot");
+
+            slots.forEach((slot, index) => {
+
+                const letter = typedLetters[index] || "";
+
+                slot.textContent = letter;
+
+                slot.classList.toggle(
+                    "filled",
+                    Boolean(letter)
+                );
+
+            });
+
+        }
+
+        // TIMER
+
+        function startTimer() {
+
+            clearInterval(timerInterval);
+
+            secondsLeft = ROUND_TIME;
+
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+
+                secondsLeft--;
+
+                updateTimerDisplay();
+
+                if (secondsLeft <= 0) {
+
+                    clearInterval(timerInterval);
+
+                    handleTimeout();
+
+                }
+
+            }, 1000);
+
+        }
+
+        function updateTimerDisplay() {
+
+            timeEl.textContent = `${secondsLeft} s`;
+
+            const percentage = Math.max(
+                0,
+                (secondsLeft / ROUND_TIME) * 100
+            );
+
+            timerBar.style.width = `${percentage}%`;
+
+            if (secondsLeft <= 3) {
+
+                timerBar.classList.add("urgent");
+                timeEl.classList.add("urgent");
+
+            } else {
+
+                timerBar.classList.remove("urgent");
+                timeEl.classList.remove("urgent");
+
+            }
+
+        }
+
+        // SHOW QUESTION
+
+        function showQuestion() {
+
+            if (currentIndex >= questions.length) {
+
+                finishGame();
+
+                return;
+
+            }
+
+            const city = questions[currentIndex];
+
+            acceptingAnswer = true;
+
+            answerInput.disabled = false;
+            submitButton.disabled = false;
+
+            answerInput.value = "";
+
+            continueBtn.hidden = true;
+
+            coatImage.hidden = false;
+            imagePlaceholder.hidden = true;
+
+            coatImage.src = city.image;
+            coatImage.alt = "Coat of arms";
+
+            renderLengthHint(city.name);
+
+            updateStats();
+
+            feedback.style.display = "none";
+
+            progressText.textContent =
+                "Vsak pravilen odgovor ti prinaša eno točko";
+
+            startTimer();
+
+            answerInput.focus();
+
+        }
+
+        // TIME OUT
+
+        function handleTimeout() {
+
+            clearInterval(timerInterval);
+
+            acceptingAnswer = false;
+
+            answerInput.disabled = true;
+            submitButton.disabled = true;
+
+            const correctCity = questions[currentIndex].name;
+
+            setFeedback(
+                `⏰ Čas je potekel! Pravilen odgovor je: <strong>${correctCity}</strong>`,
+                "timeout"
+            );
+
+            progressText.textContent = "Zapomni si pravilen odgovor!";
+
+            continueBtn.hidden = false;
+
+        }
+
+        // CORRECT ANSWER
+
+        function handleCorrectAnswer() {
+
+            acceptingAnswer = false;
+
+            // Turn the letter slots green after a correct answer
+            letterSlots.querySelectorAll(".letter-slot").forEach(slot => {
+                slot.classList.add("correct");
+            });
+
+            clearInterval(timerInterval);
+
+            clearInterval(timerInterval);
+
+            score++;
+            scoreEl.textContent = `${score}`;
+
+            // Animate the score when a point is earned
+            scoreEl.classList.remove("score-highlight");
+            void scoreEl.offsetWidth;
+            scoreEl.classList.add("score-highlight");
+
+            answerInput.disabled = true;
+            submitButton.disabled = true;
+
+            setFeedback(
+                `✓ Pravilno, ${questions[currentIndex].name}. +1 točka!`,
+                "correct"
+            );
+
+            progressText.textContent = "Bravo!";
+
+            setTimeout(nextQuestion, 1100);
+
+        }
+
+        // NEXT QUESTION
+
+        function nextQuestion() {
+
+            currentIndex++;
+
+            if (currentIndex >= questions.length) {
+
+                finishGame();
+
+            } else {
+
+                showQuestion();
+
+            }
+
+        }
+
+        // FINISH GAME
+
+        function finishGame() {
+
+            clearInterval(timerInterval);
+
+            acceptingAnswer = false;
+
+            answerInput.disabled = true;
+            submitButton.disabled = true;
+
+            roundEl.textContent =
+                `${questions.length} / ${questions.length}`;
+
+            finalScore.textContent =
+                `Dosegla si ${score} od skupnih ${questions.length} točk.`;
+
+            endOverlay.classList.add("show");
+
+        }
+
+        // START / RESTART GAME
+
+        // START / RESTART GAME
+
+        function startGame() {
+
+            // Hide the intro screen
+            document.getElementById("welcome").hidden = true;
+
+            // Show the game screen
+            document.getElementById("game").hidden = false;
+
+            // Reset game variables
+            currentIndex = 0;
+            score = 0;
+
+            // Shuffle all cities
+            questions = shuffle(CITIES);
+
+            // Reset statistics
+            scoreEl.textContent = score;
+
+            // Hide the end screen
+            endOverlay.classList.remove("show");
+
+            // Start the first question
+            showQuestion();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        continueBtn.addEventListener("click", () => {
+            continueBtn.hidden = true;
+            nextQuestion();
+        });
+
+        // ANSWER INPUT
+
+        answerInput.addEventListener("input", updateLetterSlots);
+
+        // CHECK ANSWER
+
+        answerForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            if (!acceptingAnswer) return;
+
+            const guess = normalizeName(
+                answerInput.value.trim()
+            );
+
+            if (!guess) return;
+
+            const correctAnswer = normalizeName(
+                questions[currentIndex].name
+            );
+
+            if (guess === correctAnswer) {
+
+                handleCorrectAnswer();
+
+            } else {
+
+                setFeedback(
+                    "✕ Ne bo šlo — poskusi znova!",
+                    "wrong"
+                );
+
+                // Trigger the red shake animation
+                const slots = letterSlots.querySelectorAll(".letter-slot");
+
+                slots.forEach(slot => {
+
+                    slot.classList.remove("wrong");
+
+                    // Restart animation
+                    void slot.offsetWidth;
+
+                    slot.classList.add("wrong");
+
+                });
+
+                // Remove the animation after it finishes
+                setTimeout(() => {
+
+                    slots.forEach(slot => {
+                        slot.classList.remove("wrong");
+                    });
+
+                }, 450);
+
+                answerInput.select();
+
+            }
+
+        });
+
+        // IMAGE ERROR
+
+        coatImage.addEventListener("error", () => {
+
+            coatImage.hidden = true;
+
+            imagePlaceholder.hidden = false;
+
+            imagePlaceholder.textContent =
+                `Image not found: ${questions[currentIndex]?.image || ""}`;
+
+        });
+
+        // BUTTONS
+
+        restartButton.addEventListener("click", startGame);
+
+        playAgainButton.addEventListener("click", startGame);
+
+        // INITIALIZE
+
+        document.getElementById("startGame").addEventListener("click", startGame);
+
+    </script>
+
+</body>
+
+</html>

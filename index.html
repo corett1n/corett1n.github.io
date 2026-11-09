@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+
+    <title>Slovenske igre 🇸🇮</title>
+
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #141f31;
+            --muted: #9baac0;
+            --accent: #45dfb1;
+            --text: #f4f7fb;
+            --border: #2b3a50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            background:
+                radial-gradient(circle at 50% 0%, #1b2b43 0%, transparent 45%),
+                var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 42px;
+        }
+
+        .flag {
+            font-size: 3rem;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 850;
+            letter-spacing: -1.5px;
+            margin-bottom: 12px;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+
+        .game-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 290px;
+            padding: 28px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .2s ease,
+                        border-color .2s ease,
+                        background .2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: #19283c;
+        }
+
+        .game-icon {
+            width: 65px;
+            height: 65px;
+            display: grid;
+            place-items: center;
+            background: #203449;
+            border: 1px solid #344d63;
+            border-radius: 16px;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .game-card h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .game-card p {
+            color: var(--muted);
+            font-size: .95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .play-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding: 13px 16px;
+            border-radius: 10px;
+            background: #203c39;
+            color: var(--accent);
+            font-size: .95rem;
+            font-weight: 800;
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+            transition: transform .2s ease;
+        }
+
+        .game-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .footer {
+            margin-top: 38px;
+            color: #718198;
+            font-size: .82rem;
+        }
+
+        @media (max-width: 650px) {
+            .games {
+                grid-template-columns: 1fr;
+            }
+
+            .game-card {
+                min-height: 250px;
+            }
+
+            .header {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="flag">🇸🇮</div>
+
+            <h1><span>SLOVENSKE </span>IGRE</h1>
+
+            <p class="subtitle">
+                Kako dobro poznaš Slovenijo?
+                Izberi eno izmed spodnjih iger in preizkusi svoje poznavanje Slovenije.
+            </p>
+        </header>
+
+        <section class="games">
+
+            <!-- MAP GAME -->
+            <a href="map.html" class="game-card">
+
+                <div class="game-icon">🗺️</div>
+
+                <h2><span>Mesta</h2>
+
+                <p>
+                    Na zemljevidu čim bolj natančno označi lokacijo mesta.
+                    Bližje kot boš dejanski lokaciji, več točk boš dosegel.
+                </p>
+
+                <div class="play-button">
+                    <span>IGRAJ</span>
+                    <span class="arrow">→</span>
+                </div>
+
+            </a>
+
+            <!-- CAR PLATES GAME -->
+            <a href="tablice.html" class="game-card">
+
+                <div class="game-icon">🚗</div>
+
+                <h2>Registrske tablice</h2>
+
+                <p>
+                    Prepoznaj slovenske registrske tablice
+                    in vtipkaj ime mesta registracije.
+                    Koliko jih lahko uganeš?
+                </p>
+
+                <div class="play-button">
+                    <span>IGRAJ</span>
+                    <span class="arrow">→</span>
+                </div>
+
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
