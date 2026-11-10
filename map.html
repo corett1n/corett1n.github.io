@@ -498,6 +498,16 @@
       margin-top: 30px;
     }
 
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
     @media(max-width: 760px) {
       body {
         padding: 14px 12px 30px;
@@ -697,6 +707,10 @@
     </section>
 
   </div>
+
+  <footer>
+    <a href="index.html">← Nazaj na glavno stran</a>
+  </footer>
 
   <script>
     const TOTAL_ROUNDS = 65;
@@ -1091,7 +1105,7 @@
       $("scorePercentage").className = "low";
       $("finalCard").style.display = "none";
 
-      window.scrollTo({top: 0, behavior: "smooth"});
+      window.scrollTo({ top: 0, behavior: "smooth" });
       loadRound();
     }
 
@@ -1159,7 +1173,7 @@
 
       if (x < 0 || x > 1 || y < 0 || y > 1) return;
 
-      guess = {x, y};
+      guess = { x, y };
 
       $("submitGuess").disabled = false;
 
@@ -1388,7 +1402,7 @@
         showFinalCard();
       }
 
-      window.scrollTo({top: 0, behavior: "smooth"});
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function returnToRules() {
@@ -1398,7 +1412,7 @@
       $("finish").style.display = "none";
       $("welcome").hidden = false;
 
-      window.scrollTo({top: 0, behavior: "smooth"});
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     $("map").addEventListener("click", pointOnMap);
