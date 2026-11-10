@@ -603,7 +603,7 @@
           <div class="rule-icon">🏆</div>
           <div>
             <h3>3. Doseži točke</h3>
-            <p>Vsaka runda je vredna največ 100 točk. Bližje kot boš dejanski lokaciji mesta, več točk boš dosegla.
+            <p>Vsaka runda je vredna največ 100 točk. Bližje kot boš dejanski lokaciji mesta, več točk boš dosegel.
             </p>
           </div>
         </div>
@@ -1293,7 +1293,7 @@
 
       result.innerHTML = `
     <strong>+${points.toLocaleString()} točk!</strong><br>
-    Oddaljena si <b>${Math.round(distance)} km</b>.
+    Oddaljenost: <b>${Math.round(distance)} km</b>.
   `;
 
       $("submitGuess").hidden = true;
@@ -1381,7 +1381,7 @@
         `${score.toLocaleString()} točk`;
 
       $("finalMessage").textContent =
-        `Dosegla si ${score.toLocaleString()} od ` +
+        `Dosegel si ${score.toLocaleString()} od ` +
         `${(TOTAL_ROUNDS * POINTS_PER_ROUND).toLocaleString()} možnih točk, za nagrado pa jih potrebuješ vsaj ${FINAL_CARD_THRESHOLD.toLocaleString()}.`;
 
       if (score >= FINAL_CARD_THRESHOLD) {
