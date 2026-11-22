@@ -1,2937 +1,1688 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="sl">
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color" content="#0b1220">
-
-
+    <meta name="theme-color" content="#0b1220" />
 
     <title>Slovenski pregovori 🇸🇮</title>
 
-
-
     <style>
-        :root {
+      :root {
+        --bg: #0b1220;
 
-            --bg: #0b1220;
+        --panel: #141f31;
 
-            --panel: #141f31;
+        --muted: #9baac0;
 
-            --muted: #9baac0;
+        --accent: #45dfb1;
 
-            --accent: #45dfb1;
+        --text: #f4f7fb;
 
-            --text: #f4f7fb;
+        --danger: #ff7070;
 
-            --danger: #ff7070;
+        --border: #2b3a50;
 
-            --border: #2b3a50;
+        --blue: #3498db;
+      }
 
-            --blue: #3498db;
+      [hidden] {
+        display: none !important;
+      }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+
+        min-height: 100vh;
+
+        padding: 24px 16px 40px;
+
+        background: radial-gradient(
+          ellipse at top,
+
+          #1b3550 0%,
+
+          var(--bg) 60%
+        );
+
+        color: var(--text);
+
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      button {
+        font: inherit;
+
+        cursor: pointer;
+      }
+
+      .app {
+        max-width: 1050px;
+
+        margin: auto;
+      }
+
+      /* HEADER */
+
+      header {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 16px;
+
+        margin-bottom: 25px;
+      }
+
+      .brand {
+        font-size: 1.25rem;
+
+        font-weight: 850;
+
+        letter-spacing: -0.5px;
+      }
+
+      .brand span {
+        color: var(--accent);
+      }
+
+      /* INTRO */
+
+      .intro {
+        text-align: center;
+
+        margin: 28px 0;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+
+        text-transform: uppercase;
+
+        letter-spacing: 3px;
+
+        font-weight: 800;
+
+        font-size: 0.75rem;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+
+        letter-spacing: -1.8px;
+
+        margin: 10px 0;
+
+        line-height: 1.08;
+      }
+
+      .intro > p {
+        color: var(--muted);
+
+        max-width: 550px;
+
+        margin: 12px auto;
+
+        line-height: 1.7;
+      }
+
+      /* PANELS */
+
+      .panel,
+      .stat {
+        background: rgba(20, 31, 49, 0.95);
+
+        border: 1px solid var(--border);
+
+        border-radius: 18px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .rules-card {
+        max-width: 675px;
+
+        margin: 28px auto;
+
+        padding: 25px;
+
+        text-align: left;
+      }
+
+      .rules-card h2 {
+        margin: 0 0 8px;
+
+        font-size: 1.5rem;
+      }
+
+      .rules-card button.primary {
+        width: 100%;
+
+        margin-top: 15px;
+      }
+
+      .rule {
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding: 13px 0;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .rule:last-of-type {
+        border-bottom: 0;
+      }
+
+      .rule-icon {
+        flex: 0 0 42px;
+
+        height: 42px;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: 12px;
+
+        background: #23364a;
+
+        font-size: 1.3rem;
+      }
+
+      .rule h3 {
+        font-size: 0.98rem;
+
+        margin: 0 0 4px;
+      }
+
+      .rule p {
+        color: var(--muted);
+
+        font-size: 0.88rem;
+
+        line-height: 1.6;
+
+        margin: 0;
+      }
+
+      /* GAME LAYOUT */
+
+      .game-layout {
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) 210px;
+
+        gap: 18px;
+
+        align-items: start;
+      }
+
+      .game-main {
+        min-width: 0;
+      }
+
+      .question-label {
+        color: var(--muted);
+
+        font-size: 0.8rem;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+
+        font-weight: 750;
+      }
+
+      /* PROVERB EXPLANATION */
+
+      .explanation-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 190px;
+        margin: 14px 0 22px;
+        padding: 28px;
+        border-radius: 13px;
+        background: #202f43;
+        border: 1px solid #3b4d64;
+        color: var(--text);
+        font-size: clamp(1.5rem, 3.2vw, 1.75rem);
+        font-weight: 650;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      /* QUESTION */
+
+      .question-title {
+        margin: 22px 0 14px;
+
+        color: var(--text);
+
+        font-size: 1.05rem;
+
+        font-weight: 750;
+
+        text-align: center;
+      }
+
+      /* ANSWERS */
+
+      .answers {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 11px;
+      }
+
+      .answer-option {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        min-height: 65px;
+
+        padding: 13px 15px;
+
+        border: 1px solid #3b4d64;
+
+        border-radius: 12px;
+
+        background: #1e2b40;
+
+        color: var(--text);
+
+        text-align: left;
+
+        font-size: 0.94rem;
+
+        font-weight: 650;
+
+        transition:
+          * background * 0.2s,
+          border-color 0.2s,
+          transform 0.15s;
+      }
+
+      .answer-option:hover:not(:disabled) {
+        background: #293b54;
+
+        border-color: var(--accent);
+
+        transform: translateY(-2px);
+      }
+
+      .answer-option:disabled {
+        cursor: default;
+      }
+
+      .answer-letter {
+        flex: 0 0 30px;
+
+        height: 30px;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: 8px;
+
+        background: #30435b;
+
+        color: var(--accent);
+
+        font-weight: 850;
+      }
+
+      .answer-option.correct {
+        background: rgba(69, 223, 177, 0.15);
+
+        border-color: var(--accent);
+
+        color: var(--accent);
+      }
+
+      .answer-option.correct .answer-letter {
+        background: var(--accent);
+
+        color: #08231c;
+      }
+
+      .answer-option.wrong {
+        background: rgba(255, 112, 112, 0.12);
+
+        border-color: var(--danger);
+
+        color: var(--danger);
+      }
+
+      .answer-option.wrong .answer-letter {
+        background: var(--danger);
+
+        color: #301010;
+      }
+
+      /* STATISTICS */
+
+      .stats {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        align-content: start;
+      }
+
+      .stat {
+        padding: 16px;
+      }
+
+      .stat small {
+        display: block;
+
+        color: var(--muted);
+
+        margin-bottom: 5px;
+
+        font-size: 0.78rem;
+      }
+
+      .stat strong {
+        font-size: 1.45rem;
+
+        font-weight: 850;
+
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* TIMER */
+
+      .timer-track {
+        height: 7px;
+
+        margin-top: 14px;
+
+        overflow: hidden;
+
+        border-radius: 99px;
+
+        background: var(--border);
+      }
+
+      .timer-bar {
+        width: 100%;
+
+        height: 100%;
+
+        border-radius: inherit;
+
+        background: var(--accent);
+
+        transition:
+          width 1s linear,
+          * background * 0.2s;
+      }
+
+      #timer {
+        transition: color 0.2s;
+      }
+
+      #timer.urgent {
+        color: var(--danger);
+
+        animation: timerPulse 0.5s infinite alternate;
+      }
+
+      .timer-bar.urgent {
+        background: var(--danger);
+      }
+
+      @keyframes timerPulse {
+        to {
+          opacity: 0.55;
         }
+      }
 
+      /* FEEDBACK */
 
+      .result {
+        display: flex;
 
-        [hidden] {
+        align-items: center;
 
-            display: none !important;
+        justify-content: space-between;
 
-        }
+        flex-wrap: wrap;
 
+        gap: 12px;
 
+        margin-top: 16px;
 
-        * {
+        padding: 13px 15px;
 
-            box-sizing: border-box;
+        border-radius: 13px;
 
-        }
+        background: #20354a;
 
+        line-height: 1.6;
+      }
 
+      .result.correct {
+        color: var(--accent);
+      }
 
-        body {
+      .result.wrong,
+      .result.timeout {
+        color: var(--danger);
+      }
 
-            margin: 0;
+      .result-text {
+        flex: 1;
 
-            min-height: 100vh;
+        min-width: 0;
+      }
 
-            padding: 24px 16px 40px;
+      .result strong {
+        display: block;
 
+        margin-bottom: 2px;
+      }
 
+      /* BUTTONS */
 
-            background:
+      button.primary {
+        border: 0;
 
-                radial-gradient(ellipse at top,
+        background: var(--accent);
 
-                    #1b3550 0%,
+        color: #08231c;
 
-                    var(--bg) 60%);
+        padding: 14px 20px;
 
+        font-weight: 850;
 
+        border-radius: 12px;
 
-            color: var(--text);
+        transition:
+          transform 0.15s,
+          opacity 0.15s;
+      }
 
+      button.primary:hover {
+        transform: translateY(-1px);
+      }
 
+      button.primary:disabled {
+        opacity: 0.35;
 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        cursor: not-allowed;
+      }
 
-                "Segoe UI", sans-serif;
+      button.secondary {
+        border: 1px solid #3b4d64;
 
-        }
+        background: #1e2b40;
 
+        color: white;
 
+        padding: 11px 14px;
 
-        button {
+        border-radius: 12px;
 
-            font: inherit;
+        font-weight: 700;
+      }
 
-            cursor: pointer;
+      button.secondary:hover {
+        background: #293b54;
+      }
 
-        }
+      #continueBtn {
+        background: var(--blue);
 
+        color: white;
 
+        padding: 10px 16px;
 
-        .app {
+        font-size: 0.85rem;
 
-            max-width: 1050px;
+        border-radius: 9px;
+      }
 
-            margin: auto;
+      .bottom-row {
+        display: flex;
 
-        }
+        justify-content: space-between;
 
+        align-items: center;
 
+        gap: 12px;
 
-        /* HEADER */
+        margin-top: 18px;
+      }
 
+      .bottom-row span {
+        color: var(--muted);
 
+        font-size: 0.82rem;
+      }
 
-        header {
+      /* PROGRESS */
 
-            display: flex;
+      .progress-track {
+        height: 5px;
 
-            justify-content: space-between;
+        margin-top: 17px;
 
-            align-items: center;
+        overflow: hidden;
 
-            gap: 16px;
+        border-radius: 99px;
 
-            margin-bottom: 25px;
+        background: var(--border);
+      }
 
-        }
+      .progress-bar {
+        width: 0%;
 
+        height: 100%;
 
+        background: var(--accent);
 
-        .brand {
+        transition: width 0.3s;
+      }
 
-            font-size: 1.25rem;
+      /* FINAL SCREEN */
 
-            font-weight: 850;
+      .final-card {
+        max-width: 650px;
 
-            letter-spacing: -.5px;
+        margin: 40px auto;
 
-        }
+        padding: 35px 25px;
 
+        text-align: center;
+      }
 
+      .final-icon {
+        font-size: 3.5rem;
 
-        .brand span {
+        margin-bottom: 10px;
+      }
 
-            color: var(--accent);
+      .final-score {
+        margin: 25px 0;
 
-        }
+        font-size: 3.5rem;
 
+        font-weight: 900;
 
+        color: var(--accent);
 
-        /* INTRO */
+        letter-spacing: -2px;
+      }
 
+      .final-description {
+        color: var(--muted);
 
+        line-height: 1.7;
 
-        .intro {
+        margin-bottom: 25px;
+      }
 
-            text-align: center;
+      .final-card button {
+        margin: 5px;
+      }
 
-            margin: 28px 0;
+      /* FOOTER */
 
-        }
+      footer {
+        margin-top: 35px;
 
+        text-align: center;
+      }
 
+      footer a {
+        color: var(--muted);
 
-        .eyebrow {
+        text-decoration: none;
 
-            color: var(--accent);
+        font-size: 0.85rem;
 
-            text-transform: uppercase;
+        transition: color 0.2s;
+      }
 
-            letter-spacing: 3px;
+      footer a:hover {
+        color: var(--accent);
+      }
 
-            font-weight: 800;
+      /* RESPONSIVE */
 
-            font-size: .75rem;
-
-        }
-
-
-
-        h1 {
-
-            font-size: clamp(2rem, 5vw, 3.5rem);
-
-            letter-spacing: -1.8px;
-
-            margin: 10px 0;
-
-            line-height: 1.08;
-
-        }
-
-
-
-        .intro>p {
-
-            color: var(--muted);
-
-            max-width: 550px;
-
-            margin: 12px auto;
-
-            line-height: 1.7;
-
-        }
-
-
-
-        /* PANELS */
-
-
-
-        .panel,
-
-        .stat {
-
-            background: rgba(20, 31, 49, .95);
-
-            border: 1px solid var(--border);
-
-            border-radius: 18px;
-
-        }
-
-
-
-        .panel {
-
-            padding: 22px;
-
-        }
-
-
-
-        .rules-card {
-
-            max-width: 675px;
-
-            margin: 28px auto;
-
-            padding: 25px;
-
-            text-align: left;
-
-        }
-
-
-
-        .rules-card h2 {
-
-            margin: 0 0 8px;
-
-            font-size: 1.5rem;
-
-        }
-
-
-
-        .rules-card button.primary {
-
-            width: 100%;
-
-            margin-top: 15px;
-
-        }
-
-
-
-        .rule {
-
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 14px;
-
-            padding: 13px 0;
-
-            border-bottom: 1px solid var(--border);
-
-        }
-
-
-
-        .rule:last-of-type {
-
-            border-bottom: 0;
-
-        }
-
-
-
-        .rule-icon {
-
-            flex: 0 0 42px;
-
-            height: 42px;
-
-            display: grid;
-
-            place-items: center;
-
-            border-radius: 12px;
-
-            background: #23364a;
-
-            font-size: 1.3rem;
-
-        }
-
-
-
-        .rule h3 {
-
-            font-size: .98rem;
-
-            margin: 0 0 4px;
-
-        }
-
-
-
-        .rule p {
-
-            color: var(--muted);
-
-            font-size: .88rem;
-
-            line-height: 1.6;
-
-            margin: 0;
-
-        }
-
-
-
-        /* GAME LAYOUT */
-
-
-
+      @media (max-width: 750px) {
         .game-layout {
-
-            display: grid;
-
-            grid-template-columns: minmax(0, 1fr) 210px;
-
-            gap: 18px;
-
-            align-items: start;
-
+          grid-template-columns: 1fr;
         }
-
-
-
-        .game-main {
-
-            min-width: 0;
-
-        }
-
-
-
-        .question-label {
-
-            color: var(--muted);
-
-            font-size: .8rem;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.5px;
-
-            font-weight: 750;
-
-        }
-
-
-
-        /* IMAGE */
-
-
-
-        .image-panel {
-
-            position: relative;
-
-            display: grid;
-
-            place-items: center;
-
-            margin-top: 14px;
-
-            border-radius: 13px;
-
-            background: #202f43;
-
-            border: 1px solid #3b4d64;
-
-            overflow: hidden;
-
-            aspect-ratio: 16 / 9;
-
-        }
-
-
-
-        .question-image {
-
-            display: block;
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-        }
-
-
-
-        .image-placeholder {
-
-            color: var(--muted);
-
-            font-size: .9rem;
-
-            text-align: center;
-
-            padding: 20px;
-
-        }
-
-
-
-        /* QUESTION */
-
-
-
-        .question-title {
-
-            margin: 22px 0 14px;
-
-            color: var(--text);
-
-            font-size: 1.05rem;
-
-            font-weight: 750;
-
-            text-align: center;
-
-        }
-
-
-
-        /* ANSWERS */
-
-
-
-        .answers {
-
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 11px;
-
-        }
-
-
-
-        .answer-option {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            min-height: 65px;
-
-            padding: 13px 15px;
-
-
-
-            border: 1px solid #3b4d64;
-
-            border-radius: 12px;
-
-
-
-            background: #1e2b40;
-
-            color: var(--text);
-
-
-
-            text-align: left;
-
-            font-size: .94rem;
-
-            font-weight: 650;
-
-
-
-            transition:
-
-                *background* .2s,
-
-                border-color .2s,
-
-                transform .15s;
-
-        }
-
-
-
-        .answer-option:hover:not(:disabled) {
-
-            background: #293b54;
-
-            border-color: var(--accent);
-
-            transform: translateY(-2px);
-
-        }
-
-
-
-        .answer-option:disabled {
-
-            cursor: default;
-
-        }
-
-
-
-        .answer-letter {
-
-            flex: 0 0 30px;
-
-            height: 30px;
-
-
-
-            display: grid;
-
-            place-items: center;
-
-
-
-            border-radius: 8px;
-
-            background: #30435b;
-
-
-
-            color: var(--accent);
-
-            font-weight: 850;
-
-        }
-
-
-
-        .answer-option.correct {
-
-            background: rgba(69, 223, 177, .15);
-
-            border-color: var(--accent);
-
-            color: var(--accent);
-
-        }
-
-
-
-        .answer-option.correct .answer-letter {
-
-            background: var(--accent);
-
-            color: #08231c;
-
-        }
-
-
-
-        .answer-option.wrong {
-
-            background: rgba(255, 112, 112, .12);
-
-            border-color: var(--danger);
-
-            color: var(--danger);
-
-        }
-
-
-
-        .answer-option.wrong .answer-letter {
-
-            background: var(--danger);
-
-            color: #301010;
-
-        }
-
-
-
-        /* STATISTICS */
-
-
 
         .stats {
+          grid-template-columns: repeat(3, 1fr);
 
-            display: grid;
-
-            grid-template-columns: 1fr;
-
-            gap: 12px;
-
-            align-content: start;
-
+          order: -1;
         }
-
-
 
         .stat {
-
-            padding: 16px;
-
+          padding: 12px;
         }
-
-
-
-        .stat small {
-
-            display: block;
-
-            color: var(--muted);
-
-            margin-bottom: 5px;
-
-            font-size: .78rem;
-
-        }
-
-
 
         .stat strong {
-
-            font-size: 1.45rem;
-
-            font-weight: 850;
-
-            font-variant-numeric: tabular-nums;
-
+          font-size: 1.2rem;
         }
-
-
-
-        /* TIMER */
-
-
 
         .timer-track {
+          margin-top: 10px;
+        }
+      }
 
-            height: 7px;
-
-            margin-top: 14px;
-
-            overflow: hidden;
-
-            border-radius: 99px;
-
-            background: var(--border);
-
+      @media (max-width: 520px) {
+        body {
+          padding: 18px 12px 30px;
         }
 
-
-
-        .timer-bar {
-
-            width: 100%;
-
-            height: 100%;
-
-            border-radius: inherit;
-
-            background: var(--accent);
-
-            transition: width 1s linear, *background* .2s;
-
+        header {
+          margin-bottom: 18px;
         }
 
-
-
-        #timer {
-
-            transition: color .2s;
-
+        .brand {
+          font-size: 1.1rem;
         }
 
-
-
-        #timer.urgent {
-
-            color: var(--danger);
-
-            animation: timerPulse .5s infinite alternate;
-
+        .panel {
+          padding: 15px;
         }
 
-
-
-        .timer-bar.urgent {
-
-            background: var(--danger);
-
+        .rules-card {
+          padding: 20px;
         }
 
+        .answers {
+          grid-template-columns: 1fr;
 
-
-        @keyframes timerPulse {
-
-            to {
-
-                opacity: .55;
-
-            }
-
+          gap: 9px;
         }
 
+        .answer-option {
+          min-height: 57px;
 
-
-        /* FEEDBACK */
-
-
-
-        .result {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-
-
-            margin-top: 16px;
-
-            padding: 13px 15px;
-
-
-
-            border-radius: 13px;
-
-            background: #20354a;
-
-            line-height: 1.6;
-
+          padding: 11px 12px;
         }
 
-
-
-        .result.correct {
-
-            color: var(--accent);
-
+        .question-title {
+          font-size: 0.98rem;
         }
 
-
-
-        .result.wrong,
-
-        .result.timeout {
-
-            color: var(--danger);
-
+        .stats {
+          gap: 7px;
         }
 
-
-
-        .result-text {
-
-            flex: 1;
-
-            min-width: 0;
-
+        .stat {
+          padding: 10px 8px;
         }
 
-
-
-        .result strong {
-
-            display: block;
-
-            margin-bottom: 2px;
-
+        .stat small {
+          font-size: 0.68rem;
         }
 
-
-
-        /* BUTTONS */
-
-
-
-        button.primary {
-
-            border: 0;
-
-            background: var(--accent);
-
-            color: #08231c;
-
-
-
-            padding: 14px 20px;
-
-            font-weight: 850;
-
-            border-radius: 12px;
-
-
-
-            transition: transform .15s, opacity .15s;
-
+        .stat strong {
+          font-size: 1.05rem;
         }
-
-
-
-        button.primary:hover {
-
-            transform: translateY(-1px);
-
-        }
-
-
-
-        button.primary:disabled {
-
-            opacity: .35;
-
-            cursor: not-allowed;
-
-        }
-
-
-
-        button.secondary {
-
-            border: 1px solid #3b4d64;
-
-            background: #1e2b40;
-
-            color: white;
-
-
-
-            padding: 11px 14px;
-
-            border-radius: 12px;
-
-            font-weight: 700;
-
-        }
-
-
-
-        button.secondary:hover {
-
-            background: #293b54;
-
-        }
-
-
-
-        #continueBtn {
-
-            background: var(--blue);
-
-            color: white;
-
-            padding: 10px 16px;
-
-            font-size: .85rem;
-
-            border-radius: 9px;
-
-        }
-
-
 
         .bottom-row {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin-top: 18px;
-
+          flex-wrap: wrap;
         }
 
-
-
-        .bottom-row span {
-
-            color: var(--muted);
-
-            font-size: .82rem;
-
+        .bottom-row button {
+          width: 100%;
         }
-
-
-
-        /* PROGRESS */
-
-
-
-        .progress-track {
-
-            height: 5px;
-
-            margin-top: 17px;
-
-            overflow: hidden;
-
-            border-radius: 99px;
-
-            background: var(--border);
-
-        }
-
-
-
-        .progress-bar {
-
-            width: 0%;
-
-            height: 100%;
-
-            background: var(--accent);
-
-            transition: width .3s;
-
-        }
-
-
-
-        /* FINAL SCREEN */
-
-
 
         .final-card {
-
-            max-width: 650px;
-
-            margin: 40px auto;
-
-            padding: 35px 25px;
-
-            text-align: center;
-
+          margin-top: 20px;
         }
-
-
-
-        .final-icon {
-
-            font-size: 3.5rem;
-
-            margin-bottom: 10px;
-
-        }
-
-
-
-        .final-score {
-
-            margin: 25px 0;
-
-            font-size: 3.5rem;
-
-            font-weight: 900;
-
-            color: var(--accent);
-
-            letter-spacing: -2px;
-
-        }
-
-
-
-        .final-description {
-
-            color: var(--muted);
-
-            line-height: 1.7;
-
-            margin-bottom: 25px;
-
-        }
-
-
-
-        .final-card button {
-
-            margin: 5px;
-
-        }
-
-
-
-        /* FOOTER */
-
-
-
-        footer {
-
-            margin-top: 35px;
-
-            text-align: center;
-
-        }
-
-
-
-        footer a {
-
-            color: var(--muted);
-
-            text-decoration: none;
-
-            font-size: .85rem;
-
-            transition: color .2s;
-
-        }
-
-
-
-        footer a:hover {
-
-            color: var(--accent);
-
-        }
-
-
-
-        /* RESPONSIVE */
-
-
-
-        @media (max-width: 750px) {
-
-
-
-            .game-layout {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-
-            .stats {
-
-                grid-template-columns: repeat(3, 1fr);
-
-                order: -1;
-
-            }
-
-
-
-            .stat {
-
-                padding: 12px;
-
-            }
-
-
-
-            .stat strong {
-
-                font-size: 1.2rem;
-
-            }
-
-
-
-            .timer-track {
-
-                margin-top: 10px;
-
-            }
-
-        }
-
-
-
-        @media (max-width: 520px) {
-
-
-
-            body {
-
-                padding: 18px 12px 30px;
-
-            }
-
-
-
-            header {
-
-                margin-bottom: 18px;
-
-            }
-
-
-
-            .brand {
-
-                font-size: 1.1rem;
-
-            }
-
-
-
-            .panel {
-
-                padding: 15px;
-
-            }
-
-
-
-            .rules-card {
-
-                padding: 20px;
-
-            }
-
-
-
-            .answers {
-
-                grid-template-columns: 1fr;
-
-                gap: 9px;
-
-            }
-
-
-
-            .answer-option {
-
-                min-height: 57px;
-
-                padding: 11px 12px;
-
-            }
-
-
-
-            .question-title {
-
-                font-size: .98rem;
-
-            }
-
-
-
-            .stats {
-
-                gap: 7px;
-
-            }
-
-
-
-            .stat {
-
-                padding: 10px 8px;
-
-            }
-
-
-
-            .stat small {
-
-                font-size: .68rem;
-
-            }
-
-
-
-            .stat strong {
-
-                font-size: 1.05rem;
-
-            }
-
-
-
-            .bottom-row {
-
-                flex-wrap: wrap;
-
-            }
-
-
-
-            .bottom-row button {
-
-                width: 100%;
-
-            }
-
-
-
-            .final-card {
-
-                margin-top: 20px;
-
-            }
-
-        }
+      }
     </style>
+  </head>
 
-</head>
-
-
-
-<body>
-
-
-
+  <body>
     <div class="app">
+      <!-- HEADER -->
 
+      <header>
+        <div class="brand"><span>SLOVENSKI</span> PREGOVORI 🇸🇮</div>
+      </header>
 
+      <!-- INTRO SCREEN -->
 
-        <!-- HEADER -->
+      <section id="welcome">
+        <section class="intro">
+          <div class="eyebrow">KAKO DOBRO POZNAŠ SLOVENSKE PREGOVORE?</div>
 
+          <h1>
+            Preberi razlago.<br />
 
+            Ugani pregovor.
+          </h1>
 
-        <header>
+          <p>
+            Preberi razlago in med štirimi možnostmi izberi slovenski pregovor,
+            ki ji najbolj ustreza. Koliko jih lahko pravilno prepoznaš?
+          </p>
+        </section>
 
-            <div class="brand">
+        <section class="panel rules-card">
+          <h2>🎮 Pravila igre</h2>
 
-                <span>SLOVENSKI</span> PREGOVORI 🇸🇮
+          <div class="rule">
+            <div class="rule-icon">💡</div>
 
+            <div>
+              <h3>1. Preberi razlago</h3>
+
+              <p>
+                Vsako vprašanje vsebuje razlago pomena enega slovenskega
+                pregovora.
+              </p>
+            </div>
+          </div>
+
+          <div class="rule">
+            <div class="rule-icon">💬</div>
+
+            <div>
+              <h3>2. Izberi pravi pregovor</h3>
+
+              <p>
+                Med štirimi ponujenimi možnostmi izberi pregovor, ki ustreza
+                razlagi.
+              </p>
+            </div>
+          </div>
+
+          <div class="rule">
+            <div class="rule-icon">⏱️</div>
+
+            <div>
+              <h3>3. Premagaj čas</h3>
+
+              <p>
+                Za vsak odgovor imaš na voljo 20 sekund. Če čas poteče, ne
+                dosežeš točke.
+              </p>
+            </div>
+          </div>
+
+          <div class="rule">
+            <div class="rule-icon">🏆</div>
+
+            <div>
+              <h3>4. Zberi čim več točk</h3>
+
+              <p>Vsak pravilen odgovor ti prinese eno točko.</p>
+            </div>
+          </div>
+
+          <button class="primary" id="startGame" type="button">ZAČNI →</button>
+        </section>
+      </section>
+
+      <!-- GAME SCREEN -->
+
+      <section id="game" hidden>
+        <section class="game-layout">
+          <!-- MAIN GAME PANEL -->
+
+          <main class="panel game-main">
+            <div class="question-label">💬 Kaj pomeni ta pregovor?</div>
+
+            <!-- PROVERB EXPLANATION -->
+
+            <div class="explanation-panel" id="questionExplanation"></div>
+
+            <!-- ANSWER OPTIONS -->
+
+            <div class="answers" id="answers">
+              <button class="answer-option" type="button">
+                <span class="answer-letter">A</span>
+
+                <span class="answer-text"></span>
+              </button>
+
+              <button class="answer-option" type="button">
+                <span class="answer-letter">B</span>
+
+                <span class="answer-text"></span>
+              </button>
+
+              <button class="answer-option" type="button">
+                <span class="answer-letter">C</span>
+
+                <span class="answer-text"></span>
+              </button>
+
+              <button class="answer-option" type="button">
+                <span class="answer-letter">D</span>
+
+                <span class="answer-text"></span>
+              </button>
             </div>
 
-        </header>
+            <!-- FEEDBACK -->
 
+            <div class="result" id="feedback" hidden>
+              <div class="result-text">
+                <strong id="feedbackTitle"></strong>
 
+                <span id="feedbackText"></span>
+              </div>
 
-
-
-        <!-- INTRO SCREEN -->
-
-
-
-        <section id="welcome">
-
-
-
-            <section class="intro">
-
-
-
-                <div class="eyebrow">
-
-                    KAKO DOBRO POZNAŠ SLOVENSKE PREGOVORE?
-
-                </div>
-
-
-
-                <h1>
-
-                    Prepoznaj prizor.<br>
-
-                    Ugani pregovor.
-
-                </h1>
-
-
-
-                <p>
-
-                    Oglej si sliko in izberi slovenski pregovor,
-
-                    ki najbolje opisuje prikazano situacijo.
-
-                    Koliko jih lahko pravilno prepoznaš?
-
-                </p>
-
-
-
-            </section>
-
-
-
-
-
-            <section class="panel rules-card">
-
-
-
-                <h2>🎮 Pravila igre</h2>
-
-
-
-                <div class="rule">
-
-
-
-                    <div class="rule-icon">🖼️</div>
-
-
-
-                    <div>
-
-                        <h3>1. Dobro si oglej sliko</h3>
-
-                        <p>
-
-                            Vsaka slika prikazuje določeno situacijo,
-
-                            dogodek ali prizor.
-
-                        </p>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
-                <div class="rule">
-
-
-
-                    <div class="rule-icon">💬</div>
-
-
-
-                    <div>
-
-                        <h3>2. Izberi pravi pregovor</h3>
-
-                        <p>
-
-                            Med štirimi ponujenimi možnostmi izberi
-
-                            pregovor, ki najbolj ustreza sliki.
-
-                        </p>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
-                <div class="rule">
-
-
-
-                    <div class="rule-icon">⏱️</div>
-
-
-
-                    <div>
-
-                        <h3>3. Premagaj čas</h3>
-
-                        <p>
-
-                            Za vsak odgovor imaš na voljo 10 sekund.
-
-                            Če čas poteče, ne dosežeš točke.
-
-                        </p>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
-                <div class="rule">
-
-
-
-                    <div class="rule-icon">🏆</div>
-
-
-
-                    <div>
-
-                        <h3>4. Zberi čim več točk</h3>
-
-                        <p>
-
-                            Vsak pravilen odgovor ti prinese eno točko.
-
-                        </p>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
-                <button class="primary" id="startGame" type="button">
-
-                    ZAČNI →
-
-                </button>
-
-
-
-            </section>
-
-
-
-        </section>
-
-
-
-
-
-        <!-- GAME SCREEN -->
-
-
-
-        <section id="game" hidden>
-
-
-
-            <section class="game-layout">
-
-
-
-                <!-- MAIN GAME PANEL -->
-
-
-
-                <main class="panel game-main">
-
-
-
-                    <div class="question-label">
-
-                        🖼️ Kateri pregovor ustreza sliki?
-
-                    </div>
-
-
-
-
-
-                    <!-- IMAGE -->
-
-
-
-                    <div class="image-panel">
-
-
-
-                        <img class="question-image" id="questionImage" src=""
-                            alt="Slika, ki prikazuje situacijo za ugibanje pregovora">
-
-
-
-                        <div class="image-placeholder" id="imagePlaceholder" hidden>
-
-                            Slike ni mogoče prikazati.
-
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-                    <div class="question-title">
-
-                    </div>
-
-
-
-
-
-                    <!-- ANSWER OPTIONS -->
-
-
-
-                    <div class="answers" id="answers">
-
-
-
-                        <button class="answer-option" type="button">
-
-                            <span class="answer-letter">A</span>
-
-                            <span class="answer-text"></span>
-
-                        </button>
-
-
-
-                        <button class="answer-option" type="button">
-
-                            <span class="answer-letter">B</span>
-
-                            <span class="answer-text"></span>
-
-                        </button>
-
-
-
-                        <button class="answer-option" type="button">
-
-                            <span class="answer-letter">C</span>
-
-                            <span class="answer-text"></span>
-
-                        </button>
-
-
-
-                        <button class="answer-option" type="button">
-
-                            <span class="answer-letter">D</span>
-
-                            <span class="answer-text"></span>
-
-                        </button>
-
-
-
-                    </div>
-
-
-
-
-
-                    <!-- FEEDBACK -->
-
-
-
-                    <div class="result" id="feedback" hidden>
-
-
-
-                        <div class="result-text">
-
-                            <strong id="feedbackTitle"></strong>
-
-                            <span id="feedbackText"></span>
-
-                        </div>
-
-
-
-                        <button class="primary" id="continueBtn" type="button">
-
-                            NAPREJ →
-
-                        </button>
-
-
-
-                    </div>
-
-
-
-
-
-                    <!-- PROGRESS -->
-
-
-
-                    <div class="progress-track">
-
-                        <div class="progress-bar" id="progressBar"></div>
-
-                    </div>
-
-
-
-
-
-                    <div class="bottom-row">
-
-
-
-                        <span id="progressText">
-
-                            Vsak pravilen odgovor ti prinaša eno točko.
-
-                        </span>
-
-
-
-                        <button class="secondary" id="restartButton" type="button">
-
-                            ZAČNI ZNOVA ↻
-
-                        </button>
-
-
-
-                    </div>
-
-
-
-                </main>
-
-
-
-
-
-                <!-- STATISTICS -->
-
-
-
-                <aside class="stats">
-
-
-
-                    <div class="stat">
-
-                        <small>🏆 Skupne točke</small>
-
-                        <strong id="score">0 / 10</strong>
-
-                    </div>
-
-
-
-                    <div class="stat">
-
-                        <small>🔢 Runda</small>
-
-                        <strong id="round">1 / 10</strong>
-
-                    </div>
-
-
-
-                    <div class="stat">
-
-
-
-                        <small>⏱️ Preostali čas</small>
-
-
-
-                        <strong id="timer">10 s</strong>
-
-
-
-                        <div class="timer-track">
-
-                            <div class="timer-bar" id="timerBar"></div>
-
-                        </div>
-
-
-
-                    </div>
-
-
-
-                </aside>
-
-
-
-            </section>
-
-
-
-        </section>
-
-
-
-
-
-        <!-- FINAL SCREEN -->
-
-
-
-        <section id="finalScreen" hidden>
-
-
-
-            <div class="panel final-card">
-
-
-
-                <div class="final-icon" id="finalIcon">
-
-                    🏆
-
-                </div>
-
-
-
-                <div class="eyebrow">
-
-                    KONEC IGRE
-
-                </div>
-
-
-
-                <h1 id="finalTitle">
-
-                    Odlično!
-
-                </h1>
-
-
-
-                <div class="final-score" id="finalScore">
-
-                    0 / 10
-
-                </div>
-
-
-
-                <p class="final-description" id="finalDescription">
-
-                    Zbral si 0 točk od 10 možnih.
-
-                </p>
-
-
-
-                <button class="primary" id="playAgainButton" type="button">
-
-                    IGRAJ ZNOVA ↻
-
-                </button>
-
-
-
+              <button class="primary" id="continueBtn" type="button">
+                NAPREJ →
+              </button>
             </div>
 
+            <!-- PROGRESS -->
 
+            <div class="progress-track">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
 
+            <div class="bottom-row">
+              <span id="progressText">
+                Vsak pravilen odgovor ti prinaša eno točko.
+              </span>
+
+              <button class="secondary" id="restartButton" type="button">
+                ZAČNI ZNOVA ↻
+              </button>
+            </div>
+          </main>
+
+          <!-- STATISTICS -->
+
+          <aside class="stats">
+            <div class="stat">
+              <small>🏆 Skupne točke</small>
+
+              <strong id="score">0 / 10</strong>
+            </div>
+
+            <div class="stat">
+              <small>🔢 Runda</small>
+
+              <strong id="round">1 / 10</strong>
+            </div>
+
+            <div class="stat">
+              <small>⏱️ Preostali čas</small>
+
+              <strong id="timer">10 s</strong>
+
+              <div class="timer-track">
+                <div class="timer-bar" id="timerBar"></div>
+              </div>
+            </div>
+          </aside>
         </section>
+      </section>
 
+      <!-- FINAL SCREEN -->
 
+      <section id="finalScreen" hidden>
+        <div class="panel final-card">
+          <div class="final-icon" id="finalIcon">🏆</div>
 
+          <div class="eyebrow">KONEC IGRE</div>
 
+          <h1 id="finalTitle">Odlično!</h1>
 
-        <!-- FOOTER -->
+          <div class="final-score" id="finalScore">0 / 10</div>
 
+          <p class="final-description" id="finalDescription">
+            Zbral si 0 točk od 10 možnih.
+          </p>
 
+          <button class="primary" id="playAgainButton" type="button">
+            IGRAJ ZNOVA ↻
+          </button>
+        </div>
+      </section>
 
-        <footer>
+      <!-- FOOTER -->
 
-            <a href="index.html">
-
-                ← Nazaj na glavno stran
-
-            </a>
-
-        </footer>
-
-
-
+      <footer>
+        <a href="index.html"> ← Nazaj na glavno stran </a>
+      </footer>
     </div>
 
-
-
-
-
     <script>
-
-
-
-        /* =================================
+      /* =================================
 
            SETTINGS
 
         ================================= */
 
+      const TOTAL_QUESTIONS = 40;
 
+      const ROUND_TIME = 20;
 
-        const TOTAL_QUESTIONS = 40;
-
-        const ROUND_TIME = 10;
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            QUESTIONS
 
+           proverb = proverb shown to the player
+           explanation = correct interpretation
+           options = four possible interpretations
 
-
-           image = path to your image
-
-           correct = correct proverb
-
-           options = four possible answers
-
-
-
-           Add or replace questions below.
+           Add or replace proverbs below.
 
         ================================= */
 
+      const PROVERBS = [
+        {
+          correct: "Rana ura, zlata ura.",
+          explanation:
+            "Kdor zgodaj začne dan, ima več časa in pogosto lažje opravi svoje obveznosti.",
+        },
+        {
+          correct: "Kdor prej pride, prej melje.",
+          explanation:
+            "Kdor ukrepa pravočasno oziroma pride prvi, ima pogosto prednost in lahko prvi izkoristi priložnost.",
+        },
+        {
+          correct: "Zrno do zrna pogača, kamen na kamen palača.",
+          explanation:
+            "Z vztrajnim zbiranjem majhnih prispevkov ali z vztrajnim delom lahko sčasoma ustvarimo nekaj velikega.",
+        },
+        {
+          correct: "Brez muje se še čevelj ne obuje.",
+          explanation:
+            "Brez truda in dela ne moremo pričakovati uspeha ali doseči cilja.",
+        },
+        {
+          correct: "Tiha voda bregove dere.",
+          explanation:
+            "Mirni in navidezno neopazni ljudje so lahko zelo vztrajni ter sposobni velikih dejanj.",
+        },
+        {
+          correct: "Jabolko ne pade daleč od drevesa.",
+          explanation:
+            "Otroci pogosto prevzamejo lastnosti, navade ali vedenje svojih staršev.",
+        },
+        {
+          correct: "Povsod je lepo, a najlepše je doma.",
+          explanation:
+            "Ne glede na to, kako lepo je drugje, se doma pogosto počutimo najbolj prijetno in varno.",
+        },
+        {
+          correct: "Lepa beseda lepo mesto najde.",
+          explanation:
+            "S prijaznostjo in spoštljivim govorom lažje dosežemo razumevanje in naklonjenost drugih.",
+        },
+        {
+          correct: "Obljuba dela dolg.",
+          explanation: "Ko nekaj obljubimo, smo dolžni obljubo izpolniti.",
+        },
+        {
+          correct: "Čisti računi, dobri prijatelji.",
+          explanation:
+            "Jasni dogovori in urejene obveznosti preprečujejo nesporazume ter pomagajo ohranjati dobre odnose.",
+        },
+        {
+          correct: "Prijatelja spoznaš v nesreči.",
+          explanation:
+            "Pravi prijatelj se pokaže predvsem takrat, ko imamo težave in potrebujemo pomoč.",
+        },
+        {
+          correct: "Več glav več ve.",
+          explanation:
+            "Skupaj lahko zberemo več znanja, idej in rešitev kot posameznik sam.",
+        },
+        {
+          correct: "Kdor visoko leta, nizko pade.",
+          explanation:
+            "Kdor je preveč prevzeten ali si zastavlja nerealno visoke cilje, lahko doživi velik neuspeh.",
+        },
+        {
+          correct: "Kdor se zadnji smeje, se najslajše smeje.",
+          explanation:
+            "O uspehu ne smemo soditi prehitro, saj se lahko izid na koncu še spremeni.",
+        },
+        {
+          correct: "Kdor drugemu jamo koplje, sam vanjo pade.",
+          explanation:
+            "Kdor želi škodovati drugim, lahko na koncu škoduje samemu sebi.",
+        },
+        {
+          correct: "Nobena juha se ne poje tako vroča, kot se skuha.",
+          explanation:
+            "Težava ali položaj se pogosto izkaže za manj hudega, kot smo sprva pričakovali.",
+        },
+        {
+          correct: "Zarečenega kruha se največ poje.",
+          explanation:
+            "Pogosto se zgodi, da naredimo prav tisto, kar smo prej trdili, da nikoli ne bomo.",
+        },
+        {
+          correct: "Lakota je najboljši kuhar.",
+          explanation: "Ko smo lačni, se nam zdi hrana okusnejša kot sicer.",
+        },
+        {
+          correct: "Obleka ne naredi človeka.",
+          explanation:
+            "Človekove vrednosti ne določata njegov videz ali oblačila, temveč njegove lastnosti in dejanja.",
+        },
+        {
+          correct: "Podarjenemu konju se ne gleda v zobe.",
+          explanation:
+            "Darila ne smemo pretirano kritizirati ali iskati njihovih pomanjkljivosti.",
+        },
+        {
+          correct: "Po toči zvoniti je prepozno.",
+          explanation:
+            "Ko se je nekaj že zgodilo, je za preprečevanje posledic ali ukrepanje prepozno.",
+        },
+        {
+          correct: "Ne hvali dneva pred večerom.",
+          explanation:
+            "Ne sklepajmo prehitro, da bo nekaj uspešno, dokler se ne konča.",
+        },
+        {
+          correct: "Vaja dela mojstra, če mojster dela vajo.",
+          explanation:
+            "Samo z redno vadbo, ponavljanjem in vztrajnostjo lahko postanemo zares dobri v določeni spretnosti.",
+        },
+        {
+          correct: "Kdor išče, ta najde.",
+          explanation:
+            "Vztrajen človek, ki išče rešitev ali odgovor, ga pogosto tudi najde.",
+        },
+        {
+          correct: "Najprej pometi pred svojim pragom.",
+          explanation:
+            "Preden kritiziramo druge, moramo najprej pogledati svoje napake in urediti lastne zadeve.",
+        },
+        {
+          correct: "Vsak je svoje sreče kovač.",
+          explanation:
+            "S svojimi odločitvami in dejanji pomembno vplivamo na to, kako bo potekalo naše življenje.",
+        },
+        {
+          correct: "Ura teče nič ne reče.",
+          explanation:
+            "Čas mineva ne glede na to, ali smo na to pozorni, zato ga je dobro izkoristiti.",
+        },
+        {
+          correct: "Ljubo doma, kdor ga ima.",
+          explanation:
+            "Dom in občutek pripadnosti sta dragocena; lepo je imeti kraj, kamor se lahko vedno vrnemo.",
+        },
+        {
+          correct: "Zdrav duh v zdravem telesu.",
+          explanation:
+            "Telesno zdravje in duševno počutje sta povezana ter se medsebojno podpirata.",
+        },
+        {
+          correct: "Kjer osel sedi tam dlako pusti.",
+          explanation:
+            "Kjer se kdo pogosto zadržuje ali sedi, za seboj običajno pusti kakšno sled.",
+        },
+        {
+          correct: "Kdor molči ta devetm’u odgovori.",
+          explanation:
+            "Včasih je molk najboljši odgovor, saj se z njim izognemo nepotrebnim sporom ali besedam.",
+        },
+        {
+          correct: "Kar lahko storiš danes, ne odlašaj na jutri.",
+          explanation:
+            "Naloge je bolje opraviti pravočasno, namesto da jih po nepotrebnem prelagamo.",
+        },
+        {
+          correct: "Laž ima kratke noge.",
+          explanation:
+            "Laž se prej ali slej razkrije, zato z njo dolgoročno ne moremo uspeti.",
+        },
+        {
+          correct: "Brez mule se tudi čevelj ne obuje.",
+          explanation:
+            "Tudi za na videz preprosto opravilo potrebujemo ustrezno pomoč ali pripomoček.",
+        },
+        {
+          correct: "Dober glas seže v deveto vas.",
+          explanation: "Dober sloves se hitro razširi daleč naokoli.",
+        },
+        {
+          correct: "Pes, ki laja, ne grize.",
+          explanation:
+            "Tisti, ki veliko grozi ali glasno opozarja, pogosto ni tako nevaren, kot se zdi.",
+        },
+        {
+          correct: "Za dežjem posije sonce.",
+          explanation:
+            "Po težkih ali neprijetnih obdobjih navadno pridejo tudi boljši časi.",
+        },
+        {
+          correct: "Ni vse zlato, kar se sveti.",
+          explanation:
+            "Vse, kar je na videz lepo ali privlačno, ni nujno tudi dobro ali vredno.",
+        },
+        {
+          correct: "Prazen žakelj ne stoji pokonci.",
+          explanation:
+            "Človek brez hrane oziroma energije težko dobro dela ali vztraja pri naporih.",
+        },
+        {
+          correct: "Ko mačke ni doma, miši plešejo.",
+          explanation:
+            "Ko nadzorne osebe ni, si drugi pogosto dovolijo več svobode in počnejo, kar želijo.",
+        },
+      ];
 
+      // Each question shows a proverb and offers its correct interpretation
+      // together with three randomly selected interpretations of other proverbs.
+      const QUESTIONS = PROVERBS.map((question) => {
+        const distractors = shuffleArray(
+          PROVERBS.filter((item) => item.correct !== question.correct),
+        ).slice(0, 3);
 
-        const PROVERBS = [
+        const options = shuffleArray([
+          { text: question.explanation, explanation: question.explanation },
+          ...distractors.map((item) => ({
+            text: item.explanation,
+            explanation: item.explanation,
+          })),
+        ]);
 
-            { image: "img/img-pregovori/01-rana-ura.jpg", correct: "Rana ura, zlata ura.", explanation: "Kdor zgodaj začne dan, ima več časa in pogosto lažje opravi svoje obveznosti." },
-            { image: "img/img-pregovori/02-kdor-prej-pride.jpg", correct: "Kdor prej pride, prej melje.", explanation: "Kdor ukrepa pravočasno oziroma pride prvi, ima pogosto prednost in lahko prvi izkoristi priložnost." },
-            { image: "img/img-pregovori/03-zrno-do-zrna.jpg", correct: "Zrno do zrna pogača, kamen na kamen palača.", explanation: "Z vztrajnim zbiranjem majhnih prispevkov ali z vztrajnim delom lahko sčasoma ustvarimo nekaj velikega." },
-            { image: "img/img-pregovori/02-brez-muje.jpg", correct: "Brez muje se še čevelj ne obuje.", explanation: "Brez truda in dela ne moremo pričakovati uspeha ali doseči cilja." },
-            { image: "img/img-pregovori/05-tiha-voda.jpg", correct: "Tiha voda bregove dere.", explanation: "Mirni in navidezno neopazni ljudje so lahko zelo vztrajni ter sposobni velikih dejanj." },
-            { image: "img/img-pregovori/03-jabolko.jpg", correct: "Jabolko ne pade daleč od drevesa.", explanation: "Otroci pogosto prevzamejo lastnosti, navade ali vedenje svojih staršev." },
-            { image: "img/img-pregovori/07-povsod-je-lepo.jpg", correct: "Povsod je lepo, a doma je najlepše.", explanation: "Ne glede na to, kako lepo je drugje, se doma pogosto počutimo najbolj prijetno in varno." },
-            { image: "img/img-pregovori/08-lepa-beseda.jpg", correct: "Lepa beseda lepo mesto najde.", explanation: "S prijaznostjo in spoštljivim govorom lažje dosežemo razumevanje in naklonjenost drugih." },
-            { image: "img/img-pregovori/09-obljuba-dela-dolznost.jpg", correct: "Obljuba dela dolžnost.", explanation: "Ko nekaj obljubimo, smo dolžni obljubo izpolniti." },
-            { image: "img/img-pregovori/10-cisti-racuni.jpg", correct: "Čisti računi, dobri prijatelji.", explanation: "Jasni dogovori in urejene obveznosti preprečujejo nesporazume ter pomagajo ohranjati dobre odnose." },
-            { image: "img/img-pregovori/11-prijatelja-spoznas-v-nesreci.jpg", correct: "Prijatelja spoznaš v nesreči.", explanation: "Pravi prijatelj se pokaže predvsem takrat, ko imamo težave in potrebujemo pomoč." },
-            { image: "img/img-pregovori/12-vec-glav-vec-ve.jpg", correct: "Več glav več ve.", explanation: "Skupaj lahko zberemo več znanja, idej in rešitev kot posameznik sam." },
-            { image: "img/img-pregovori/06-kdor-visoko.jpg", correct: "Kdor visoko leta, nizko pade.", explanation: "Kdor je preveč prevzeten ali si zastavlja nerealno visoke cilje, lahko doživi velik neuspeh." },
-            { image: "img/img-pregovori/14-kdor-se-zadnji-smeje.jpg", correct: "Kdor se zadnji smeje, se najslajše smeje.", explanation: "O uspehu ne smemo soditi prehitro, saj se lahko izid na koncu še spremeni." },
-            { image: "img/img-pregovori/04-kdor-drugemu.jpg", correct: "Kdor drugemu jamo koplje, sam vanjo pade.", explanation: "Kdor želi škodovati drugim, lahko na koncu škoduje samemu sebi." },
-            { image: "img/img-pregovori/16-nobena-juha.jpg", correct: "Nobena juha se ne poje tako vroča, kot se skuha.", explanation: "Težava ali položaj se pogosto izkaže za manj hudega, kot smo sprva pričakovali." },
-            { image: "img/img-pregovori/17-zarecenega-kruha.jpg", correct: "Zarečenega kruha se največ poje.", explanation: "Pogosto se zgodi, da naredimo prav tisto, kar smo prej trdili, da nikoli ne bomo." },
-            { image: "img/img-pregovori/18-lakota-je-najboljsi-kuhar.jpg", correct: "Lakota je najboljši kuhar.", explanation: "Ko smo lačni, se nam zdi hrana okusnejša kot sicer." },
-            { image: "img/img-pregovori/19-obleka-ne-naredi-cloveka.jpg", correct: "Obleka ne naredi človeka.", explanation: "Človekove vrednosti ne določata njegov videz ali oblačila, temveč njegove lastnosti in dejanja." },
-            { image: "img/img-pregovori/20-podarjenemu-konju.jpg", correct: "Podarjenemu konju se ne gleda v zobe.", explanation: "Darila ne smemo pretirano kritizirati ali iskati njihovih pomanjkljivosti." },
-            { image: "img/img-pregovori/21-po-toci.jpg", correct: "Po toči zvoniti je prepozno.", explanation: "Ko se je nekaj že zgodilo, je za preprečevanje posledic ali ukrepanje prepozno." },
-            { image: "img/img-pregovori/22-ne-hvali-dneva.jpg", correct: "Ne hvali dneva pred večerom.", explanation: "Ne sklepajmo prehitro, da bo nekaj uspešno, dokler se ne konča." },
-            { image: "img/img-pregovori/23-vaja-dela-mojstra.jpg", correct: "Vaja dela mojstra, če mojster dela vajo.", explanation: "Samo z redno vadbo, ponavljanjem in vztrajnostjo lahko postanemo zares dobri v določeni spretnosti." },
-            { image: "img/img-pregovori/24-kdor-isce.jpg", correct: "Kdor išče, ta najde.", explanation: "Vztrajen človek, ki išče rešitev ali odgovor, ga pogosto tudi najde." },
-            { image: "img/img-pregovori/25-pometi-pred-svojim-pragom.jpg", correct: "Najprej pometi pred svojim pragom.", explanation: "Preden kritiziramo druge, moramo najprej pogledati svoje napake in urediti lastne zadeve." },
-            { image: "img/img-pregovori/26-vsak-je-svoje-srece-kovac.jpg", correct: "Vsak je svoje sreče kovač.", explanation: "S svojimi odločitvami in dejanji pomembno vplivamo na to, kako bo potekalo naše življenje." },
-            { image: "img/img-pregovori/27-ura-tece.jpg", correct: "Ura teče nič ne reče.", explanation: "Čas mineva ne glede na to, ali smo na to pozorni, zato ga je dobro izkoristiti." },
-            { image: "img/img-pregovori/28-ljubo-doma.jpg", correct: "Ljubo doma, kdor ga ima.", explanation: "Dom in občutek pripadnosti sta dragocena; lepo je imeti kraj, kamor se lahko vedno vrnemo." },
-            { image: "img/img-pregovori/29-zdrav-duh.jpg", correct: "Zdrav duh v zdravem telesu.", explanation: "Telesno zdravje in duševno počutje sta povezana ter se medsebojno podpirata." },
-            { image: "img/img-pregovori/30-kjer-osel-sedi.jpg", correct: "Kjer osel sedi tam dlako pusti.", explanation: "Kjer se kdo pogosto zadržuje ali sedi, za seboj običajno pusti kakšno sled." },
-            { image: "img/img-pregovori/31-kdor-molci.jpg", correct: "Kdor molči, devetim odgovori.", explanation: "Včasih je molk najboljši odgovor, saj se z njim izognemo nepotrebnim sporom ali besedam." },
-            { image: "img/img-pregovori/32-kar-lahko-storis-danes.jpg", correct: "Kar lahko storiš danes, ne odlašaj na jutri.", explanation: "Naloge je bolje opraviti pravočasno, namesto da jih po nepotrebnem prelagamo." },
-            { image: "img/img-pregovori/09-laz.jpg", correct: "Laž ima kratke noge.", explanation: "Laž se prej ali slej razkrije, zato z njo dolgoročno ne moremo uspeti." },
-            { image: "img/img-pregovori/34-brez-mule.jpg", correct: "Brez mule se tudi čevelj ne obuje.", explanation: "Tudi za na videz preprosto opravilo potrebujemo ustrezno pomoč ali pripomoček." },
-            { image: "img/img-pregovori/35-dober-glas.jpg", correct: "Dober glas seže v deveto vas.", explanation: "Dober sloves se hitro razširi daleč naokoli." },
-            { image: "img/img-pregovori/36-pes-ki-laja.jpg", correct: "Pes, ki laja, ne grize.", explanation: "Tisti, ki veliko grozi ali glasno opozarja, pogosto ni tako nevaren, kot se zdi." },
-            { image: "img/img-pregovori/37-za-dezjem-posije-sonce.jpg", correct: "Za dežjem posije sonce.", explanation: "Po težkih ali neprijetnih obdobjih navadno pridejo tudi boljši časi." },
-            { image: "img/img-pregovori/38-ni-vse-zlato.jpg", correct: "Ni vse zlato, kar se sveti.", explanation: "Vse, kar je na videz lepo ali privlačno, ni nujno tudi dobro ali vredno." },
-            { image: "img/img-pregovori/39-prazen-zakelj.jpg", correct: "Prazen žakelj ne stoji pokonci.", explanation: "Človek brez hrane oziroma energije težko dobro dela ali vztraja pri naporih." },
-            { image: "img/img-pregovori/40-ko-macke-ni-doma.jpg", correct: "Ko mačke ni doma, miši plešejo.", explanation: "Ko nadzorne osebe ni, si drugi pogosto dovolijo več svobode in počnejo, kar želijo." }
-        ];
+        return {
+          proverb: question.correct,
+          explanation: question.explanation,
+          correct: question.explanation,
+          options,
+        };
+      });
 
-
-        // Each question has its correct proverb and three randomly selected distractors.
-        const QUESTIONS = PROVERBS.map(question => {
-            const distractors = shuffleArray(
-                PROVERBS.filter(item => item.correct !== question.correct)
-            ).slice(0, 3);
-
-            const options = shuffleArray([
-                { text: question.correct, explanation: question.explanation },
-                ...distractors.map(item => ({ text: item.correct, explanation: item.explanation }))
-            ]);
-
-            return {
-                image: question.image,
-                correct: question.correct,
-                options
-            };
-        });
-
-
-
-        /* =================================
+      /* =================================
 
            DOM ELEMENTS
 
         ================================= */
 
+      const welcome = document.getElementById("welcome");
 
+      const game = document.getElementById("game");
 
-        const welcome = document.getElementById("welcome");
+      const finalScreen = document.getElementById("finalScreen");
 
-        const game = document.getElementById("game");
+      const startGameButton = document.getElementById("startGame");
 
-        const finalScreen = document.getElementById("finalScreen");
+      const restartButton = document.getElementById("restartButton");
 
+      const continueButton = document.getElementById("continueBtn");
 
+      const playAgainButton = document.getElementById("playAgainButton");
 
-        const startGameButton = document.getElementById("startGame");
+      const questionExplanation = document.getElementById(
+        "questionExplanation",
+      );
 
-        const restartButton = document.getElementById("restartButton");
+      const answerButtons = [...document.querySelectorAll(".answer-option")];
 
-        const continueButton = document.getElementById("continueBtn");
+      const feedback = document.getElementById("feedback");
 
-        const playAgainButton = document.getElementById("playAgainButton");
+      const feedbackTitle = document.getElementById("feedbackTitle");
 
+      const feedbackText = document.getElementById("feedbackText");
 
+      const scoreDisplay = document.getElementById("score");
 
-        const questionImage = document.getElementById("questionImage");
+      const roundDisplay = document.getElementById("round");
 
-        const imagePlaceholder = document.getElementById("imagePlaceholder");
+      const timerDisplay = document.getElementById("timer");
 
+      const timerBar = document.getElementById("timerBar");
 
+      const progressBar = document.getElementById("progressBar");
 
-        const answerButtons = [...document.querySelectorAll(".answer-option")];
+      const progressText = document.getElementById("progressText");
 
-
-
-        const feedback = document.getElementById("feedback");
-
-        const feedbackTitle = document.getElementById("feedbackTitle");
-
-        const feedbackText = document.getElementById("feedbackText");
-
-
-
-        const scoreDisplay = document.getElementById("score");
-
-        const roundDisplay = document.getElementById("round");
-
-        const timerDisplay = document.getElementById("timer");
-
-        const timerBar = document.getElementById("timerBar");
-
-
-
-        const progressBar = document.getElementById("progressBar");
-
-        const progressText = document.getElementById("progressText");
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            GAME VARIABLES
 
         ================================= */
 
+      let shuffledQuestions = [];
 
+      let currentQuestion = 0;
 
-        let shuffledQuestions = [];
+      let score = 0;
 
+      let timeLeft = ROUND_TIME;
 
+      let timerInterval = null;
 
-        let currentQuestion = 0;
+      let answered = false;
 
-        let score = 0;
-
-
-
-        let timeLeft = ROUND_TIME;
-
-        let timerInterval = null;
-
-
-
-        let answered = false;
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            SHUFFLE ARRAY
 
         ================================= */
 
+      function shuffleArray(array) {
+        const shuffled = [...array];
 
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
 
-        function shuffleArray(array) {
-
-
-
-            const shuffled = [...array];
-
-
-
-            for (let i = shuffled.length - 1; i > 0; i--) {
-
-
-
-                const j = Math.floor(Math.random() * (i + 1));
-
-
-
-                [shuffled[i], shuffled[j]] =
-
-                    [shuffled[j], shuffled[i]];
-
-
-
-            }
-
-
-
-            return shuffled;
-
-
-
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
         }
 
+        return shuffled;
+      }
 
-
-
-
-        /* =================================
+      /* =================================
 
            START GAME
 
         ================================= */
 
+      function startGame() {
+        clearInterval(timerInterval);
 
+        shuffledQuestions = shuffleArray(QUESTIONS).slice(0, TOTAL_QUESTIONS);
 
-        function startGame() {
+        currentQuestion = 0;
 
+        score = 0;
 
+        welcome.hidden = true;
 
-            clearInterval(timerInterval);
+        finalScreen.hidden = true;
 
+        game.hidden = false;
 
+        updateScore();
 
-            shuffledQuestions = shuffleArray(QUESTIONS)
+        loadQuestion();
+      }
 
-                .slice(0, TOTAL_QUESTIONS);
-
-
-
-            currentQuestion = 0;
-
-            score = 0;
-
-
-
-            welcome.hidden = true;
-
-            finalScreen.hidden = true;
-
-            game.hidden = false;
-
-
-
-            updateScore();
-
-
-
-            loadQuestion();
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            LOAD QUESTION
 
         ================================= */
 
+      function loadQuestion() {
+        clearInterval(timerInterval);
 
+        answered = false;
 
-        function loadQuestion() {
+        const question = shuffledQuestions[currentQuestion];
 
+        // Display the proverb; the player must identify its interpretation
 
+        questionExplanation.textContent = question.proverb;
 
-            clearInterval(timerInterval);
+        // Update statistics
 
+        roundDisplay.textContent = `${currentQuestion + 1} / ${TOTAL_QUESTIONS}`;
 
+        progressText.textContent = `Vprašanje ${currentQuestion + 1} od ${TOTAL_QUESTIONS}`;
 
-            answered = false;
+        progressBar.style.width = `${(currentQuestion / TOTAL_QUESTIONS) * 100}%`;
 
+        // Hide feedback
 
+        feedback.hidden = true;
 
-            const question = shuffledQuestions[currentQuestion];
+        feedback.className = "result";
 
+        // Shuffle answer options
 
+        const shuffledOptions = shuffleArray(question.options);
 
-            // Update image
+        answerButtons.forEach((button, index) => {
+          button.disabled = false;
 
+          button.className = "answer-option";
 
+          button.querySelector(".answer-letter").textContent =
+            String.fromCharCode(65 + index);
 
-            questionImage.hidden = false;
+          button.querySelector(".answer-text").textContent =
+            shuffledOptions[index].text;
 
-            imagePlaceholder.hidden = true;
+          button.onclick = function () {
+            selectAnswer(button, shuffledOptions[index].text);
+          };
+        });
 
+        // Start timer
 
+        startTimer();
+      }
 
-            questionImage.src = question.image;
-
-
-
-            questionImage.onerror = function () {
-
-
-
-                questionImage.hidden = true;
-
-                imagePlaceholder.hidden = false;
-
-
-
-            };
-
-
-
-
-
-            // Update statistics
-
-
-
-            roundDisplay.textContent =
-
-                `${currentQuestion + 1} / ${TOTAL_QUESTIONS}`;
-
-
-
-            progressText.textContent =
-
-                `Vprašanje ${currentQuestion + 1} od ${TOTAL_QUESTIONS}`;
-
-
-
-            progressBar.style.width =
-
-                `${(currentQuestion / TOTAL_QUESTIONS) * 100}%`;
-
-
-
-
-
-            // Hide feedback
-
-
-
-            feedback.hidden = true;
-
-            feedback.className = "result";
-
-
-
-
-
-            // Shuffle answer options
-
-
-
-            const shuffledOptions = shuffleArray(question.options);
-
-
-
-            answerButtons.forEach((button, index) => {
-
-
-
-                button.disabled = false;
-
-                button.className = "answer-option";
-
-
-
-                button.querySelector(".answer-letter").textContent =
-
-                    String.fromCharCode(65 + index);
-
-
-
-                button.querySelector(".answer-text").textContent =
-
-                    shuffledOptions[index].text;
-
-
-
-                button.onclick = function () {
-
-                    selectAnswer(button, shuffledOptions[index].text);
-
-                };
-
-
-
-            });
-
-
-
-
-
-            // Start timer
-
-
-
-            startTimer();
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            TIMER
 
         ================================= */
 
+      function startTimer() {
+        clearInterval(timerInterval);
 
+        timeLeft = ROUND_TIME;
 
-        function startTimer() {
+        updateTimerDisplay();
 
+        timerInterval = setInterval(() => {
+          timeLeft--;
 
+          updateTimerDisplay();
 
+          if (timeLeft <= 0) {
             clearInterval(timerInterval);
 
+            timeOut();
+          }
+        }, 1000);
+      }
 
-
-            timeLeft = ROUND_TIME;
-
-
-
-            updateTimerDisplay();
-
-
-
-            timerInterval = setInterval(() => {
-
-
-
-                timeLeft--;
-
-
-
-                updateTimerDisplay();
-
-
-
-                if (timeLeft <= 0) {
-
-
-
-                    clearInterval(timerInterval);
-
-
-
-                    timeOut();
-
-
-
-                }
-
-
-
-            }, 1000);
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            UPDATE TIMER DISPLAY
 
         ================================= */
 
+      function updateTimerDisplay() {
+        timerDisplay.textContent = `${timeLeft} s`;
 
+        const percentage = (timeLeft / ROUND_TIME) * 100;
 
-        function updateTimerDisplay() {
+        timerBar.style.width = `${percentage}%`;
 
+        if (timeLeft <= 3) {
+          timerDisplay.classList.add("urgent");
 
+          timerBar.classList.add("urgent");
+        } else {
+          timerDisplay.classList.remove("urgent");
 
-            timerDisplay.textContent = `${timeLeft} s`;
-
-
-
-            const percentage =
-
-                (timeLeft / ROUND_TIME) * 100;
-
-
-
-            timerBar.style.width = `${percentage}%`;
-
-
-
-            if (timeLeft <= 3) {
-
-
-
-                timerDisplay.classList.add("urgent");
-
-                timerBar.classList.add("urgent");
-
-
-
-            } else {
-
-
-
-                timerDisplay.classList.remove("urgent");
-
-                timerBar.classList.remove("urgent");
-
-
-
-            }
-
-
-
+          timerBar.classList.remove("urgent");
         }
+      }
 
-
-
-
-
-        /* =================================
+      /* =================================
 
            SELECT ANSWER
 
         ================================= */
 
+      function selectAnswer(selectedButton, selectedAnswer) {
+        if (answered) return;
 
+        answered = true;
 
-        function selectAnswer(selectedButton, selectedAnswer) {
+        clearInterval(timerInterval);
 
+        const question = shuffledQuestions[currentQuestion];
 
+        const correctAnswer = question.correct;
 
-            if (answered) return;
+        // Explanation belonging to the correct proverb
+        const correctOption = question.options.find(
+          (option) => option.text === correctAnswer,
+        );
 
+        const explanation = correctOption ? correctOption.explanation : "";
 
+        const isCorrect = selectedAnswer === correctAnswer;
 
-            answered = true;
+        // Disable all answer buttons
 
+        answerButtons.forEach((button) => {
+          button.disabled = true;
 
+          const answerText = button.querySelector(".answer-text").textContent;
 
-            clearInterval(timerInterval);
+          if (answerText === correctAnswer) {
+            button.classList.add("correct");
+          }
+        });
 
+        if (isCorrect) {
+          score++;
 
+          selectedButton.classList.add("correct");
 
-            const question = shuffledQuestions[currentQuestion];
+          feedback.className = "result correct";
 
+          feedbackTitle.textContent = "✓ Pravilen odgovor!";
 
+          feedbackText.textContent = ` Odlično! Prislužil si eno točko. ${explanation}`;
+        } else {
+          selectedButton.classList.add("wrong");
 
-            const correctAnswer = question.correct;
+          feedback.className = "result wrong";
 
-            // Explanation belonging to the correct proverb
-            const correctOption = question.options.find(
-                option => option.text === correctAnswer
-            );
+          feedbackTitle.textContent = "✕ Napačen odgovor.";
 
-            const explanation = correctOption ? correctOption.explanation : "";
-
-
-
-            const isCorrect = selectedAnswer === correctAnswer;
-
-
-
-
-
-            // Disable all answer buttons
-
-
-
-            answerButtons.forEach(button => {
-
-
-
-                button.disabled = true;
-
-
-
-                const answerText =
-
-                    button.querySelector(".answer-text").textContent;
-
-
-
-                if (answerText === correctAnswer) {
-
-
-
-                    button.classList.add("correct");
-
-
-
-                }
-
-
-
-            });
-
-
-
-
-
-            if (isCorrect) {
-
-
-
-                score++;
-
-
-
-                selectedButton.classList.add("correct");
-
-
-
-                feedback.className = "result correct";
-
-
-
-                feedbackTitle.textContent = "✓ Pravilen odgovor!";
-
-
-
-                feedbackText.textContent =
-
-                    ` Odlično! Prislužil si eno točko. ${explanation}`;
-
-
-
-            } else {
-
-
-
-                selectedButton.classList.add("wrong");
-
-
-
-                feedback.className = "result wrong";
-
-
-
-                feedbackTitle.textContent = "✕ Napačen odgovor.";
-
-
-
-                feedbackText.textContent =
-
-                    ` Pravilen odgovor je: ${correctAnswer} ${explanation}`;
-
-
-
-            }
-
-
-
-
-
-            updateScore();
-
-
-
-            showFeedback();
-
-
-
+          feedbackText.textContent = ` Pravilna razlaga je: ${correctAnswer}`;
         }
 
+        updateScore();
 
+        showFeedback();
+      }
 
-
-
-        /* =================================
+      /* =================================
 
            TIMEOUT
 
         ================================= */
 
+      function timeOut() {
+        if (answered) return;
 
+        answered = true;
 
-        function timeOut() {
+        const question = shuffledQuestions[currentQuestion];
 
+        // Explanation belonging to the correct proverb
+        const correctOption = question.options.find(
+          (option) => option.text === question.correct,
+        );
 
+        const explanation = correctOption ? correctOption.explanation : "";
 
-            if (answered) return;
+        answerButtons.forEach((button) => {
+          button.disabled = true;
 
+          const answerText = button.querySelector(".answer-text").textContent;
 
+          if (answerText === question.correct) {
+            button.classList.add("correct");
+          }
+        });
 
-            answered = true;
+        feedback.className = "result timeout";
 
+        feedbackTitle.textContent = "⌛ Čas je potekel!";
 
+        feedbackText.textContent = ` Pravilna razlaga je: ${question.correct}`;
 
-            const question = shuffledQuestions[currentQuestion];
+        showFeedback();
+      }
 
-            // Explanation belonging to the correct proverb
-            const correctOption = question.options.find(
-                option => option.text === question.correct
-            );
-
-            const explanation = correctOption ? correctOption.explanation : "";
-
-
-
-            answerButtons.forEach(button => {
-
-
-
-                button.disabled = true;
-
-
-
-                const answerText =
-
-                    button.querySelector(".answer-text").textContent;
-
-
-
-                if (answerText === question.correct) {
-
-
-
-                    button.classList.add("correct");
-
-
-
-                }
-
-
-
-            });
-
-
-
-
-
-            feedback.className = "result timeout";
-
-
-
-            feedbackTitle.textContent = "⌛ Čas je potekel!";
-
-
-
-            feedbackText.textContent =
-
-                ` Pravilen odgovor je: ${question.correct} ${explanation}`;
-
-
-
-            showFeedback();
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            SHOW FEEDBACK
 
         ================================= */
 
+      function showFeedback() {
+        feedback.hidden = false;
 
-
-        function showFeedback() {
-
-
-
-            feedback.hidden = false;
-
-
-
-            if (currentQuestion === TOTAL_QUESTIONS - 1) {
-
-
-
-                continueButton.textContent = "REZULTAT →";
-
-
-
-            } else {
-
-
-
-                continueButton.textContent = "NAPREJ →";
-
-
-
-            }
-
-
-
+        if (currentQuestion === TOTAL_QUESTIONS - 1) {
+          continueButton.textContent = "REZULTAT →";
+        } else {
+          continueButton.textContent = "NAPREJ →";
         }
+      }
 
-
-
-
-
-        /* =================================
+      /* =================================
 
            NEXT QUESTION
 
         ================================= */
 
+      function nextQuestion() {
+        if (!answered) return;
 
+        currentQuestion++;
 
-        function nextQuestion() {
-
-
-
-            if (!answered) return;
-
-
-
-            currentQuestion++;
-
-
-
-            if (currentQuestion >= TOTAL_QUESTIONS) {
-
-
-
-                endGame();
-
-
-
-            } else {
-
-
-
-                loadQuestion();
-
-
-
-            }
-
-
-
+        if (currentQuestion >= TOTAL_QUESTIONS) {
+          endGame();
+        } else {
+          loadQuestion();
         }
+      }
 
-
-
-
-
-        /* =================================
+      /* =================================
 
            UPDATE SCORE
 
         ================================= */
 
+      function updateScore() {
+        scoreDisplay.textContent = `${score} / ${TOTAL_QUESTIONS}`;
+      }
 
-
-        function updateScore() {
-
-
-
-            scoreDisplay.textContent =
-
-                `${score} / ${TOTAL_QUESTIONS}`;
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            END GAME
 
         ================================= */
 
+      function endGame() {
+        clearInterval(timerInterval);
 
+        game.hidden = true;
 
-        function endGame() {
+        finalScreen.hidden = false;
 
+        progressBar.style.width = "100%";
 
+        document.getElementById("finalScore").textContent =
+          `${score} / ${TOTAL_QUESTIONS}`;
 
-            clearInterval(timerInterval);
+        const percentage = Math.round((score / TOTAL_QUESTIONS) * 100);
 
+        let title = "";
 
+        let description = "";
 
-            game.hidden = true;
+        let icon = "";
 
-            finalScreen.hidden = false;
+        if (percentage === 100) {
+          title = "Popolno!";
 
+          description =
+            "Neverjetno! Pravilno si prepoznal vse slovenske pregovore.";
 
+          icon = "🏆";
+        } else if (percentage >= 80) {
+          title = "Odlično!";
 
-            progressBar.style.width = "100%";
+          description =
+            "Slovenske pregovore zelo dobro poznaš. Le tako naprej!";
 
+          icon = "🥇";
+        } else if (percentage >= 60) {
+          title = "Zelo dobro!";
 
+          description =
+            "Večina pregovorov ti je dobro poznana. Poskusi še enkrat!";
 
-            document.getElementById("finalScore").textContent =
+          icon = "👏";
+        } else if (percentage >= 40) {
+          title = "Kar dobro!";
 
-                `${score} / ${TOTAL_QUESTIONS}`;
+          description =
+            "Nekaj pregovorov si že prepoznal. Z malo vaje bo še bolje!";
 
+          icon = "🙂";
+        } else {
+          title = "Poskusi znova!";
 
+          description =
+            "Tokrat ti ni šlo najbolje, a naslednjič bo zagotovo bolje!";
 
-            const percentage =
-
-                Math.round((score / TOTAL_QUESTIONS) * 100);
-
-
-
-            let title = "";
-
-            let description = "";
-
-            let icon = "";
-
-
-
-            if (percentage === 100) {
-
-
-
-                title = "Popolno!";
-
-
-
-                description =
-
-                    "Neverjetno! Pravilno si prepoznal vse slovenske pregovore.";
-
-
-
-                icon = "🏆";
-
-
-
-            } else if (percentage >= 80) {
-
-
-
-                title = "Odlično!";
-
-
-
-                description =
-
-                    "Slovenske pregovore zelo dobro poznaš. Le tako naprej!";
-
-
-
-                icon = "🥇";
-
-
-
-            } else if (percentage >= 60) {
-
-
-
-                title = "Zelo dobro!";
-
-
-
-                description =
-
-                    "Večina pregovorov ti je dobro poznana. Poskusi še enkrat!";
-
-
-
-                icon = "👏";
-
-
-
-            } else if (percentage >= 40) {
-
-
-
-                title = "Kar dobro!";
-
-
-
-                description =
-
-                    "Nekaj pregovorov si že prepoznal. Z malo vaje bo še bolje!";
-
-
-
-                icon = "🙂";
-
-
-
-            } else {
-
-
-
-                title = "Poskusi znova!";
-
-
-
-                description =
-
-                    "Tokrat ti ni šlo najbolje, a naslednjič bo zagotovo bolje!";
-
-
-
-                icon = "💪";
-
-
-
-            }
-
-
-
-            document.getElementById("finalTitle").textContent = title;
-
-
-
-            document.getElementById("finalDescription").textContent =
-
-                `${description} Uspešnost: ${percentage} %.`;
-
-
-
-            document.getElementById("finalIcon").textContent = icon;
-
-
-
+          icon = "💪";
         }
 
+        document.getElementById("finalTitle").textContent = title;
 
+        document.getElementById("finalDescription").textContent =
+          `${description} Uspešnost: ${percentage} %.`;
 
+        document.getElementById("finalIcon").textContent = icon;
+      }
 
-
-        /* =================================
+      /* =================================
 
            RESTART
 
         ================================= */
 
+      function restartGame() {
+        clearInterval(timerInterval);
 
+        startGame();
+      }
 
-        function restartGame() {
-
-
-
-            clearInterval(timerInterval);
-
-
-
-            startGame();
-
-
-
-        }
-
-
-
-
-
-        /* =================================
+      /* =================================
 
            EVENT LISTENERS
 
         ================================= */
 
+      startGameButton.addEventListener("click", startGame);
 
+      restartButton.addEventListener("click", restartGame);
 
-        startGameButton.addEventListener("click", startGame);
+      continueButton.addEventListener("click", nextQuestion);
 
-
-
-        restartButton.addEventListener("click", restartGame);
-
-
-
-        continueButton.addEventListener("click", nextQuestion);
-
-
-
-        playAgainButton.addEventListener("click", restartGame);
-
-
-
-
-
+      playAgainButton.addEventListener("click", restartGame);
     </script>
-
-
-
-</body>
-
+  </body>
 </html>
